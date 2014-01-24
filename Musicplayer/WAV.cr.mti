@@ -1,22 +1,4 @@
-D:/Dropbox/Dropbox/project/Musicplayer/SampleENA.vhd {1 {vcom -work work -2002 -explicit D:/Dropbox/Dropbox/project/Musicplayer/SampleENA.vhd
-Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity SampleENA
--- Compiling architecture Behavioral of SampleENA
-
-} {} {}} D:/Dropbox/Dropbox/project/Musicplayer/decoder.vhd {1 {vcom -work work -2002 -explicit D:/Dropbox/Dropbox/project/Musicplayer/decoder.vhd
-Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity decoder
--- Compiling architecture stuff of decoder
-
-} {} {}} D:/Dropbox/Dropbox/project/Musicplayer/top.vhd {1 {vcom -work work -2002 -explicit {D:\Dropbox\Dropbox\project\Musicplayer\top.vhd}
+D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/top.vhd {1 {vcom -work work -2002 -explicit D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/top.vhd
 Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -26,16 +8,7 @@ Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 
 -- Compiling entity top
 -- Compiling architecture beh of top
 
-} {} {}} D:/Dropbox/Dropbox/project/Musicplayer/Decoder2.vhd {1 {vcom -work work -2002 -explicit {D:\Dropbox\Dropbox\project\Musicplayer\Decoder2.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity decoder2
--- Compiling architecture stuff of decoder2
-
-} {} {}} D:/Dropbox/Dropbox/project/Musicplayer/SDRAMInterface.vhd {1 {vcom -work work -2002 -explicit D:/Dropbox/Dropbox/project/Musicplayer/SDRAMInterface.vhd
+} {} {}} D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SDRAMInterface.vhd {1 {vcom -work work -2002 -explicit D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SDRAMInterface.vhd
 Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -45,16 +18,7 @@ Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 
 -- Compiling entity SDRAMInterface
 -- Compiling architecture interface of SDRAMInterface
 
-} {} {}} D:/Dropbox/Dropbox/project/Musicplayer/controlunit.vhd {1 {vcom -work work -2002 -explicit {D:\Dropbox\Dropbox\project\Musicplayer\controlunit.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity controlunit
--- Compiling architecture control of controlunit
-
-} {} {}} D:/Dropbox/Dropbox/project/Musicplayer/functions.vhd {1 {vcom -work work -2002 -explicit D:/Dropbox/Dropbox/project/Musicplayer/functions.vhd
+} {} {}} D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/functions.vhd {1 {vcom -work work -2002 -explicit D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/functions.vhd
 Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -63,5 +27,32 @@ Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 
 -- Compiling package functions
 -- Compiling package body functions
 -- Loading package functions
+
+} {} {}} D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/controlunit.vhd {1 {vcom -work work -2002 -explicit D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/controlunit.vhd
+Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity controlunit
+-- Compiling architecture control of controlunit
+
+} {} {}} D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SampleENA.vhd {1 {vcom -work work -2002 -explicit D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SampleENA.vhd
+Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity SampleENA
+-- Compiling architecture Behavioral of SampleENA
+
+} {} {}} D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/decoder.vhd {1 {vcom -work work -2002 -explicit D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/decoder.vhd
+Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity decoder
+-- Compiling architecture stuff of decoder
 
 } {} {}}

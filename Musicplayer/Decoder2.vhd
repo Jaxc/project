@@ -126,20 +126,20 @@ begin
         if sampleclkena = '1' then
           if numchannels = "001" then
             nxt.cnt <= to_integer(unsigned(bitspersamplein)) /8 -1;
-            nxt.channel <= left;					   
+            nxt.channel <= right;					   
             requestread <= '1';
             nxt.FourByteWord <=  current.FourByteWord(23 downto 0) & Bytein;
             
           elsif numchannels = "010" then
-            nxt.cnt <= to_integer(unsigned(bitspersamplein)) /8 - 1;
-            nxt.channel <= right;
+            nxt.cnt <= to_integer(unsigned(bitspersamplein)) /8;
+            nxt.channel <= left;
             requestread <= '1';
             nxt.FourByteWord <=  current.FourByteWord(23 downto 0) & Bytein;
           end if;
-        elsif current.channel = right then
+        elsif current.channel = left then
           if numchannels = "010" then
             nxt.cnt <= to_integer(unsigned(bitspersamplein)) /8 - 1;
-            nxt.channel <= left;
+            nxt.channel <= right;
             requestread <= '1';
             nxt.FourByteWord <=  current.FourByteWord(23 downto 0) & Bytein;
           end if;
@@ -538,16 +538,16 @@ process(clk, rst)
     else
       current <= nxt;
       end if;
-	    IF numchannels = "001" and (current.cnt * 8 = BitsPerSampleOUT) then
+	    IF numchannels = "001" and (current.cnt  = 0) then
 	      sampleoutleft(6 downto 0) <= nxt.FourByteWord(6 downto 0);
 		    sampleOutLEft(7) <= not (nxt.FourByteWord(7));
 		    SampleOutRight(6 downto 0) <= nxt.FourByteWord(6 downto 0);
 		    sampleOutRight(7) <= not (nxt.FourByteWord(7));
 		  elsif (numchannels = "010") then		    
-        if (current.channel = right) AND (current.cnt = 0) then
+        if (current.channel = left) AND (current.cnt = 0) then
           SampleOutLeft(6 downto 0) <= nxt.FourByteWord(6 downto 0);
   		      sampleOutLEft(7) <= not (nxt.FourByteWord(7));
-        elsif (current.cnt  = 0 ) and (current.channel = left) then
+        elsif (current.channel = right) AND (current.cnt  = 0 ) then
           SampleOutRight(6 downto 0) <= nxt.FourByteWord(6 downto 0);
   		      sampleOutRight(7) <= not (nxt.FourByteWord(7));
   		    end if;
