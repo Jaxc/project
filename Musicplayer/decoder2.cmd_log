@@ -1,0 +1,1 @@
+vhdtdtfi -prj Musicplayer -o D:/Dropbox/Dropbox/project/Musicplayer/decoder2.vhi -module decoder2 -template d:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Decoder2.vhd 

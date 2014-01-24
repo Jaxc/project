@@ -1,0 +1,5 @@
+vhdl work "D:\Dropbox\Dropbox\project\Musicplayer\functions.vhd"
+vhdl work "D:\Dropbox\Dropbox\project\Musicplayer\SDRAMInterface.vhd"
+vhdl work "D:\Dropbox\Dropbox\project\Musicplayer\SampleENA.vhd"
+vhdl work "D:\Dropbox\Dropbox\project\Musicplayer\decoder.vhd"
+vhdl work "D:\Dropbox\Dropbox\project\Musicplayer\top.vhd"

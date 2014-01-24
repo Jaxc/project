@@ -1,0 +1,231 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Jan 20 17:06:21 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P43" LEVEL 1;
+COMP "rst" LOCATE = SITE "P68" LEVEL 1;
+COMP "A<0>" LOCATE = SITE "P49" LEVEL 1;
+COMP "A<1>" LOCATE = SITE "P48" LEVEL 1;
+COMP "A<2>" LOCATE = SITE "P46" LEVEL 1;
+COMP "A<3>" LOCATE = SITE "P31" LEVEL 1;
+COMP "A<4>" LOCATE = SITE "P30" LEVEL 1;
+COMP "A<5>" LOCATE = SITE "P29" LEVEL 1;
+COMP "A<6>" LOCATE = SITE "P28" LEVEL 1;
+COMP "A<7>" LOCATE = SITE "P27" LEVEL 1;
+COMP "A<8>" LOCATE = SITE "P23" LEVEL 1;
+COMP "A<9>" LOCATE = SITE "P24" LEVEL 1;
+COMP "d<0>" LOCATE = SITE "P90" LEVEL 1;
+COMP "d<1>" LOCATE = SITE "P77" LEVEL 1;
+COMP "d<2>" LOCATE = SITE "P78" LEVEL 1;
+COMP "d<3>" LOCATE = SITE "P85" LEVEL 1;
+COMP "d<4>" LOCATE = SITE "P86" LEVEL 1;
+COMP "d<5>" LOCATE = SITE "P71" LEVEL 1;
+COMP "d<6>" LOCATE = SITE "P70" LEVEL 1;
+COMP "d<7>" LOCATE = SITE "P65" LEVEL 1;
+COMP "d<8>" LOCATE = SITE "P16" LEVEL 1;
+COMP "d<9>" LOCATE = SITE "P15" LEVEL 1;
+COMP "A<10>" LOCATE = SITE "P51" LEVEL 1;
+COMP "A<11>" LOCATE = SITE "P25" LEVEL 1;
+COMP "MemCLKIN" LOCATE = SITE "P41" LEVEL 1;
+COMP "BSOut" LOCATE = SITE "P53" LEVEL 1;
+COMP "d<10>" LOCATE = SITE "P10" LEVEL 1;
+COMP "d<11>" LOCATE = SITE "P9" LEVEL 1;
+COMP "d<12>" LOCATE = SITE "P6" LEVEL 1;
+COMP "d<13>" LOCATE = SITE "P5" LEVEL 1;
+COMP "d<14>" LOCATE = SITE "P99" LEVEL 1;
+COMP "d<15>" LOCATE = SITE "P98" LEVEL 1;
+COMP "WEOut" LOCATE = SITE "P64" LEVEL 1;
+COMP "BitsPerSampleOut" LOCATE = SITE "P83" LEVEL 1;
+COMP "testOut" LOCATE = SITE "P44" LEVEL 1;
+COMP "MemCLKOut" LOCATE = SITE "P40" LEVEL 1;
+COMP "CASOut" LOCATE = SITE "P60" LEVEL 1;
+COMP "RASOut" LOCATE = SITE "P59" LEVEL 1;
+COMP "sampleclkout" LOCATE = SITE "P84" LEVEL 1;
+COMP "SampleOutRight<0>" LOCATE = SITE "P36" LEVEL 1;
+COMP "SampleOutRight<1>" LOCATE = SITE "P37" LEVEL 1;
+COMP "SampleOutRight<2>" LOCATE = SITE "P50" LEVEL 1;
+COMP "SampleOutRight<3>" LOCATE = SITE "P52" LEVEL 1;
+COMP "SampleOutRight<4>" LOCATE = SITE "P56" LEVEL 1;
+COMP "SampleOutRight<5>" LOCATE = SITE "P57" LEVEL 1;
+COMP "SampleOutRight<6>" LOCATE = SITE "P61" LEVEL 1;
+COMP "SampleOutRight<7>" LOCATE = SITE "P62" LEVEL 1;
+COMP "SampleOutLeft<0>" LOCATE = SITE "P35" LEVEL 1;
+COMP "SampleOutLeft<1>" LOCATE = SITE "P34" LEVEL 1;
+COMP "SampleOutLeft<2>" LOCATE = SITE "P33" LEVEL 1;
+COMP "SampleOutLeft<3>" LOCATE = SITE "P32" LEVEL 1;
+COMP "SampleOutLeft<4>" LOCATE = SITE "P20" LEVEL 1;
+COMP "SampleOutLeft<5>" LOCATE = SITE "P19" LEVEL 1;
+COMP "SampleOutLeft<6>" LOCATE = SITE "P13" LEVEL 1;
+COMP "SampleOutLeft<7>" LOCATE = SITE "P12" LEVEL 1;
+TIMEGRP clk = BEL "Inst_SampleENA/SampleCLKEna" BEL "Inst_SampleENA/cnt_0" BEL
+        "Inst_SampleENA/cnt_1" BEL "Inst_SampleENA/cnt_2" BEL
+        "Inst_SampleENA/cnt_3" BEL "Inst_SampleENA/cnt_4" BEL
+        "Inst_SampleENA/cnt_5" BEL "Inst_SampleENA/cnt_6" BEL
+        "Inst_SampleENA/cnt_7" BEL "Inst_SampleENA/cnt_8" BEL
+        "Inst_decoder/current.State_FSM_FFd17" BEL
+        "Inst_decoder/current.State_FSM_FFd16" BEL
+        "Inst_decoder/current.State_FSM_FFd15" BEL
+        "Inst_decoder/current.State_FSM_FFd14" BEL
+        "Inst_decoder/current.State_FSM_FFd13" BEL
+        "Inst_decoder/current.State_FSM_FFd12" BEL
+        "Inst_decoder/current.State_FSM_FFd11" BEL
+        "Inst_decoder/current.State_FSM_FFd10" BEL
+        "Inst_decoder/current.State_FSM_FFd9" BEL
+        "Inst_decoder/current.State_FSM_FFd8" BEL
+        "Inst_decoder/current.State_FSM_FFd7" BEL
+        "Inst_decoder/current.State_FSM_FFd6" BEL
+        "Inst_decoder/current.State_FSM_FFd5" BEL
+        "Inst_decoder/current.State_FSM_FFd4" BEL
+        "Inst_decoder/current.State_FSM_FFd2" BEL
+        "Inst_decoder/current.State_FSM_FFd1" BEL
+        "Inst_decoder/current.State_FSM_FFd3" BEL
+        "Inst_decoder/audioformatREG_7" BEL "Inst_decoder/audioformatREG_6"
+        BEL "Inst_decoder/audioformatREG_5" BEL
+        "Inst_decoder/audioformatREG_4" BEL "Inst_decoder/audioformatREG_3"
+        BEL "Inst_decoder/audioformatREG_2" BEL
+        "Inst_decoder/audioformatREG_1" BEL "Inst_decoder/audioformatREG_0"
+        BEL "Inst_decoder/bitsPerSampleOut_7" BEL
+        "Inst_decoder/bitsPerSampleOut_6" BEL
+        "Inst_decoder/bitsPerSampleOut_5" BEL
+        "Inst_decoder/bitsPerSampleOut_4" BEL
+        "Inst_decoder/bitsPerSampleOut_3" BEL
+        "Inst_decoder/bitsPerSampleOut_2" BEL
+        "Inst_decoder/bitsPerSampleOut_1" BEL
+        "Inst_decoder/bitsPerSampleOut_0" BEL "Inst_decoder/numchannelsREG_7"
+        BEL "Inst_decoder/numchannelsREG_6" BEL
+        "Inst_decoder/numchannelsREG_5" BEL "Inst_decoder/numchannelsREG_4"
+        BEL "Inst_decoder/numchannelsREG_3" BEL
+        "Inst_decoder/numchannelsREG_2" BEL "Inst_decoder/numchannelsREG_1"
+        BEL "Inst_decoder/numchannelsREG_0" BEL "Inst_decoder/SampleOutLeft_2"
+        BEL "Inst_decoder/SampleOutLeft_0" BEL "Inst_decoder/current.cnt_4"
+        BEL "Inst_decoder/current.cnt_3" BEL "Inst_decoder/current.cnt_2" BEL
+        "Inst_decoder/current.cnt_1" BEL "Inst_decoder/current.cnt_0" BEL
+        "Inst_decoder/SampleOutLeft_1" BEL "Inst_decoder/BlockAlignOut" BEL
+        "Inst_decoder/current.ChunkBytesLeft_31" BEL
+        "Inst_decoder/current.ChunkBytesLeft_30" BEL
+        "Inst_decoder/current.ChunkBytesLeft_29" BEL
+        "Inst_decoder/current.ChunkBytesLeft_28" BEL
+        "Inst_decoder/current.ChunkBytesLeft_27" BEL
+        "Inst_decoder/current.ChunkBytesLeft_26" BEL
+        "Inst_decoder/current.ChunkBytesLeft_25" BEL
+        "Inst_decoder/current.ChunkBytesLeft_24" BEL
+        "Inst_decoder/current.ChunkBytesLeft_23" BEL
+        "Inst_decoder/current.ChunkBytesLeft_22" BEL
+        "Inst_decoder/current.ChunkBytesLeft_21" BEL
+        "Inst_decoder/current.ChunkBytesLeft_20" BEL
+        "Inst_decoder/current.ChunkBytesLeft_19" BEL
+        "Inst_decoder/current.ChunkBytesLeft_18" BEL
+        "Inst_decoder/current.ChunkBytesLeft_17" BEL
+        "Inst_decoder/current.ChunkBytesLeft_16" BEL
+        "Inst_decoder/current.ChunkBytesLeft_15" BEL
+        "Inst_decoder/current.ChunkBytesLeft_14" BEL
+        "Inst_decoder/current.ChunkBytesLeft_13" BEL
+        "Inst_decoder/current.ChunkBytesLeft_12" BEL
+        "Inst_decoder/current.ChunkBytesLeft_11" BEL
+        "Inst_decoder/current.ChunkBytesLeft_10" BEL
+        "Inst_decoder/current.ChunkBytesLeft_9" BEL
+        "Inst_decoder/current.ChunkBytesLeft_8" BEL
+        "Inst_decoder/current.ChunkBytesLeft_7" BEL
+        "Inst_decoder/current.ChunkBytesLeft_6" BEL
+        "Inst_decoder/current.ChunkBytesLeft_5" BEL
+        "Inst_decoder/current.ChunkBytesLeft_4" BEL
+        "Inst_decoder/current.ChunkBytesLeft_3" BEL
+        "Inst_decoder/current.ChunkBytesLeft_2" BEL
+        "Inst_decoder/current.ChunkBytesLeft_1" BEL
+        "Inst_decoder/current.ChunkBytesLeft_0" BEL
+        "Inst_decoder/SampleRateOut" BEL
+        "Inst_decoder/current.fourByteWord_31" BEL
+        "Inst_decoder/current.fourByteWord_30" BEL
+        "Inst_decoder/current.fourByteWord_29" BEL
+        "Inst_decoder/current.fourByteWord_28" BEL
+        "Inst_decoder/current.fourByteWord_27" BEL
+        "Inst_decoder/current.fourByteWord_26" BEL
+        "Inst_decoder/current.fourByteWord_25" BEL
+        "Inst_decoder/current.fourByteWord_24" BEL
+        "Inst_decoder/current.fourByteWord_23" BEL
+        "Inst_decoder/current.fourByteWord_22" BEL
+        "Inst_decoder/current.fourByteWord_21" BEL
+        "Inst_decoder/current.fourByteWord_20" BEL
+        "Inst_decoder/current.fourByteWord_19" BEL
+        "Inst_decoder/current.fourByteWord_18" BEL
+        "Inst_decoder/current.fourByteWord_17" BEL
+        "Inst_decoder/current.fourByteWord_16" BEL
+        "Inst_decoder/current.fourByteWord_15" BEL
+        "Inst_decoder/current.fourByteWord_14" BEL
+        "Inst_decoder/current.fourByteWord_13" BEL
+        "Inst_decoder/current.fourByteWord_12" BEL
+        "Inst_decoder/current.fourByteWord_11" BEL
+        "Inst_decoder/current.fourByteWord_10" BEL
+        "Inst_decoder/current.fourByteWord_9" BEL
+        "Inst_decoder/current.fourByteWord_8" BEL
+        "Inst_decoder/current.fourByteWord_7" BEL
+        "Inst_decoder/current.fourByteWord_6" BEL
+        "Inst_decoder/current.fourByteWord_5" BEL
+        "Inst_decoder/current.fourByteWord_4" BEL
+        "Inst_decoder/current.fourByteWord_3" BEL
+        "Inst_decoder/current.fourByteWord_2" BEL
+        "Inst_decoder/current.fourByteWord_1" BEL
+        "Inst_decoder/current.fourByteWord_0" BEL
+        "Inst_decoder/current.Channel_0" BEL
+        "Inst_decoder/current.requestdata" BEL "Inst_decoder/SampleOutRight_6"
+        BEL "Inst_decoder/SampleOutRight_5" BEL
+        "Inst_decoder/SampleOutRight_7" BEL "Inst_decoder/SampleOutRight_4"
+        BEL "Inst_decoder/SampleOutRight_3" BEL
+        "Inst_decoder/SampleOutRight_1" BEL "Inst_decoder/SampleOutRight_0"
+        BEL "Inst_decoder/SampleOutRight_2" BEL "Inst_decoder/ByteRateOut" BEL
+        "Inst_decoder/SampleOutLeft_6" BEL "Inst_decoder/SampleOutLeft_5" BEL
+        "Inst_decoder/SampleOutLeft_7" BEL "Inst_decoder/lastFilestart" BEL
+        "Inst_decoder/SampleOutLeft_3" BEL "Inst_decoder/SampleOutLeft_4" BEL
+        "Inst_SDRAMInterface/current.state_FSM_FFd2" BEL
+        "Inst_SDRAMInterface/current.state_FSM_FFd1" BEL
+        "Inst_SDRAMInterface/current.state_FSM_FFd3" BEL
+        "Inst_SDRAMInterface/Filestart" BEL
+        "Inst_SDRAMInterface/current.cnt_8" BEL
+        "Inst_SDRAMInterface/current.cnt_7" BEL
+        "Inst_SDRAMInterface/current.cnt_6" BEL
+        "Inst_SDRAMInterface/current.cnt_5" BEL
+        "Inst_SDRAMInterface/current.cnt_4" BEL
+        "Inst_SDRAMInterface/current.cnt_3" BEL
+        "Inst_SDRAMInterface/current.cnt_2" BEL
+        "Inst_SDRAMInterface/current.cnt_1" BEL
+        "Inst_SDRAMInterface/current.cnt_0" BEL
+        "Inst_SDRAMInterface/current.clkena" BEL
+        "Inst_SDRAMInterface/current.WE" BEL
+        "Inst_SDRAMInterface/current.Addr_11" BEL
+        "Inst_SDRAMInterface/current.Addr_10" BEL
+        "Inst_SDRAMInterface/current.Addr_9" BEL
+        "Inst_SDRAMInterface/current.Addr_8" BEL
+        "Inst_SDRAMInterface/current.Addr_7" BEL
+        "Inst_SDRAMInterface/current.Addr_6" BEL
+        "Inst_SDRAMInterface/current.Addr_5" BEL
+        "Inst_SDRAMInterface/current.Addr_4" BEL
+        "Inst_SDRAMInterface/current.Addr_3" BEL
+        "Inst_SDRAMInterface/current.Addr_2" BEL
+        "Inst_SDRAMInterface/current.Addr_1" BEL
+        "Inst_SDRAMInterface/current.Addr_0" BEL "Inst_SDRAMInterface/MemCLK"
+        BEL "Inst_SDRAMInterface/current.RAS" BEL
+        "Inst_SDRAMInterface/current.CAS" BEL "Inst_SDRAMInterface/byteout_7"
+        BEL "Inst_SDRAMInterface/byteout_6" BEL
+        "Inst_SDRAMInterface/byteout_5" BEL "Inst_SDRAMInterface/byteout_4"
+        BEL "Inst_SDRAMInterface/byteout_3" BEL
+        "Inst_SDRAMInterface/byteout_2" BEL "Inst_SDRAMInterface/byteout_1"
+        BEL "Inst_SDRAMInterface/byteout_0" BEL
+        "Inst_SDRAMInterface/MemCLKOut" BEL
+        "Inst_SDRAMInterface/current.cnt2_11" BEL
+        "Inst_SDRAMInterface/current.cnt2_10" BEL
+        "Inst_SDRAMInterface/current.cnt2_9" BEL
+        "Inst_SDRAMInterface/current.cnt2_8" BEL
+        "Inst_SDRAMInterface/current.cnt2_7" BEL
+        "Inst_SDRAMInterface/current.cnt2_6" BEL
+        "Inst_SDRAMInterface/current.cnt2_5" BEL
+        "Inst_SDRAMInterface/current.cnt2_4" BEL
+        "Inst_SDRAMInterface/current.cnt2_3" BEL
+        "Inst_SDRAMInterface/current.cnt2_2" BEL
+        "Inst_SDRAMInterface/current.cnt2_1" BEL
+        "Inst_SDRAMInterface/current.cnt2_0" BEL
+        "Inst_decoder/current.cnt_0_1" BEL "Inst_decoder/current.cnt_1_1" BEL
+        "clk_BUFGP/BUFG.GCLKMUX" BEL "clk_BUFGP/BUFG";
+TS_fpga_clk = PERIOD TIMEGRP "clk" 83 ns HIGH 50%;
+SCHEMATIC END;
+

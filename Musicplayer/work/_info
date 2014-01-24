@@ -1,0 +1,289 @@
+m255
+K4
+z2
+13
+cModel Technology
+dd:/Modeltech_pe_edu_10.2c/examples
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+Econtrolunit
+Z0 w1390516683
+Z1 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z2 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+Z4 dD:/Dropbox/Dropbox/project/Musicplayer
+Z5 8D:\Dropbox\Dropbox\project\Musicplayer\controlunit.vhd
+Z6 FD:\Dropbox\Dropbox\project\Musicplayer\controlunit.vhd
+l0
+L5
+VlRl89bA^eg_Ca6T2RJ=?^1
+Z7 OP;C;10.2c;57
+32
+Z8 !s110 1390516686
+Z9 !s108 1390516686.580000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\Dropbox\Dropbox\project\Musicplayer\controlunit.vhd|
+Z11 !s107 D:\Dropbox\Dropbox\project\Musicplayer\controlunit.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 ik>V;8kE_OJ1MH=ZOzYGk2
+!i10b 1
+Acontrol
+R1
+R2
+R3
+DEx4 work 11 controlunit 0 22 lRl89bA^eg_Ca6T2RJ=?^1
+l37
+L17
+V_mW7A;_[eY^134nPoG5cW3
+R7
+32
+R8
+R9
+R10
+R11
+R12
+R13
+!s100 H8:elAQBG5ndIeJ<B;Aj?2
+!i10b 1
+Edecoder
+Z14 w1390233876
+R1
+R2
+R3
+R4
+Z15 8D:/Dropbox/Dropbox/project/Musicplayer/decoder.vhd
+Z16 FD:/Dropbox/Dropbox/project/Musicplayer/decoder.vhd
+l0
+L5
+V^0LdelLU@ffg67cDzg=4h3
+R7
+32
+Z17 !s110 1390320401
+Z18 !s108 1390320400.955000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/project/Musicplayer/decoder.vhd|
+Z20 !s107 D:/Dropbox/Dropbox/project/Musicplayer/decoder.vhd|
+R12
+R13
+!s100 n>>kV6:PTef71QjKY0m^R2
+!i10b 1
+Astuff
+R1
+R2
+R3
+DEx4 work 7 decoder 0 22 ^0LdelLU@ffg67cDzg=4h3
+l47
+L24
+Vm7_NW4D:Qc06=A5he60K92
+R7
+32
+R17
+R18
+R19
+R20
+R12
+R13
+!s100 YPZWZPZDIH]dhUnM`KNf21
+!i10b 1
+Edecoder2
+Z21 w1390517025
+R1
+R2
+R3
+R4
+Z22 8D:\Dropbox\Dropbox\project\Musicplayer\Decoder2.vhd
+Z23 FD:\Dropbox\Dropbox\project\Musicplayer\Decoder2.vhd
+l0
+L5
+VERLOhXfYN<Dgl[]>5WYV[1
+!s100 PCPD_JYWdkF19ii=akl?G0
+R7
+32
+Z24 !s110 1390517028
+!i10b 1
+Z25 !s108 1390517028.543000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\Dropbox\Dropbox\project\Musicplayer\Decoder2.vhd|
+Z27 !s107 D:\Dropbox\Dropbox\project\Musicplayer\Decoder2.vhd|
+R12
+R13
+Astuff
+R1
+R2
+R3
+Z28 DEx4 work 8 decoder2 0 22 ERLOhXfYN<Dgl[]>5WYV[1
+l42
+L27
+Vf`[gOhdZYOmkQlB33Wbhf0
+!s100 I66JBI^hI7QBmA5kHWeP^3
+R7
+32
+R24
+!i10b 1
+R25
+R26
+R27
+R12
+R13
+Pfunctions
+R1
+R2
+R3
+Z29 w1389270642
+R4
+Z30 8D:/Dropbox/Dropbox/project/Musicplayer/functions.vhd
+Z31 FD:/Dropbox/Dropbox/project/Musicplayer/functions.vhd
+l0
+L6
+V;2<GM6Zc4==ZgRoi=blNR3
+R7
+32
+b1
+Z32 !s110 1390320400
+Z33 !s108 1390320400.107000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/project/Musicplayer/functions.vhd|
+Z35 !s107 D:/Dropbox/Dropbox/project/Musicplayer/functions.vhd|
+R12
+R13
+!s100 oX^d^B``llL=QLW3b?n7T1
+!i10b 1
+Bbody
+Z36 DPx4 work 9 functions 0 22 ;2<GM6Zc4==ZgRoi=blNR3
+R1
+R2
+R3
+l0
+L23
+V[hDidU?B:MOme=[?o<zTN3
+R7
+32
+R32
+R33
+R34
+R35
+R12
+R13
+nbody
+!s100 aWTA3QA?HH;l;`m@[UaM>0
+!i10b 1
+Esampleena
+Z37 w1389805295
+R1
+R2
+R3
+R4
+Z38 8D:/Dropbox/Dropbox/project/Musicplayer/SampleENA.vhd
+Z39 FD:/Dropbox/Dropbox/project/Musicplayer/SampleENA.vhd
+l0
+L33
+V63@iF;]?PjS@OEnET5kPo2
+R7
+32
+R17
+Z40 !s108 1390320401.378000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/project/Musicplayer/SampleENA.vhd|
+Z42 !s107 D:/Dropbox/Dropbox/project/Musicplayer/SampleENA.vhd|
+R12
+R13
+!s100 I]>z3Vj>Y[6e0j^R^m]4i2
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 9 sampleena 0 22 63@iF;]?PjS@OEnET5kPo2
+l42
+L40
+VD]QU3V2_nC_ZfnK7VSNSR0
+R7
+32
+R17
+R40
+R41
+R42
+R12
+R13
+!s100 YZfiGRN5Kk@lL4;fKhhh`0
+!i10b 1
+Esdraminterface
+Z43 w1390232261
+R36
+R1
+R2
+R3
+R4
+Z44 8D:/Dropbox/Dropbox/project/Musicplayer/SDRAMInterface.vhd
+Z45 FD:/Dropbox/Dropbox/project/Musicplayer/SDRAMInterface.vhd
+l0
+L7
+VSQz2B@QaD?4iP]M[M`2zB0
+R7
+32
+R17
+Z46 !s108 1390320401.588000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/project/Musicplayer/SDRAMInterface.vhd|
+Z48 !s107 D:/Dropbox/Dropbox/project/Musicplayer/SDRAMInterface.vhd|
+R12
+R13
+!s100 G4N;0MVZ>QFKcA;>1KbdJ3
+!i10b 1
+Ainterface
+R36
+R1
+R2
+R3
+DEx4 work 14 sdraminterface 0 22 SQz2B@QaD?4iP]M[M`2zB0
+l54
+L26
+V]_gL[b3SIGgS6WNLQhhCH1
+R7
+32
+R17
+R46
+R47
+R48
+R12
+R13
+!s100 5L3N]5@QBGCCWC;G;250Y3
+!i10b 1
+Etop
+Z49 w1390516851
+R1
+R36
+R2
+R3
+R4
+Z50 8D:\Dropbox\Dropbox\project\Musicplayer\top.vhd
+Z51 FD:\Dropbox\Dropbox\project\Musicplayer\top.vhd
+l0
+L8
+V@:C1;CX_IJBB<b]:R>lIf2
+R7
+32
+Z52 !s110 1390516857
+Z53 !s108 1390516857.554000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\Dropbox\Dropbox\project\Musicplayer\top.vhd|
+Z55 !s107 D:\Dropbox\Dropbox\project\Musicplayer\top.vhd|
+R12
+R13
+!s100 oVzAC0j;4SONQ=iRb>k2Z1
+!i10b 1
+Abeh
+R1
+R36
+R2
+R3
+DEx4 work 3 top 0 22 @:C1;CX_IJBB<b]:R>lIf2
+l135
+L33
+V2RSEg2HX6IQT7kJ<TlDQ?1
+R7
+32
+R52
+R53
+R54
+R55
+R12
+R13
+!s100 =dh_3IFlho:n1e8kVd:f`1
+!i10b 1

@@ -1,0 +1,263 @@
+#---------------------------------------------------------------------
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+# 02111-1307, USA.
+#
+# ©1997-2010 - X Engineering Software Systems Corp.
+#---------------------------------------------------------------------
+
+NET "clk" LOC = P43;
+
+NET "MemCLKOut" LOC = P40;
+#net sdram_clk_fb loc = p41;
+NET "RASOut" LOC = P59;
+NET "CASOut" LOC = P60;
+NET "WEOut" LOC = P64;
+NET "BSOut" LOC = P53;
+NET "A[0]" LOC = P49;
+NET "A[1]" LOC = P48;
+NET "A[2]" LOC = P46;
+NET "A[3]" LOC = P31;
+NET "A[4]" LOC = P30;
+NET "A[5]" LOC = P29;
+NET "A[6]" LOC = P28;
+NET "A[7]" LOC = P27;
+NET "A[8]" LOC = P23;
+NET "A[9]" LOC = P24;
+NET "A[10]" LOC = P51;
+NET "A[11]" LOC = P25;
+#
+# Chan CLK
+NET "sampleclkout" LOC = P84;
+# Chan<1>-Chan<8>
+NET "SampleOutRight[0]" LOC = P36;
+NET "SampleOutRight[1]" LOC = P37;
+NET "SampleOutRight[2]" LOC = P50;
+NET "SampleOutRight[4]" LOC = P56;
+NET "SampleOutRight[5]" LOC = P57;
+NET "SampleOutRight[6]" LOC = P61;
+NET "SampleOutRight[7]" LOC = P62;
+#net chan<8> loc = p62;
+# Chan<9>
+NET "rst" LOC = P68;
+#net chan<10> loc = p72;
+#net chan<11> loc = p73;
+#net chan<12> loc = p82;
+#net chan<13> loc = p83;
+#net chan<14> loc = p84;
+#net chan<15> loc = p35;
+#net chan<16> loc = p34;
+#net chan<17> loc = p33;
+#net chan<18> loc = p32;
+#net chan<19> loc = p21;
+#net chan<20> loc = p20;
+#net chan<21> loc = p19;
+#net chan<22> loc = p13;
+#net chan<23> loc = p12;
+#net chan<24> loc = p7;
+#net chan<25> loc = p4;
+#net chan<26> loc = p3;
+#net chan<27> loc = p97;
+#net chan<28> loc = p94;
+#net chan<29> loc = p93;
+#net chan<30> loc = p89;
+#net chan<31> loc = p88;
+
+NET "clk" IOSTANDARD = LVTTL;
+NET "MemCLKOut" IOSTANDARD = LVTTL;
+NET "MemCLKOut" DRIVE = 8;
+NET "MemCLKOut" SLEW = FAST;
+NET "A[0]" IOSTANDARD = LVTTL;
+NET "A[10]" IOSTANDARD = LVTTL;
+NET "A[11]" IOSTANDARD = LVTTL;
+NET "A[1]" IOSTANDARD = LVTTL;
+NET "A[2]" IOSTANDARD = LVTTL;
+NET "A[3]" IOSTANDARD = LVTTL;
+NET "A[4]" IOSTANDARD = LVTTL;
+NET "A[5]" IOSTANDARD = LVTTL;
+NET "A[6]" IOSTANDARD = LVTTL;
+NET "A[7]" IOSTANDARD = LVTTL;
+NET "A[8]" IOSTANDARD = LVTTL;
+NET "A[9]" IOSTANDARD = LVTTL;
+NET "A[0]" DRIVE = 6;
+NET "A[10]" DRIVE = 6;
+NET "A[11]" DRIVE = 6;
+NET "A[1]" DRIVE = 6;
+NET "A[2]" DRIVE = 6;
+NET "A[3]" DRIVE = 6;
+NET "A[4]" DRIVE = 6;
+NET "A[5]" DRIVE = 6;
+NET "A[6]" DRIVE = 6;
+NET "A[7]" DRIVE = 6;
+NET "A[8]" DRIVE = 6;
+NET "A[9]" DRIVE = 6;
+NET "A[0]" SLEW = SLOW;
+NET "A[10]" SLEW = SLOW;
+NET "A[11]" SLEW = SLOW;
+NET "A[1]" SLEW = SLOW;
+NET "A[2]" SLEW = SLOW;
+NET "A[3]" SLEW = SLOW;
+NET "A[4]" SLEW = SLOW;
+NET "A[5]" SLEW = SLOW;
+NET "A[6]" SLEW = SLOW;
+NET "A[7]" SLEW = SLOW;
+NET "A[8]" SLEW = SLOW;
+NET "A[9]" SLEW = SLOW;
+NET "BSOut" IOSTANDARD = LVTTL;
+NET "BSOut" DRIVE = 6;
+NET "BSOut" SLEW = SLOW;
+NET "RASOut" IOSTANDARD = LVTTL;
+NET "RASOut" DRIVE = 6;
+NET "RASOut" SLEW = SLOW;
+NET "CASOut" IOSTANDARD = LVTTL;
+NET "CASOut" DRIVE = 6;
+NET "CASOut" SLEW = SLOW;
+NET "WEOut" IOSTANDARD = LVTTL;
+NET "WEOut" DRIVE = 6;
+NET "WEOut" SLEW = SLOW;
+NET "d[0]" IOSTANDARD = LVTTL;
+NET "d[10]" IOSTANDARD = LVTTL;
+NET "d[11]" IOSTANDARD = LVTTL;
+NET "d[12]" IOSTANDARD = LVTTL;
+NET "d[13]" IOSTANDARD = LVTTL;
+NET "d[14]" IOSTANDARD = LVTTL;
+NET "d[15]" IOSTANDARD = LVTTL;
+NET "d[1]" IOSTANDARD = LVTTL;
+NET "d[2]" IOSTANDARD = LVTTL;
+NET "d[3]" IOSTANDARD = LVTTL;
+NET "d[4]" IOSTANDARD = LVTTL;
+NET "d[5]" IOSTANDARD = LVTTL;
+NET "d[6]" IOSTANDARD = LVTTL;
+NET "d[7]" IOSTANDARD = LVTTL;
+NET "d[8]" IOSTANDARD = LVTTL;
+NET "d[9]" IOSTANDARD = LVTTL;
+NET "d[0]" DRIVE = 6;
+NET "d[10]" DRIVE = 6;
+NET "d[11]" DRIVE = 6;
+NET "d[12]" DRIVE = 6;
+NET "d[13]" DRIVE = 6;
+NET "d[14]" DRIVE = 6;
+NET "d[15]" DRIVE = 6;
+NET "d[1]" DRIVE = 6;
+NET "d[2]" DRIVE = 6;
+NET "d[3]" DRIVE = 6;
+NET "d[4]" DRIVE = 6;
+NET "d[5]" DRIVE = 6;
+NET "d[6]" DRIVE = 6;
+NET "d[7]" DRIVE = 6;
+NET "d[8]" DRIVE = 6;
+NET "d[9]" DRIVE = 6;
+NET "d[0]" SLEW = SLOW;
+NET "d[10]" SLEW = SLOW;
+NET "d[11]" SLEW = SLOW;
+NET "d[12]" SLEW = SLOW;
+NET "d[13]" SLEW = SLOW;
+NET "d[14]" SLEW = SLOW;
+NET "d[15]" SLEW = SLOW;
+NET "d[1]" SLEW = SLOW;
+NET "d[2]" SLEW = SLOW;
+NET "d[3]" SLEW = SLOW;
+NET "d[4]" SLEW = SLOW;
+NET "d[5]" SLEW = SLOW;
+NET "d[6]" SLEW = SLOW;
+NET "d[7]" SLEW = SLOW;
+NET "d[8]" SLEW = SLOW;
+NET "d[9]" SLEW = SLOW;
+NET "sampleclkout" IOSTANDARD = LVTTL;
+NET "SampleOutRight[0]" IOSTANDARD = LVTTL;
+NET "SampleOutRight[1]" IOSTANDARD = LVTTL;
+NET "SampleOutRight[2]" IOSTANDARD = LVTTL;
+NET "SampleOutRight[4]" IOSTANDARD = LVTTL;
+NET "SampleOutRight[5]" IOSTANDARD = LVTTL;
+NET "SampleOutRight[6]" IOSTANDARD = LVTTL;
+NET "SampleOutRight[7]" IOSTANDARD = LVTTL;
+
+NET "clk" TNM_NET = "clk";
+TIMESPEC TS_fpga_clk = PERIOD "clk" 83 ns HIGH 50 %;
+
+
+NET "rst" PULLUP;
+NET "rst" IOSTANDARD = LVTTL;
+
+
+
+NET "testOut" LOC = P44;
+
+
+NET "testOut" IOSTANDARD = LVTTL;
+
+
+NET "BitsPerSampleOut" IOSTANDARD = LVTTL;
+NET "BitsPerSampleOut" SLEW = FAST;
+NET "testOut" SLEW = FAST;
+
+NET "MemCLKIN" LOC = P41;
+NET "BitsPerSampleOut" LOC = P83;
+
+
+NET "BlockAlignOut" IOSTANDARD = LVTTL;
+NET "ByteRateOut" IOSTANDARD = LVTTL;
+
+
+NET "SampleOutRight[3]" IOSTANDARD = LVTTL;
+
+
+NET "SampleOutRight[3]" LOC = P52;
+
+
+
+
+NET "d[15]" LOC = P98;
+NET "d[14]" LOC = P99;
+NET "d[13]" LOC = P5;
+NET "d[12]" LOC = P6;
+NET "d[11]" LOC = P9;
+NET "d[10]" LOC = P10;
+NET "d[9]" LOC = P15;
+NET "d[8]" LOC = P16;
+NET "d[7]" LOC = P65;
+NET "d[6]" LOC = P70;
+NET "d[5]" LOC = P71;
+NET "d[4]" LOC = P86;
+NET "d[3]" LOC = P85;
+NET "d[2]" LOC = P78;
+NET "d[1]" LOC = P77;
+NET "d[0]" LOC = P90;
+
+
+NET "MemCLKIN" IOSTANDARD = LVTTL;
+NET "MemCLKIN" DRIVE = 12;
+NET "MemCLKIN" SLEW = SLOW;
+
+# PlanAhead Generated IO constraints 
+
+NET "SampleOutLeft[7]" IOSTANDARD = LVTTL;
+NET "SampleOutLeft[6]" IOSTANDARD = LVTTL;
+NET "SampleOutLeft[5]" IOSTANDARD = LVTTL;
+NET "SampleOutLeft[4]" IOSTANDARD = LVTTL;
+NET "SampleOutLeft[3]" IOSTANDARD = LVTTL;
+NET "SampleOutLeft[2]" IOSTANDARD = LVTTL;
+NET "SampleOutLeft[1]" IOSTANDARD = LVTTL;
+NET "SampleOutLeft[0]" IOSTANDARD = LVTTL;
+
+# PlanAhead Generated physical constraints 
+
+NET "SampleOutLeft[0]" LOC = P35;
+NET "SampleOutLeft[1]" LOC = P34;
+NET "SampleOutLeft[2]" LOC = P33;
+NET "SampleOutLeft[3]" LOC = P32;
+NET "SampleOutLeft[4]" LOC = P20;
+NET "SampleOutLeft[5]" LOC = P19;
+NET "SampleOutLeft[6]" LOC = P13;
+NET "SampleOutLeft[7]" LOC = P12;

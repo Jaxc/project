@@ -1,0 +1,5 @@
+vhdl work "functions.vhd"
+vhdl work "SDRAMInterface.vhd"
+vhdl work "SampleENA.vhd"
+vhdl work "decoder.vhd"
+vhdl work "top.vhd"

@@ -1,0 +1,591 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.28 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s200a-4-vq100
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Dropbox/Dropbox/project/Musicplayer/functions.vhd" in Library work.
+Architecture functions of Entity functions is up to date.
+Compiling vhdl file "D:/Dropbox/Dropbox/project/Musicplayer/decoder.vhd" in Library work.
+Entity <decoder> compiled.
+Entity <decoder> (Architecture <stuff>) compiled.
+Compiling vhdl file "D:/Dropbox/Dropbox/project/Musicplayer/SampleENA.vhd" in Library work.
+Architecture behavioral of Entity sampleena is up to date.
+Compiling vhdl file "D:/Dropbox/Dropbox/project/Musicplayer/SDRAMInterface.vhd" in Library work.
+Entity <sdraminterface> compiled.
+Entity <sdraminterface> (Architecture <interface>) compiled.
+Compiling vhdl file "D:/Dropbox/Dropbox/project/Musicplayer/top.vhd" in Library work.
+Architecture beh of Entity top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <beh>).
+
+Analyzing hierarchy for entity <decoder> in library <work> (architecture <stuff>).
+
+Analyzing hierarchy for entity <SampleENA> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <SDRAMInterface> in library <work> (architecture <interface>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <beh>).
+WARNING:Xst:753 - "D:/Dropbox/Dropbox/project/Musicplayer/top.vhd" line 135: Unconnected output port 'testout' of component 'SDRAMInterface'.
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <decoder> in library <work> (Architecture <stuff>).
+Entity <decoder> analyzed. Unit <decoder> generated.
+
+Analyzing Entity <SampleENA> in library <work> (Architecture <behavioral>).
+Entity <SampleENA> analyzed. Unit <SampleENA> generated.
+
+Analyzing Entity <SDRAMInterface> in library <work> (Architecture <interface>).
+Entity <SDRAMInterface> analyzed. Unit <SDRAMInterface> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <decoder>.
+    Related source file is "D:/Dropbox/Dropbox/project/Musicplayer/decoder.vhd".
+    Found finite state machine <FSM_0> for signal <current.State>.
+    -----------------------------------------------------------------------
+    | States             | 17                                             |
+    | Transitions        | 139                                            |
+    | Inputs             | 24                                             |
+    | Outputs            | 24                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <SampleOutLeft>.
+    Found 8-bit register for signal <SampleOutRight>.
+    Found 1-bit register for signal <BlockAlignOut>.
+    Found 1-bit register for signal <SampleRateOut>.
+    Found 1-bit register for signal <ByteRateOut>.
+    Found 8-bit adder for signal <$add0000> created at line 339.
+    Found 8-bit adder for signal <$add0001> created at line 339.
+    Found 8-bit subtractor for signal <$sub0000> created at line 339.
+    Found 8-bit register for signal <audioformatREG>.
+    Found 8-bit register for signal <bitsPerSampleOut>.
+    Found 32-bit register for signal <current.bytesLeft>.
+    Found 32-bit subtractor for signal <current.bytesLeft$share0000> created at line 54.
+    Found 1-bit register for signal <current.Channel<0>>.
+    Found 32-bit register for signal <current.ChunkBytesLeft>.
+    Found 32-bit subtractor for signal <current.ChunkBytesLeft$addsub0000>.
+    Found 5-bit register for signal <current.cnt>.
+    Found 5-bit adder for signal <current.cnt$share0000> created at line 54.
+    Found 32-bit register for signal <current.fourByteWord>.
+    Found 1-bit register for signal <current.requestdata>.
+    Found 1-bit register for signal <lastFilestart>.
+    Found 8-bit register for signal <numchannelsREG>.
+    Found 8-bit comparator not equal for signal <SampleOutLeft_3$cmp_ne0003> created at line 475.
+    Found 8-bit comparator equal for signal <tmp.fourByteWord$cmp_eq0000> created at line 339.
+    Found 8-bit comparator equal for signal <tmp.fourByteWord$cmp_eq0001> created at line 339.
+    Found 8-bit comparator equal for signal <tmp.fourByteWord$cmp_eq0002> created at line 339.
+    Found 8-bit comparator equal for signal <tmp.fourByteWord$cmp_eq0003> created at line 339.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 147 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
+Unit <decoder> synthesized.
+
+
+Synthesizing Unit <SampleENA>.
+    Related source file is "D:/Dropbox/Dropbox/project/Musicplayer/SampleENA.vhd".
+    Found 1-bit register for signal <SampleCLKEna>.
+    Found 9-bit up counter for signal <cnt>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <SampleENA> synthesized.
+
+
+Synthesizing Unit <SDRAMInterface>.
+    Related source file is "D:/Dropbox/Dropbox/project/Musicplayer/SDRAMInterface.vhd".
+WARNING:Xst:1305 - Output <testout> is never assigned. Tied to value 0.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current.state> of Case statement line 60 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current.state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_1> for signal <current.state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 53                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 16                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | current.state$not0000     (positive)           |
+    | Reset              | rst                       (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <MemCLKOut>.
+    Found 1-bit register for signal <Filestart>.
+    Found 8-bit register for signal <byteout>.
+    Found 12-bit register for signal <current.Addr>.
+    Found 1-bit register for signal <current.CAS>.
+    Found 1-bit register for signal <current.clkena>.
+    Found 9-bit register for signal <current.cnt>.
+    Found 12-bit register for signal <current.cnt2>.
+    Found 12-bit adder for signal <current.cnt2$addsub0000> created at line 145.
+    Found 1-bit register for signal <current.RAS>.
+    Found 1-bit register for signal <current.WE>.
+    Found 1-bit register for signal <MemCLK>.
+    Found 9-bit adder for signal <nxt.cnt$share0000> created at line 60.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  48 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <SDRAMInterface> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "D:/Dropbox/Dropbox/project/Musicplayer/top.vhd".
+WARNING:Xst:1780 - Signal <memclkbuf> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 12-bit adder                                          : 1
+ 32-bit subtractor                                     : 2
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 41
+ 1-bit register                                        : 30
+ 12-bit register                                       : 2
+ 32-bit register                                       : 3
+ 5-bit register                                        : 1
+ 8-bit register                                        : 4
+ 9-bit register                                        : 1
+# Comparators                                          : 5
+ 8-bit comparator equal                                : 4
+ 8-bit comparator not equal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <Inst_SDRAMInterface/current.state/FSM> on signal <current.state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+ 110   | 110
+ 111   | 111
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <Inst_decoder/current.State/FSM> on signal <current.State[1:17]> with one-hot encoding.
+----------------------------
+ State | Encoding
+----------------------------
+ 00000 | 00000000000000001
+ 00001 | 00000000000000010
+ 00010 | 00000000000000100
+ 00011 | 00000000000010000
+ 00100 | 00000000000100000
+ 00101 | 00000000001000000
+ 00110 | 00000000010000000
+ 00111 | 00000000100000000
+ 01000 | 00000001000000000
+ 01001 | 00000010000000000
+ 01010 | 00000100000000000
+ 01011 | 00001000000000000
+ 01100 | 00010000000000000
+ 01101 | 00100000000000000
+ 01110 | 01000000000000000
+ 01111 | 10000000000000000
+ 10000 | 00000000000001000
+----------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Adders/Subtractors                                   : 7
+ 12-bit adder                                          : 1
+ 32-bit subtractor                                     : 1
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 164
+ Flip-Flops                                            : 164
+# Comparators                                          : 5
+ 8-bit comparator equal                                : 4
+ 8-bit comparator not equal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <decoder> ...
+
+Optimizing unit <SDRAMInterface> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 17.
+FlipFlop Inst_decoder/current.cnt_0 has been replicated 1 time(s)
+FlipFlop Inst_decoder/current.cnt_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 195
+ Flip-Flops                                            : 195
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 57
+
+Cell Usage :
+# BELS                             : 725
+#      GND                         : 1
+#      INV                         : 37
+#      LUT1                        : 28
+#      LUT2                        : 28
+#      LUT2_D                      : 1
+#      LUT2_L                      : 4
+#      LUT3                        : 124
+#      LUT3_D                      : 12
+#      LUT3_L                      : 9
+#      LUT4                        : 247
+#      LUT4_D                      : 32
+#      LUT4_L                      : 55
+#      MUXCY                       : 74
+#      MUXF5                       : 10
+#      VCC                         : 1
+#      XORCY                       : 62
+# FlipFlops/Latches                : 195
+#      FDC                         : 36
+#      FDCE                        : 112
+#      FDE                         : 46
+#      FDP                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 56
+#      IBUF                        : 18
+#      OBUF                        : 38
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200avq100-4 
+
+ Number of Slices:                      299  out of   1792    16%  
+ Number of Slice Flip Flops:            195  out of   3584     5%  
+ Number of 4 input LUTs:                577  out of   3584    16%  
+ Number of IOs:                          57
+ Number of bonded IOBs:                  57  out of     68    83%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 195   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------------------------------------------------------+------------------------------------+-------+
+Control Signal                                                                                          | Buffer(FF name)                    | Load  |
+--------------------------------------------------------------------------------------------------------+------------------------------------+-------+
+Inst_SDRAMInterface/current.state_FSM_Acst_FSM_inv(Inst_decoder/current.State_FSM_Acst_FSM_inv1_INV_0:O)| NONE(Inst_SDRAMInterface/Filestart)| 149   |
+--------------------------------------------------------------------------------------------------------+------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 10.582ns (Maximum Frequency: 94.500MHz)
+   Minimum input arrival time before clock: 3.803ns
+   Maximum output required time after clock: 8.422ns
+   Maximum combinational path delay: 5.789ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.582ns (frequency: 94.500MHz)
+  Total number of paths / destination ports: 27983 / 353
+-------------------------------------------------------------------------
+Delay:               10.582ns (Levels of Logic = 8)
+  Source:            Inst_decoder/bitsPerSampleOut_4 (FF)
+  Destination:       Inst_decoder/current.cnt_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Inst_decoder/bitsPerSampleOut_4 to Inst_decoder/current.cnt_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            15   0.591   1.020  Inst_decoder/bitsPerSampleOut_4 (Inst_decoder/bitsPerSampleOut_4)
+     LUT4:I3->O            1   0.648   0.452  Inst_decoder/Madd__add0001_xor<7>11 (Inst_decoder/_add0001<7>)
+     LUT4:I2->O            1   0.648   0.500  Inst_decoder/tmp_fourByteWord_or0000104_SW0 (N224)
+     LUT4:I1->O            2   0.643   0.527  Inst_decoder/tmp_fourByteWord_or0000141_SW0 (N228)
+     LUT4:I1->O           19   0.643   1.117  Inst_decoder/tmp_fourByteWord_or0000141 (Inst_decoder/tmp_fourByteWord_or0000)
+     LUT3:I2->O            1   0.648   0.423  Inst_decoder/current_cnt_mux0001<3>71_SW0_SW0 (N262)
+     LUT4_L:I3->LO         1   0.648   0.103  Inst_decoder/current_cnt_mux0001<3>71_SW0 (N240)
+     LUT4:I3->O            1   0.648   0.423  Inst_decoder/current_cnt_mux0001<3>94_SW0 (N260)
+     LUT4:I3->O            2   0.648   0.000  Inst_decoder/current_cnt_mux0001<3>94 (Inst_decoder/current_cnt_mux0001<3>)
+     FDC:D                     0.252          Inst_decoder/current.cnt_1
+    ----------------------------------------
+    Total                     10.582ns (6.017ns logic, 4.565ns route)
+                                       (56.9% logic, 43.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 62 / 54
+-------------------------------------------------------------------------
+Offset:              3.803ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       Inst_SDRAMInterface/current.cnt_8 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to Inst_SDRAMInterface/current.cnt_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.849   0.730  rst_IBUF (rst_IBUF)
+     LUT3:I0->O           37   0.648   1.264  Inst_SDRAMInterface/current_cnt2_and00001 (Inst_SDRAMInterface/current_cnt2_and0000)
+     FDE:CE                    0.312          Inst_SDRAMInterface/current.cnt2_0
+    ----------------------------------------
+    Total                      3.803ns (1.809ns logic, 1.994ns route)
+                                       (47.6% logic, 52.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 51 / 36
+-------------------------------------------------------------------------
+Offset:              8.422ns (Levels of Logic = 3)
+  Source:            Inst_decoder/current.State_FSM_FFd1 (FF)
+  Destination:       testOut (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Inst_decoder/current.State_FSM_FFd1 to testOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             18   0.591   1.148  Inst_decoder/current.State_FSM_FFd1 (Inst_decoder/current.State_FSM_FFd1)
+     LUT4:I1->O            1   0.643   0.452  Inst_decoder/current.State_FSM_Out2349 (Inst_decoder/current.State_FSM_Out2349)
+     LUT4:I2->O            1   0.648   0.420  Inst_decoder/current.State_FSM_Out2376 (testOut_OBUF)
+     OBUF:I->O                 4.520          testOut_OBUF (testOut)
+    ----------------------------------------
+    Total                      8.422ns (6.402ns logic, 2.020ns route)
+                                       (76.0% logic, 24.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               5.789ns (Levels of Logic = 2)
+  Source:            MemCLKIN (PAD)
+  Destination:       BitsPerSampleOut (PAD)
+
+  Data Path: MemCLKIN to BitsPerSampleOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.849   0.420  MemCLKIN_IBUF (BitsPerSampleOut_OBUF)
+     OBUF:I->O                 4.520          BitsPerSampleOut_OBUF (BitsPerSampleOut)
+    ----------------------------------------
+    Total                      5.789ns (5.369ns logic, 0.420ns route)
+                                       (92.7% logic, 7.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 36.00 secs
+Total CPU time to Xst completion: 35.57 secs
+ 
+--> 
+
+Total memory usage is 309116 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+
