@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-01-21T17:10:34</DateModified>
+  <DateModified>2014-01-24T16:42:32</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>2014-01-18T11:48:25</SummaryTimeStamp>
-  <SavedFilePath>D:/Dropbox/Dropbox/project/Musicplayer/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Dropbox/Dropbox/project/Musicplayer\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/iseconfig/top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/Dropbox/Dropbox/github/musicplayer/project/musicplayer\</ImplementationReportsDirectory>
   <DateInitialized>2014-01-18T11:47:27</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

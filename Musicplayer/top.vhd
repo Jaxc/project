@@ -79,13 +79,9 @@ COMPONENT decoder
 		Filestart : IN std_logic;
 		modeselect : IN std_logic_vector(3 downto 0);
 		Numchannels : IN std_logic_vector(2 downto 0);  
-		bitspersamplein : IN STD_LOGIC_VECTOR(5 downto 0);        
-		SampleRateOut : OUT std_logic;
-		ByteRateOut : OUT std_logic;
-		BlockAlignOut : OUT std_logic;
-		RequestRead : OUT std_logic;
+		bitspersamplein : IN STD_LOGIC_VECTOR(2 downto 0);
+		requestread		 : OUT STD_LOGIC;
 		SampleOutLeft : OUT std_logic_vector(7 downto 0);
-		ERROROUT : OUT std_logic;
 		SampleOutRight : OUT std_logic_vector(7 downto 0)
 		);
 	END COMPONENT;
@@ -98,7 +94,7 @@ COMPONENT decoder
 		ByteIn : IN std_logic_vector(7 downto 0);          
 		ModeSelect : OUT std_logic_vector(3 downto 0);
 		NumChannelsout     : OUT STD_LOGIC_VECTOR(2 downto 0);
-		bitspersampleout : out STD_LOGIC_VECTOR(5 downto 0)
+		bitspersampleout : out STD_LOGIC_VECTOR(2 downto 0)
 		);
 	END COMPONENT;
 	
@@ -130,26 +126,26 @@ signal samplerate,filestart,requestread : STD_LOGIC;
 signal addr : STD_LOGIC_VECTOR(11 downto 0);
 signal modeselect : STD_LOGIC_VECTOR(3 downto 0);
 signal NumChannels     : STD_LOGIC_VECTOR(2 downto 0);
-signal bitspersample : STD_LOGIC_VECTOR(5 downto 0);
+signal bitspersample : STD_LOGIC_VECTOR(2 downto 0);
 
 begin
 	RST_in <= rst;
 		
-	Inst_decoder: decoder PORT MAP(
-		clk => clk,
-		rst => rst_in,
-		sampleCLKEna => SampleCLKEna,
-		bytein => bytetransfer,
-		Filestart => Filestart,
-		samplerateOut => samplerate,
-		requestread => requestread,
-		SampleOutRight => SampleOutRight,
-		sampleOutLeft	=> SampleOutLeft,
-		ByteRateOut => ByteRateOut,
-		ERROROUT => testout, 
-		BlockAlignOut => BlockAlignOut
---		bitsPerSampleOut => BitsPerSampleOut
-	);
+--	Inst_decoder: decoder PORT MAP(
+--		clk => clk,
+--		rst => rst_in,
+--		sampleCLKEna => SampleCLKEna,
+--		bytein => bytetransfer,
+--		Filestart => Filestart,
+--		samplerateOut => samplerate,
+--		requestread => requestread,
+--		SampleOutRight => SampleOutRight,
+--		sampleOutLeft	=> SampleOutLeft,
+--		ByteRateOut => ByteRateOut,
+--		ERROROUT => testout, 
+--		BlockAlignOut => BlockAlignOut
+----		bitsPerSampleOut => BitsPerSampleOut
+--	);
   
  	Inst_SampleENA: SampleENA PORT MAP(
 		CLK => clk,
@@ -166,14 +162,14 @@ begin
 		Filestart => filestart,
 		modeselect => Modeselect,
 		Numchannels => numchannels,
-		bitspersamplein => bitspersample
+		bitspersamplein => bitspersample,
 --		SampleRateOut => ,
 --		ByteRateOut => ,
 --		BlockAlignOut => ,
---		RequestRead => ,
---		SampleOutLeft => ,
+		RequestRead => requestread,
+		SampleOutLeft => SampleOutLeft,
 --		ERROROUT => ,
---		SampleOutRight => 
+		SampleOutRight => SampleOutRight
 	);
 	
 --	Inst_memory: memory PORT MAP(

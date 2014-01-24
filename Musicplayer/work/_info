@@ -9,61 +9,61 @@ dd:/Modeltech_pe_edu_10.2c/examples
 !i10e 25
 !i10f 100
 Econtrolunit
-Z0 w1390516683
+Z0 w1390580957
 Z1 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
 Z2 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
 Z4 dD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer
-Z5 8D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/controlunit.vhd
-Z6 FD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/controlunit.vhd
+Z5 8D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\controlunit.vhd
+Z6 FD:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\controlunit.vhd
 l0
 L5
-VlRl89bA^eg_Ca6T2RJ=?^1
+V_1[h_TzlnoJKkgCz]7P_71
+!s100 OVR9<4DMJAH?XO68TG_iT2
 Z7 OP;C;10.2c;57
 32
-Z8 !s110 1390576870
-Z9 !s108 1390576870.335000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/controlunit.vhd|
-Z11 !s107 D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/controlunit.vhd|
+Z8 !s110 1390580964
+!i10b 1
+Z9 !s108 1390580964.421000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\controlunit.vhd|
+Z11 !s107 D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\controlunit.vhd|
 Z12 o-work work -2002 -explicit -O0
 Z13 tExplicit 1
-!s100 ik>V;8kE_OJ1MH=ZOzYGk2
-!i10b 1
 Acontrol
 R1
 R2
 R3
-DEx4 work 11 controlunit 0 22 lRl89bA^eg_Ca6T2RJ=?^1
-l37
-L17
-V_mW7A;_[eY^134nPoG5cW3
+Z14 DEx4 work 11 controlunit 0 22 _1[h_TzlnoJKkgCz]7P_71
+l38
+L18
+VNO@8I7cb?kbRIVO1dYaPg3
+!s100 dRFl7L7Xn:XfJb1dQLhRl2
 R7
 32
 R8
+!i10b 1
 R9
 R10
 R11
 R12
 R13
-!s100 H8:elAQBG5ndIeJ<B;Aj?2
-!i10b 1
 Edecoder
-Z14 w1390233876
+Z15 w1390233876
 R1
 R2
 R3
 R4
-Z15 8D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/decoder.vhd
-Z16 FD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/decoder.vhd
+Z16 8D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/decoder.vhd
+Z17 FD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/decoder.vhd
 l0
 L5
 V^0LdelLU@ffg67cDzg=4h3
 R7
 32
-R8
-Z17 !s108 1390576870.718000
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/decoder.vhd|
-Z19 !s107 D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/decoder.vhd|
+Z18 !s110 1390576870
+Z19 !s108 1390576870.718000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/decoder.vhd|
+Z21 !s107 D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/decoder.vhd|
 R12
 R13
 !s100 n>>kV6:PTef71QjKY0m^R2
@@ -78,77 +78,77 @@ L24
 Vm7_NW4D:Qc06=A5he60K92
 R7
 32
-R8
-R17
 R18
 R19
+R20
+R21
 R12
 R13
 !s100 YPZWZPZDIH]dhUnM`KNf21
 !i10b 1
 Edecoder2
-Z20 w1390577464
+Z22 w1390579628
 R1
 R2
 R3
 R4
-Z21 8D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\Decoder2.vhd
-Z22 FD:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\Decoder2.vhd
+Z23 8D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\Decoder2.vhd
+Z24 FD:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\Decoder2.vhd
 l0
 L5
-VERLOhXfYN<Dgl[]>5WYV[1
-!s100 PCPD_JYWdkF19ii=akl?G0
+VCV4ZHl@==`?1m@SVc3QcY0
 R7
 32
-Z23 !s110 1390577471
-!i10b 1
-Z24 !s108 1390577470.954000
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\Decoder2.vhd|
-Z26 !s107 D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\Decoder2.vhd|
+Z25 !s110 1390580527
+Z26 !s108 1390580527.300000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\Decoder2.vhd|
+Z28 !s107 D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\Decoder2.vhd|
 R12
 R13
+!s100 2;b_SBHGL=Mh?[@TP;T5k1
+!i10b 1
 Astuff
 R1
 R2
 R3
-Z27 DEx4 work 8 decoder2 0 22 ERLOhXfYN<Dgl[]>5WYV[1
-l42
-L27
-V[A7Vm@JGDb7]aFOioa9hI1
-!s100 IjGfEl7L=]D[FccYG7BMZ3
+DEx4 work 8 decoder2 0 22 CV4ZHl@==`?1m@SVc3QcY0
+l37
+L22
+VE56WK2KkNQ^:j_^5Y=^MW3
 R7
 32
-R23
-!i10b 1
-R24
 R25
 R26
+R27
+R28
 R12
 R13
+!s100 ]]QGVR8D;XTWB4ZkOHBWk0
+!i10b 1
 Pfunctions
 R1
 R2
 R3
-Z28 w1389270642
+Z29 w1389270642
 R4
-Z29 8D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/functions.vhd
-Z30 FD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/functions.vhd
+Z30 8D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/functions.vhd
+Z31 FD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/functions.vhd
 l0
 L6
 V;2<GM6Zc4==ZgRoi=blNR3
 R7
 32
 b1
-Z31 !s110 1390576871
-Z32 !s108 1390576871.448000
-Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/functions.vhd|
-Z34 !s107 D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/functions.vhd|
+Z32 !s110 1390576871
+Z33 !s108 1390576871.448000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/functions.vhd|
+Z35 !s107 D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/functions.vhd|
 R12
 R13
 !s100 oX^d^B``llL=QLW3b?n7T1
 !i10b 1
 Bbody
-Z35 DPx4 work 9 functions 0 22 ;2<GM6Zc4==ZgRoi=blNR3
+Z36 DPx4 work 9 functions 0 22 ;2<GM6Zc4==ZgRoi=blNR3
 R1
 R2
 R3
@@ -157,32 +157,32 @@ L23
 V[hDidU?B:MOme=[?o<zTN3
 R7
 32
-R31
 R32
 R33
 R34
+R35
 R12
 R13
 nbody
 !s100 aWTA3QA?HH;l;`m@[UaM>0
 !i10b 1
 Esampleena
-Z36 w1389805295
+Z37 w1389805295
 R1
 R2
 R3
 R4
-Z37 8D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SampleENA.vhd
-Z38 FD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SampleENA.vhd
+Z38 8D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SampleENA.vhd
+Z39 FD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SampleENA.vhd
 l0
 L33
 V63@iF;]?PjS@OEnET5kPo2
 R7
 32
-Z39 !s110 1390576872
-Z40 !s108 1390576871.913000
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SampleENA.vhd|
-Z42 !s107 D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SampleENA.vhd|
+Z40 !s110 1390576872
+Z41 !s108 1390576871.913000
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SampleENA.vhd|
+Z43 !s107 D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SampleENA.vhd|
 R12
 R13
 !s100 I]>z3Vj>Y[6e0j^R^m]4i2
@@ -197,38 +197,38 @@ L40
 VD]QU3V2_nC_ZfnK7VSNSR0
 R7
 32
-R39
 R40
 R41
 R42
+R43
 R12
 R13
 !s100 YZfiGRN5Kk@lL4;fKhhh`0
 !i10b 1
 Esdraminterface
-Z43 w1390232261
-R35
+Z44 w1390232261
+R36
 R1
 R2
 R3
 R4
-Z44 8D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SDRAMInterface.vhd
-Z45 FD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SDRAMInterface.vhd
+Z45 8D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SDRAMInterface.vhd
+Z46 FD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SDRAMInterface.vhd
 l0
 L7
 VSQz2B@QaD?4iP]M[M`2zB0
 R7
 32
-R39
-Z46 !s108 1390576872.315000
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SDRAMInterface.vhd|
-Z48 !s107 D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SDRAMInterface.vhd|
+R40
+Z47 !s108 1390576872.315000
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SDRAMInterface.vhd|
+Z49 !s107 D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/SDRAMInterface.vhd|
 R12
 R13
 !s100 G4N;0MVZ>QFKcA;>1KbdJ3
 !i10b 1
 Ainterface
-R35
+R36
 R1
 R2
 R3
@@ -238,52 +238,52 @@ L26
 V]_gL[b3SIGgS6WNLQhhCH1
 R7
 32
-R39
-R46
+R40
 R47
 R48
+R49
 R12
 R13
 !s100 5L3N]5@QBGCCWC;G;250Y3
 !i10b 1
 Etop
-Z49 w1390516851
+Z50 w1390578783
 R1
-R35
+R36
 R2
 R3
 R4
-Z50 8D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/top.vhd
-Z51 FD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/top.vhd
+Z51 8D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/top.vhd
+Z52 FD:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/top.vhd
 l0
 L8
 V@:C1;CX_IJBB<b]:R>lIf2
 R7
 32
-Z52 !s110 1390576869
-Z53 !s108 1390576869.702000
-Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/top.vhd|
-Z55 !s107 D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/top.vhd|
+Z53 !s110 1390580526
+Z54 !s108 1390580526.680000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/top.vhd|
+Z56 !s107 D:/Dropbox/Dropbox/github/musicplayer/project/Musicplayer/top.vhd|
 R12
 R13
 !s100 oVzAC0j;4SONQ=iRb>k2Z1
 !i10b 1
 Abeh
 R1
-R35
+R36
 R2
 R3
 DEx4 work 3 top 0 22 @:C1;CX_IJBB<b]:R>lIf2
-l135
+l131
 L33
-V2RSEg2HX6IQT7kJ<TlDQ?1
+V`KdOI4b<M8aEbTnH52B>02
 R7
 32
-R52
 R53
 R54
 R55
+R56
 R12
 R13
-!s100 =dh_3IFlho:n1e8kVd:f`1
+!s100 K^Iz]cPgz1OfHejk]P<OB1
 !i10b 1

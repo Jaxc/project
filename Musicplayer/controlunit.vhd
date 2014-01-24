@@ -10,7 +10,8 @@ port(
   ByteIn          : IN STD_LOGIC_VECTOR(7 downto 0);
   ModeSelect      : out STD_LOGIC_VECTOR(3 downto 0);
   NumChannelsout  : OUT STD_LOGIC_VECTOR(2 downto 0);
-  bitspersampleout: OUT STD_LOGIC_VECTOR(5 downto 0)
+  samplerateout	: OUT STD_LOGIC;
+  bitspersampleout: OUT STD_LOGIC_VECTOR(2 downto 0)
   
   );
 end controlunit;
@@ -31,7 +32,7 @@ architecture control of controlunit is
       TwoByteWord : STD_LOGIC_VECTOR(15 downto 0);
     end record;
     
-  signal current,nxt  : recordtype;
+  signal current,nxt  : recordtype:=(1,start,(others => '0'),(others => '0'),'0',(others => '0'));
   
 
 begin
@@ -41,33 +42,38 @@ begin
   case current.state is
     
     when start =>
-      if current.cnt = 1 then
+      if current.cnt = 0 then
         nxt.state <= Chunkid;
-        nxt.cnt <= 0;
+        nxt.cnt <= 3;
       else 
-        nxt.cnt <= current.cnt + 1;
+        nxt.cnt <= current.cnt - 1;
       end if;
       
     when chunkID =>
-      nxt.cnt <= current.cnt + 1;
-      if current.cnt = 0 then
+      if current.cnt = 3 then
         if bytein /= X"52" then
           nxt.state <= error;
+        else
+          nxt.cnt <= current.cnt - 1;
         end if;
-      elsif current.cnt = 1 then
+      elsif current.cnt = 2 then
         if bytein /= X"49" then
           nxt.state <= error;
+        else
+          nxt.cnt <= current.cnt - 1;
         end if;        
-      elsif current.cnt = 2 then
+      elsif current.cnt = 1 then
         if bytein /= X"46" then
           nxt.state <= error;
+		    else
+			    nxt.cnt <= current.cnt - 1;
         end if;        
-      elsif current.cnt = 3 then
+      elsif current.cnt = 0 then
         if bytein /= X"46" then
           nxt.state <= error;
         else 
           nxt.state <= chunksize;
-          nxt.cnt <= 0;
+          nxt.cnt <= 3;
         end if;        
       end if; 
       
@@ -76,11 +82,11 @@ begin
       nxt.bytesleft <= bytein & current.bytesleft(31 downto 8);
 		  nxt.ChunkBytesLeft <= (others => '0');
 		  nxt.requestdata <= '1';
-        if current.cnt = 3 then
+        if current.cnt = 0 then
           nxt.state <=  Format;
           nxt.cnt <= 0;
         else
-          nxt.cnt <= current.cnt + 1;
+          nxt.cnt <= current.cnt - 1;
         
         end if;      
 
@@ -88,7 +94,7 @@ begin
       nxt.bytesLeft <= std_logic_vector(unsigned(current.bytesleft) - 1);
 		  nxt.ChunkBytesLeft <= (others => '0');
 		  nxt.requestdata <= '1';
-        if current.cnt = 3 then
+        if current.cnt = 0 then
           if bytein = x"45" then
             nxt.state <= Subchunk1ID;
             nxt.cnt <= 0;
@@ -96,7 +102,7 @@ begin
             nxt.state <= ERROR;
           end if;
         else
-          nxt.cnt <= current.cnt + 1;
+          nxt.cnt <= current.cnt - 1;
           if current.cnt = 0 then
             if (bytein /= x"57") then
               nxt.state <= ERROR;
@@ -281,7 +287,7 @@ when SubChunk2ID =>
         nxt.cnt <= 0;
         nxt.requestdata <= '0';
       else
-        nxt.cnt <= current.cnt + 1;
+        nxt.cnt <= current.cnt - 1;
         
       end if; 
       
@@ -295,7 +301,7 @@ when SubChunk2ID =>
          
     when others =>
 	 nxt.state <= start;
-	 nxt.cnt <= 0;
+	 nxt.cnt <= 1;
 	 nxt.bytesleft <= (others => '0');
 	 nxt.ChunkBytesLeft <= (others => '0');
 	 nxt.TwoByteWord <= (others => '0');
@@ -309,7 +315,7 @@ process(clk,rst)
 begin
   if rst = '0' then
     current.state <= start;
-    current.cnt <= 0;
+    current.cnt <= 1;
     
   elsif rising_edge(clk) then
     if filestart <= '0' then
@@ -321,7 +327,7 @@ begin
           numchannelsout <= current.TwoByteWord(2 downto 0);
           
         when Subchunk2id =>
-          bitspersampleout <= current.TwoByteWord(5 downto 0);
+          bitspersampleout <= current.TwoByteWord(5 downto 3);
           
         when others =>
           
