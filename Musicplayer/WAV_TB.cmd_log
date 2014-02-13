@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Dropbox/github/musicplayer/project/Musicplayer/WAV_TB.xst" -ofn "C:/Dropbox/github/musicplayer/project/Musicplayer/WAV_TB.syr" 
+xst -intstyle ise -ifn "C:/Dropbox/github/musicplayer/project/Musicplayer/WAV_TB.xst" -ofn "C:/Dropbox/github/musicplayer/project/Musicplayer/WAV_TB.syr" 
+xst -intstyle ise -ifn "C:/Dropbox/github/musicplayer/project/Musicplayer/WAV_TB.xst" -ofn "C:/Dropbox/github/musicplayer/project/Musicplayer/WAV_TB.syr" 

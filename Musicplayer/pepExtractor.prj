@@ -1,1 +1,2 @@
-work	"Decoder2.vhd"
+work	"functions.vhd"
+work	"memory.vhd"

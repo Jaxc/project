@@ -2,6 +2,7 @@ library IEEE;
 
 use ieee.std_logic_1164.all;
 use work.functions.all;
+use work.modules.all;
 --library UNISIM;
 --use UNISIM.Vcomponents.ALL;
 
@@ -18,11 +19,10 @@ port(
   CASOut			 : OUT STD_LOGIC;
   RASOut			 : OUT STD_LOGIC;
   BSOut			 : OUT STD_LOGIC;
-  ByteRateOut	 : OUT STD_LOGIC;
-  BlockAlignOut : OUT STD_LOGIC;
   MemCLKIN		 : in STD_LOGIC;
   BitsPerSampleOut : OUT STD_LOGIC;
-  testOut		 : OUT STD_LOGIC;
+  errorout		 : OUT STD_LOGIC;
+  errorcode		 : OUT STD_LOGIC_vector(3 downto 0);
 --  ADDRtest  	 : OUT STD_LOGIC_vector(4 downto 0);
   WEOut 			 : OUT STD_LOGIC
   );
@@ -32,101 +32,17 @@ end top;
 
 architecture beh of top is 
 
-	COMPONENT SDRAMInterface
-	PORT(
-		clk : IN std_logic;
-		rst : IN std_logic;
-		MemDataIn : IN std_logic_vector(15 downto 0);
-		requestread : in STD_LOGIC;          
-		AddressOut : OUT std_logic_vector(11 downto 0);
-		MemCLKOut : OUT std_logic;
-		WEOut : OUT std_logic;
-		RASOut : OUT std_logic;
-		CASOut : OUT std_logic;
-		BSOUT	 : OUT STD_LOGIC;
-		Filestart   : OUT STD_LOGIC;
-		testout : Out STD_LOGIC;
---		CLKENAOUT 	: OUT STD_LOGIC;
-		byteout : OUT std_logic_vector(7 downto 0)
-		);
-	END COMPONENT;
-
-
-COMPONENT decoder
-	PORT(
-		clk : IN std_logic;
-		rst : IN std_logic;
-		SampleCLKEna : in std_logic;
-		bytein : IN std_logic_vector(7 downto 0);   
-		Filestart   : IN STD_LOGIC;       
-		SampleRateOut : OUT std_logic;
-		ByteRateOut : OUT std_logic;
-      BlockAlignOut   : OUT STD_LOGIC;
-      RequestRead     : OUT STD_LOGIC;	
-		ERROROUT 			: OUT STD_LOGIC;
---		BitsPerSampleOut : OUT std_logic_vector(15 downto 0);
-		SampleOutLeft   : OUT STD_LOGIC_VECTOR(7 downto 0);
-      SampleOutRight  : OUT STD_LOGIC_VECTOR(7 downto 0)
-		);
-	END COMPONENT;
-	
-	COMPONENT decoder2
-	PORT(
-		clk : IN std_logic;
-		rst : IN std_logic;
-		SampleCLKEna : IN std_logic;
-		bytein : IN std_logic_vector(7 downto 0);
-		Filestart : IN std_logic;
-		modeselect : IN std_logic_vector(3 downto 0);
-		Numchannels : IN std_logic_vector(2 downto 0);  
-		bitspersamplein : IN STD_LOGIC_VECTOR(2 downto 0);
-		requestread		 : OUT STD_LOGIC;
-		SampleOutLeft : OUT std_logic_vector(7 downto 0);
-		SampleOutRight : OUT std_logic_vector(7 downto 0)
-		);
-	END COMPONENT;
-	
-	COMPONENT controlunit
-	PORT(
-		clk : IN std_logic;
-		rst : IN std_logic;
-		filestart : IN std_logic;
-		ByteIn : IN std_logic_vector(7 downto 0);          
-		ModeSelect : OUT std_logic_vector(3 downto 0);
-		NumChannelsout     : OUT STD_LOGIC_VECTOR(2 downto 0);
-		bitspersampleout : out STD_LOGIC_VECTOR(2 downto 0)
-		);
-	END COMPONENT;
-	
-	COMPONENT memory
-	PORT(
-		clk : IN std_logic;
-		rst : IN std_logic;  
-		requestread  : in STD_LOGIC;
-		Filestart : in STD_LOGIC;
-		sampleclk : in STD_LOGIC;      
-		byteout : OUT std_logic_vector(7 downto 0)
-		);
-	END COMPONENT;	
-	
-COMPONENT SampleENA
-	PORT(
-		CLK : IN std_logic;
-		RST : IN std_logic;
-		samplerate : in std_logic;
-		SampleCLKEna : out std_logic      
-		);
-	END COMPONENT;
 
 signal bytetransfer : byte;
 --signal BlockAlignOut: STD_LOGIC_VECTOR(15 downto 0);
-signal SampleCLKEna,memclkbuf,tmpwe,tmpras,tmpcas : STD_LOGIC;
+signal SampleCLKEna,tmpwe,tmpras,tmpcas : STD_LOGIC;
 signal RST_in : STD_LOGIC;
-signal samplerate,filestart,requestread : STD_LOGIC;
+signal samplerate,filestart,requestread,RequestReadDec : STD_LOGIC;
 signal addr : STD_LOGIC_VECTOR(11 downto 0);
 signal modeselect : STD_LOGIC_VECTOR(3 downto 0);
 signal NumChannels     : STD_LOGIC_VECTOR(2 downto 0);
 signal bitspersample : STD_LOGIC_VECTOR(2 downto 0);
+Signal SampleoutrightBuf,SampleOutLeftBuf : STD_LOGIC_VECTOR(15 downto 0);
 
 begin
 	RST_in <= rst;
@@ -166,10 +82,10 @@ begin
 --		SampleRateOut => ,
 --		ByteRateOut => ,
 --		BlockAlignOut => ,
-		RequestRead => requestread,
-		SampleOutLeft => SampleOutLeft,
+		RequestRead => requestreadDec,
+		SampleOutLeft => SampleOutleftbuf,
 --		ERROROUT => ,
-		SampleOutRight => SampleOutRight
+		SampleOutRight => SampleOutRightbuf
 	);
 	
 --	Inst_memory: memory PORT MAP(
@@ -224,8 +140,13 @@ weout <= tmpwe;
 --		ID_OK => ,
 		filestart => filestart,
 		ByteIn => bytetransfer,
+		RequestDataIn  => requestreadDec,
+    RequestDataOut => requestRead,
+    samplerateout => samplerate,
 		numchannelsout => numchannels,
 		ModeSelect => modeselect,
+		errorout => errorout,
+		errorcode => errorcode,
 		Bitspersampleout => bitspersample
 --		IDByte => 
 	);
@@ -233,12 +154,20 @@ weout <= tmpwe;
 --sampleoutright(0) <= tmpcas;
 --sampleoutright(1) <= tmpras;
 --sampleoutright(2) <= tmpwe;
-
---sampleoutleft <= bytetransfer;
-
- SampleCLKOut <= filestart; 
+process(sampleoutRightbuf,SampleoutLeftbuf,bitspersample)
+  begin
+    case bitspersample is
+      
+    when "001" =>
+      sampleoutleft <= sampleoutleftbuf(7 downto 0);
+      sampleoutright <= sampleoutrightbuf(7 downto 0);
+    when others =>
+      sampleoutleft <= sampleoutleftbuf(15 downto 8);
+      sampleoutright <= sampleoutrightbuf(15 downto 8);
+    end case;
+  end process;
+ SampleCLKOut <= requestread; 
 -- bitspersampleout <= samplerate;
 --  <= tmp;
 -- MemclkOUT <= memclkbuf;
- --testout <= Bytetransfer(7) and  Bytetransfer(6) and  Bytetransfer(5) and  Bytetransfer(4) and  Bytetransfer(3) and  Bytetransfer(2) and  Bytetransfer(1) and  Bytetransfer(0);
 end beh;

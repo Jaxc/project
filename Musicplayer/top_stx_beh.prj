@@ -1,0 +1,6 @@
+vhdl isim_temp "functions.vhd"
+vhdl isim_temp "SDRAMInterface.vhd"
+vhdl isim_temp "SampleENA.vhd"
+vhdl isim_temp "Decoder2.vhd"
+vhdl isim_temp "controlunit.vhd"
+vhdl isim_temp "top.vhd"

@@ -17,7 +17,7 @@ port(
   CASOut      : OUT STD_LOGIC;							-- CAS to SDRAM
   BSOut		     : OUT STD_LOGIC;							-- BS to SDRAM
   Filestart   : OUT STD_LOGIC;							-- Signals the start of a file
-  testout     : OUT STD_LOGIC;
+--  testout     : OUT STD_LOGIC;
   byteout     : out sTD_LOGIC_VECTOR(7 downto 0)	-- The current read byte
   );
 end SDRAMInterface

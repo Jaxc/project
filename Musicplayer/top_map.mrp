@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Mapping Report File for Design 'top'
 
 Design Information
@@ -9,35 +9,35 @@ Target Device  : xc3s200a
 Target Package : vq100
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Mon Jan 20 17:06:15 2014
+Mapped Date    : Thu Feb 13 17:38:31 2014
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:           195 out of   3,584    5%
-  Number of 4 input LUTs:               547 out of   3,584   15%
+  Number of Slice Flip Flops:           238 out of   3,584    6%
+  Number of 4 input LUTs:               648 out of   3,584   18%
 Logic Distribution:
-  Number of occupied Slices:            326 out of   1,792   18%
-    Number of Slices containing only related logic:     326 out of     326 100%
-    Number of Slices containing unrelated logic:          0 out of     326   0%
+  Number of occupied Slices:            363 out of   1,792   20%
+    Number of Slices containing only related logic:     363 out of     363 100%
+    Number of Slices containing unrelated logic:          0 out of     363   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         576 out of   3,584   16%
-    Number used as logic:               547
-    Number used as a route-thru:         29
+  Total Number of 4 input LUTs:         676 out of   3,584   18%
+    Number used as logic:               648
+    Number used as a route-thru:         28
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 57 out of      68   83%
+  Number of bonded IOBs:                 59 out of      68   86%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                3.53
+Average Fanout of Non-Clock Nets:                3.57
 
-Peak Memory Usage:  281 MB
-Total REAL time to MAP completion:  6 secs 
-Total CPU time to MAP completion:   6 secs 
+Peak Memory Usage:  208 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   3 secs 
 
 NOTES:
 
@@ -78,26 +78,57 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Pack:266 - The function generator
-   Inst_decoder/current.State_FSM_FFd14-In251 failed to merge with F5
-   multiplexer Inst_decoder/current.State_FSM_FFd12-In121_f5.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
 
 Section 3 - Informational
 -------------------------
+INFO:Map:110 - output buffer 'MemCLKOut_OBUF' driving design level port
+   'MemCLKOut' is being pushed into module 'Inst_SDRAMInterface' to enable I/O
+   register usage. The buffer has been renamed as
+   'Inst_SDRAMInterface/MemCLKOut_OBUF'.
+INFO:Map:110 - output buffer 'errorcode_0_OBUF' driving design level port
+   'errorcode<0>' is being pushed into module 'Inst_controlunit' to enable I/O
+   register usage. The buffer has been renamed as
+   'Inst_controlunit/errorcode_0_OBUF'.
+INFO:Map:110 - output buffer 'errorcode_1_OBUF' driving design level port
+   'errorcode<1>' is being pushed into module 'Inst_controlunit' to enable I/O
+   register usage. The buffer has been renamed as
+   'Inst_controlunit/errorcode_1_OBUF'.
+INFO:Map:110 - output buffer 'errorcode_2_OBUF' driving design level port
+   'errorcode<2>' is being pushed into module 'Inst_controlunit' to enable I/O
+   register usage. The buffer has been renamed as
+   'Inst_controlunit/errorcode_2_OBUF'.
+INFO:Map:110 - output buffer 'errorcode_3_OBUF' driving design level port
+   'errorcode<3>' is being pushed into module 'Inst_controlunit' to enable I/O
+   register usage. The buffer has been renamed as
+   'Inst_controlunit/errorcode_3_OBUF'.
 INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   2 block(s) optimized away
+   6 block(s) optimized away
+   1 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
 
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "modeselect<1>" is unused and has been removed.
+
 Optimized Block(s):
 TYPE 		BLOCK
-GND 		XST_GND
-VCC 		XST_VCC
+GND 		Inst_SDRAMInterface/XST_GND
+VCC 		Inst_SDRAMInterface/XST_VCC
+GND 		Inst_SampleENA/XST_GND
+VCC 		Inst_SampleENA/XST_VCC
+GND 		Inst_controlunit/XST_GND
+VCC 		Inst_controlunit/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -109,26 +140,24 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
 |                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| A<0>                               | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| A<1>                               | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| A<2>                               | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| A<3>                               | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| A<4>                               | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| A<5>                               | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| A<6>                               | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| A<7>                               | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| A<8>                               | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| A<9>                               | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| A<10>                              | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| A<11>                              | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| BSOut                              | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
-| BitsPerSampleOut                   | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST    |              |          | 0 / 0    | 3STATE           |
-| BlockAlignOut                      | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| ByteRateOut                        | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| CASOut                             | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<0>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<1>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<2>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<3>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<4>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<5>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<6>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<7>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<8>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<9>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<10>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| A<11>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| BSOut                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| BitsPerSampleOut                   | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| CASOut                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | MemCLKIN                           | IBUF             | INPUT     | LVTTL                |       |          |         |              |          | 0 / 0    |                  |
-| MemCLKOut                          | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST    |              |          | 0 / 0    | 3STATE           |
-| RASOut                             | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| MemCLKOut                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| RASOut                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | SampleOutLeft<0>                   | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | SampleOutLeft<1>                   | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | SampleOutLeft<2>                   | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
@@ -145,7 +174,7 @@ Section 6 - IOB Properties
 | SampleOutRight<5>                  | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | SampleOutRight<6>                  | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | SampleOutRight<7>                  | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| WEOut                              | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| WEOut                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | clk                                | IBUF             | INPUT     | LVTTL                |       |          |         |              |          | 0 / 0    |                  |
 | d<0>                               | IBUF             | INPUT     | LVTTL                |       |          |         |              |          | 0 / 0    |                  |
 | d<1>                               | IBUF             | INPUT     | LVTTL                |       |          |         |              |          | 0 / 0    |                  |
@@ -163,9 +192,13 @@ Section 6 - IOB Properties
 | d<13>                              | IBUF             | INPUT     | LVTTL                |       |          |         |              |          | 0 / 0    |                  |
 | d<14>                              | IBUF             | INPUT     | LVTTL                |       |          |         |              |          | 0 / 0    |                  |
 | d<15>                              | IBUF             | INPUT     | LVTTL                |       |          |         |              |          | 0 / 0    |                  |
+| errorcode<0>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| errorcode<1>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| errorcode<2>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| errorcode<3>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| errorout                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | rst                                | IBUF             | INPUT     | LVTTL                |       |          |         |              | PULLUP   | 0 / 0    |                  |
 | sampleclkout                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| testOut                            | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST    |              |          | 0 / 0    | 3STATE           |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

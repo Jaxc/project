@@ -1,0 +1,4 @@
+vhdl work "../Musicplayer/functions.vhd"
+vhdl work "../Musicplayer/netgen/par/top_timesim.vhd"
+vhdl work "../Musicplayer/memory.vhd"
+vhdl work "../Musicplayer/WAV_TB.vhd"

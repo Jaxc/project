@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Dropbox/github/musicplayer/project/simulation/WAV_TB_isim_beh.exe" -prj "C:/Dropbox/github/musicplayer/project/simulation/WAV_TB_beh.prj" "work.WAV_TB" 
