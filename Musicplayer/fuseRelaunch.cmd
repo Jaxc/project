@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "C:/Dropbox/github/musicplayer/project/Musicplayer/WAV_TB_isim_beh.exe" -prj "C:/Dropbox/github/musicplayer/project/Musicplayer/WAV_TB_beh.prj" "work.WAV_TB" 
