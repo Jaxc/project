@@ -67,9 +67,10 @@
       <outfile xil_pn:name="../Musicplayer/memory.vhd"/>
       <outfile xil_pn:name="../Musicplayer/netgen/par/top_timesim.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1392307980" xil_pn:in_ck="2140164506600222977" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-900349344575570260" xil_pn:start_ts="1392307936">
+    <transform xil_pn:end_ts="1392377532" xil_pn:in_ck="2140164506600222977" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-900349344575570260" xil_pn:start_ts="1392377465">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="WAV_TB_beh.prj"/>
@@ -79,9 +80,11 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1392307980" xil_pn:in_ck="6344298844859534044" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2498128418351604017" xil_pn:start_ts="1392307980">
+    <transform xil_pn:end_ts="1392377532" xil_pn:in_ck="6344298844859534044" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2498128418351604017" xil_pn:start_ts="1392377532">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="WAV_TB_isim_beh.wdb"/>

@@ -79,13 +79,13 @@
          <ClosedNode>/top - Structure C:|Dropbox|github|musicplayer|project|Musicplayer|netgen|par|top_timesim.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>WAV_TB - TESTBENCH (C:/Dropbox/github/musicplayer/project/Musicplayer/WAV_TB.vhd)</SelectedItem>
+         <SelectedItem>Inst_memory - memory - mem (C:/Dropbox/github/musicplayer/project/Musicplayer/memory.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001da000000020000000000000000000000000200000064ffffffff000000810000000300000002000001da0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>WAV_TB - TESTBENCH (C:/Dropbox/github/musicplayer/project/Musicplayer/WAV_TB.vhd)</CurrentItem>
+      <CurrentItem>Inst_memory - memory - mem (C:/Dropbox/github/musicplayer/project/Musicplayer/memory.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>

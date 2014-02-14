@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.28 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.51 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.51 secs
  
 --> Reading design: top.prj
 
@@ -116,8 +116,7 @@ Architecture stuff of Entity decoder2 is up to date.
 Compiling vhdl file "C:/Dropbox/github/musicplayer/project/Musicplayer/SDRAMInterface.vhd" in Library work.
 Architecture interface of Entity sdraminterface is up to date.
 Compiling vhdl file "C:/Dropbox/github/musicplayer/project/Musicplayer/controlunit.vhd" in Library work.
-Entity <controlunit> compiled.
-Entity <controlunit> (Architecture <control>) compiled.
+Architecture control of Entity controlunit is up to date.
 Compiling vhdl file "C:/Dropbox/github/musicplayer/project/Musicplayer/top.vhd" in Library work.
 Architecture beh of Entity top is up to date.
 
@@ -610,12 +609,12 @@ Delay:               5.789ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 13.04 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.92 secs
  
 --> 
 
-Total memory usage is 210268 kilobytes
+Total memory usage is 210716 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    6 (   0 filtered)

@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\top.ncd
-OUTFILE=D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer\top.bit
+INFILE=C:\Dropbox\github\musicplayer\project\Musicplayer\top.ncd
+OUTFILE=C:\Dropbox\github\musicplayer\project\Musicplayer\top.bit
 FAMILY=Spartan3A and Spartan3AN
 PART=xc3s200a-4vq100
-WORKINGDIR=D:\Dropbox\Dropbox\github\musicplayer\project\Musicplayer
+WORKINGDIR=C:\Dropbox\github\musicplayer\project\Musicplayer
 LICENSE=WebPack
 USER_INFO=210716284_0_0_135

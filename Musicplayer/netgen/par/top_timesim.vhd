@@ -7,7 +7,7 @@
 -- \   \   \/     Version: P.20131013
 --  \   \         Application: netgen
 --  /   /         Filename: top_timesim.vhd
--- /___/   /\     Timestamp: Thu Feb 13 17:41:18 2014
+-- /___/   /\     Timestamp: Fri Feb 14 12:30:27 2014
 -- \   \  /  \ 
 --  \___\/\___\
 --             
@@ -657,6 +657,7 @@ architecture Structure of controlunit is
   signal Inst_controlunit_samplerateout_cmp_eq0000_CYMUXF2_11075 : STD_LOGIC; 
   signal Inst_controlunit_samplerateout_cmp_eq0000_LOGIC_ZERO_11074 : STD_LOGIC; 
   signal Inst_controlunit_samplerateout_cmp_eq0000_CYSELG_11068 : STD_LOGIC; 
+  signal samplerate_FFX_RST : STD_LOGIC; 
   signal samplerate_DXMUX_11108 : STD_LOGIC; 
   signal samplerate_XORF_11106 : STD_LOGIC; 
   signal samplerate_CYINIT_11105 : STD_LOGIC; 
@@ -682,12 +683,14 @@ architecture Structure of controlunit is
   signal N250 : STD_LOGIC; 
   signal Inst_controlunit_current_state_FSM_FFd12_In42_BXINV_11223 : STD_LOGIC; 
   signal N249 : STD_LOGIC; 
+  signal Inst_controlunit_current_state_FSM_FFd10_FFX_RST : STD_LOGIC; 
   signal Inst_controlunit_current_state_FSM_FFd10_DXMUX_11261 : STD_LOGIC; 
   signal Inst_controlunit_current_state_FSM_FFd10_F5MUX_11259 : STD_LOGIC; 
   signal Inst_controlunit_current_state_FSM_FFd10_F : STD_LOGIC; 
   signal Inst_controlunit_current_state_FSM_FFd10_BXINV_11248 : STD_LOGIC; 
   signal current_state_FSM_FFd10_In1_11246 : STD_LOGIC; 
   signal Inst_controlunit_current_state_FSM_FFd10_CLKINV_11240 : STD_LOGIC; 
+  signal Inst_controlunit_current_state_FSM_FFd13_FFX_RST : STD_LOGIC; 
   signal Inst_controlunit_current_state_FSM_FFd13_DXMUX_11297 : STD_LOGIC; 
   signal Inst_controlunit_current_state_FSM_FFd13_F5MUX_11295 : STD_LOGIC; 
   signal Inst_controlunit_current_state_FSM_FFd13_F : STD_LOGIC; 
@@ -712,6 +715,7 @@ architecture Structure of controlunit is
   signal current_cnt_mux0001_3_212_O : STD_LOGIC; 
   signal N51 : STD_LOGIC; 
   signal current_cnt_mux0001_3_2146_O : STD_LOGIC; 
+  signal Inst_controlunit_current_TwoByteWord_10_FFX_RST : STD_LOGIC; 
   signal Inst_controlunit_current_TwoByteWord_10_DXMUX_11536 : STD_LOGIC; 
   signal Inst_controlunit_current_TwoByteWord_10_FXMUX_11535 : STD_LOGIC; 
   signal N251 : STD_LOGIC; 
@@ -721,6 +725,7 @@ architecture Structure of controlunit is
   signal N37 : STD_LOGIC; 
   signal N142 : STD_LOGIC; 
   signal current_state_cmp_eq0005 : STD_LOGIC; 
+  signal Inst_controlunit_current_TwoByteWord_12_FFX_RST : STD_LOGIC; 
   signal Inst_controlunit_current_TwoByteWord_12_DXMUX_11622 : STD_LOGIC; 
   signal N120 : STD_LOGIC; 
   signal Inst_controlunit_current_TwoByteWord_12_CLKINV_11605 : STD_LOGIC; 
@@ -731,6 +736,7 @@ architecture Structure of controlunit is
   signal nxt_TwoByteWord_13_mux0001_SW0_O : STD_LOGIC; 
   signal Inst_controlunit_current_TwoByteWord_13_CLKINV_11644 : STD_LOGIC; 
   signal Inst_controlunit_current_TwoByteWord_13_CEINVNOT : STD_LOGIC; 
+  signal Inst_controlunit_current_cnt_3_FFX_RST : STD_LOGIC; 
   signal Inst_controlunit_current_cnt_3_DXMUX_11697 : STD_LOGIC; 
   signal current_cnt_mux0001_0_20_O : STD_LOGIC; 
   signal Inst_controlunit_current_cnt_3_CLKINV_11681 : STD_LOGIC; 
@@ -1226,12 +1232,6 @@ architecture Structure of controlunit is
   signal current_state_FSM_FFd14_In119_15928 : STD_LOGIC; 
   signal current_state_FSM_FFd15_In112_15940 : STD_LOGIC; 
   signal errorout_OBUF_G : STD_LOGIC; 
-  signal samplerate_FFX_RSTAND_11114 : STD_LOGIC; 
-  signal Inst_controlunit_current_state_FSM_FFd10_FFX_RSTAND_11266 : STD_LOGIC; 
-  signal Inst_controlunit_current_state_FSM_FFd13_FFX_RSTAND_11302 : STD_LOGIC; 
-  signal Inst_controlunit_current_TwoByteWord_10_FFX_RSTAND_11542 : STD_LOGIC; 
-  signal Inst_controlunit_current_TwoByteWord_12_FFX_RSTAND_11628 : STD_LOGIC; 
-  signal Inst_controlunit_current_cnt_3_FFX_RSTAND_11702 : STD_LOGIC; 
   signal Inst_controlunit_current_state_FSM_FFd11_FFX_RSTAND_12001 : STD_LOGIC; 
   signal Inst_controlunit_current_cnt_1_FFX_RSTAND_12204 : STD_LOGIC; 
   signal Inst_controlunit_current_cnt_0_FFX_SET : STD_LOGIC; 
@@ -1660,30 +1660,6 @@ begin
       I => Msub_current_ChunkBytesLeft_addsub0000_lut(5),
       O => Inst_controlunit_current_ChunkBytesLeft_addsub0000_4_CYSELG_10212
     );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_4_INV_0 : X_LUT4
-    generic map(
-      INIT => X"0F0F",
-      LOC => "SLICE_X31Y29"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => current_ChunkBytesLeft_4_4257,
-      ADR3 => VCC,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(4)
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_6_INV_0 : X_LUT4
-    generic map(
-      INIT => X"00FF",
-      LOC => "SLICE_X31Y30"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => VCC,
-      ADR3 => current_ChunkBytesLeft_6_4262,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(6)
-    );
   Inst_controlunit_current_ChunkBytesLeft_addsub0000_6_LOGIC_ONE : X_ONE
     generic map(
       LOC => "SLICE_X31Y30"
@@ -1821,30 +1797,6 @@ begin
       I => Msub_current_ChunkBytesLeft_addsub0000_lut(7),
       O => Inst_controlunit_current_ChunkBytesLeft_addsub0000_6_CYSELG_10250
     );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_7_INV_0 : X_LUT4
-    generic map(
-      INIT => X"0F0F",
-      LOC => "SLICE_X31Y30"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => current_ChunkBytesLeft_7_4263,
-      ADR3 => VCC,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(7)
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_8_INV_0 : X_LUT4
-    generic map(
-      INIT => X"0F0F",
-      LOC => "SLICE_X31Y31"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => current_ChunkBytesLeft_8_4267,
-      ADR3 => VCC,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(8)
-    );
   Inst_controlunit_current_ChunkBytesLeft_addsub0000_8_LOGIC_ONE : X_ONE
     generic map(
       LOC => "SLICE_X31Y31"
@@ -1981,18 +1933,6 @@ begin
     port map (
       I => Msub_current_ChunkBytesLeft_addsub0000_lut(9),
       O => Inst_controlunit_current_ChunkBytesLeft_addsub0000_8_CYSELG_10288
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_9_INV_0 : X_LUT4
-    generic map(
-      INIT => X"3333",
-      LOC => "SLICE_X31Y31"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => current_ChunkBytesLeft_9_4268,
-      ADR2 => VCC,
-      ADR3 => VCC,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(9)
     );
   Inst_controlunit_current_ChunkBytesLeft_addsub0000_10_LOGIC_ONE : X_ONE
     generic map(
@@ -2542,30 +2482,6 @@ begin
       I => Msub_current_ChunkBytesLeft_addsub0000_lut(17),
       O => Inst_controlunit_current_ChunkBytesLeft_addsub0000_16_CYSELG_10440
     );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_16_INV_0 : X_LUT4
-    generic map(
-      INIT => X"3333",
-      LOC => "SLICE_X31Y35"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => current_ChunkBytesLeft_16_4287,
-      ADR2 => VCC,
-      ADR3 => VCC,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(16)
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_18_INV_0 : X_LUT4
-    generic map(
-      INIT => X"00FF",
-      LOC => "SLICE_X31Y36"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => VCC,
-      ADR3 => current_ChunkBytesLeft_18_4292,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(18)
-    );
   Inst_controlunit_current_ChunkBytesLeft_addsub0000_18_LOGIC_ONE : X_ONE
     generic map(
       LOC => "SLICE_X31Y36"
@@ -2702,30 +2618,6 @@ begin
     port map (
       I => Msub_current_ChunkBytesLeft_addsub0000_lut(19),
       O => Inst_controlunit_current_ChunkBytesLeft_addsub0000_18_CYSELG_10478
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_19_INV_0 : X_LUT4
-    generic map(
-      INIT => X"5555",
-      LOC => "SLICE_X31Y36"
-    )
-    port map (
-      ADR0 => current_ChunkBytesLeft_19_4293,
-      ADR1 => VCC,
-      ADR2 => VCC,
-      ADR3 => VCC,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(19)
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_20_INV_0 : X_LUT4
-    generic map(
-      INIT => X"00FF",
-      LOC => "SLICE_X31Y37"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => VCC,
-      ADR3 => current_ChunkBytesLeft_20_4297,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(20)
     );
   Inst_controlunit_current_ChunkBytesLeft_addsub0000_20_LOGIC_ONE : X_ONE
     generic map(
@@ -2864,18 +2756,6 @@ begin
       I => Msub_current_ChunkBytesLeft_addsub0000_lut(21),
       O => Inst_controlunit_current_ChunkBytesLeft_addsub0000_20_CYSELG_10516
     );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_21_INV_0 : X_LUT4
-    generic map(
-      INIT => X"3333",
-      LOC => "SLICE_X31Y37"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => current_ChunkBytesLeft_21_4298,
-      ADR2 => VCC,
-      ADR3 => VCC,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(21)
-    );
   Inst_controlunit_current_ChunkBytesLeft_addsub0000_22_LOGIC_ONE : X_ONE
     generic map(
       LOC => "SLICE_X31Y38"
@@ -3012,6 +2892,30 @@ begin
     port map (
       I => Msub_current_ChunkBytesLeft_addsub0000_lut(23),
       O => Inst_controlunit_current_ChunkBytesLeft_addsub0000_22_CYSELG_10554
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_22_INV_0 : X_LUT4
+    generic map(
+      INIT => X"5555",
+      LOC => "SLICE_X31Y38"
+    )
+    port map (
+      ADR0 => current_ChunkBytesLeft_22_4302,
+      ADR1 => VCC,
+      ADR2 => VCC,
+      ADR3 => VCC,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(22)
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_24_INV_0 : X_LUT4
+    generic map(
+      INIT => X"3333",
+      LOC => "SLICE_X31Y39"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => current_ChunkBytesLeft_24_4307,
+      ADR2 => VCC,
+      ADR3 => VCC,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(24)
     );
   Inst_controlunit_current_ChunkBytesLeft_addsub0000_24_LOGIC_ONE : X_ONE
     generic map(
@@ -3150,6 +3054,30 @@ begin
       I => Msub_current_ChunkBytesLeft_addsub0000_lut(25),
       O => Inst_controlunit_current_ChunkBytesLeft_addsub0000_24_CYSELG_10592
     );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_25_INV_0 : X_LUT4
+    generic map(
+      INIT => X"00FF",
+      LOC => "SLICE_X31Y39"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => VCC,
+      ADR3 => current_ChunkBytesLeft_25_4308,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(25)
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_26_INV_0 : X_LUT4
+    generic map(
+      INIT => X"5555",
+      LOC => "SLICE_X31Y40"
+    )
+    port map (
+      ADR0 => current_ChunkBytesLeft_26_4312,
+      ADR1 => VCC,
+      ADR2 => VCC,
+      ADR3 => VCC,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(26)
+    );
   Inst_controlunit_current_ChunkBytesLeft_addsub0000_26_LOGIC_ONE : X_ONE
     generic map(
       LOC => "SLICE_X31Y40"
@@ -3287,6 +3215,30 @@ begin
       I => Msub_current_ChunkBytesLeft_addsub0000_lut(27),
       O => Inst_controlunit_current_ChunkBytesLeft_addsub0000_26_CYSELG_10630
     );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_27_INV_0 : X_LUT4
+    generic map(
+      INIT => X"00FF",
+      LOC => "SLICE_X31Y40"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => VCC,
+      ADR3 => current_ChunkBytesLeft_27_4313,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(27)
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_28_INV_0 : X_LUT4
+    generic map(
+      INIT => X"3333",
+      LOC => "SLICE_X31Y41"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => current_ChunkBytesLeft_28_4317,
+      ADR2 => VCC,
+      ADR3 => VCC,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(28)
+    );
   Inst_controlunit_current_ChunkBytesLeft_addsub0000_28_LOGIC_ONE : X_ONE
     generic map(
       LOC => "SLICE_X31Y41"
@@ -3415,17 +3367,17 @@ begin
       I => Msub_current_ChunkBytesLeft_addsub0000_lut(29),
       O => Inst_controlunit_current_ChunkBytesLeft_addsub0000_28_CYSELG_10668
     );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_28_INV_0 : X_LUT4
+  Msub_current_ChunkBytesLeft_addsub0000_lut_29_INV_0 : X_LUT4
     generic map(
-      INIT => X"3333",
+      INIT => X"00FF",
       LOC => "SLICE_X31Y41"
     )
     port map (
       ADR0 => VCC,
-      ADR1 => current_ChunkBytesLeft_28_4317,
+      ADR1 => VCC,
       ADR2 => VCC,
-      ADR3 => VCC,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(28)
+      ADR3 => current_ChunkBytesLeft_29_4318,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(29)
     );
   Msub_current_ChunkBytesLeft_addsub0000_lut_30_INV_0 : X_LUT4
     generic map(
@@ -3609,6 +3561,18 @@ begin
       ADR3 => watchdogstate(3),
       O => Mcompar_errorcode_cmp_ne0000_lut(1)
     );
+  Mcompar_errorcode_cmp_ne0000_lut_2_Q : X_LUT4
+    generic map(
+      INIT => X"8241",
+      LOC => "SLICE_X27Y61"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd11_4336,
+      ADR1 => watchdogstate(5),
+      ADR2 => current_state_FSM_FFd10_4338,
+      ADR3 => watchdogstate(4),
+      O => Mcompar_errorcode_cmp_ne0000_lut(2)
+    );
   Inst_controlunit_Mcompar_errorcode_cmp_ne0000_cy_3_LOGIC_ONE : X_ONE
     generic map(
       LOC => "SLICE_X27Y61"
@@ -3682,6 +3646,30 @@ begin
       I => Mcompar_errorcode_cmp_ne0000_lut(3),
       O => Inst_controlunit_Mcompar_errorcode_cmp_ne0000_cy_3_CYSELG_10770
     );
+  Mcompar_errorcode_cmp_ne0000_lut_3_Q : X_LUT4
+    generic map(
+      INIT => X"8421",
+      LOC => "SLICE_X27Y61"
+    )
+    port map (
+      ADR0 => watchdogstate(7),
+      ADR1 => current_state_FSM_FFd9_4340,
+      ADR2 => current_state_FSM_FFd8_4342,
+      ADR3 => watchdogstate(6),
+      O => Mcompar_errorcode_cmp_ne0000_lut(3)
+    );
+  Mcompar_errorcode_cmp_ne0000_lut_4_Q : X_LUT4
+    generic map(
+      INIT => X"8241",
+      LOC => "SLICE_X27Y62"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd6_4347,
+      ADR1 => current_state_FSM_FFd7_4345,
+      ADR2 => watchdogstate(8),
+      ADR3 => watchdogstate(9),
+      O => Mcompar_errorcode_cmp_ne0000_lut(4)
+    );
   Inst_controlunit_Mcompar_errorcode_cmp_ne0000_cy_5_LOGIC_ONE : X_ONE
     generic map(
       LOC => "SLICE_X27Y62"
@@ -3754,6 +3742,30 @@ begin
     port map (
       I => Mcompar_errorcode_cmp_ne0000_lut(5),
       O => Inst_controlunit_Mcompar_errorcode_cmp_ne0000_cy_5_CYSELG_10800
+    );
+  Mcompar_errorcode_cmp_ne0000_lut_5_Q : X_LUT4
+    generic map(
+      INIT => X"8241",
+      LOC => "SLICE_X27Y62"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd4_4351,
+      ADR1 => watchdogstate(10),
+      ADR2 => current_state_FSM_FFd5_4349,
+      ADR3 => watchdogstate(11),
+      O => Mcompar_errorcode_cmp_ne0000_lut(5)
+    );
+  Mcompar_errorcode_cmp_ne0000_lut_6_Q : X_LUT4
+    generic map(
+      INIT => X"9009",
+      LOC => "SLICE_X27Y63"
+    )
+    port map (
+      ADR0 => watchdogstate(13),
+      ADR1 => current_state_FSM_FFd2_4356,
+      ADR2 => current_state_FSM_FFd3_4354,
+      ADR3 => watchdogstate(12),
+      O => Mcompar_errorcode_cmp_ne0000_lut(6)
     );
   Inst_controlunit_Mcompar_errorcode_cmp_ne0000_cy_7_LOGIC_ONE : X_ONE
     generic map(
@@ -3837,6 +3849,30 @@ begin
       I => Mcompar_errorcode_cmp_ne0000_lut(7),
       O => Inst_controlunit_Mcompar_errorcode_cmp_ne0000_cy_7_CYSELG_10830
     );
+  Mcompar_errorcode_cmp_ne0000_lut_7_Q : X_LUT4
+    generic map(
+      INIT => X"8421",
+      LOC => "SLICE_X27Y63"
+    )
+    port map (
+      ADR0 => watchdogstate(14),
+      ADR1 => current_state_FSM_FFd14_4360,
+      ADR2 => current_state_FSM_FFd1_4358,
+      ADR3 => watchdogstate(15),
+      O => Mcompar_errorcode_cmp_ne0000_lut(7)
+    );
+  current_state_cmp_eq0004_wg_lut_0_Q : X_LUT4
+    generic map(
+      INIT => X"0001",
+      LOC => "SLICE_X29Y33"
+    )
+    port map (
+      ADR0 => current_ChunkBytesLeft_7_4263,
+      ADR1 => current_ChunkBytesLeft_10_4272,
+      ADR2 => current_ChunkBytesLeft_9_4268,
+      ADR3 => current_ChunkBytesLeft_8_4267,
+      O => current_state_cmp_eq0004_wg_lut(0)
+    );
   Inst_controlunit_current_state_cmp_eq0004_wg_cy_1_LOGIC_ZERO : X_ZERO
     generic map(
       LOC => "SLICE_X29Y33"
@@ -3899,6 +3935,30 @@ begin
     port map (
       I => current_state_cmp_eq0004_wg_lut(1),
       O => Inst_controlunit_current_state_cmp_eq0004_wg_cy_1_CYSELG_10860
+    );
+  current_state_cmp_eq0004_wg_lut_1_Q : X_LUT4
+    generic map(
+      INIT => X"0001",
+      LOC => "SLICE_X29Y33"
+    )
+    port map (
+      ADR0 => current_ChunkBytesLeft_12_4277,
+      ADR1 => current_ChunkBytesLeft_13_4278,
+      ADR2 => current_ChunkBytesLeft_6_4262,
+      ADR3 => current_ChunkBytesLeft_11_4273,
+      O => current_state_cmp_eq0004_wg_lut(1)
+    );
+  current_state_cmp_eq0004_wg_lut_2_Q : X_LUT4
+    generic map(
+      INIT => X"0001",
+      LOC => "SLICE_X29Y34"
+    )
+    port map (
+      ADR0 => current_ChunkBytesLeft_16_4287,
+      ADR1 => current_ChunkBytesLeft_15_4283,
+      ADR2 => current_ChunkBytesLeft_5_4258,
+      ADR3 => current_ChunkBytesLeft_14_4282,
+      O => current_state_cmp_eq0004_wg_lut(2)
     );
   Inst_controlunit_current_state_cmp_eq0004_wg_cy_3_LOGIC_ZERO : X_ZERO
     generic map(
@@ -3973,6 +4033,30 @@ begin
       I => current_state_cmp_eq0004_wg_lut(3),
       O => Inst_controlunit_current_state_cmp_eq0004_wg_cy_3_CYSELG_10889
     );
+  current_state_cmp_eq0004_wg_lut_3_Q : X_LUT4
+    generic map(
+      INIT => X"0001",
+      LOC => "SLICE_X29Y34"
+    )
+    port map (
+      ADR0 => current_ChunkBytesLeft_19_4293,
+      ADR1 => current_ChunkBytesLeft_4_4257,
+      ADR2 => current_ChunkBytesLeft_18_4292,
+      ADR3 => current_ChunkBytesLeft_17_4288,
+      O => current_state_cmp_eq0004_wg_lut(3)
+    );
+  current_state_cmp_eq0004_wg_lut_4_Q : X_LUT4
+    generic map(
+      INIT => X"0001",
+      LOC => "SLICE_X29Y35"
+    )
+    port map (
+      ADR0 => current_ChunkBytesLeft_20_4297,
+      ADR1 => current_ChunkBytesLeft_22_4302,
+      ADR2 => current_ChunkBytesLeft_21_4298,
+      ADR3 => current_ChunkBytesLeft_3_4253,
+      O => current_state_cmp_eq0004_wg_lut(4)
+    );
   Inst_controlunit_current_state_cmp_eq0004_wg_cy_5_LOGIC_ZERO : X_ZERO
     generic map(
       LOC => "SLICE_X29Y35"
@@ -4045,6 +4129,18 @@ begin
     port map (
       I => current_state_cmp_eq0004_wg_lut(5),
       O => Inst_controlunit_current_state_cmp_eq0004_wg_cy_5_CYSELG_10919
+    );
+  current_state_cmp_eq0004_wg_lut_5_Q : X_LUT4
+    generic map(
+      INIT => X"0001",
+      LOC => "SLICE_X29Y35"
+    )
+    port map (
+      ADR0 => current_ChunkBytesLeft_25_4308,
+      ADR1 => current_ChunkBytesLeft_2_4252,
+      ADR2 => current_ChunkBytesLeft_24_4307,
+      ADR3 => current_ChunkBytesLeft_23_4303,
+      O => current_state_cmp_eq0004_wg_lut(5)
     );
   current_state_cmp_eq0004_wg_lut_6_Q : X_LUT4
     generic map(
@@ -4530,6 +4626,28 @@ begin
       ADR3 => nxt_TwoByteWord_29_0,
       O => samplerateout_cmp_eq0000_wg_lut(7)
     );
+  samplerate_FFX_RSTOR : X_INV
+    generic map(
+      LOC => "SLICE_X15Y36",
+      PATHPULSE => 592 ps
+    )
+    port map (
+      I => rst,
+      O => samplerate_FFX_RST
+    );
+  samplerateout_4232 : X_FF
+    generic map(
+      LOC => "SLICE_X15Y36",
+      INIT => '0'
+    )
+    port map (
+      I => samplerate_DXMUX_11108,
+      CE => samplerate_CEINV_11092,
+      CLK => samplerate_CLKINV_11093,
+      SET => GND,
+      RST => samplerate_FFX_RST,
+      O => samplerateout
+    );
   samplerate_DXMUX : X_BUF
     generic map(
       LOC => "SLICE_X15Y36",
@@ -4607,6 +4725,31 @@ begin
       I => errorcode_3_O,
       O => errorcode(3)
     );
+  errorcode_mux0001_2_221 : X_LUT4
+    generic map(
+      INIT => X"A8AA",
+      LOC => "SLICE_X17Y54"
+    )
+    port map (
+      ADR0 => errorcode_cmp_gt0000_0,
+      ADR1 => errorcode_mux0001_2_2_0,
+      ADR2 => errorcode_mux0001_2_5_0,
+      ADR3 => current_state_FSM_FFd15_4329,
+      O => errorcode_mux0001_2_22
+    );
+  errorcode_2 : X_FF
+    generic map(
+      LOC => "SLICE_X17Y54",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_controlunit_errorcode_2_OBUF_DXMUX_11177,
+      CE => Inst_controlunit_errorcode_2_OBUF_CEINVNOT,
+      CLK => Inst_controlunit_errorcode_2_OBUF_CLKINV_11160,
+      SET => GND,
+      RST => GND,
+      O => errorcode_2_OBUF_4405
+    );
   Inst_controlunit_errorcode_2_OBUF_DXMUX : X_BUF
     generic map(
       LOC => "SLICE_X17Y54",
@@ -4653,6 +4796,30 @@ begin
       I => Mcompar_errorcode_cmp_ne0000_cy_7_Q,
       O => Inst_controlunit_errorcode_2_OBUF_CEINVNOT
     );
+  errorcode_mux0001_2_222 : X_LUT4
+    generic map(
+      INIT => X"FC00",
+      LOC => "SLICE_X17Y54"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => errorcode_mux0001_2_2_0,
+      ADR2 => errorcode_mux0001_2_5_0,
+      ADR3 => errorcode_cmp_gt0000_0,
+      O => errorcode_mux0001_2_221_11166
+    );
+  current_cnt_mux0001_3_73_G : X_LUT4
+    generic map(
+      INIT => X"8000",
+      LOC => "SLICE_X8Y47"
+    )
+    port map (
+      ADR0 => ByteIn(5),
+      ADR1 => N22_0,
+      ADR2 => ByteIn(3),
+      ADR3 => current_state_FSM_FFd11_4336,
+      O => N252
+    );
   Inst_controlunit_current_cnt_mux0001_3_73_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X8Y47",
@@ -4681,6 +4848,30 @@ begin
       I => ByteIn(2),
       O => Inst_controlunit_current_cnt_mux0001_3_73_BXINV_11198
     );
+  current_cnt_mux0001_3_73_F : X_LUT4
+    generic map(
+      INIT => X"0C00",
+      LOC => "SLICE_X8Y47"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => current_cnt_mux0001_3_65_0,
+      ADR2 => ByteIn(5),
+      ADR3 => N22_0,
+      O => N2511
+    );
+  current_state_FSM_FFd12_In42_G : X_LUT4
+    generic map(
+      INIT => X"ECCE",
+      LOC => "SLICE_X6Y49"
+    )
+    port map (
+      ADR0 => N34_0,
+      ADR1 => current_state_FSM_N16_0,
+      ADR2 => current_cnt_1_4416,
+      ADR3 => ByteIn(0),
+      O => N250
+    );
   Inst_controlunit_current_state_FSM_FFd12_In42_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X6Y49",
@@ -4708,6 +4899,40 @@ begin
     port map (
       I => current_cnt_0_4414,
       O => Inst_controlunit_current_state_FSM_FFd12_In42_BXINV_11223
+    );
+  current_state_FSM_FFd12_In42_F : X_LUT4
+    generic map(
+      INIT => X"AAEA",
+      LOC => "SLICE_X6Y49"
+    )
+    port map (
+      ADR0 => current_state_FSM_N16_0,
+      ADR1 => N36_0,
+      ADR2 => current_cnt_1_4416,
+      ADR3 => ByteIn(3),
+      O => N249
+    );
+  Inst_controlunit_current_state_FSM_FFd10_FFX_RSTOR : X_INV
+    generic map(
+      LOC => "SLICE_X15Y49",
+      PATHPULSE => 592 ps
+    )
+    port map (
+      I => rst,
+      O => Inst_controlunit_current_state_FSM_FFd10_FFX_RST
+    );
+  current_state_FSM_FFd10 : X_FF
+    generic map(
+      LOC => "SLICE_X15Y49",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_controlunit_current_state_FSM_FFd10_DXMUX_11261,
+      CE => VCC,
+      CLK => Inst_controlunit_current_state_FSM_FFd10_CLKINV_11240,
+      SET => GND,
+      RST => Inst_controlunit_current_state_FSM_FFd10_FFX_RST,
+      O => current_state_FSM_FFd10_4338
     );
   Inst_controlunit_current_state_FSM_FFd10_DXMUX : X_BUF
     generic map(
@@ -4746,6 +4971,40 @@ begin
       I => clk,
       O => Inst_controlunit_current_state_FSM_FFd10_CLKINV_11240
     );
+  current_state_FSM_FFd10_In1 : X_LUT4
+    generic map(
+      INIT => X"B380",
+      LOC => "SLICE_X15Y49"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd11_4336,
+      ADR1 => current_cnt_mux0001_3_324_0,
+      ADR2 => current_state_and0001_0,
+      ADR3 => current_state_FSM_FFd10_4338,
+      O => current_state_FSM_FFd10_In1_11246
+    );
+  Inst_controlunit_current_state_FSM_FFd13_FFX_RSTOR : X_INV
+    generic map(
+      LOC => "SLICE_X14Y45",
+      PATHPULSE => 592 ps
+    )
+    port map (
+      I => rst,
+      O => Inst_controlunit_current_state_FSM_FFd13_FFX_RST
+    );
+  current_state_FSM_FFd13 : X_FF
+    generic map(
+      LOC => "SLICE_X14Y45",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_controlunit_current_state_FSM_FFd13_DXMUX_11297,
+      CE => VCC,
+      CLK => Inst_controlunit_current_state_FSM_FFd13_CLKINV_11276,
+      SET => GND,
+      RST => Inst_controlunit_current_state_FSM_FFd13_FFX_RST,
+      O => current_state_FSM_FFd13_4331
+    );
   Inst_controlunit_current_state_FSM_FFd13_DXMUX : X_BUF
     generic map(
       LOC => "SLICE_X14Y45",
@@ -4782,6 +5041,18 @@ begin
     port map (
       I => clk,
       O => Inst_controlunit_current_state_FSM_FFd13_CLKINV_11276
+    );
+  current_state_FSM_FFd13_In1 : X_LUT4
+    generic map(
+      INIT => X"B380",
+      LOC => "SLICE_X14Y45"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd15_4329,
+      ADR1 => current_cnt_mux0001_3_324_0,
+      ADR2 => current_state_and0009_0,
+      ADR3 => current_state_FSM_FFd13_4331,
+      O => current_state_FSM_FFd13_In1_11282
     );
   current_state_FSM_FFd11_In22_SW0 : X_LUT4
     generic map(
@@ -4982,6 +5253,18 @@ begin
       ADR3 => current_state_FSM_FFd5_4349,
       O => current_cnt_mux00021_11398
     );
+  current_cnt_mux0001_0_1212 : X_LUT4
+    generic map(
+      INIT => X"AAA2",
+      LOC => "SLICE_X16Y42"
+    )
+    port map (
+      ADR0 => current_cnt_or0003_0,
+      ADR1 => current_cnt_0_4414,
+      ADR2 => current_cnt_1_4416,
+      ADR3 => current_state_FSM_N16_0,
+      O => N30
+    );
   Inst_controlunit_N30_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X16Y42",
@@ -4999,6 +5282,30 @@ begin
     port map (
       I => current_state_FSM_N16,
       O => current_state_FSM_N16_0
+    );
+  current_state_FSM_FFd11_In112 : X_LUT4
+    generic map(
+      INIT => X"FFF0",
+      LOC => "SLICE_X16Y42"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => current_cnt_3_4425,
+      ADR3 => current_cnt_2_4426,
+      O => current_state_FSM_N16
+    );
+  current_cnt_mux0001_3_2130 : X_LUT4
+    generic map(
+      INIT => X"8CCC",
+      LOC => "SLICE_X10Y46"
+    )
+    port map (
+      ADR0 => ByteIn(4),
+      ADR1 => current_state_FSM_FFd11_4336,
+      ADR2 => ByteIn(1),
+      ADR3 => N35_0,
+      O => current_cnt_mux0001_3_2130_11454
     );
   Inst_controlunit_current_cnt_mux0001_3_2130_XUSED : X_BUF
     generic map(
@@ -5018,6 +5325,30 @@ begin
       I => N35,
       O => N35_0
     );
+  current_state_and000211 : X_LUT4
+    generic map(
+      INIT => X"A000",
+      LOC => "SLICE_X10Y46"
+    )
+    port map (
+      ADR0 => ByteIn(6),
+      ADR1 => VCC,
+      ADR2 => ByteIn(2),
+      ADR3 => N24_0,
+      O => N35
+    );
+  current_cnt_mux0001_3_2115 : X_LUT4
+    generic map(
+      INIT => X"FB00",
+      LOC => "SLICE_X8Y46"
+    )
+    port map (
+      ADR0 => current_cnt_mux0001_3_212_O_0,
+      ADR1 => N23_0,
+      ADR2 => ByteIn(0),
+      ADR3 => current_state_FSM_FFd15_4329,
+      O => current_cnt_mux0001_3_2115_11478
+    );
   Inst_controlunit_current_cnt_mux0001_3_2115_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X8Y46",
@@ -5036,6 +5367,30 @@ begin
       I => current_cnt_mux0001_3_212_O,
       O => current_cnt_mux0001_3_212_O_0
     );
+  current_cnt_mux0001_3_212 : X_LUT4
+    generic map(
+      INIT => X"CFCF",
+      LOC => "SLICE_X8Y46"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => ByteIn(2),
+      ADR2 => ByteIn(4),
+      ADR3 => VCC,
+      O => current_cnt_mux0001_3_212_O
+    );
+  current_cnt_mux0001_3_2152 : X_LUT4
+    generic map(
+      INIT => X"FFEC",
+      LOC => "SLICE_X9Y47"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd12_4333,
+      ADR1 => current_cnt_mux0001_3_2130_0,
+      ADR2 => current_cnt_mux0001_3_2146_O_0,
+      ADR3 => current_cnt_mux0001_3_2115_0,
+      O => N51
+    );
   Inst_controlunit_N51_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X9Y47",
@@ -5053,6 +5408,52 @@ begin
     port map (
       I => current_cnt_mux0001_3_2146_O,
       O => current_cnt_mux0001_3_2146_O_0
+    );
+  current_cnt_mux0001_3_2146 : X_LUT4
+    generic map(
+      INIT => X"7FFF",
+      LOC => "SLICE_X9Y47"
+    )
+    port map (
+      ADR0 => ByteIn(2),
+      ADR1 => ByteIn(0),
+      ADR2 => N23_0,
+      ADR3 => ByteIn(4),
+      O => current_cnt_mux0001_3_2146_O
+    );
+  nxt_TwoByteWord_10_mux0001 : X_LUT4
+    generic map(
+      INIT => X"FCCC",
+      LOC => "SLICE_X15Y39"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => N124_0,
+      ADR2 => current_TwoByteWord_10_4447,
+      ADR3 => N251_0,
+      O => nxt_TwoByteWord(10)
+    );
+  Inst_controlunit_current_TwoByteWord_10_FFX_RSTOR : X_INV
+    generic map(
+      LOC => "SLICE_X15Y39",
+      PATHPULSE => 592 ps
+    )
+    port map (
+      I => rst,
+      O => Inst_controlunit_current_TwoByteWord_10_FFX_RST
+    );
+  current_TwoByteWord_10 : X_FF
+    generic map(
+      LOC => "SLICE_X15Y39",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_controlunit_current_TwoByteWord_10_DXMUX_11536,
+      CE => Inst_controlunit_current_TwoByteWord_10_CEINVNOT,
+      CLK => Inst_controlunit_current_TwoByteWord_10_CLKINV_11519,
+      SET => GND,
+      RST => Inst_controlunit_current_TwoByteWord_10_FFX_RST,
+      O => current_TwoByteWord_10_4447
     );
   Inst_controlunit_current_TwoByteWord_10_DXMUX : X_BUF
     generic map(
@@ -5108,6 +5509,30 @@ begin
       I => filestart,
       O => Inst_controlunit_current_TwoByteWord_10_CEINVNOT
     );
+  nxt_TwoByteWord_10_mux00013 : X_LUT4
+    generic map(
+      INIT => X"FFFE",
+      LOC => "SLICE_X15Y39"
+    )
+    port map (
+      ADR0 => N30_0,
+      ADR1 => N2_0,
+      ADR2 => current_state_FSM_FFd8_4342,
+      ADR3 => N136_0,
+      O => N251
+    );
+  errorcode_mux0001_3_SW0 : X_LUT4
+    generic map(
+      INIT => X"CCDC",
+      LOC => "SLICE_X14Y54"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd16_4327,
+      ADR1 => current_state_FSM_FFd2_4356,
+      ADR2 => N37_0,
+      ADR3 => current_state_FSM_FFd13_4331,
+      O => N12
+    );
   Inst_controlunit_N12_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X14Y54",
@@ -5126,6 +5551,30 @@ begin
       I => N37,
       O => N37_0
     );
+  current_state_FSM_Out2221 : X_LUT4
+    generic map(
+      INIT => X"0005",
+      LOC => "SLICE_X14Y54"
+    )
+    port map (
+      ADR0 => N4_0,
+      ADR1 => VCC,
+      ADR2 => current_state_FSM_FFd9_4340,
+      ADR3 => current_state_FSM_FFd10_4338,
+      O => N37
+    );
+  current_state_FSM_FFd14_In63_SW0 : X_LUT4
+    generic map(
+      INIT => X"CCEC",
+      LOC => "SLICE_X15Y47"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd3_4354,
+      ADR1 => current_state_FSM_FFd14_4360,
+      ADR2 => current_state_cmp_eq0001_0,
+      ADR3 => current_state_cmp_eq0005_0,
+      O => N142
+    );
   Inst_controlunit_N142_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X15Y47",
@@ -5143,6 +5592,64 @@ begin
     port map (
       I => current_state_cmp_eq0005,
       O => current_state_cmp_eq0005_0
+    );
+  current_state_cmp_eq00051 : X_LUT4
+    generic map(
+      INIT => X"0020",
+      LOC => "SLICE_X15Y47"
+    )
+    port map (
+      ADR0 => N22_0,
+      ADR1 => ByteIn(3),
+      ADR2 => ByteIn(5),
+      ADR3 => ByteIn(2),
+      O => current_state_cmp_eq0005
+    );
+  nxt_TwoByteWord_12_mux0001_SW0 : X_LUT4
+    generic map(
+      INIT => X"ECA0",
+      LOC => "SLICE_X14Y35"
+    )
+    port map (
+      ADR0 => N110_0,
+      ADR1 => N10_0,
+      ADR2 => ByteIn(4),
+      ADR3 => current_TwoByteWord_20_4459,
+      O => N120
+    );
+  nxt_TwoByteWord_12_mux0001 : X_LUT4
+    generic map(
+      INIT => X"F8F8",
+      LOC => "SLICE_X14Y35"
+    )
+    port map (
+      ADR0 => current_TwoByteWord_12_4458,
+      ADR1 => N251_0,
+      ADR2 => N120_0,
+      ADR3 => VCC,
+      O => nxt_TwoByteWord(12)
+    );
+  Inst_controlunit_current_TwoByteWord_12_FFX_RSTOR : X_INV
+    generic map(
+      LOC => "SLICE_X14Y35",
+      PATHPULSE => 592 ps
+    )
+    port map (
+      I => rst,
+      O => Inst_controlunit_current_TwoByteWord_12_FFX_RST
+    );
+  current_TwoByteWord_12 : X_FF
+    generic map(
+      LOC => "SLICE_X14Y35",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_controlunit_current_TwoByteWord_12_DXMUX_11622,
+      CE => Inst_controlunit_current_TwoByteWord_12_CEINVNOT,
+      CLK => Inst_controlunit_current_TwoByteWord_12_CLKINV_11605,
+      SET => GND,
+      RST => Inst_controlunit_current_TwoByteWord_12_FFX_RST,
+      O => current_TwoByteWord_12_4458
     );
   Inst_controlunit_current_TwoByteWord_12_DXMUX : X_BUF
     generic map(
@@ -5280,6 +5787,18 @@ begin
       I => filestart,
       O => Inst_controlunit_current_TwoByteWord_13_CEINVNOT
     );
+  current_cnt_mux0001_0_20 : X_LUT4
+    generic map(
+      INIT => X"C96C",
+      LOC => "SLICE_X21Y42"
+    )
+    port map (
+      ADR0 => Maddsub_current_cnt_share0000_cy_1_0,
+      ADR1 => current_cnt_3_4425,
+      ADR2 => current_cnt_2_4426,
+      ADR3 => current_cnt_mux00021_0,
+      O => current_cnt_mux0001_0_20_O
+    );
   current_cnt_mux0001_0_44 : X_LUT4
     generic map(
       INIT => X"00EC",
@@ -5291,6 +5810,28 @@ begin
       ADR2 => current_cnt_mux0001_0_20_O_0,
       ADR3 => filestart,
       O => current_cnt_mux0001(0)
+    );
+  Inst_controlunit_current_cnt_3_FFX_RSTOR : X_INV
+    generic map(
+      LOC => "SLICE_X21Y42",
+      PATHPULSE => 592 ps
+    )
+    port map (
+      I => rst,
+      O => Inst_controlunit_current_cnt_3_FFX_RST
+    );
+  current_cnt_3 : X_FF
+    generic map(
+      LOC => "SLICE_X21Y42",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_controlunit_current_cnt_3_DXMUX_11697,
+      CE => VCC,
+      CLK => Inst_controlunit_current_cnt_3_CLKINV_11681,
+      SET => GND,
+      RST => Inst_controlunit_current_cnt_3_FFX_RST,
+      O => current_cnt_3_4425
     );
   Inst_controlunit_current_cnt_3_DXMUX : X_BUF
     generic map(
@@ -5319,17 +5860,29 @@ begin
       I => clk,
       O => Inst_controlunit_current_cnt_3_CLKINV_11681
     );
-  current_cnt_mux0001_0_20 : X_LUT4
+  current_cnt_or00011 : X_LUT4
     generic map(
-      INIT => X"C96C",
-      LOC => "SLICE_X21Y42"
+      INIT => X"FFF0",
+      LOC => "SLICE_X19Y44"
     )
     port map (
-      ADR0 => Maddsub_current_cnt_share0000_cy_1_0,
-      ADR1 => current_cnt_3_4425,
-      ADR2 => current_cnt_2_4426,
-      ADR3 => current_cnt_mux00021_0,
-      O => current_cnt_mux0001_0_20_O
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => current_state_FSM_FFd10_4338,
+      ADR3 => current_state_FSM_FFd9_4340,
+      O => current_cnt_or0001
+    );
+  current_cnt_mux0001_3_12 : X_LUT4
+    generic map(
+      INIT => X"0001",
+      LOC => "SLICE_X19Y44"
+    )
+    port map (
+      ADR0 => current_cnt_or0003_0,
+      ADR1 => N44_0,
+      ADR2 => current_cnt_or0001_0,
+      ADR3 => current_cnt_or0002_0,
+      O => current_cnt_mux0001_3_12_11725
     );
   Inst_controlunit_current_cnt_mux0001_3_12_XUSED : X_BUF
     generic map(
@@ -5349,6 +5902,30 @@ begin
       I => current_cnt_or0001,
       O => current_cnt_or0001_0
     );
+  current_cnt_mux0001_3_11 : X_LUT4
+    generic map(
+      INIT => X"FEFE",
+      LOC => "SLICE_X18Y45"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd15_4329,
+      ADR1 => current_state_FSM_FFd12_4333,
+      ADR2 => current_state_FSM_FFd11_4336,
+      ADR3 => VCC,
+      O => N4
+    );
+  current_cnt_mux0001_3_21 : X_LUT4
+    generic map(
+      INIT => X"0003",
+      LOC => "SLICE_X18Y45"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => current_cnt_or0000_0,
+      ADR2 => N4_0,
+      ADR3 => current_state_FSM_FFd6_4347,
+      O => current_cnt_mux0001_3_21_11749
+    );
   Inst_controlunit_current_cnt_mux0001_3_21_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X18Y45",
@@ -5366,6 +5943,30 @@ begin
     port map (
       I => N4,
       O => N4_0
+    );
+  current_cnt_mux0001_2_112_SW1 : X_LUT4
+    generic map(
+      INIT => X"F3F3",
+      LOC => "SLICE_X14Y42"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => current_state_FSM_FFd11_4336,
+      ADR2 => current_state_and0003_0,
+      ADR3 => VCC,
+      O => current_cnt_mux0001_2_112_SW1_O
+    );
+  current_cnt_mux0001_2_93 : X_LUT4
+    generic map(
+      INIT => X"A8AA",
+      LOC => "SLICE_X14Y42"
+    )
+    port map (
+      ADR0 => current_cnt_1_4416,
+      ADR1 => N104_0,
+      ADR2 => current_cnt_mux0001_2_87_0,
+      ADR3 => current_cnt_mux0001_2_112_SW1_O_0,
+      O => current_cnt_mux0001_2_93_11773
     );
   Inst_controlunit_current_cnt_mux0001_2_93_XUSED : X_BUF
     generic map(
@@ -5385,6 +5986,30 @@ begin
       I => current_cnt_mux0001_2_112_SW1_O,
       O => current_cnt_mux0001_2_112_SW1_O_0
     );
+  current_cnt_mux0001_3_43 : X_LUT4
+    generic map(
+      INIT => X"0002",
+      LOC => "SLICE_X19Y45"
+    )
+    port map (
+      ADR0 => current_cnt_or0001_0,
+      ADR1 => current_cnt_1_4416,
+      ADR2 => current_state_FSM_N16_0,
+      ADR3 => current_cnt_0_4414,
+      O => current_cnt_mux0001_3_43_O
+    );
+  current_cnt_mux0001_3_46 : X_LUT4
+    generic map(
+      INIT => X"FFEA",
+      LOC => "SLICE_X19Y45"
+    )
+    port map (
+      ADR0 => filestart,
+      ADR1 => current_cnt_mux0001_3_12_0,
+      ADR2 => current_cnt_mux0001_3_21_0,
+      ADR3 => current_cnt_mux0001_3_43_O_0,
+      O => current_cnt_mux0001_3_46_11797
+    );
   Inst_controlunit_current_cnt_mux0001_3_46_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X19Y45",
@@ -5402,6 +6027,43 @@ begin
     port map (
       I => current_cnt_mux0001_3_43_O,
       O => current_cnt_mux0001_3_43_O_0
+    );
+  current_state_FSM_Out2611 : X_LUT4
+    generic map(
+      INIT => X"FAFA",
+      LOC => "SLICE_X15Y55"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd3_4354,
+      ADR1 => VCC,
+      ADR2 => current_state_FSM_FFd1_4358,
+      ADR3 => VCC,
+      O => N44
+    );
+  errorcode_mux0001_3_Q : X_LUT4
+    generic map(
+      INIT => X"CCC8",
+      LOC => "SLICE_X15Y55"
+    )
+    port map (
+      ADR0 => N25_0,
+      ADR1 => errorcode_cmp_gt0000_0,
+      ADR2 => N44_0,
+      ADR3 => N12_0,
+      O => errorcode_mux0001_3_Q_11825
+    );
+  errorcode_3 : X_FF
+    generic map(
+      LOC => "SLICE_X15Y55",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_controlunit_errorcode_3_OBUF_DXMUX_11828,
+      CE => Inst_controlunit_errorcode_3_OBUF_CEINVNOT,
+      CLK => Inst_controlunit_errorcode_3_OBUF_CLKINV_11811,
+      SET => GND,
+      RST => GND,
+      O => errorcode_3_OBUF_4406
     );
   Inst_controlunit_errorcode_3_OBUF_DXMUX : X_BUF
     generic map(
@@ -5439,6 +6101,30 @@ begin
       I => Mcompar_errorcode_cmp_ne0000_cy_7_Q,
       O => Inst_controlunit_errorcode_3_OBUF_CEINVNOT
     );
+  RequestDataOut_SW0_SW0 : X_LUT4
+    generic map(
+      INIT => X"FFBA",
+      LOC => "SLICE_X19Y43"
+    )
+    port map (
+      ADR0 => N94_0,
+      ADR1 => current_cnt_mux0001_3_3241_0,
+      ADR2 => current_state_FSM_FFd2_4356,
+      ADR3 => N185_0,
+      O => RequestDataOut_SW0_SW0_O
+    );
+  RequestDataOut_4507 : X_LUT4
+    generic map(
+      INIT => X"FFEA",
+      LOC => "SLICE_X19Y43"
+    )
+    port map (
+      ADR0 => N25_0,
+      ADR1 => RequestDataIn,
+      ADR2 => current_state_FSM_FFd1_4358,
+      ADR3 => RequestDataOut_SW0_SW0_O_0,
+      O => sampleclkout_OBUF_F
+    );
   sampleclkout_OBUF_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X19Y43",
@@ -5456,6 +6142,30 @@ begin
     port map (
       I => RequestDataOut_SW0_SW0_O,
       O => RequestDataOut_SW0_SW0_O_0
+    );
+  current_state_and00061 : X_LUT4
+    generic map(
+      INIT => X"0004",
+      LOC => "SLICE_X6Y47"
+    )
+    port map (
+      ADR0 => ByteIn(7),
+      ADR1 => ByteIn(6),
+      ADR2 => N100_0,
+      ADR3 => ByteIn(5),
+      O => N23
+    );
+  current_state_and000621 : X_LUT4
+    generic map(
+      INIT => X"A000",
+      LOC => "SLICE_X6Y47"
+    )
+    port map (
+      ADR0 => ByteIn(4),
+      ADR1 => VCC,
+      ADR2 => N23_0,
+      ADR3 => ByteIn(2),
+      O => N34
     );
   Inst_controlunit_N34_XUSED : X_BUF
     generic map(
@@ -5475,6 +6185,18 @@ begin
       I => N23,
       O => N23_0
     );
+  nxt_TwoByteWord_0_mux000221 : X_LUT4
+    generic map(
+      INIT => X"FFCC",
+      LOC => "SLICE_X15Y38"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => current_state_FSM_FFd6_4347,
+      ADR2 => VCC,
+      ADR3 => current_state_FSM_FFd7_4345,
+      O => N10
+    );
   Inst_controlunit_N124_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X15Y38",
@@ -5493,6 +6215,30 @@ begin
       I => N10,
       O => N10_0
     );
+  nxt_TwoByteWord_10_mux0001_SW0 : X_LUT4
+    generic map(
+      INIT => X"F888",
+      LOC => "SLICE_X15Y38"
+    )
+    port map (
+      ADR0 => ByteIn(2),
+      ADR1 => N110_0,
+      ADR2 => N10_0,
+      ADR3 => current_TwoByteWord_18_4485,
+      O => N124
+    );
+  nxt_TwoByteWord_6_mux0002_SW0 : X_LUT4
+    generic map(
+      INIT => X"F888",
+      LOC => "SLICE_X14Y38"
+    )
+    port map (
+      ADR0 => current_TwoByteWord_14_4487,
+      ADR1 => N10_0,
+      ADR2 => current_TwoByteWord_6_4486,
+      ADR3 => N01_0,
+      O => N116
+    );
   Inst_controlunit_N116_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X14Y38",
@@ -5510,6 +6256,18 @@ begin
     port map (
       I => N01,
       O => N01_0
+    );
+  nxt_TwoByteWord_0_mux00024 : X_LUT4
+    generic map(
+      INIT => X"F0F1",
+      LOC => "SLICE_X14Y38"
+    )
+    port map (
+      ADR0 => N88_0,
+      ADR1 => current_cnt_1_4416,
+      ADR2 => N2_0,
+      ADR3 => current_state_FSM_N16_0,
+      O => N01
     );
   nxt_TwoByteWord_19_mux00001 : X_LUT4
     generic map(
@@ -10647,6 +11405,66 @@ begin
       ADR3 => VCC,
       O => Msub_current_ChunkBytesLeft_addsub0000_lut(5)
     );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_4_INV_0 : X_LUT4
+    generic map(
+      INIT => X"0F0F",
+      LOC => "SLICE_X31Y29"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => current_ChunkBytesLeft_4_4257,
+      ADR3 => VCC,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(4)
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_7_INV_0 : X_LUT4
+    generic map(
+      INIT => X"0F0F",
+      LOC => "SLICE_X31Y30"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => current_ChunkBytesLeft_7_4263,
+      ADR3 => VCC,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(7)
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_6_INV_0 : X_LUT4
+    generic map(
+      INIT => X"00FF",
+      LOC => "SLICE_X31Y30"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => VCC,
+      ADR3 => current_ChunkBytesLeft_6_4262,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(6)
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_9_INV_0 : X_LUT4
+    generic map(
+      INIT => X"3333",
+      LOC => "SLICE_X31Y31"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => current_ChunkBytesLeft_9_4268,
+      ADR2 => VCC,
+      ADR3 => VCC,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(9)
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_8_INV_0 : X_LUT4
+    generic map(
+      INIT => X"0F0F",
+      LOC => "SLICE_X31Y31"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => current_ChunkBytesLeft_8_4267,
+      ADR3 => VCC,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(8)
+    );
   Msub_current_ChunkBytesLeft_addsub0000_lut_11_INV_0 : X_LUT4
     generic map(
       INIT => X"00FF",
@@ -10731,6 +11549,66 @@ begin
       ADR3 => current_ChunkBytesLeft_17_4288,
       O => Msub_current_ChunkBytesLeft_addsub0000_lut(17)
     );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_16_INV_0 : X_LUT4
+    generic map(
+      INIT => X"3333",
+      LOC => "SLICE_X31Y35"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => current_ChunkBytesLeft_16_4287,
+      ADR2 => VCC,
+      ADR3 => VCC,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(16)
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_19_INV_0 : X_LUT4
+    generic map(
+      INIT => X"5555",
+      LOC => "SLICE_X31Y36"
+    )
+    port map (
+      ADR0 => current_ChunkBytesLeft_19_4293,
+      ADR1 => VCC,
+      ADR2 => VCC,
+      ADR3 => VCC,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(19)
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_18_INV_0 : X_LUT4
+    generic map(
+      INIT => X"00FF",
+      LOC => "SLICE_X31Y36"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => VCC,
+      ADR3 => current_ChunkBytesLeft_18_4292,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(18)
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_21_INV_0 : X_LUT4
+    generic map(
+      INIT => X"3333",
+      LOC => "SLICE_X31Y37"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => current_ChunkBytesLeft_21_4298,
+      ADR2 => VCC,
+      ADR3 => VCC,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(21)
+    );
+  Msub_current_ChunkBytesLeft_addsub0000_lut_20_INV_0 : X_LUT4
+    generic map(
+      INIT => X"00FF",
+      LOC => "SLICE_X31Y37"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => VCC,
+      ADR3 => current_ChunkBytesLeft_20_4297,
+      O => Msub_current_ChunkBytesLeft_addsub0000_lut(20)
+    );
   Msub_current_ChunkBytesLeft_addsub0000_lut_23_INV_0 : X_LUT4
     generic map(
       INIT => X"0F0F",
@@ -10742,884 +11620,6 @@ begin
       ADR2 => current_ChunkBytesLeft_23_4303,
       ADR3 => VCC,
       O => Msub_current_ChunkBytesLeft_addsub0000_lut(23)
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_22_INV_0 : X_LUT4
-    generic map(
-      INIT => X"5555",
-      LOC => "SLICE_X31Y38"
-    )
-    port map (
-      ADR0 => current_ChunkBytesLeft_22_4302,
-      ADR1 => VCC,
-      ADR2 => VCC,
-      ADR3 => VCC,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(22)
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_25_INV_0 : X_LUT4
-    generic map(
-      INIT => X"00FF",
-      LOC => "SLICE_X31Y39"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => VCC,
-      ADR3 => current_ChunkBytesLeft_25_4308,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(25)
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_24_INV_0 : X_LUT4
-    generic map(
-      INIT => X"3333",
-      LOC => "SLICE_X31Y39"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => current_ChunkBytesLeft_24_4307,
-      ADR2 => VCC,
-      ADR3 => VCC,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(24)
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_27_INV_0 : X_LUT4
-    generic map(
-      INIT => X"00FF",
-      LOC => "SLICE_X31Y40"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => VCC,
-      ADR3 => current_ChunkBytesLeft_27_4313,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(27)
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_26_INV_0 : X_LUT4
-    generic map(
-      INIT => X"5555",
-      LOC => "SLICE_X31Y40"
-    )
-    port map (
-      ADR0 => current_ChunkBytesLeft_26_4312,
-      ADR1 => VCC,
-      ADR2 => VCC,
-      ADR3 => VCC,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(26)
-    );
-  Msub_current_ChunkBytesLeft_addsub0000_lut_29_INV_0 : X_LUT4
-    generic map(
-      INIT => X"00FF",
-      LOC => "SLICE_X31Y41"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => VCC,
-      ADR3 => current_ChunkBytesLeft_29_4318,
-      O => Msub_current_ChunkBytesLeft_addsub0000_lut(29)
-    );
-  Mcompar_errorcode_cmp_ne0000_lut_3_Q : X_LUT4
-    generic map(
-      INIT => X"8421",
-      LOC => "SLICE_X27Y61"
-    )
-    port map (
-      ADR0 => watchdogstate(7),
-      ADR1 => current_state_FSM_FFd9_4340,
-      ADR2 => current_state_FSM_FFd8_4342,
-      ADR3 => watchdogstate(6),
-      O => Mcompar_errorcode_cmp_ne0000_lut(3)
-    );
-  Mcompar_errorcode_cmp_ne0000_lut_2_Q : X_LUT4
-    generic map(
-      INIT => X"8241",
-      LOC => "SLICE_X27Y61"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd11_4336,
-      ADR1 => watchdogstate(5),
-      ADR2 => current_state_FSM_FFd10_4338,
-      ADR3 => watchdogstate(4),
-      O => Mcompar_errorcode_cmp_ne0000_lut(2)
-    );
-  samplerateout_4232 : X_FF
-    generic map(
-      LOC => "SLICE_X15Y36",
-      INIT => '0'
-    )
-    port map (
-      I => samplerate_DXMUX_11108,
-      CE => samplerate_CEINV_11092,
-      CLK => samplerate_CLKINV_11093,
-      SET => GND,
-      RST => samplerate_FFX_RSTAND_11114,
-      O => samplerateout
-    );
-  samplerate_FFX_RSTAND : X_INV
-    generic map(
-      LOC => "SLICE_X15Y36",
-      PATHPULSE => 592 ps
-    )
-    port map (
-      I => rst,
-      O => samplerate_FFX_RSTAND_11114
-    );
-  Mcompar_errorcode_cmp_ne0000_lut_5_Q : X_LUT4
-    generic map(
-      INIT => X"8241",
-      LOC => "SLICE_X27Y62"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd4_4351,
-      ADR1 => watchdogstate(10),
-      ADR2 => current_state_FSM_FFd5_4349,
-      ADR3 => watchdogstate(11),
-      O => Mcompar_errorcode_cmp_ne0000_lut(5)
-    );
-  Mcompar_errorcode_cmp_ne0000_lut_4_Q : X_LUT4
-    generic map(
-      INIT => X"8241",
-      LOC => "SLICE_X27Y62"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd6_4347,
-      ADR1 => current_state_FSM_FFd7_4345,
-      ADR2 => watchdogstate(8),
-      ADR3 => watchdogstate(9),
-      O => Mcompar_errorcode_cmp_ne0000_lut(4)
-    );
-  Mcompar_errorcode_cmp_ne0000_lut_7_Q : X_LUT4
-    generic map(
-      INIT => X"8421",
-      LOC => "SLICE_X27Y63"
-    )
-    port map (
-      ADR0 => watchdogstate(14),
-      ADR1 => current_state_FSM_FFd14_4360,
-      ADR2 => current_state_FSM_FFd1_4358,
-      ADR3 => watchdogstate(15),
-      O => Mcompar_errorcode_cmp_ne0000_lut(7)
-    );
-  Mcompar_errorcode_cmp_ne0000_lut_6_Q : X_LUT4
-    generic map(
-      INIT => X"9009",
-      LOC => "SLICE_X27Y63"
-    )
-    port map (
-      ADR0 => watchdogstate(13),
-      ADR1 => current_state_FSM_FFd2_4356,
-      ADR2 => current_state_FSM_FFd3_4354,
-      ADR3 => watchdogstate(12),
-      O => Mcompar_errorcode_cmp_ne0000_lut(6)
-    );
-  current_state_cmp_eq0004_wg_lut_1_Q : X_LUT4
-    generic map(
-      INIT => X"0001",
-      LOC => "SLICE_X29Y33"
-    )
-    port map (
-      ADR0 => current_ChunkBytesLeft_12_4277,
-      ADR1 => current_ChunkBytesLeft_13_4278,
-      ADR2 => current_ChunkBytesLeft_6_4262,
-      ADR3 => current_ChunkBytesLeft_11_4273,
-      O => current_state_cmp_eq0004_wg_lut(1)
-    );
-  current_state_cmp_eq0004_wg_lut_0_Q : X_LUT4
-    generic map(
-      INIT => X"0001",
-      LOC => "SLICE_X29Y33"
-    )
-    port map (
-      ADR0 => current_ChunkBytesLeft_7_4263,
-      ADR1 => current_ChunkBytesLeft_10_4272,
-      ADR2 => current_ChunkBytesLeft_9_4268,
-      ADR3 => current_ChunkBytesLeft_8_4267,
-      O => current_state_cmp_eq0004_wg_lut(0)
-    );
-  current_state_cmp_eq0004_wg_lut_3_Q : X_LUT4
-    generic map(
-      INIT => X"0001",
-      LOC => "SLICE_X29Y34"
-    )
-    port map (
-      ADR0 => current_ChunkBytesLeft_19_4293,
-      ADR1 => current_ChunkBytesLeft_4_4257,
-      ADR2 => current_ChunkBytesLeft_18_4292,
-      ADR3 => current_ChunkBytesLeft_17_4288,
-      O => current_state_cmp_eq0004_wg_lut(3)
-    );
-  current_state_cmp_eq0004_wg_lut_2_Q : X_LUT4
-    generic map(
-      INIT => X"0001",
-      LOC => "SLICE_X29Y34"
-    )
-    port map (
-      ADR0 => current_ChunkBytesLeft_16_4287,
-      ADR1 => current_ChunkBytesLeft_15_4283,
-      ADR2 => current_ChunkBytesLeft_5_4258,
-      ADR3 => current_ChunkBytesLeft_14_4282,
-      O => current_state_cmp_eq0004_wg_lut(2)
-    );
-  current_state_cmp_eq0004_wg_lut_5_Q : X_LUT4
-    generic map(
-      INIT => X"0001",
-      LOC => "SLICE_X29Y35"
-    )
-    port map (
-      ADR0 => current_ChunkBytesLeft_25_4308,
-      ADR1 => current_ChunkBytesLeft_2_4252,
-      ADR2 => current_ChunkBytesLeft_24_4307,
-      ADR3 => current_ChunkBytesLeft_23_4303,
-      O => current_state_cmp_eq0004_wg_lut(5)
-    );
-  current_state_cmp_eq0004_wg_lut_4_Q : X_LUT4
-    generic map(
-      INIT => X"0001",
-      LOC => "SLICE_X29Y35"
-    )
-    port map (
-      ADR0 => current_ChunkBytesLeft_20_4297,
-      ADR1 => current_ChunkBytesLeft_22_4302,
-      ADR2 => current_ChunkBytesLeft_21_4298,
-      ADR3 => current_ChunkBytesLeft_3_4253,
-      O => current_state_cmp_eq0004_wg_lut(4)
-    );
-  errorcode_mux0001_2_222 : X_LUT4
-    generic map(
-      INIT => X"FC00",
-      LOC => "SLICE_X17Y54"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => errorcode_mux0001_2_2_0,
-      ADR2 => errorcode_mux0001_2_5_0,
-      ADR3 => errorcode_cmp_gt0000_0,
-      O => errorcode_mux0001_2_221_11166
-    );
-  errorcode_mux0001_2_221 : X_LUT4
-    generic map(
-      INIT => X"A8AA",
-      LOC => "SLICE_X17Y54"
-    )
-    port map (
-      ADR0 => errorcode_cmp_gt0000_0,
-      ADR1 => errorcode_mux0001_2_2_0,
-      ADR2 => errorcode_mux0001_2_5_0,
-      ADR3 => current_state_FSM_FFd15_4329,
-      O => errorcode_mux0001_2_22
-    );
-  errorcode_2 : X_FF
-    generic map(
-      LOC => "SLICE_X17Y54",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_controlunit_errorcode_2_OBUF_DXMUX_11177,
-      CE => Inst_controlunit_errorcode_2_OBUF_CEINVNOT,
-      CLK => Inst_controlunit_errorcode_2_OBUF_CLKINV_11160,
-      SET => GND,
-      RST => GND,
-      O => errorcode_2_OBUF_4405
-    );
-  current_cnt_mux0001_3_73_F : X_LUT4
-    generic map(
-      INIT => X"0C00",
-      LOC => "SLICE_X8Y47"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => current_cnt_mux0001_3_65_0,
-      ADR2 => ByteIn(5),
-      ADR3 => N22_0,
-      O => N2511
-    );
-  current_cnt_mux0001_3_73_G : X_LUT4
-    generic map(
-      INIT => X"8000",
-      LOC => "SLICE_X8Y47"
-    )
-    port map (
-      ADR0 => ByteIn(5),
-      ADR1 => N22_0,
-      ADR2 => ByteIn(3),
-      ADR3 => current_state_FSM_FFd11_4336,
-      O => N252
-    );
-  current_state_FSM_FFd12_In42_F : X_LUT4
-    generic map(
-      INIT => X"AAEA",
-      LOC => "SLICE_X6Y49"
-    )
-    port map (
-      ADR0 => current_state_FSM_N16_0,
-      ADR1 => N36_0,
-      ADR2 => current_cnt_1_4416,
-      ADR3 => ByteIn(3),
-      O => N249
-    );
-  current_state_FSM_FFd12_In42_G : X_LUT4
-    generic map(
-      INIT => X"ECCE",
-      LOC => "SLICE_X6Y49"
-    )
-    port map (
-      ADR0 => N34_0,
-      ADR1 => current_state_FSM_N16_0,
-      ADR2 => current_cnt_1_4416,
-      ADR3 => ByteIn(0),
-      O => N250
-    );
-  current_state_FSM_FFd10_In1 : X_LUT4
-    generic map(
-      INIT => X"B380",
-      LOC => "SLICE_X15Y49"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd11_4336,
-      ADR1 => current_cnt_mux0001_3_324_0,
-      ADR2 => current_state_and0001_0,
-      ADR3 => current_state_FSM_FFd10_4338,
-      O => current_state_FSM_FFd10_In1_11246
-    );
-  current_state_FSM_FFd10 : X_FF
-    generic map(
-      LOC => "SLICE_X15Y49",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_controlunit_current_state_FSM_FFd10_DXMUX_11261,
-      CE => VCC,
-      CLK => Inst_controlunit_current_state_FSM_FFd10_CLKINV_11240,
-      SET => GND,
-      RST => Inst_controlunit_current_state_FSM_FFd10_FFX_RSTAND_11266,
-      O => current_state_FSM_FFd10_4338
-    );
-  Inst_controlunit_current_state_FSM_FFd10_FFX_RSTAND : X_INV
-    generic map(
-      LOC => "SLICE_X15Y49",
-      PATHPULSE => 592 ps
-    )
-    port map (
-      I => rst,
-      O => Inst_controlunit_current_state_FSM_FFd10_FFX_RSTAND_11266
-    );
-  current_state_FSM_FFd13_In1 : X_LUT4
-    generic map(
-      INIT => X"B380",
-      LOC => "SLICE_X14Y45"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd15_4329,
-      ADR1 => current_cnt_mux0001_3_324_0,
-      ADR2 => current_state_and0009_0,
-      ADR3 => current_state_FSM_FFd13_4331,
-      O => current_state_FSM_FFd13_In1_11282
-    );
-  current_state_FSM_FFd13 : X_FF
-    generic map(
-      LOC => "SLICE_X14Y45",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_controlunit_current_state_FSM_FFd13_DXMUX_11297,
-      CE => VCC,
-      CLK => Inst_controlunit_current_state_FSM_FFd13_CLKINV_11276,
-      SET => GND,
-      RST => Inst_controlunit_current_state_FSM_FFd13_FFX_RSTAND_11302,
-      O => current_state_FSM_FFd13_4331
-    );
-  Inst_controlunit_current_state_FSM_FFd13_FFX_RSTAND : X_INV
-    generic map(
-      LOC => "SLICE_X14Y45",
-      PATHPULSE => 592 ps
-    )
-    port map (
-      I => rst,
-      O => Inst_controlunit_current_state_FSM_FFd13_FFX_RSTAND_11302
-    );
-  current_state_FSM_FFd11_In112 : X_LUT4
-    generic map(
-      INIT => X"FFF0",
-      LOC => "SLICE_X16Y42"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => current_cnt_3_4425,
-      ADR3 => current_cnt_2_4426,
-      O => current_state_FSM_N16
-    );
-  current_cnt_mux0001_0_1212 : X_LUT4
-    generic map(
-      INIT => X"AAA2",
-      LOC => "SLICE_X16Y42"
-    )
-    port map (
-      ADR0 => current_cnt_or0003_0,
-      ADR1 => current_cnt_0_4414,
-      ADR2 => current_cnt_1_4416,
-      ADR3 => current_state_FSM_N16_0,
-      O => N30
-    );
-  current_state_and000211 : X_LUT4
-    generic map(
-      INIT => X"A000",
-      LOC => "SLICE_X10Y46"
-    )
-    port map (
-      ADR0 => ByteIn(6),
-      ADR1 => VCC,
-      ADR2 => ByteIn(2),
-      ADR3 => N24_0,
-      O => N35
-    );
-  current_cnt_mux0001_3_2130 : X_LUT4
-    generic map(
-      INIT => X"8CCC",
-      LOC => "SLICE_X10Y46"
-    )
-    port map (
-      ADR0 => ByteIn(4),
-      ADR1 => current_state_FSM_FFd11_4336,
-      ADR2 => ByteIn(1),
-      ADR3 => N35_0,
-      O => current_cnt_mux0001_3_2130_11454
-    );
-  current_cnt_mux0001_3_212 : X_LUT4
-    generic map(
-      INIT => X"CFCF",
-      LOC => "SLICE_X8Y46"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => ByteIn(2),
-      ADR2 => ByteIn(4),
-      ADR3 => VCC,
-      O => current_cnt_mux0001_3_212_O
-    );
-  current_cnt_mux0001_3_2115 : X_LUT4
-    generic map(
-      INIT => X"FB00",
-      LOC => "SLICE_X8Y46"
-    )
-    port map (
-      ADR0 => current_cnt_mux0001_3_212_O_0,
-      ADR1 => N23_0,
-      ADR2 => ByteIn(0),
-      ADR3 => current_state_FSM_FFd15_4329,
-      O => current_cnt_mux0001_3_2115_11478
-    );
-  current_cnt_mux0001_3_2146 : X_LUT4
-    generic map(
-      INIT => X"7FFF",
-      LOC => "SLICE_X9Y47"
-    )
-    port map (
-      ADR0 => ByteIn(2),
-      ADR1 => ByteIn(0),
-      ADR2 => N23_0,
-      ADR3 => ByteIn(4),
-      O => current_cnt_mux0001_3_2146_O
-    );
-  current_cnt_mux0001_3_2152 : X_LUT4
-    generic map(
-      INIT => X"FFEC",
-      LOC => "SLICE_X9Y47"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd12_4333,
-      ADR1 => current_cnt_mux0001_3_2130_0,
-      ADR2 => current_cnt_mux0001_3_2146_O_0,
-      ADR3 => current_cnt_mux0001_3_2115_0,
-      O => N51
-    );
-  nxt_TwoByteWord_10_mux00013 : X_LUT4
-    generic map(
-      INIT => X"FFFE",
-      LOC => "SLICE_X15Y39"
-    )
-    port map (
-      ADR0 => N30_0,
-      ADR1 => N2_0,
-      ADR2 => current_state_FSM_FFd8_4342,
-      ADR3 => N136_0,
-      O => N251
-    );
-  nxt_TwoByteWord_10_mux0001 : X_LUT4
-    generic map(
-      INIT => X"FCCC",
-      LOC => "SLICE_X15Y39"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => N124_0,
-      ADR2 => current_TwoByteWord_10_4447,
-      ADR3 => N251_0,
-      O => nxt_TwoByteWord(10)
-    );
-  current_TwoByteWord_10 : X_FF
-    generic map(
-      LOC => "SLICE_X15Y39",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_controlunit_current_TwoByteWord_10_DXMUX_11536,
-      CE => Inst_controlunit_current_TwoByteWord_10_CEINVNOT,
-      CLK => Inst_controlunit_current_TwoByteWord_10_CLKINV_11519,
-      SET => GND,
-      RST => Inst_controlunit_current_TwoByteWord_10_FFX_RSTAND_11542,
-      O => current_TwoByteWord_10_4447
-    );
-  Inst_controlunit_current_TwoByteWord_10_FFX_RSTAND : X_INV
-    generic map(
-      LOC => "SLICE_X15Y39",
-      PATHPULSE => 592 ps
-    )
-    port map (
-      I => rst,
-      O => Inst_controlunit_current_TwoByteWord_10_FFX_RSTAND_11542
-    );
-  current_state_FSM_Out2221 : X_LUT4
-    generic map(
-      INIT => X"0005",
-      LOC => "SLICE_X14Y54"
-    )
-    port map (
-      ADR0 => N4_0,
-      ADR1 => VCC,
-      ADR2 => current_state_FSM_FFd9_4340,
-      ADR3 => current_state_FSM_FFd10_4338,
-      O => N37
-    );
-  errorcode_mux0001_3_SW0 : X_LUT4
-    generic map(
-      INIT => X"CCDC",
-      LOC => "SLICE_X14Y54"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd16_4327,
-      ADR1 => current_state_FSM_FFd2_4356,
-      ADR2 => N37_0,
-      ADR3 => current_state_FSM_FFd13_4331,
-      O => N12
-    );
-  current_state_cmp_eq00051 : X_LUT4
-    generic map(
-      INIT => X"0020",
-      LOC => "SLICE_X15Y47"
-    )
-    port map (
-      ADR0 => N22_0,
-      ADR1 => ByteIn(3),
-      ADR2 => ByteIn(5),
-      ADR3 => ByteIn(2),
-      O => current_state_cmp_eq0005
-    );
-  current_state_FSM_FFd14_In63_SW0 : X_LUT4
-    generic map(
-      INIT => X"CCEC",
-      LOC => "SLICE_X15Y47"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd3_4354,
-      ADR1 => current_state_FSM_FFd14_4360,
-      ADR2 => current_state_cmp_eq0001_0,
-      ADR3 => current_state_cmp_eq0005_0,
-      O => N142
-    );
-  nxt_TwoByteWord_12_mux0001_SW0 : X_LUT4
-    generic map(
-      INIT => X"ECA0",
-      LOC => "SLICE_X14Y35"
-    )
-    port map (
-      ADR0 => N110_0,
-      ADR1 => N10_0,
-      ADR2 => ByteIn(4),
-      ADR3 => current_TwoByteWord_20_4459,
-      O => N120
-    );
-  nxt_TwoByteWord_12_mux0001 : X_LUT4
-    generic map(
-      INIT => X"F8F8",
-      LOC => "SLICE_X14Y35"
-    )
-    port map (
-      ADR0 => current_TwoByteWord_12_4458,
-      ADR1 => N251_0,
-      ADR2 => N120_0,
-      ADR3 => VCC,
-      O => nxt_TwoByteWord(12)
-    );
-  current_TwoByteWord_12 : X_FF
-    generic map(
-      LOC => "SLICE_X14Y35",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_controlunit_current_TwoByteWord_12_DXMUX_11622,
-      CE => Inst_controlunit_current_TwoByteWord_12_CEINVNOT,
-      CLK => Inst_controlunit_current_TwoByteWord_12_CLKINV_11605,
-      SET => GND,
-      RST => Inst_controlunit_current_TwoByteWord_12_FFX_RSTAND_11628,
-      O => current_TwoByteWord_12_4458
-    );
-  Inst_controlunit_current_TwoByteWord_12_FFX_RSTAND : X_INV
-    generic map(
-      LOC => "SLICE_X14Y35",
-      PATHPULSE => 592 ps
-    )
-    port map (
-      I => rst,
-      O => Inst_controlunit_current_TwoByteWord_12_FFX_RSTAND_11628
-    );
-  current_cnt_3 : X_FF
-    generic map(
-      LOC => "SLICE_X21Y42",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_controlunit_current_cnt_3_DXMUX_11697,
-      CE => VCC,
-      CLK => Inst_controlunit_current_cnt_3_CLKINV_11681,
-      SET => GND,
-      RST => Inst_controlunit_current_cnt_3_FFX_RSTAND_11702,
-      O => current_cnt_3_4425
-    );
-  Inst_controlunit_current_cnt_3_FFX_RSTAND : X_INV
-    generic map(
-      LOC => "SLICE_X21Y42",
-      PATHPULSE => 592 ps
-    )
-    port map (
-      I => rst,
-      O => Inst_controlunit_current_cnt_3_FFX_RSTAND_11702
-    );
-  current_cnt_or00011 : X_LUT4
-    generic map(
-      INIT => X"FFF0",
-      LOC => "SLICE_X19Y44"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => current_state_FSM_FFd10_4338,
-      ADR3 => current_state_FSM_FFd9_4340,
-      O => current_cnt_or0001
-    );
-  current_cnt_mux0001_3_12 : X_LUT4
-    generic map(
-      INIT => X"0001",
-      LOC => "SLICE_X19Y44"
-    )
-    port map (
-      ADR0 => current_cnt_or0003_0,
-      ADR1 => N44_0,
-      ADR2 => current_cnt_or0001_0,
-      ADR3 => current_cnt_or0002_0,
-      O => current_cnt_mux0001_3_12_11725
-    );
-  current_cnt_mux0001_3_11 : X_LUT4
-    generic map(
-      INIT => X"FEFE",
-      LOC => "SLICE_X18Y45"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd15_4329,
-      ADR1 => current_state_FSM_FFd12_4333,
-      ADR2 => current_state_FSM_FFd11_4336,
-      ADR3 => VCC,
-      O => N4
-    );
-  current_cnt_mux0001_3_21 : X_LUT4
-    generic map(
-      INIT => X"0003",
-      LOC => "SLICE_X18Y45"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => current_cnt_or0000_0,
-      ADR2 => N4_0,
-      ADR3 => current_state_FSM_FFd6_4347,
-      O => current_cnt_mux0001_3_21_11749
-    );
-  current_cnt_mux0001_3_43 : X_LUT4
-    generic map(
-      INIT => X"0002",
-      LOC => "SLICE_X19Y45"
-    )
-    port map (
-      ADR0 => current_cnt_or0001_0,
-      ADR1 => current_cnt_1_4416,
-      ADR2 => current_state_FSM_N16_0,
-      ADR3 => current_cnt_0_4414,
-      O => current_cnt_mux0001_3_43_O
-    );
-  current_cnt_mux0001_2_112_SW1 : X_LUT4
-    generic map(
-      INIT => X"F3F3",
-      LOC => "SLICE_X14Y42"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => current_state_FSM_FFd11_4336,
-      ADR2 => current_state_and0003_0,
-      ADR3 => VCC,
-      O => current_cnt_mux0001_2_112_SW1_O
-    );
-  current_cnt_mux0001_2_93 : X_LUT4
-    generic map(
-      INIT => X"A8AA",
-      LOC => "SLICE_X14Y42"
-    )
-    port map (
-      ADR0 => current_cnt_1_4416,
-      ADR1 => N104_0,
-      ADR2 => current_cnt_mux0001_2_87_0,
-      ADR3 => current_cnt_mux0001_2_112_SW1_O_0,
-      O => current_cnt_mux0001_2_93_11773
-    );
-  current_cnt_mux0001_3_46 : X_LUT4
-    generic map(
-      INIT => X"FFEA",
-      LOC => "SLICE_X19Y45"
-    )
-    port map (
-      ADR0 => filestart,
-      ADR1 => current_cnt_mux0001_3_12_0,
-      ADR2 => current_cnt_mux0001_3_21_0,
-      ADR3 => current_cnt_mux0001_3_43_O_0,
-      O => current_cnt_mux0001_3_46_11797
-    );
-  current_state_FSM_Out2611 : X_LUT4
-    generic map(
-      INIT => X"FAFA",
-      LOC => "SLICE_X15Y55"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd3_4354,
-      ADR1 => VCC,
-      ADR2 => current_state_FSM_FFd1_4358,
-      ADR3 => VCC,
-      O => N44
-    );
-  errorcode_mux0001_3_Q : X_LUT4
-    generic map(
-      INIT => X"CCC8",
-      LOC => "SLICE_X15Y55"
-    )
-    port map (
-      ADR0 => N25_0,
-      ADR1 => errorcode_cmp_gt0000_0,
-      ADR2 => N44_0,
-      ADR3 => N12_0,
-      O => errorcode_mux0001_3_Q_11825
-    );
-  errorcode_3 : X_FF
-    generic map(
-      LOC => "SLICE_X15Y55",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_controlunit_errorcode_3_OBUF_DXMUX_11828,
-      CE => Inst_controlunit_errorcode_3_OBUF_CEINVNOT,
-      CLK => Inst_controlunit_errorcode_3_OBUF_CLKINV_11811,
-      SET => GND,
-      RST => GND,
-      O => errorcode_3_OBUF_4406
-    );
-  RequestDataOut_SW0_SW0 : X_LUT4
-    generic map(
-      INIT => X"FFBA",
-      LOC => "SLICE_X19Y43"
-    )
-    port map (
-      ADR0 => N94_0,
-      ADR1 => current_cnt_mux0001_3_3241_0,
-      ADR2 => current_state_FSM_FFd2_4356,
-      ADR3 => N185_0,
-      O => RequestDataOut_SW0_SW0_O
-    );
-  RequestDataOut_4507 : X_LUT4
-    generic map(
-      INIT => X"FFEA",
-      LOC => "SLICE_X19Y43"
-    )
-    port map (
-      ADR0 => N25_0,
-      ADR1 => RequestDataIn,
-      ADR2 => current_state_FSM_FFd1_4358,
-      ADR3 => RequestDataOut_SW0_SW0_O_0,
-      O => sampleclkout_OBUF_F
-    );
-  current_state_and00061 : X_LUT4
-    generic map(
-      INIT => X"0004",
-      LOC => "SLICE_X6Y47"
-    )
-    port map (
-      ADR0 => ByteIn(7),
-      ADR1 => ByteIn(6),
-      ADR2 => N100_0,
-      ADR3 => ByteIn(5),
-      O => N23
-    );
-  current_state_and000621 : X_LUT4
-    generic map(
-      INIT => X"A000",
-      LOC => "SLICE_X6Y47"
-    )
-    port map (
-      ADR0 => ByteIn(4),
-      ADR1 => VCC,
-      ADR2 => N23_0,
-      ADR3 => ByteIn(2),
-      O => N34
-    );
-  nxt_TwoByteWord_0_mux000221 : X_LUT4
-    generic map(
-      INIT => X"FFCC",
-      LOC => "SLICE_X15Y38"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => current_state_FSM_FFd6_4347,
-      ADR2 => VCC,
-      ADR3 => current_state_FSM_FFd7_4345,
-      O => N10
-    );
-  nxt_TwoByteWord_10_mux0001_SW0 : X_LUT4
-    generic map(
-      INIT => X"F888",
-      LOC => "SLICE_X15Y38"
-    )
-    port map (
-      ADR0 => ByteIn(2),
-      ADR1 => N110_0,
-      ADR2 => N10_0,
-      ADR3 => current_TwoByteWord_18_4485,
-      O => N124
-    );
-  nxt_TwoByteWord_0_mux00024 : X_LUT4
-    generic map(
-      INIT => X"F0F1",
-      LOC => "SLICE_X14Y38"
-    )
-    port map (
-      ADR0 => N88_0,
-      ADR1 => current_cnt_1_4416,
-      ADR2 => N2_0,
-      ADR3 => current_state_FSM_N16_0,
-      O => N01
-    );
-  nxt_TwoByteWord_6_mux0002_SW0 : X_LUT4
-    generic map(
-      INIT => X"F888",
-      LOC => "SLICE_X14Y38"
-    )
-    port map (
-      ADR0 => current_TwoByteWord_14_4487,
-      ADR1 => N10_0,
-      ADR2 => current_TwoByteWord_6_4486,
-      ADR3 => N01_0,
-      O => N116
     );
   current_state_FSM_FFd11 : X_FF
     generic map(
@@ -15787,7 +15787,6 @@ architecture Structure of SDRAMInterface is
   signal A_2_OBUF_CEINV_8513 : STD_LOGIC; 
   signal N112 : STD_LOGIC; 
   signal nxt_cnt_and000026_O : STD_LOGIC; 
-  signal Inst_SDRAMInterface_current_state_FSM_FFd1_FFX_RST : STD_LOGIC; 
   signal Inst_SDRAMInterface_current_state_FSM_FFd1_DXMUX_8590 : STD_LOGIC; 
   signal current_state_FSM_FFd1_In_8587 : STD_LOGIC; 
   signal current_state_FSM_FFd1_In_SW0_O : STD_LOGIC; 
@@ -15852,14 +15851,11 @@ architecture Structure of SDRAMInterface is
   signal bytetransfer_1_SRINVNOT : STD_LOGIC; 
   signal bytetransfer_1_CLKINV_9068 : STD_LOGIC; 
   signal bytetransfer_1_CEINV_9067 : STD_LOGIC; 
-  signal bytetransfer_3_FFY_RST : STD_LOGIC; 
-  signal bytetransfer_3_FFX_RST : STD_LOGIC; 
   signal bytetransfer_3_DXMUX_9140 : STD_LOGIC; 
   signal bytetransfer_3_DYMUX_9124 : STD_LOGIC; 
   signal bytetransfer_3_SRINVNOT : STD_LOGIC; 
   signal bytetransfer_3_CLKINV_9114 : STD_LOGIC; 
   signal bytetransfer_3_CEINV_9113 : STD_LOGIC; 
-  signal bytetransfer_5_FFY_RST : STD_LOGIC; 
   signal bytetransfer_5_DXMUX_9186 : STD_LOGIC; 
   signal bytetransfer_5_DYMUX_9170 : STD_LOGIC; 
   signal bytetransfer_5_SRINVNOT : STD_LOGIC; 
@@ -15967,6 +15963,7 @@ architecture Structure of SDRAMInterface is
   signal current_state_cmp_eq00008_10095 : STD_LOGIC; 
   signal N52 : STD_LOGIC; 
   signal N77 : STD_LOGIC; 
+  signal Inst_SDRAMInterface_current_state_FSM_FFd1_FFX_RSTAND_8596 : STD_LOGIC; 
   signal Inst_SDRAMInterface_current_state_FSM_FFd3_FFX_RSTAND_8634 : STD_LOGIC; 
   signal Inst_SDRAMInterface_current_state_FSM_FFd4_FFX_RSTAND_8672 : STD_LOGIC; 
   signal Inst_SDRAMInterface_current_state_FSM_FFd6_FFX_RSTAND_8710 : STD_LOGIC; 
@@ -17273,18 +17270,6 @@ begin
       I => Inst_SDRAMInterface_nxt_cnt_share0000_6_CYMUXFAST_7956,
       O => Inst_SDRAMInterface_nxt_cnt_share0000_8_CYINIT_7985
     );
-  current_cnt_8_rt : X_LUT4
-    generic map(
-      INIT => X"AAAA",
-      LOC => "SLICE_X1Y30"
-    )
-    port map (
-      ADR0 => current_cnt_8_2022,
-      ADR1 => VCC,
-      ADR2 => VCC,
-      ADR3 => VCC,
-      O => current_cnt_8_rt_7983
-    );
   MemCLKOut_OBUF : X_OBUF
     generic map(
       LOC => "PAD155"
@@ -17292,18 +17277,6 @@ begin
     port map (
       I => MemCLKOut_O,
       O => MemCLKOut
-    );
-  nxt_cnt_1_1 : X_LUT4
-    generic map(
-      INIT => X"FBF0",
-      LOC => "SLICE_X2Y25"
-    )
-    port map (
-      ADR0 => current_cnt_1_2003,
-      ADR1 => N10_0,
-      ADR2 => nxt_cnt_1_1_SW0_O_0,
-      ADR3 => current_state_FSM_FFd4_2025,
-      O => N5
     );
   Inst_SDRAMInterface_N5_XUSED : X_BUF
     generic map(
@@ -17322,18 +17295,6 @@ begin
     port map (
       I => nxt_cnt_1_1_SW0_O,
       O => nxt_cnt_1_1_SW0_O_0
-    );
-  nxt_cnt_1_1_SW0 : X_LUT4
-    generic map(
-      INIT => X"AAFE",
-      LOC => "SLICE_X2Y25"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd1_2030,
-      ADR1 => current_state_FSM_FFd7_2028,
-      ADR2 => current_state_FSM_FFd2_2029,
-      ADR3 => current_state_cmp_eq0002_0,
-      O => nxt_cnt_1_1_SW0_O
     );
   Inst_SDRAMInterface_current_cnt_4_DXMUX : X_BUF
     generic map(
@@ -17551,31 +17512,6 @@ begin
       I => current_cnt2_and0000_0,
       O => A_5_OBUF_CEINV_8227
     );
-  current_Addr_5 : X_FF
-    generic map(
-      LOC => "SLICE_X4Y16",
-      INIT => '0'
-    )
-    port map (
-      I => A_5_OBUF_DXMUX_8243,
-      CE => A_5_OBUF_CEINV_8227,
-      CLK => A_5_OBUF_CLKINV_8228,
-      SET => GND,
-      RST => GND,
-      O => NlwRenamedSig_OI_current_Addr_5
-    );
-  current_state_cmp_eq000014 : X_LUT4
-    generic map(
-      INIT => X"8000",
-      LOC => "SLICE_X2Y27"
-    )
-    port map (
-      ADR0 => current_cnt_1_2003,
-      ADR1 => current_state_cmp_eq00008_0,
-      ADR2 => current_state_cmp_eq00004_O_0,
-      ADR3 => current_cnt_8_2022,
-      O => current_state_cmp_eq0000
-    );
   Inst_SDRAMInterface_current_state_cmp_eq0000_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X2Y27",
@@ -17593,43 +17529,6 @@ begin
     port map (
       I => current_state_cmp_eq00004_O,
       O => current_state_cmp_eq00004_O_0
-    );
-  current_state_cmp_eq00004 : X_LUT4
-    generic map(
-      INIT => X"8000",
-      LOC => "SLICE_X2Y27"
-    )
-    port map (
-      ADR0 => current_cnt_7_2018,
-      ADR1 => current_cnt_6_2017,
-      ADR2 => current_cnt_3_2008,
-      ADR3 => current_cnt_2_2007,
-      O => current_state_cmp_eq00004_O
-    );
-  current_cnt2_mux0000_8_1 : X_LUT4
-    generic map(
-      INIT => X"ECA0",
-      LOC => "SLICE_X2Y11"
-    )
-    port map (
-      ADR0 => current_cnt2_3_1979,
-      ADR1 => N111_0,
-      ADR2 => N2_0,
-      ADR3 => current_cnt2_addsub0000(3),
-      O => current_cnt2_mux0000(8)
-    );
-  current_cnt2_3 : X_FF
-    generic map(
-      LOC => "SLICE_X2Y11",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_SDRAMInterface_current_cnt2_3_DXMUX_8300,
-      CE => Inst_SDRAMInterface_current_cnt2_3_CEINV_8284,
-      CLK => Inst_SDRAMInterface_current_cnt2_3_CLKINV_8285,
-      SET => GND,
-      RST => GND,
-      O => current_cnt2_3_1979
     );
   Inst_SDRAMInterface_current_cnt2_3_DXMUX : X_BUF
     generic map(
@@ -17667,30 +17566,6 @@ begin
       I => current_cnt2_and0000_0,
       O => Inst_SDRAMInterface_current_cnt2_3_CEINV_8284
     );
-  current_cnt2_mux0000_0_11 : X_LUT4
-    generic map(
-      INIT => X"C5F5",
-      LOC => "SLICE_X2Y11"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd6_2065,
-      ADR1 => requestread,
-      ADR2 => current_state_FSM_FFd1_2030,
-      ADR3 => current_state_cmp_eq0000_0,
-      O => N2
-    );
-  current_cnt2_mux0000_9_1 : X_LUT4
-    generic map(
-      INIT => X"ECA0",
-      LOC => "SLICE_X3Y10"
-    )
-    port map (
-      ADR0 => current_cnt2_addsub0000(2),
-      ADR1 => N2_0,
-      ADR2 => N111_0,
-      ADR3 => current_cnt2_2_1978,
-      O => current_cnt2_mux0000(9)
-    );
   Inst_SDRAMInterface_current_cnt2_2_DXMUX : X_BUF
     generic map(
       LOC => "SLICE_X3Y10",
@@ -17726,18 +17601,6 @@ begin
     port map (
       I => current_cnt2_and0000_0,
       O => Inst_SDRAMInterface_current_cnt2_2_CEINV_8316
-    );
-  current_cnt2_mux0000_0_21 : X_LUT4
-    generic map(
-      INIT => X"2020",
-      LOC => "SLICE_X3Y10"
-    )
-    port map (
-      ADR0 => current_state_cmp_eq0000_0,
-      ADR1 => requestread,
-      ADR2 => current_state_FSM_FFd1_2030,
-      ADR3 => VCC,
-      O => N111
     );
   A_8_OBUF_DXMUX : X_BUF
     generic map(
@@ -17973,52 +17836,6 @@ begin
       I => nxt_cnt_and000026_O,
       O => nxt_cnt_and000026_O_0
     );
-  current_state_FSM_FFd1_In_SW0 : X_LUT4
-    generic map(
-      INIT => X"F222",
-      LOC => "SLICE_X4Y21"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd1_2030,
-      ADR1 => current_state_cmp_eq0000_0,
-      ADR2 => current_state_cmp_eq0002_0,
-      ADR3 => current_state_FSM_FFd2_2029,
-      O => current_state_FSM_FFd1_In_SW0_O
-    );
-  current_state_FSM_FFd1_In : X_LUT4
-    generic map(
-      INIT => X"EAE2",
-      LOC => "SLICE_X4Y21"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd1_2030,
-      ADR1 => MemCLK_2043,
-      ADR2 => current_state_FSM_FFd1_In_SW0_O_0,
-      ADR3 => requestread,
-      O => current_state_FSM_FFd1_In_8587
-    );
-  Inst_SDRAMInterface_current_state_FSM_FFd1_FFX_RSTOR : X_INV
-    generic map(
-      LOC => "SLICE_X4Y21",
-      PATHPULSE => 592 ps
-    )
-    port map (
-      I => rst,
-      O => Inst_SDRAMInterface_current_state_FSM_FFd1_FFX_RST
-    );
-  current_state_FSM_FFd1 : X_FF
-    generic map(
-      LOC => "SLICE_X4Y21",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_SDRAMInterface_current_state_FSM_FFd1_DXMUX_8590,
-      CE => Inst_SDRAMInterface_current_state_FSM_FFd1_CEINV_8573,
-      CLK => Inst_SDRAMInterface_current_state_FSM_FFd1_CLKINV_8574,
-      SET => GND,
-      RST => Inst_SDRAMInterface_current_state_FSM_FFd1_FFX_RST,
-      O => current_state_FSM_FFd1_2030
-    );
   Inst_SDRAMInterface_current_state_FSM_FFd1_DXMUX : X_BUF
     generic map(
       LOC => "SLICE_X4Y21",
@@ -18055,18 +17872,6 @@ begin
       I => current_state_not0001_0,
       O => Inst_SDRAMInterface_current_state_FSM_FFd1_CEINV_8573
     );
-  current_state_FSM_FFd3_In : X_LUT4
-    generic map(
-      INIT => X"3B08",
-      LOC => "SLICE_X5Y22"
-    )
-    port map (
-      ADR0 => N0_0,
-      ADR1 => MemCLK_2043,
-      ADR2 => current_state_FSM_FFd3_In_SW0_SW0_O_0,
-      ADR3 => current_state_FSM_FFd3_2049,
-      O => current_state_FSM_FFd3_In_8625
-    );
   Inst_SDRAMInterface_current_state_FSM_FFd3_DXMUX : X_BUF
     generic map(
       LOC => "SLICE_X5Y22",
@@ -18102,18 +17907,6 @@ begin
     port map (
       I => current_state_not0001_0,
       O => Inst_SDRAMInterface_current_state_FSM_FFd3_CEINV_8610
-    );
-  current_state_FSM_FFd3_In_SW0_SW0 : X_LUT4
-    generic map(
-      INIT => X"AFFF",
-      LOC => "SLICE_X5Y22"
-    )
-    port map (
-      ADR0 => current_cnt_1_2003,
-      ADR1 => VCC,
-      ADR2 => N10_0,
-      ADR3 => current_state_FSM_FFd4_2025,
-      O => current_state_FSM_FFd3_In_SW0_SW0_O
     );
   Inst_SDRAMInterface_current_state_FSM_FFd4_DXMUX : X_BUF
     generic map(
@@ -18295,18 +18088,6 @@ begin
       I => current_state_not0001_0,
       O => Inst_SDRAMInterface_current_state_FSM_FFd5_CEINV_8806
     );
-  nxt_cnt_0_11 : X_LUT4
-    generic map(
-      INIT => X"AE0C",
-      LOC => "SLICE_X4Y25"
-    )
-    port map (
-      ADR0 => N39_0,
-      ADR1 => current_state_FSM_FFd1_2030,
-      ADR2 => nxt_cnt_and000097_O_0,
-      ADR3 => current_state_FSM_FFd4_2025,
-      O => N19
-    );
   Inst_SDRAMInterface_N19_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X4Y25",
@@ -18324,43 +18105,6 @@ begin
     port map (
       I => nxt_cnt_and000097_O,
       O => nxt_cnt_and000097_O_0
-    );
-  nxt_cnt_and000097 : X_LUT4
-    generic map(
-      INIT => X"8000",
-      LOC => "SLICE_X4Y25"
-    )
-    port map (
-      ADR0 => requestread,
-      ADR1 => nxt_cnt_and000052_0,
-      ADR2 => N10_0,
-      ADR3 => nxt_cnt_cmp_eq0002_0,
-      O => nxt_cnt_and000097_O
-    );
-  current_Addr_mux0000_10_Q : X_LUT4
-    generic map(
-      INIT => X"FCF0",
-      LOC => "SLICE_X5Y10"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => N11_0,
-      ADR2 => current_Addr_mux0000_10_SW0_SW0_O_0,
-      ADR3 => NlwRenamedSig_OI_current_Addr_1,
-      O => current_Addr_mux0000(10)
-    );
-  current_Addr_1 : X_FF
-    generic map(
-      LOC => "SLICE_X5Y10",
-      INIT => '0'
-    )
-    port map (
-      I => A_1_OBUF_DXMUX_8883,
-      CE => A_1_OBUF_CEINV_8866,
-      CLK => A_1_OBUF_CLKINV_8867,
-      SET => GND,
-      RST => GND,
-      O => NlwRenamedSig_OI_current_Addr_1
     );
   A_1_OBUF_DXMUX : X_BUF
     generic map(
@@ -18397,18 +18141,6 @@ begin
     port map (
       I => current_cnt2_and0000_0,
       O => A_1_OBUF_CEINV_8866
-    );
-  current_Addr_mux0000_10_SW0_SW0 : X_LUT4
-    generic map(
-      INIT => X"F8F0",
-      LOC => "SLICE_X5Y10"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd1_2030,
-      ADR1 => current_cnt_1_2003,
-      ADR2 => N103_0,
-      ADR3 => requestread,
-      O => current_Addr_mux0000_10_SW0_SW0_O
     );
   A_0_OBUF_DXMUX : X_BUF
     generic map(
@@ -18608,62 +18340,6 @@ begin
       I => byteout_not0001_0,
       O => bytetransfer_1_CEINV_9067
     );
-  bytetransfer_3_FFY_RSTOR : X_BUF
-    generic map(
-      LOC => "SLICE_X10Y44",
-      PATHPULSE => 592 ps
-    )
-    port map (
-      I => bytetransfer_3_SRINVNOT,
-      O => bytetransfer_3_FFY_RST
-    );
-  byteout_2 : X_FF
-    generic map(
-      LOC => "SLICE_X10Y44",
-      INIT => '0'
-    )
-    port map (
-      I => bytetransfer_3_DYMUX_9124,
-      CE => bytetransfer_3_CEINV_9113,
-      CLK => bytetransfer_3_CLKINV_9114,
-      SET => GND,
-      RST => bytetransfer_3_FFY_RST,
-      O => byteout(2)
-    );
-  byteout_mux0000_11_1 : X_LUT4
-    generic map(
-      INIT => X"AACC",
-      LOC => "SLICE_X10Y44"
-    )
-    port map (
-      ADR0 => MemDataIn(11),
-      ADR1 => MemDataIn(3),
-      ADR2 => VCC,
-      ADR3 => MemCLK_2043,
-      O => byteout_mux0000(11)
-    );
-  bytetransfer_3_FFX_RSTOR : X_BUF
-    generic map(
-      LOC => "SLICE_X10Y44",
-      PATHPULSE => 592 ps
-    )
-    port map (
-      I => bytetransfer_3_SRINVNOT,
-      O => bytetransfer_3_FFX_RST
-    );
-  byteout_3 : X_FF
-    generic map(
-      LOC => "SLICE_X10Y44",
-      INIT => '0'
-    )
-    port map (
-      I => bytetransfer_3_DXMUX_9140,
-      CE => bytetransfer_3_CEINV_9113,
-      CLK => bytetransfer_3_CLKINV_9114,
-      SET => GND,
-      RST => bytetransfer_3_FFX_RST,
-      O => byteout(3)
-    );
   bytetransfer_3_DXMUX : X_BUF
     generic map(
       LOC => "SLICE_X10Y44",
@@ -18709,40 +18385,6 @@ begin
       I => byteout_not0001_0,
       O => bytetransfer_3_CEINV_9113
     );
-  byteout_mux0000_10_1 : X_LUT4
-    generic map(
-      INIT => X"CFC0",
-      LOC => "SLICE_X10Y44"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => MemDataIn(10),
-      ADR2 => MemCLK_2043,
-      ADR3 => MemDataIn(2),
-      O => byteout_mux0000(10)
-    );
-  bytetransfer_5_FFY_RSTOR : X_BUF
-    generic map(
-      LOC => "SLICE_X12Y55",
-      PATHPULSE => 592 ps
-    )
-    port map (
-      I => bytetransfer_5_SRINVNOT,
-      O => bytetransfer_5_FFY_RST
-    );
-  byteout_4 : X_FF
-    generic map(
-      LOC => "SLICE_X12Y55",
-      INIT => '0'
-    )
-    port map (
-      I => bytetransfer_5_DYMUX_9170,
-      CE => bytetransfer_5_CEINV_9159,
-      CLK => bytetransfer_5_CLKINV_9160,
-      SET => GND,
-      RST => bytetransfer_5_FFY_RST,
-      O => byteout(4)
-    );
   bytetransfer_5_DXMUX : X_BUF
     generic map(
       LOC => "SLICE_X12Y55",
@@ -18787,18 +18429,6 @@ begin
     port map (
       I => byteout_not0001_0,
       O => bytetransfer_5_CEINV_9159
-    );
-  byteout_mux0000_12_1 : X_LUT4
-    generic map(
-      INIT => X"D8D8",
-      LOC => "SLICE_X12Y55"
-    )
-    port map (
-      ADR0 => MemCLK_2043,
-      ADR1 => MemDataIn(12),
-      ADR2 => MemDataIn(4),
-      ADR3 => VCC,
-      O => byteout_mux0000(12)
     );
   bytetransfer_7_DXMUX : X_BUF
     generic map(
@@ -18980,31 +18610,6 @@ begin
       I => current_cnt2_and0000_0,
       O => Inst_SDRAMInterface_current_cnt_3_CEINV_9348
     );
-  current_cnt_5 : X_FF
-    generic map(
-      LOC => "SLICE_X2Y28",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_SDRAMInterface_current_cnt_5_DYMUX_9391,
-      CE => Inst_SDRAMInterface_current_cnt_5_CEINV_9382,
-      CLK => Inst_SDRAMInterface_current_cnt_5_CLKINV_9383,
-      SET => GND,
-      RST => GND,
-      O => current_cnt_5_2013
-    );
-  nxt_cnt_5_1 : X_LUT4
-    generic map(
-      INIT => X"FFB0",
-      LOC => "SLICE_X2Y28"
-    )
-    port map (
-      ADR0 => N19_0,
-      ADR1 => N65_0,
-      ADR2 => nxt_cnt_share0000(5),
-      ADR3 => N7_0,
-      O => nxt_cnt(5)
-    );
   Inst_SDRAMInterface_current_cnt_5_DYMUX : X_BUF
     generic map(
       LOC => "SLICE_X2Y28",
@@ -19031,44 +18636,6 @@ begin
     port map (
       I => current_cnt2_and0000_0,
       O => Inst_SDRAMInterface_current_cnt_5_CEINV_9382
-    );
-  current_cnt_6 : X_FF
-    generic map(
-      LOC => "SLICE_X3Y29",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_SDRAMInterface_current_cnt_7_DYMUX_9417,
-      CE => Inst_SDRAMInterface_current_cnt_7_CEINV_9408,
-      CLK => Inst_SDRAMInterface_current_cnt_7_CLKINV_9409,
-      SET => GND,
-      RST => GND,
-      O => current_cnt_6_2017
-    );
-  nxt_cnt_7_1 : X_LUT4
-    generic map(
-      INIT => X"EEAE",
-      LOC => "SLICE_X3Y29"
-    )
-    port map (
-      ADR0 => N7_0,
-      ADR1 => nxt_cnt_share0000(7),
-      ADR2 => N65_0,
-      ADR3 => N19_0,
-      O => nxt_cnt(7)
-    );
-  current_cnt_7 : X_FF
-    generic map(
-      LOC => "SLICE_X3Y29",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_SDRAMInterface_current_cnt_7_DXMUX_9429,
-      CE => Inst_SDRAMInterface_current_cnt_7_CEINV_9408,
-      CLK => Inst_SDRAMInterface_current_cnt_7_CLKINV_9409,
-      SET => GND,
-      RST => GND,
-      O => current_cnt_7_2018
     );
   Inst_SDRAMInterface_current_cnt_7_DXMUX : X_BUF
     generic map(
@@ -19105,30 +18672,6 @@ begin
     port map (
       I => current_cnt2_and0000_0,
       O => Inst_SDRAMInterface_current_cnt_7_CEINV_9408
-    );
-  nxt_cnt_6_1 : X_LUT4
-    generic map(
-      INIT => X"EFAA",
-      LOC => "SLICE_X3Y29"
-    )
-    port map (
-      ADR0 => N7_0,
-      ADR1 => N19_0,
-      ADR2 => N65_0,
-      ADR3 => nxt_cnt_share0000(6),
-      O => nxt_cnt(6)
-    );
-  current_state_FSM_FFd8_In1 : X_LUT4
-    generic map(
-      INIT => X"5500",
-      LOC => "SLICE_X6Y22"
-    )
-    port map (
-      ADR0 => MemCLK_2043,
-      ADR1 => VCC,
-      ADR2 => VCC,
-      ADR3 => current_state_FSM_FFd8_2052,
-      O => current_state_FSM_FFd8_In
     );
   Inst_SDRAMInterface_current_state_FSM_FFd8_XUSED : X_BUF
     generic map(
@@ -19346,18 +18889,6 @@ begin
       I => current_cnt2_and0000_0,
       O => A_11_OBUF_CEINV_9635
     );
-  current_state_and000018 : X_LUT4
-    generic map(
-      INIT => X"FFFC",
-      LOC => "SLICE_X2Y31"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => current_cnt_4_2012,
-      ADR2 => current_cnt_5_2013,
-      ADR3 => current_cnt_0_2002,
-      O => current_state_and000018_9682
-    );
   Inst_SDRAMInterface_current_state_and000018_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X2Y31",
@@ -19375,30 +18906,6 @@ begin
     port map (
       I => N41,
       O => N41_0
-    );
-  current_state_cmp_eq0002_SW0 : X_LUT4
-    generic map(
-      INIT => X"CCFF",
-      LOC => "SLICE_X2Y31"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => current_cnt_2_2007,
-      ADR2 => VCC,
-      ADR3 => current_cnt_0_2002,
-      O => N41
-    );
-  current_Addr_mux0000_6_20_SW0_SW0 : X_LUT4
-    generic map(
-      INIT => X"0CFC",
-      LOC => "SLICE_X5Y17"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => N9_0,
-      ADR2 => current_state_FSM_FFd1_2030,
-      ADR3 => requestread,
-      O => N108
     );
   Inst_SDRAMInterface_N108_XUSED : X_BUF
     generic map(
@@ -19418,18 +18925,6 @@ begin
       I => N110,
       O => N110_0
     );
-  current_Addr_mux0000_10_12_SW0 : X_LUT4
-    generic map(
-      INIT => X"04F4",
-      LOC => "SLICE_X5Y17"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd6_2065,
-      ADR1 => N9_0,
-      ADR2 => current_state_FSM_FFd1_2030,
-      ADR3 => requestread,
-      O => N110
-    );
   Inst_SDRAMInterface_nxt_cnt_and000038_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X5Y7",
@@ -19438,30 +18933,6 @@ begin
     port map (
       I => nxt_cnt_and000038_9718,
       O => nxt_cnt_and000038_0
-    );
-  nxt_cnt_and000038 : X_LUT4
-    generic map(
-      INIT => X"0100",
-      LOC => "SLICE_X5Y7"
-    )
-    port map (
-      ADR0 => NlwRenamedSig_OI_current_Addr_10,
-      ADR1 => NlwRenamedSig_OI_current_Addr_9,
-      ADR2 => NlwRenamedSig_OI_current_Addr_8,
-      ADR3 => NlwRenamedSig_OI_current_Addr_4,
-      O => nxt_cnt_and000038_9718
-    );
-  nxt_CAS17 : X_LUT4
-    generic map(
-      INIT => X"FFF0",
-      LOC => "SLICE_X11Y23"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => nxt_CAS4_0,
-      ADR3 => nxt_CAS16_0,
-      O => nxt_CAS
     );
   CASOut_OBUF_DXMUX : X_BUF
     generic map(
@@ -19498,18 +18969,6 @@ begin
     port map (
       I => current_cnt2_and0000_0,
       O => CASOut_OBUF_CEINV_9731
-    );
-  nxt_CAS16 : X_LUT4
-    generic map(
-      INIT => X"0100",
-      LOC => "SLICE_X11Y23"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd6_2065,
-      ADR1 => current_state_FSM_FFd1_2030,
-      ADR2 => current_state_FSM_FFd2_2029,
-      ADR3 => NlwRenamedSig_OI_current_CAS,
-      O => nxt_CAS16_9737
     );
   RASOut_OBUF_DXMUX : X_BUF
     generic map(
@@ -19709,18 +19168,6 @@ begin
       I => N93,
       O => N93_0
     );
-  current_state_FSM_FFd1_In11_SW5 : X_LUT4
-    generic map(
-      INIT => X"8888",
-      LOC => "SLICE_X2Y10"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd3_2049,
-      ADR1 => current_cnt2_6_1988,
-      ADR2 => VCC,
-      ADR3 => VCC,
-      O => N99
-    );
   Inst_SDRAMInterface_N99_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X2Y10",
@@ -19738,30 +19185,6 @@ begin
     port map (
       I => N95,
       O => N95_0
-    );
-  current_state_FSM_FFd1_In11_SW3 : X_LUT4
-    generic map(
-      INIT => X"A0A0",
-      LOC => "SLICE_X2Y10"
-    )
-    port map (
-      ADR0 => current_state_FSM_FFd3_2049,
-      ADR1 => VCC,
-      ADR2 => current_cnt2_7_1989,
-      ADR3 => VCC,
-      O => N95
-    );
-  current_Addr_mux0000_6_2 : X_LUT4
-    generic map(
-      INIT => X"FAF0",
-      LOC => "SLICE_X4Y8"
-    )
-    port map (
-      ADR0 => current_cnt2_5_1984,
-      ADR1 => VCC,
-      ADR2 => current_state_FSM_FFd6_2065,
-      ADR3 => current_state_FSM_FFd3_2049,
-      O => current_Addr_mux0000_6_2_10018
     );
   Inst_SDRAMInterface_current_Addr_mux0000_6_2_XUSED : X_BUF
     generic map(
@@ -19781,18 +19204,6 @@ begin
       I => N97,
       O => N97_0
     );
-  current_state_FSM_FFd1_In11_SW4 : X_LUT4
-    generic map(
-      INIT => X"F000",
-      LOC => "SLICE_X4Y8"
-    )
-    port map (
-      ADR0 => VCC,
-      ADR1 => VCC,
-      ADR2 => current_cnt2_0_1973,
-      ADR3 => current_state_FSM_FFd3_2049,
-      O => N97
-    );
   Inst_SDRAMInterface_nxt_cnt_cmp_eq000225_XUSED : X_BUF
     generic map(
       LOC => "SLICE_X2Y7",
@@ -19801,30 +19212,6 @@ begin
     port map (
       I => nxt_cnt_cmp_eq000225_10030,
       O => nxt_cnt_cmp_eq000225_0
-    );
-  nxt_cnt_cmp_eq000225 : X_LUT4
-    generic map(
-      INIT => X"0001",
-      LOC => "SLICE_X2Y7"
-    )
-    port map (
-      ADR0 => current_cnt2_5_1984,
-      ADR1 => current_cnt2_7_1989,
-      ADR2 => current_cnt2_6_1988,
-      ADR3 => current_cnt2_4_1983,
-      O => nxt_cnt_cmp_eq000225_10030
-    );
-  current_Addr_mux0000_2_2 : X_LUT4
-    generic map(
-      INIT => X"EECC",
-      LOC => "SLICE_X3Y9"
-    )
-    port map (
-      ADR0 => current_cnt2_9_1994,
-      ADR1 => current_state_FSM_FFd6_2065,
-      ADR2 => VCC,
-      ADR3 => current_state_FSM_FFd3_2049,
-      O => current_Addr_mux0000_2_2_10054
     );
   Inst_SDRAMInterface_current_Addr_mux0000_2_2_XUSED : X_BUF
     generic map(
@@ -19931,6 +19318,18 @@ begin
       ADR3 => VCC,
       O => current_cnt2_11_rt_7804
     );
+  current_cnt_8_rt : X_LUT4
+    generic map(
+      INIT => X"AAAA",
+      LOC => "SLICE_X1Y30"
+    )
+    port map (
+      ADR0 => current_cnt_8_2022,
+      ADR1 => VCC,
+      ADR2 => VCC,
+      ADR3 => VCC,
+      O => current_cnt_8_rt_7983
+    );
   Madd_nxt_cnt_share0000_lut_0_INV_0 : X_LUT4
     generic map(
       INIT => X"00FF",
@@ -19942,6 +19341,30 @@ begin
       ADR2 => VCC,
       ADR3 => current_cnt_0_2002,
       O => Madd_nxt_cnt_share0000_lut(0)
+    );
+  nxt_cnt_1_1_SW0 : X_LUT4
+    generic map(
+      INIT => X"AAFE",
+      LOC => "SLICE_X2Y25"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd1_2030,
+      ADR1 => current_state_FSM_FFd7_2028,
+      ADR2 => current_state_FSM_FFd2_2029,
+      ADR3 => current_state_cmp_eq0002_0,
+      O => nxt_cnt_1_1_SW0_O
+    );
+  nxt_cnt_1_1 : X_LUT4
+    generic map(
+      INIT => X"FBF0",
+      LOC => "SLICE_X2Y25"
+    )
+    port map (
+      ADR0 => current_cnt_1_2003,
+      ADR1 => N10_0,
+      ADR2 => nxt_cnt_1_1_SW0_O_0,
+      ADR3 => current_state_FSM_FFd4_2025,
+      O => N5
     );
   nxt_cnt_1_21 : X_LUT4
     generic map(
@@ -20089,6 +19512,18 @@ begin
       ADR3 => current_state_and000014_O_0,
       O => N3
     );
+  current_state_cmp_eq00004 : X_LUT4
+    generic map(
+      INIT => X"8000",
+      LOC => "SLICE_X2Y27"
+    )
+    port map (
+      ADR0 => current_cnt_7_2018,
+      ADR1 => current_cnt_6_2017,
+      ADR2 => current_cnt_3_2008,
+      ADR3 => current_cnt_2_2007,
+      O => current_state_cmp_eq00004_O
+    );
   current_Addr_mux0000_10_11_SW0 : X_LUT4
     generic map(
       INIT => X"FFAA",
@@ -20150,19 +19585,6 @@ begin
       RST => GND,
       O => NlwRenamedSig_OI_current_Addr_9
     );
-  current_cnt2_2 : X_FF
-    generic map(
-      LOC => "SLICE_X3Y10",
-      INIT => '0'
-    )
-    port map (
-      I => Inst_SDRAMInterface_current_cnt2_2_DXMUX_8333,
-      CE => Inst_SDRAMInterface_current_cnt2_2_CEINV_8316,
-      CLK => Inst_SDRAMInterface_current_cnt2_2_CLKINV_8317,
-      SET => GND,
-      RST => GND,
-      O => current_cnt2_2_1978
-    );
   current_Addr_mux0000_6_20_SW0 : X_LUT4
     generic map(
       INIT => X"AA08",
@@ -20186,6 +19608,105 @@ begin
       ADR2 => current_cnt_5_2013,
       ADR3 => current_Addr_mux0000_6_20_SW0_O_0,
       O => current_Addr_mux0000(6)
+    );
+  current_Addr_5 : X_FF
+    generic map(
+      LOC => "SLICE_X4Y16",
+      INIT => '0'
+    )
+    port map (
+      I => A_5_OBUF_DXMUX_8243,
+      CE => A_5_OBUF_CEINV_8227,
+      CLK => A_5_OBUF_CLKINV_8228,
+      SET => GND,
+      RST => GND,
+      O => NlwRenamedSig_OI_current_Addr_5
+    );
+  current_state_cmp_eq000014 : X_LUT4
+    generic map(
+      INIT => X"8000",
+      LOC => "SLICE_X2Y27"
+    )
+    port map (
+      ADR0 => current_cnt_1_2003,
+      ADR1 => current_state_cmp_eq00008_0,
+      ADR2 => current_state_cmp_eq00004_O_0,
+      ADR3 => current_cnt_8_2022,
+      O => current_state_cmp_eq0000
+    );
+  current_cnt2_mux0000_0_11 : X_LUT4
+    generic map(
+      INIT => X"C5F5",
+      LOC => "SLICE_X2Y11"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd6_2065,
+      ADR1 => requestread,
+      ADR2 => current_state_FSM_FFd1_2030,
+      ADR3 => current_state_cmp_eq0000_0,
+      O => N2
+    );
+  current_cnt2_mux0000_8_1 : X_LUT4
+    generic map(
+      INIT => X"ECA0",
+      LOC => "SLICE_X2Y11"
+    )
+    port map (
+      ADR0 => current_cnt2_3_1979,
+      ADR1 => N111_0,
+      ADR2 => N2_0,
+      ADR3 => current_cnt2_addsub0000(3),
+      O => current_cnt2_mux0000(8)
+    );
+  current_cnt2_3 : X_FF
+    generic map(
+      LOC => "SLICE_X2Y11",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_SDRAMInterface_current_cnt2_3_DXMUX_8300,
+      CE => Inst_SDRAMInterface_current_cnt2_3_CEINV_8284,
+      CLK => Inst_SDRAMInterface_current_cnt2_3_CLKINV_8285,
+      SET => GND,
+      RST => GND,
+      O => current_cnt2_3_1979
+    );
+  current_cnt2_mux0000_0_21 : X_LUT4
+    generic map(
+      INIT => X"2020",
+      LOC => "SLICE_X3Y10"
+    )
+    port map (
+      ADR0 => current_state_cmp_eq0000_0,
+      ADR1 => requestread,
+      ADR2 => current_state_FSM_FFd1_2030,
+      ADR3 => VCC,
+      O => N111
+    );
+  current_cnt2_mux0000_9_1 : X_LUT4
+    generic map(
+      INIT => X"ECA0",
+      LOC => "SLICE_X3Y10"
+    )
+    port map (
+      ADR0 => current_cnt2_addsub0000(2),
+      ADR1 => N2_0,
+      ADR2 => N111_0,
+      ADR3 => current_cnt2_2_1978,
+      O => current_cnt2_mux0000(9)
+    );
+  current_cnt2_2 : X_FF
+    generic map(
+      LOC => "SLICE_X3Y10",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_SDRAMInterface_current_cnt2_2_DXMUX_8333,
+      CE => Inst_SDRAMInterface_current_cnt2_2_CEINV_8316,
+      CLK => Inst_SDRAMInterface_current_cnt2_2_CLKINV_8317,
+      SET => GND,
+      RST => GND,
+      O => current_cnt2_2_1978
     );
   current_Addr_mux0000_3_SW0_SW0 : X_LUT4
     generic map(
@@ -20433,6 +19954,76 @@ begin
       ADR3 => nxt_cnt_and000026_O_0,
       O => N112
     );
+  current_state_FSM_FFd1_In_SW0 : X_LUT4
+    generic map(
+      INIT => X"F222",
+      LOC => "SLICE_X4Y21"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd1_2030,
+      ADR1 => current_state_cmp_eq0000_0,
+      ADR2 => current_state_cmp_eq0002_0,
+      ADR3 => current_state_FSM_FFd2_2029,
+      O => current_state_FSM_FFd1_In_SW0_O
+    );
+  current_state_FSM_FFd1_In : X_LUT4
+    generic map(
+      INIT => X"EAE2",
+      LOC => "SLICE_X4Y21"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd1_2030,
+      ADR1 => MemCLK_2043,
+      ADR2 => current_state_FSM_FFd1_In_SW0_O_0,
+      ADR3 => requestread,
+      O => current_state_FSM_FFd1_In_8587
+    );
+  current_state_FSM_FFd1 : X_FF
+    generic map(
+      LOC => "SLICE_X4Y21",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_SDRAMInterface_current_state_FSM_FFd1_DXMUX_8590,
+      CE => Inst_SDRAMInterface_current_state_FSM_FFd1_CEINV_8573,
+      CLK => Inst_SDRAMInterface_current_state_FSM_FFd1_CLKINV_8574,
+      SET => GND,
+      RST => Inst_SDRAMInterface_current_state_FSM_FFd1_FFX_RSTAND_8596,
+      O => current_state_FSM_FFd1_2030
+    );
+  Inst_SDRAMInterface_current_state_FSM_FFd1_FFX_RSTAND : X_INV
+    generic map(
+      LOC => "SLICE_X4Y21",
+      PATHPULSE => 592 ps
+    )
+    port map (
+      I => rst,
+      O => Inst_SDRAMInterface_current_state_FSM_FFd1_FFX_RSTAND_8596
+    );
+  current_state_FSM_FFd3_In_SW0_SW0 : X_LUT4
+    generic map(
+      INIT => X"AFFF",
+      LOC => "SLICE_X5Y22"
+    )
+    port map (
+      ADR0 => current_cnt_1_2003,
+      ADR1 => VCC,
+      ADR2 => N10_0,
+      ADR3 => current_state_FSM_FFd4_2025,
+      O => current_state_FSM_FFd3_In_SW0_SW0_O
+    );
+  current_state_FSM_FFd3_In : X_LUT4
+    generic map(
+      INIT => X"3B08",
+      LOC => "SLICE_X5Y22"
+    )
+    port map (
+      ADR0 => N0_0,
+      ADR1 => MemCLK_2043,
+      ADR2 => current_state_FSM_FFd3_In_SW0_SW0_O_0,
+      ADR3 => current_state_FSM_FFd3_2049,
+      O => current_state_FSM_FFd3_In_8625
+    );
   current_state_FSM_FFd3 : X_FF
     generic map(
       LOC => "SLICE_X5Y22",
@@ -20632,6 +20223,18 @@ begin
       RST => GND,
       O => current_cnt_0_2002
     );
+  nxt_cnt_and000097 : X_LUT4
+    generic map(
+      INIT => X"8000",
+      LOC => "SLICE_X4Y25"
+    )
+    port map (
+      ADR0 => requestread,
+      ADR1 => nxt_cnt_and000052_0,
+      ADR2 => N10_0,
+      ADR3 => nxt_cnt_cmp_eq0002_0,
+      O => nxt_cnt_and000097_O
+    );
   current_state_FSM_FFd5_In10 : X_LUT4
     generic map(
       INIT => X"A2AA",
@@ -20677,6 +20280,55 @@ begin
     port map (
       I => rst,
       O => Inst_SDRAMInterface_current_state_FSM_FFd5_FFX_RSTAND_8829
+    );
+  nxt_cnt_0_11 : X_LUT4
+    generic map(
+      INIT => X"AE0C",
+      LOC => "SLICE_X4Y25"
+    )
+    port map (
+      ADR0 => N39_0,
+      ADR1 => current_state_FSM_FFd1_2030,
+      ADR2 => nxt_cnt_and000097_O_0,
+      ADR3 => current_state_FSM_FFd4_2025,
+      O => N19
+    );
+  current_Addr_mux0000_10_SW0_SW0 : X_LUT4
+    generic map(
+      INIT => X"F8F0",
+      LOC => "SLICE_X5Y10"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd1_2030,
+      ADR1 => current_cnt_1_2003,
+      ADR2 => N103_0,
+      ADR3 => requestread,
+      O => current_Addr_mux0000_10_SW0_SW0_O
+    );
+  current_Addr_mux0000_10_Q : X_LUT4
+    generic map(
+      INIT => X"FCF0",
+      LOC => "SLICE_X5Y10"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => N11_0,
+      ADR2 => current_Addr_mux0000_10_SW0_SW0_O_0,
+      ADR3 => NlwRenamedSig_OI_current_Addr_1,
+      O => current_Addr_mux0000(10)
+    );
+  current_Addr_1 : X_FF
+    generic map(
+      LOC => "SLICE_X5Y10",
+      INIT => '0'
+    )
+    port map (
+      I => A_1_OBUF_DXMUX_8883,
+      CE => A_1_OBUF_CEINV_8866,
+      CLK => A_1_OBUF_CLKINV_8867,
+      SET => GND,
+      RST => GND,
+      O => NlwRenamedSig_OI_current_Addr_1
     );
   current_Addr_mux0000_11_SW0_SW0 : X_LUT4
     generic map(
@@ -20927,6 +20579,81 @@ begin
       RST => bytetransfer_1_SRINVNOT,
       O => byteout(1)
     );
+  byteout_mux0000_10_1 : X_LUT4
+    generic map(
+      INIT => X"CFC0",
+      LOC => "SLICE_X10Y44"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => MemDataIn(10),
+      ADR2 => MemCLK_2043,
+      ADR3 => MemDataIn(2),
+      O => byteout_mux0000(10)
+    );
+  byteout_2 : X_FF
+    generic map(
+      LOC => "SLICE_X10Y44",
+      INIT => '0'
+    )
+    port map (
+      I => bytetransfer_3_DYMUX_9124,
+      CE => bytetransfer_3_CEINV_9113,
+      CLK => bytetransfer_3_CLKINV_9114,
+      SET => GND,
+      RST => bytetransfer_3_SRINVNOT,
+      O => byteout(2)
+    );
+  byteout_mux0000_11_1 : X_LUT4
+    generic map(
+      INIT => X"AACC",
+      LOC => "SLICE_X10Y44"
+    )
+    port map (
+      ADR0 => MemDataIn(11),
+      ADR1 => MemDataIn(3),
+      ADR2 => VCC,
+      ADR3 => MemCLK_2043,
+      O => byteout_mux0000(11)
+    );
+  byteout_3 : X_FF
+    generic map(
+      LOC => "SLICE_X10Y44",
+      INIT => '0'
+    )
+    port map (
+      I => bytetransfer_3_DXMUX_9140,
+      CE => bytetransfer_3_CEINV_9113,
+      CLK => bytetransfer_3_CLKINV_9114,
+      SET => GND,
+      RST => bytetransfer_3_SRINVNOT,
+      O => byteout(3)
+    );
+  byteout_mux0000_12_1 : X_LUT4
+    generic map(
+      INIT => X"D8D8",
+      LOC => "SLICE_X12Y55"
+    )
+    port map (
+      ADR0 => MemCLK_2043,
+      ADR1 => MemDataIn(12),
+      ADR2 => MemDataIn(4),
+      ADR3 => VCC,
+      O => byteout_mux0000(12)
+    );
+  byteout_4 : X_FF
+    generic map(
+      LOC => "SLICE_X12Y55",
+      INIT => '0'
+    )
+    port map (
+      I => bytetransfer_5_DYMUX_9170,
+      CE => bytetransfer_5_CEINV_9159,
+      CLK => bytetransfer_5_CLKINV_9160,
+      SET => GND,
+      RST => bytetransfer_5_SRINVNOT,
+      O => byteout(4)
+    );
   byteout_mux0000_13_1 : X_LUT4
     generic map(
       INIT => X"F3C0",
@@ -21172,6 +20899,93 @@ begin
       SET => GND,
       RST => GND,
       O => current_cnt_3_2008
+    );
+  nxt_cnt_5_1 : X_LUT4
+    generic map(
+      INIT => X"FFB0",
+      LOC => "SLICE_X2Y28"
+    )
+    port map (
+      ADR0 => N19_0,
+      ADR1 => N65_0,
+      ADR2 => nxt_cnt_share0000(5),
+      ADR3 => N7_0,
+      O => nxt_cnt(5)
+    );
+  current_cnt_5 : X_FF
+    generic map(
+      LOC => "SLICE_X2Y28",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_SDRAMInterface_current_cnt_5_DYMUX_9391,
+      CE => Inst_SDRAMInterface_current_cnt_5_CEINV_9382,
+      CLK => Inst_SDRAMInterface_current_cnt_5_CLKINV_9383,
+      SET => GND,
+      RST => GND,
+      O => current_cnt_5_2013
+    );
+  nxt_cnt_6_1 : X_LUT4
+    generic map(
+      INIT => X"EFAA",
+      LOC => "SLICE_X3Y29"
+    )
+    port map (
+      ADR0 => N7_0,
+      ADR1 => N19_0,
+      ADR2 => N65_0,
+      ADR3 => nxt_cnt_share0000(6),
+      O => nxt_cnt(6)
+    );
+  current_cnt_6 : X_FF
+    generic map(
+      LOC => "SLICE_X3Y29",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_SDRAMInterface_current_cnt_7_DYMUX_9417,
+      CE => Inst_SDRAMInterface_current_cnt_7_CEINV_9408,
+      CLK => Inst_SDRAMInterface_current_cnt_7_CLKINV_9409,
+      SET => GND,
+      RST => GND,
+      O => current_cnt_6_2017
+    );
+  nxt_cnt_7_1 : X_LUT4
+    generic map(
+      INIT => X"EEAE",
+      LOC => "SLICE_X3Y29"
+    )
+    port map (
+      ADR0 => N7_0,
+      ADR1 => nxt_cnt_share0000(7),
+      ADR2 => N65_0,
+      ADR3 => N19_0,
+      O => nxt_cnt(7)
+    );
+  current_cnt_7 : X_FF
+    generic map(
+      LOC => "SLICE_X3Y29",
+      INIT => '0'
+    )
+    port map (
+      I => Inst_SDRAMInterface_current_cnt_7_DXMUX_9429,
+      CE => Inst_SDRAMInterface_current_cnt_7_CEINV_9408,
+      CLK => Inst_SDRAMInterface_current_cnt_7_CLKINV_9409,
+      SET => GND,
+      RST => GND,
+      O => current_cnt_7_2018
+    );
+  current_state_FSM_FFd8_In1 : X_LUT4
+    generic map(
+      INIT => X"5500",
+      LOC => "SLICE_X6Y22"
+    )
+    port map (
+      ADR0 => MemCLK_2043,
+      ADR1 => VCC,
+      ADR2 => VCC,
+      ADR3 => current_state_FSM_FFd8_2052,
+      O => current_state_FSM_FFd8_In
     );
   current_state_FSM_FFd8 : X_FF
     generic map(
@@ -21457,6 +21271,90 @@ begin
       RST => GND,
       O => NlwRenamedSig_OI_current_Addr_11
     );
+  nxt_cnt_and000038 : X_LUT4
+    generic map(
+      INIT => X"0100",
+      LOC => "SLICE_X5Y7"
+    )
+    port map (
+      ADR0 => NlwRenamedSig_OI_current_Addr_10,
+      ADR1 => NlwRenamedSig_OI_current_Addr_9,
+      ADR2 => NlwRenamedSig_OI_current_Addr_8,
+      ADR3 => NlwRenamedSig_OI_current_Addr_4,
+      O => nxt_cnt_and000038_9718
+    );
+  current_state_cmp_eq0002_SW0 : X_LUT4
+    generic map(
+      INIT => X"CCFF",
+      LOC => "SLICE_X2Y31"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => current_cnt_2_2007,
+      ADR2 => VCC,
+      ADR3 => current_cnt_0_2002,
+      O => N41
+    );
+  current_state_and000018 : X_LUT4
+    generic map(
+      INIT => X"FFFC",
+      LOC => "SLICE_X2Y31"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => current_cnt_4_2012,
+      ADR2 => current_cnt_5_2013,
+      ADR3 => current_cnt_0_2002,
+      O => current_state_and000018_9682
+    );
+  current_Addr_mux0000_10_12_SW0 : X_LUT4
+    generic map(
+      INIT => X"04F4",
+      LOC => "SLICE_X5Y17"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd6_2065,
+      ADR1 => N9_0,
+      ADR2 => current_state_FSM_FFd1_2030,
+      ADR3 => requestread,
+      O => N110
+    );
+  current_Addr_mux0000_6_20_SW0_SW0 : X_LUT4
+    generic map(
+      INIT => X"0CFC",
+      LOC => "SLICE_X5Y17"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => N9_0,
+      ADR2 => current_state_FSM_FFd1_2030,
+      ADR3 => requestread,
+      O => N108
+    );
+  nxt_CAS16 : X_LUT4
+    generic map(
+      INIT => X"0100",
+      LOC => "SLICE_X11Y23"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd6_2065,
+      ADR1 => current_state_FSM_FFd1_2030,
+      ADR2 => current_state_FSM_FFd2_2029,
+      ADR3 => NlwRenamedSig_OI_current_CAS,
+      O => nxt_CAS16_9737
+    );
+  nxt_CAS17 : X_LUT4
+    generic map(
+      INIT => X"FFF0",
+      LOC => "SLICE_X11Y23"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => nxt_CAS4_0,
+      ADR3 => nxt_CAS16_0,
+      O => nxt_CAS
+    );
   current_CAS : X_FF
     generic map(
       LOC => "SLICE_X11Y23",
@@ -21629,17 +21527,29 @@ begin
       RST => GND,
       O => current_clkena_2104
     );
-  nxt_cnt_cmp_eq000249 : X_LUT4
+  nxt_cnt_cmp_eq000225 : X_LUT4
     generic map(
       INIT => X"0001",
-      LOC => "SLICE_X3Y9"
+      LOC => "SLICE_X2Y7"
     )
     port map (
-      ADR0 => current_cnt2_9_1994,
-      ADR1 => current_cnt2_8_1993,
-      ADR2 => current_cnt2_11_1999,
-      ADR3 => current_cnt2_10_1998,
-      O => nxt_cnt_cmp_eq000249_10046
+      ADR0 => current_cnt2_5_1984,
+      ADR1 => current_cnt2_7_1989,
+      ADR2 => current_cnt2_6_1988,
+      ADR3 => current_cnt2_4_1983,
+      O => nxt_cnt_cmp_eq000225_10030
+    );
+  current_state_FSM_FFd1_In11_SW4 : X_LUT4
+    generic map(
+      INIT => X"F000",
+      LOC => "SLICE_X4Y8"
+    )
+    port map (
+      ADR0 => VCC,
+      ADR1 => VCC,
+      ADR2 => current_cnt2_0_1973,
+      ADR3 => current_state_FSM_FFd3_2049,
+      O => N97
     );
   current_state_FSM_FFd1_In11_SW0 : X_LUT4
     generic map(
@@ -21712,6 +21622,66 @@ begin
       ADR2 => VCC,
       ADR3 => current_state_FSM_FFd3_2049,
       O => N1011
+    );
+  current_state_FSM_FFd1_In11_SW3 : X_LUT4
+    generic map(
+      INIT => X"A0A0",
+      LOC => "SLICE_X2Y10"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd3_2049,
+      ADR1 => VCC,
+      ADR2 => current_cnt2_7_1989,
+      ADR3 => VCC,
+      O => N95
+    );
+  current_state_FSM_FFd1_In11_SW5 : X_LUT4
+    generic map(
+      INIT => X"8888",
+      LOC => "SLICE_X2Y10"
+    )
+    port map (
+      ADR0 => current_state_FSM_FFd3_2049,
+      ADR1 => current_cnt2_6_1988,
+      ADR2 => VCC,
+      ADR3 => VCC,
+      O => N99
+    );
+  current_Addr_mux0000_6_2 : X_LUT4
+    generic map(
+      INIT => X"FAF0",
+      LOC => "SLICE_X4Y8"
+    )
+    port map (
+      ADR0 => current_cnt2_5_1984,
+      ADR1 => VCC,
+      ADR2 => current_state_FSM_FFd6_2065,
+      ADR3 => current_state_FSM_FFd3_2049,
+      O => current_Addr_mux0000_6_2_10018
+    );
+  nxt_cnt_cmp_eq000249 : X_LUT4
+    generic map(
+      INIT => X"0001",
+      LOC => "SLICE_X3Y9"
+    )
+    port map (
+      ADR0 => current_cnt2_9_1994,
+      ADR1 => current_cnt2_8_1993,
+      ADR2 => current_cnt2_11_1999,
+      ADR3 => current_cnt2_10_1998,
+      O => nxt_cnt_cmp_eq000249_10046
+    );
+  current_Addr_mux0000_2_2 : X_LUT4
+    generic map(
+      INIT => X"EECC",
+      LOC => "SLICE_X3Y9"
+    )
+    port map (
+      ADR0 => current_cnt2_9_1994,
+      ADR1 => current_state_FSM_FFd6_2065,
+      ADR2 => VCC,
+      ADR3 => current_state_FSM_FFd3_2049,
+      O => current_Addr_mux0000_2_2_10054
     );
   MemCLK : X_FF
     generic map(
