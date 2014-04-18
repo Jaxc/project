@@ -10,7 +10,7 @@ port(
   clk     : in STD_LOGIC;
   rst     : in STD_LOGIC;
   filestart : in std_LOGIC; 
-  A         : in STD_LOGIC_VECTOR(11 downto 0);
+  A         : in STD_LOGIC_VECTOR(12 downto 0);
   CASin     : IN STD_LOGIC;
   RASin     : IN STD_LOGIC;
   WEin      : IN STD_LOGIC;
@@ -60,7 +60,7 @@ architecture mem of memory is
   CONSTANT memory_array:memory_array_type := init_Memory_wfile("test.mif");
   
   signal cnt : integer;
-  SIGNAL Address : STD_LOGIC_VECTOR(21 downto 0);
+  SIGNAL Address : STD_LOGIC_VECTOR(22 downto 0);
   SIGNAL DUMMY : STD_LOGIC_VECTOR(15 downto 0);
 begin  
   process(rst,clk)
@@ -70,7 +70,7 @@ begin
       ADDRESS <= (others => '0');
     elsif rising_edge(clk) then
       if WEin = '1' and RASin = '0' and CASin = '1' then
-        ADDRESS(21 downto 10) <= A ;
+        ADDRESS(22 downto 10) <= A ;
       elsif WEin = '1' and RASin = '1' and CASin = '0' then
         ADDRESS(9 downto 0) <= A(9 downto 0);
       end if;

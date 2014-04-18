@@ -8,7 +8,7 @@ package functions is
  subtype  t_256       is integer range 0 to   255 ;
   subtype  byte        is STD_LOGIC_VECTOR(width-1 downto 0);
   subtype  TwoByte     is STD_LOGIC_VECTOR(2*width - 1 downto 0);
- 	type memory_array_type is array (0 to 2**21-1) of TWOBYTE;
+ 	type memory_array_type is array (0 to 2**22-1) of TWOBYTE;
  	
  	impurefunction init_Memory_length(mif_file_name : in string) return integer;
  	

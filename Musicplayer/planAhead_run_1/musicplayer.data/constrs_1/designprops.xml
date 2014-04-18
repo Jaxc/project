@@ -3,6 +3,7 @@
 	<CompatParts>
 	</CompatParts>
 	<ConfigModes>
+		<Mode Id="JTAG"/>
 	</ConfigModes>
 	<PortProps>
 	</PortProps>

@@ -1,10 +1,21 @@
 
-#Created by Constraints Editor (xc3s200a-vq100-4) - 2014/01/30
-NET "clk" TNM_NET = "clk";
-TIMESPEC TS_clk = PERIOD "clk" 83.3 ns HIGH 50 %;
 
-# PlanAhead Generated IO constraints 
+NET "A[0]" LOC = E4;
+NET "A[1]" LOC = E3;
+NET "A[2]" LOC = D3;
+NET "A[3]" LOC = C3;
+NET "A[4]" LOC = B12;
+NET "A[5]" LOC = A12;
+NET "A[6]" LOC = D12;
+NET "A[7]" LOC = E12;
+NET "A[8]" LOC = G16;
+NET "A[9]" LOC = G12;
+NET "A[10]" LOC = F4;
+NET "A[11]" LOC = G11;
+NET "A[12]" LOC = H13;
 
+
+NET "A[12]" IOSTANDARD = LVTTL;
 NET "A[11]" IOSTANDARD = LVTTL;
 NET "A[10]" IOSTANDARD = LVTTL;
 NET "A[9]" IOSTANDARD = LVTTL;
@@ -17,6 +28,26 @@ NET "A[3]" IOSTANDARD = LVTTL;
 NET "A[2]" IOSTANDARD = LVTTL;
 NET "A[1]" IOSTANDARD = LVTTL;
 NET "A[0]" IOSTANDARD = LVTTL;
+
+
+NET "d[0]" LOC = P6;
+NET "d[1]" LOC = T6;
+NET "d[2]" LOC = T5;
+NET "d[4]" LOC = R5;
+NET "d[3]" LOC = P5;
+NET "d[5]" LOC = N5;
+NET "d[6]" LOC = P4;
+NET "d[7]" LOC = N4;
+NET "d[8]" LOC = P12;
+NET "d[9]" LOC = R12;
+NET "d[10]" LOC = T13;
+NET "d[11]" LOC = T14;
+NET "d[15]" LOC = P11;
+NET "d[12]" LOC = R14;
+NET "d[13]" LOC = T15;
+NET "d[14]" LOC = T12;
+
+
 NET "d[15]" IOSTANDARD = LVTTL;
 NET "d[14]" IOSTANDARD = LVTTL;
 NET "d[13]" IOSTANDARD = LVTTL;
@@ -33,45 +64,6 @@ NET "d[3]" IOSTANDARD = LVTTL;
 NET "d[2]" IOSTANDARD = LVTTL;
 NET "d[1]" IOSTANDARD = LVTTL;
 NET "d[0]" IOSTANDARD = LVTTL;
-NET "SampleOutLeft[7]" IOSTANDARD = LVTTL;
-NET "SampleOutLeft[6]" IOSTANDARD = LVTTL;
-NET "SampleOutLeft[5]" IOSTANDARD = LVTTL;
-NET "SampleOutLeft[4]" IOSTANDARD = LVTTL;
-NET "SampleOutLeft[3]" IOSTANDARD = LVTTL;
-NET "SampleOutLeft[2]" IOSTANDARD = LVTTL;
-NET "SampleOutLeft[1]" IOSTANDARD = LVTTL;
-NET "SampleOutLeft[0]" IOSTANDARD = LVTTL;
-NET "SampleOutRight[7]" IOSTANDARD = LVTTL;
-NET "SampleOutRight[6]" IOSTANDARD = LVTTL;
-NET "SampleOutRight[5]" IOSTANDARD = LVTTL;
-NET "SampleOutRight[4]" IOSTANDARD = LVTTL;
-NET "SampleOutRight[3]" IOSTANDARD = LVTTL;
-NET "SampleOutRight[2]" IOSTANDARD = LVTTL;
-NET "SampleOutRight[1]" IOSTANDARD = LVTTL;
-NET "SampleOutRight[0]" IOSTANDARD = LVTTL;
-NET "BitsPerSampleOut" IOSTANDARD = LVTTL;
-NET "BSOut" IOSTANDARD = LVTTL;
-NET "CASOut" IOSTANDARD = LVTTL;
-NET "clk" IOSTANDARD = LVTTL;
-NET "errorout" IOSTANDARD = LVTTL;
-NET "MemCLKIN" IOSTANDARD = LVTTL;
-NET "MemCLKOut" IOSTANDARD = LVTTL;
-NET "RASOut" IOSTANDARD = LVTTL;
-NET "rst" IOSTANDARD = LVTTL;
-NET "sampleclkout" IOSTANDARD = LVTTL;
-NET "WEOut" IOSTANDARD = LVTTL;
-NET "A[11]" DRIVE = 12;
-NET "A[10]" DRIVE = 12;
-NET "A[9]" DRIVE = 12;
-NET "A[8]" DRIVE = 12;
-NET "A[7]" DRIVE = 12;
-NET "A[6]" DRIVE = 12;
-NET "A[5]" DRIVE = 12;
-NET "A[4]" DRIVE = 12;
-NET "A[3]" DRIVE = 12;
-NET "A[2]" DRIVE = 12;
-NET "A[1]" DRIVE = 12;
-NET "A[0]" DRIVE = 12;
 NET "d[15]" DRIVE = 12;
 NET "d[14]" DRIVE = 12;
 NET "d[13]" DRIVE = 12;
@@ -88,45 +80,6 @@ NET "d[3]" DRIVE = 12;
 NET "d[2]" DRIVE = 12;
 NET "d[1]" DRIVE = 12;
 NET "d[0]" DRIVE = 12;
-NET "SampleOutLeft[7]" DRIVE = 12;
-NET "SampleOutLeft[6]" DRIVE = 12;
-NET "SampleOutLeft[5]" DRIVE = 12;
-NET "SampleOutLeft[4]" DRIVE = 12;
-NET "SampleOutLeft[3]" DRIVE = 12;
-NET "SampleOutLeft[2]" DRIVE = 12;
-NET "SampleOutLeft[1]" DRIVE = 12;
-NET "SampleOutLeft[0]" DRIVE = 12;
-NET "SampleOutRight[7]" DRIVE = 12;
-NET "SampleOutRight[6]" DRIVE = 12;
-NET "SampleOutRight[5]" DRIVE = 12;
-NET "SampleOutRight[4]" DRIVE = 12;
-NET "SampleOutRight[3]" DRIVE = 12;
-NET "SampleOutRight[2]" DRIVE = 12;
-NET "SampleOutRight[1]" DRIVE = 12;
-NET "SampleOutRight[0]" DRIVE = 12;
-NET "BitsPerSampleOut" DRIVE = 12;
-NET "BSOut" DRIVE = 12;
-NET "CASOut" DRIVE = 12;
-NET "clk" DRIVE = 12;
-NET "errorout" DRIVE = 12;
-NET "MemCLKIN" DRIVE = 12;
-NET "MemCLKOut" DRIVE = 12;
-NET "RASOut" DRIVE = 12;
-NET "rst" DRIVE = 12;
-NET "sampleclkout" DRIVE = 12;
-NET "WEOut" DRIVE = 12;
-NET "A[11]" SLEW = SLOW;
-NET "A[10]" SLEW = SLOW;
-NET "A[9]" SLEW = SLOW;
-NET "A[8]" SLEW = SLOW;
-NET "A[7]" SLEW = SLOW;
-NET "A[6]" SLEW = SLOW;
-NET "A[5]" SLEW = SLOW;
-NET "A[4]" SLEW = SLOW;
-NET "A[3]" SLEW = SLOW;
-NET "A[2]" SLEW = SLOW;
-NET "A[1]" SLEW = SLOW;
-NET "A[0]" SLEW = SLOW;
 NET "d[15]" SLEW = SLOW;
 NET "d[14]" SLEW = SLOW;
 NET "d[13]" SLEW = SLOW;
@@ -143,24 +96,37 @@ NET "d[3]" SLEW = SLOW;
 NET "d[2]" SLEW = SLOW;
 NET "d[1]" SLEW = SLOW;
 NET "d[0]" SLEW = SLOW;
-NET "SampleOutLeft[7]" SLEW = SLOW;
-NET "SampleOutLeft[6]" SLEW = SLOW;
-NET "SampleOutLeft[5]" SLEW = SLOW;
-NET "SampleOutLeft[4]" SLEW = SLOW;
-NET "SampleOutLeft[3]" SLEW = SLOW;
-NET "SampleOutLeft[2]" SLEW = SLOW;
-NET "SampleOutLeft[1]" SLEW = SLOW;
-NET "SampleOutLeft[0]" SLEW = SLOW;
-NET "SampleOutRight[7]" SLEW = SLOW;
-NET "SampleOutRight[6]" SLEW = SLOW;
-NET "SampleOutRight[5]" SLEW = SLOW;
-NET "SampleOutRight[4]" SLEW = SLOW;
-NET "SampleOutRight[3]" SLEW = SLOW;
-NET "SampleOutRight[2]" SLEW = SLOW;
-NET "SampleOutRight[1]" SLEW = SLOW;
-NET "SampleOutRight[0]" SLEW = SLOW;
+NET "errorcode[3]" IOSTANDARD = LVTTL;
+NET "errorcode[2]" IOSTANDARD = LVTTL;
+NET "errorcode[1]" IOSTANDARD = LVTTL;
+NET "errorcode[0]" IOSTANDARD = LVTTL;
+
+
+
+
+
+
+
+NET "CASOut" IOSTANDARD = LVTTL;
+NET "clk" IOSTANDARD = LVTTL;
+NET "errorout" IOSTANDARD = LVTTL;
+NET "MemCLKIN" IOSTANDARD = LVTTL;
+NET "MemCLKOut" IOSTANDARD = LVTTL;
+NET "RASOut" IOSTANDARD = LVTTL;
+NET "rst" IOSTANDARD = LVTTL;
+NET "sampleclkout" IOSTANDARD = LVTTL;
+NET "WEOut" IOSTANDARD = LVTTL;
+NET "BitsPerSampleOut" DRIVE = 12;
+NET "CASOut" DRIVE = 12;
+NET "clk" DRIVE = 12;
+NET "errorout" DRIVE = 12;
+NET "MemCLKIN" DRIVE = 12;
+NET "MemCLKOut" DRIVE = 12;
+NET "RASOut" DRIVE = 12;
+NET "rst" DRIVE = 12;
+NET "sampleclkout" DRIVE = 12;
+NET "WEOut" DRIVE = 12;
 NET "BitsPerSampleOut" SLEW = SLOW;
-NET "BSOut" SLEW = SLOW;
 NET "CASOut" SLEW = SLOW;
 NET "clk" SLEW = SLOW;
 NET "errorout" SLEW = SLOW;
@@ -171,64 +137,71 @@ NET "rst" SLEW = SLOW;
 NET "sampleclkout" SLEW = SLOW;
 NET "WEOut" SLEW = SLOW;
 
-# PlanAhead Generated physical constraints 
 
-NET "A[0]" LOC = P49;
-NET "A[1]" LOC = P48;
-NET "A[2]" LOC = P46;
-NET "A[3]" LOC = P31;
-NET "A[4]" LOC = P30;
-NET "A[5]" LOC = P29;
-NET "A[6]" LOC = P28;
-NET "A[7]" LOC = P27;
-NET "A[8]" LOC = P23;
-NET "A[9]" LOC = P24;
-NET "A[10]" LOC = P51;
-NET "A[11]" LOC = P25;
-NET "d[0]" LOC = P90;
-NET "d[1]" LOC = P77;
-NET "d[2]" LOC = P78;
-NET "d[3]" LOC = P85;
-NET "d[4]" LOC = P86;
-NET "d[5]" LOC = P71;
-NET "d[6]" LOC = P70;
-NET "d[7]" LOC = P65;
-NET "d[8]" LOC = P16;
-NET "d[9]" LOC = P15;
-NET "d[10]" LOC = P10;
-NET "d[11]" LOC = P9;
-NET "d[12]" LOC = P6;
-NET "d[13]" LOC = P5;
-NET "d[14]" LOC = P99;
-NET "d[15]" LOC = P98;
-NET "SampleOutRight[0]" LOC = P36;
-NET "SampleOutRight[1]" LOC = P37;
-NET "SampleOutRight[6]" LOC = P61;
-NET "SampleOutRight[5]" LOC = P57;
-NET "SampleOutRight[4]" LOC = P56;
-NET "SampleOutRight[3]" LOC = P52;
-NET "SampleOutRight[2]" LOC = P50;
-NET "SampleOutRight[7]" LOC = P62;
-NET "SampleOutLeft[0]" LOC = P35;
-NET "SampleOutLeft[1]" LOC = P34;
-NET "SampleOutLeft[2]" LOC = P33;
-NET "SampleOutLeft[3]" LOC = P32;
-NET "SampleOutLeft[4]" LOC = P20;
-NET "SampleOutLeft[5]" LOC = P19;
-NET "SampleOutLeft[6]" LOC = P13;
-NET "SampleOutLeft[7]" LOC = P12;
-NET "clk" LOC = P43;
+NET "clk" LOC = A9;
+NET "errorout" LOC = T4;
+NET "MemCLKOut" LOC = K12;
+NET "RASOut" LOC = L4;
+NET "WEOut" LOC = M3;
+NET "CASOut" LOC = L3;
 
-# PlanAhead Generated IO constraints 
+
+NET "BSOut[1]" LOC = G3;
+NET "BSOut[0]" LOC = H3;
+
+
+NET "CS" LOC = H4;
+NET "LDQM" LOC = M4;
+NET "CKE" LOC = J12;
+NET "UDQM" LOC = L13;
+NET "rst" LOC = J14;
+
+
+NET "BSOut[1]" IOSTANDARD = LVTTL;
+NET "BSOut[0]" IOSTANDARD = LVTTL;
+
+NET "CKE" DRIVE = 12;
+NET "CS" DRIVE = 12;
+NET "LDQM" DRIVE = 12;
+NET "UDQM" DRIVE = 12;
+NET "CKE" SLEW = SLOW;
+NET "CS" SLEW = SLOW;
+NET "LDQM" SLEW = SLOW;
+NET "UDQM" SLEW = SLOW;
+NET "CKE" IOSTANDARD = LVTTL;
+NET "CS" IOSTANDARD = LVTTL;
+NET "LDQM" IOSTANDARD = LVTTL;
+NET "UDQM" IOSTANDARD = LVTTL;
+#Created by Constraints Editor (xc6slx9-ftg256-3) - 2014/03/22
+NET "clk" TNM_NET = "clk";
+TIMESPEC TS_clk = PERIOD "clk" 83.3333 ns HIGH 50 %;
+
+
+NET "sampleclkout" LOC = R1;
+
 
 NET "rst" PULLUP;
 
+
+NET "BCLK_out" IOSTANDARD = LVTTL;
+NET "DACDAT" IOSTANDARD = LVTTL;
+NET "LRCLKout" IOSTANDARD = LVTTL;
+NET "MCLK_out" IOSTANDARD = LVTTL;
+
+
+NET "DACDAT" LOC = R7;
+NET "LRCLKout" LOC = R15;
+NET "BCLK_out" LOC = R16;
+NET "MCLK_out" LOC = M15;
+NET "MemCLKIN" LOC = K11;
+NET "errorcode[0]" LOC = M16;
+NET "errorcode[1]" LOC = K15;
+NET "errorcode[2]" LOC = K16;
+NET "errorcode[3]" LOC = J16;
+
+
+NET "BitsPerSampleOut" IOSTANDARD = LVTTL;
+
 # PlanAhead Generated physical constraints 
 
-NET "rst" LOC = P68;
-NET "RASOut" LOC = P59;
-NET "BSOut" LOC = P53;
-NET "CASOut" LOC = P60;
-NET "MemCLKOut" LOC = P41;
-NET "MemCLKIN" LOC = P40;
-NET "WEOut" LOC = P64;
+NET "BitsPerSampleOut" LOC = F15;

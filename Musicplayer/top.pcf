@@ -1,270 +1,296 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Feb 14 12:14:33 2014
+// Written by: Map P.20131013 on Fri Apr 18 21:08:31 2014
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "clk" LOCATE = SITE "P43" LEVEL 1;
-COMP "rst" LOCATE = SITE "P68" LEVEL 1;
-COMP "A<0>" LOCATE = SITE "P49" LEVEL 1;
-COMP "A<1>" LOCATE = SITE "P48" LEVEL 1;
-COMP "A<2>" LOCATE = SITE "P46" LEVEL 1;
-COMP "A<3>" LOCATE = SITE "P31" LEVEL 1;
-COMP "A<4>" LOCATE = SITE "P30" LEVEL 1;
-COMP "A<5>" LOCATE = SITE "P29" LEVEL 1;
-COMP "A<6>" LOCATE = SITE "P28" LEVEL 1;
-COMP "A<7>" LOCATE = SITE "P27" LEVEL 1;
-COMP "A<8>" LOCATE = SITE "P23" LEVEL 1;
-COMP "A<9>" LOCATE = SITE "P24" LEVEL 1;
-COMP "d<0>" LOCATE = SITE "P90" LEVEL 1;
-COMP "d<1>" LOCATE = SITE "P77" LEVEL 1;
-COMP "d<2>" LOCATE = SITE "P78" LEVEL 1;
-COMP "d<3>" LOCATE = SITE "P85" LEVEL 1;
-COMP "d<4>" LOCATE = SITE "P86" LEVEL 1;
-COMP "d<5>" LOCATE = SITE "P71" LEVEL 1;
-COMP "d<6>" LOCATE = SITE "P70" LEVEL 1;
-COMP "d<7>" LOCATE = SITE "P65" LEVEL 1;
-COMP "d<8>" LOCATE = SITE "P16" LEVEL 1;
-COMP "d<9>" LOCATE = SITE "P15" LEVEL 1;
-COMP "A<10>" LOCATE = SITE "P51" LEVEL 1;
-COMP "A<11>" LOCATE = SITE "P25" LEVEL 1;
-COMP "MemCLKIN" LOCATE = SITE "P40" LEVEL 1;
-COMP "BSOut" LOCATE = SITE "P53" LEVEL 1;
-COMP "d<10>" LOCATE = SITE "P10" LEVEL 1;
-COMP "d<11>" LOCATE = SITE "P9" LEVEL 1;
-COMP "d<12>" LOCATE = SITE "P6" LEVEL 1;
-COMP "d<13>" LOCATE = SITE "P5" LEVEL 1;
-COMP "d<14>" LOCATE = SITE "P99" LEVEL 1;
-COMP "d<15>" LOCATE = SITE "P98" LEVEL 1;
-COMP "WEOut" LOCATE = SITE "P64" LEVEL 1;
-COMP "CASOut" LOCATE = SITE "P60" LEVEL 1;
-COMP "RASOut" LOCATE = SITE "P59" LEVEL 1;
-COMP "SampleOutRight<0>" LOCATE = SITE "P36" LEVEL 1;
-COMP "SampleOutRight<1>" LOCATE = SITE "P37" LEVEL 1;
-COMP "SampleOutRight<2>" LOCATE = SITE "P50" LEVEL 1;
-COMP "SampleOutRight<3>" LOCATE = SITE "P52" LEVEL 1;
-COMP "SampleOutRight<4>" LOCATE = SITE "P56" LEVEL 1;
-COMP "SampleOutRight<5>" LOCATE = SITE "P57" LEVEL 1;
-COMP "SampleOutRight<6>" LOCATE = SITE "P61" LEVEL 1;
-COMP "SampleOutRight<7>" LOCATE = SITE "P62" LEVEL 1;
-COMP "SampleOutLeft<0>" LOCATE = SITE "P35" LEVEL 1;
-COMP "SampleOutLeft<1>" LOCATE = SITE "P34" LEVEL 1;
-COMP "SampleOutLeft<2>" LOCATE = SITE "P33" LEVEL 1;
-COMP "SampleOutLeft<3>" LOCATE = SITE "P32" LEVEL 1;
-COMP "SampleOutLeft<4>" LOCATE = SITE "P20" LEVEL 1;
-COMP "SampleOutLeft<5>" LOCATE = SITE "P19" LEVEL 1;
-COMP "SampleOutLeft<6>" LOCATE = SITE "P13" LEVEL 1;
-COMP "SampleOutLeft<7>" LOCATE = SITE "P12" LEVEL 1;
-COMP "MemCLKOut" LOCATE = SITE "P41" LEVEL 1;
-TIMEGRP clk = BEL "Inst_SampleENA/SampleCLKEna" BEL "Inst_SampleENA/cnt_0" BEL
-        "Inst_SampleENA/cnt_1" BEL "Inst_SampleENA/cnt_2" BEL
-        "Inst_SampleENA/cnt_3" BEL "Inst_SampleENA/cnt_4" BEL
-        "Inst_SampleENA/cnt_5" BEL "Inst_SampleENA/cnt_6" BEL
-        "Inst_SampleENA/cnt_7" BEL "Inst_SampleENA/cnt_8" BEL
-        "Inst_decoder2/SampleOutLeft_4" BEL "Inst_decoder2/SampleOutLeft_3"
-        BEL "Inst_decoder2/SampleOutRight_10" BEL
-        "Inst_decoder2/SampleOutRight_11" BEL "Inst_decoder2/SampleOutLeft_5"
-        BEL "Inst_decoder2/SampleOutRight_13" BEL
-        "Inst_decoder2/SampleOutRight_12" BEL "Inst_decoder2/SampleOutLeft_6"
-        BEL "Inst_decoder2/SampleOutLeft_7" BEL
-        "Inst_decoder2/SampleOutRight_14" BEL "Inst_decoder2/SampleOutLeft_9"
-        BEL "Inst_decoder2/SampleOutLeft_8" BEL
-        "Inst_decoder2/SampleOutRight_15" BEL "Inst_decoder2/SampleOutRight_0"
-        BEL "Inst_decoder2/SampleOutRight_1" BEL
-        "Inst_decoder2/SampleOutRight_2" BEL "Inst_decoder2/SampleOutRight_3"
-        BEL "Inst_decoder2/SampleOutRight_4" BEL
-        "Inst_decoder2/SampleOutRight_5" BEL "Inst_decoder2/SampleOutRight_8"
-        BEL "Inst_decoder2/SampleOutRight_6" BEL
-        "Inst_decoder2/SampleOutRight_7" BEL "Inst_decoder2/current.Channel_0"
-        BEL "Inst_decoder2/SampleOutRight_9" BEL
-        "Inst_decoder2/SampleOutLeft_10" BEL "Inst_decoder2/SampleOutLeft_11"
-        BEL "Inst_decoder2/current.fourByteWord_0" BEL
-        "Inst_decoder2/current.fourByteWord_1" BEL
-        "Inst_decoder2/current.fourByteWord_2" BEL
-        "Inst_decoder2/current.fourByteWord_3" BEL
-        "Inst_decoder2/current.fourByteWord_4" BEL
-        "Inst_decoder2/current.fourByteWord_5" BEL
-        "Inst_decoder2/current.fourByteWord_6" BEL
-        "Inst_decoder2/current.fourByteWord_7" BEL
-        "Inst_decoder2/current.fourByteWord_8" BEL
-        "Inst_decoder2/current.fourByteWord_9" BEL
-        "Inst_decoder2/current.fourByteWord_10" BEL
-        "Inst_decoder2/current.fourByteWord_11" BEL
-        "Inst_decoder2/current.fourByteWord_12" BEL
-        "Inst_decoder2/current.fourByteWord_13" BEL
-        "Inst_decoder2/current.fourByteWord_14" BEL
-        "Inst_decoder2/current.fourByteWord_15" BEL
-        "Inst_decoder2/SampleOutLeft_12" BEL "Inst_decoder2/SampleOutLeft_15"
-        BEL "Inst_decoder2/SampleOutLeft_13" BEL
-        "Inst_decoder2/SampleOutLeft_14" BEL "Inst_decoder2/current.cnt_0" BEL
-        "Inst_decoder2/current.cnt_1" BEL "Inst_decoder2/current.cnt_2" BEL
-        "Inst_decoder2/current.cnt_3" BEL "Inst_decoder2/current.cnt_4" BEL
-        "Inst_decoder2/SampleOutLeft_0" BEL "Inst_decoder2/SampleOutLeft_1"
-        BEL "Inst_decoder2/SampleOutLeft_2" BEL
-        "Inst_SDRAMInterface/current.cnt2_0" BEL
-        "Inst_SDRAMInterface/current.cnt2_1" BEL
-        "Inst_SDRAMInterface/current.cnt2_2" BEL
-        "Inst_SDRAMInterface/current.cnt2_3" BEL
-        "Inst_SDRAMInterface/current.cnt2_4" BEL
-        "Inst_SDRAMInterface/current.cnt2_5" BEL
-        "Inst_SDRAMInterface/current.cnt2_6" BEL
-        "Inst_SDRAMInterface/current.cnt2_7" BEL
-        "Inst_SDRAMInterface/current.cnt2_8" BEL
-        "Inst_SDRAMInterface/current.cnt2_9" BEL
-        "Inst_SDRAMInterface/current.cnt2_10" BEL
-        "Inst_SDRAMInterface/current.cnt2_11" BEL
-        "Inst_SDRAMInterface/MemCLKOut" BEL "Inst_SDRAMInterface/byteout_0"
-        BEL "Inst_SDRAMInterface/byteout_1" BEL
-        "Inst_SDRAMInterface/byteout_2" BEL "Inst_SDRAMInterface/byteout_3"
-        BEL "Inst_SDRAMInterface/byteout_4" BEL
-        "Inst_SDRAMInterface/byteout_5" BEL "Inst_SDRAMInterface/byteout_6"
+COMP "CS" LOCATE = SITE "H4" LEVEL 1;
+COMP "CKE" LOCATE = SITE "J12" LEVEL 1;
+COMP "clk" LOCATE = SITE "A9" LEVEL 1;
+COMP "rst" LOCATE = SITE "J14" LEVEL 1;
+COMP "A<0>" LOCATE = SITE "E4" LEVEL 1;
+COMP "A<1>" LOCATE = SITE "E3" LEVEL 1;
+COMP "A<2>" LOCATE = SITE "D3" LEVEL 1;
+COMP "A<3>" LOCATE = SITE "C3" LEVEL 1;
+COMP "A<4>" LOCATE = SITE "B12" LEVEL 1;
+COMP "A<5>" LOCATE = SITE "A12" LEVEL 1;
+COMP "A<6>" LOCATE = SITE "D12" LEVEL 1;
+COMP "A<7>" LOCATE = SITE "E12" LEVEL 1;
+COMP "A<8>" LOCATE = SITE "G16" LEVEL 1;
+COMP "A<9>" LOCATE = SITE "G12" LEVEL 1;
+COMP "LDQM" LOCATE = SITE "M4" LEVEL 1;
+COMP "UDQM" LOCATE = SITE "L13" LEVEL 1;
+COMP "d<0>" LOCATE = SITE "P6" LEVEL 1;
+COMP "d<1>" LOCATE = SITE "T6" LEVEL 1;
+COMP "d<2>" LOCATE = SITE "T5" LEVEL 1;
+COMP "d<3>" LOCATE = SITE "P5" LEVEL 1;
+COMP "d<4>" LOCATE = SITE "R5" LEVEL 1;
+COMP "d<5>" LOCATE = SITE "N5" LEVEL 1;
+COMP "d<6>" LOCATE = SITE "P4" LEVEL 1;
+COMP "d<7>" LOCATE = SITE "N4" LEVEL 1;
+COMP "d<8>" LOCATE = SITE "P12" LEVEL 1;
+COMP "d<9>" LOCATE = SITE "R12" LEVEL 1;
+COMP "A<10>" LOCATE = SITE "F4" LEVEL 1;
+COMP "A<11>" LOCATE = SITE "G11" LEVEL 1;
+COMP "A<12>" LOCATE = SITE "H13" LEVEL 1;
+COMP "MemCLKIN" LOCATE = SITE "K11" LEVEL 1;
+COMP "d<10>" LOCATE = SITE "T13" LEVEL 1;
+COMP "d<11>" LOCATE = SITE "T14" LEVEL 1;
+COMP "d<12>" LOCATE = SITE "R14" LEVEL 1;
+COMP "d<13>" LOCATE = SITE "T15" LEVEL 1;
+COMP "d<14>" LOCATE = SITE "T12" LEVEL 1;
+COMP "d<15>" LOCATE = SITE "P11" LEVEL 1;
+COMP "WEOut" LOCATE = SITE "M3" LEVEL 1;
+COMP "BitsPerSampleOut" LOCATE = SITE "F15" LEVEL 1;
+COMP "MemCLKOut" LOCATE = SITE "K12" LEVEL 1;
+COMP "DACDAT" LOCATE = SITE "R7" LEVEL 1;
+COMP "CASOut" LOCATE = SITE "L3" LEVEL 1;
+COMP "RASOut" LOCATE = SITE "L4" LEVEL 1;
+COMP "sampleclkout" LOCATE = SITE "R1" LEVEL 1;
+COMP "errorout" LOCATE = SITE "T4" LEVEL 1;
+COMP "errorcode<0>" LOCATE = SITE "M16" LEVEL 1;
+COMP "errorcode<1>" LOCATE = SITE "K15" LEVEL 1;
+COMP "errorcode<2>" LOCATE = SITE "K16" LEVEL 1;
+COMP "errorcode<3>" LOCATE = SITE "J16" LEVEL 1;
+COMP "BCLK_out" LOCATE = SITE "R16" LEVEL 1;
+COMP "MCLK_out" LOCATE = SITE "M15" LEVEL 1;
+COMP "BSOut<0>" LOCATE = SITE "H3" LEVEL 1;
+COMP "BSOut<1>" LOCATE = SITE "G3" LEVEL 1;
+COMP "LRCLKout" LOCATE = SITE "R15" LEVEL 1;
+PIN ODDR2_inst_BCLK_pins<1> = BEL "ODDR2_inst_BCLK" PINNAME CK0;
+PIN ODDR2_inst_BCLK_pins<2> = BEL "ODDR2_inst_BCLK" PINNAME CK1;
+PIN ODDR2_inst_MCLK_pins<1> = BEL "ODDR2_inst_MCLK" PINNAME CK0;
+PIN ODDR2_inst_MCLK_pins<2> = BEL "ODDR2_inst_MCLK" PINNAME CK1;
+TIMEGRP Inst_DAC_top_inst_DMC_clkout0 = BEL "Inst_SampleENA/lastLRCLK" BEL
+        "Inst_SampleENA/SampleCLKEna" BEL
+        "Inst_SDRAMInterface/current_cnt2_12" BEL
+        "Inst_SDRAMInterface/current_cnt2_11" BEL
+        "Inst_SDRAMInterface/current_cnt2_10" BEL
+        "Inst_SDRAMInterface/current_cnt2_9" BEL
+        "Inst_SDRAMInterface/current_cnt2_8" BEL
+        "Inst_SDRAMInterface/current_cnt2_7" BEL
+        "Inst_SDRAMInterface/current_cnt2_6" BEL
+        "Inst_SDRAMInterface/current_cnt2_5" BEL
+        "Inst_SDRAMInterface/current_cnt2_4" BEL
+        "Inst_SDRAMInterface/current_cnt2_3" BEL
+        "Inst_SDRAMInterface/current_cnt2_2" BEL
+        "Inst_SDRAMInterface/current_cnt2_1" BEL
+        "Inst_SDRAMInterface/current_cnt2_0" BEL
+        "Inst_SDRAMInterface/current_state_FSM_FFd1" BEL
+        "Inst_SDRAMInterface/current_state_FSM_FFd2" BEL
+        "Inst_SDRAMInterface/current_state_FSM_FFd3" BEL
+        "Inst_SDRAMInterface/current_Addr_12" BEL
+        "Inst_SDRAMInterface/current_Addr_11" BEL
+        "Inst_SDRAMInterface/current_Addr_10" BEL
+        "Inst_SDRAMInterface/current_Addr_9" BEL
+        "Inst_SDRAMInterface/current_Addr_8" BEL
+        "Inst_SDRAMInterface/current_Addr_7" BEL
+        "Inst_SDRAMInterface/current_Addr_6" BEL
+        "Inst_SDRAMInterface/current_Addr_5" BEL
+        "Inst_SDRAMInterface/current_Addr_4" BEL
+        "Inst_SDRAMInterface/current_Addr_3" BEL
+        "Inst_SDRAMInterface/current_Addr_2" BEL
+        "Inst_SDRAMInterface/current_Addr_1" BEL
+        "Inst_SDRAMInterface/current_Addr_0" BEL
+        "Inst_SDRAMInterface/current_cnt_8" BEL
+        "Inst_SDRAMInterface/current_cnt_7" BEL
+        "Inst_SDRAMInterface/current_cnt_6" BEL
+        "Inst_SDRAMInterface/current_cnt_5" BEL
+        "Inst_SDRAMInterface/current_cnt_4" BEL
+        "Inst_SDRAMInterface/current_cnt_3" BEL
+        "Inst_SDRAMInterface/current_cnt_2" BEL
+        "Inst_SDRAMInterface/current_cnt_1" BEL
+        "Inst_SDRAMInterface/current_cnt_0" BEL
+        "Inst_SDRAMInterface/MemCLKOut" BEL "Inst_SDRAMInterface/Filestart"
+        BEL "Inst_SDRAMInterface/current_RAS" BEL
+        "Inst_SDRAMInterface/current_WE" BEL "Inst_SDRAMInterface/current_CAS"
         BEL "Inst_SDRAMInterface/byteout_7" BEL
-        "Inst_SDRAMInterface/current.CAS" BEL
-        "Inst_SDRAMInterface/current.RAS" BEL "Inst_SDRAMInterface/MemCLK" BEL
-        "Inst_SDRAMInterface/current.Addr_0" BEL
-        "Inst_SDRAMInterface/current.Addr_1" BEL
-        "Inst_SDRAMInterface/current.Addr_2" BEL
-        "Inst_SDRAMInterface/current.Addr_3" BEL
-        "Inst_SDRAMInterface/current.Addr_4" BEL
-        "Inst_SDRAMInterface/current.Addr_5" BEL
-        "Inst_SDRAMInterface/current.Addr_6" BEL
-        "Inst_SDRAMInterface/current.Addr_7" BEL
-        "Inst_SDRAMInterface/current.Addr_8" BEL
-        "Inst_SDRAMInterface/current.Addr_9" BEL
-        "Inst_SDRAMInterface/current.Addr_10" BEL
-        "Inst_SDRAMInterface/current.Addr_11" BEL
-        "Inst_SDRAMInterface/current.WE" BEL
-        "Inst_SDRAMInterface/current.clkena" BEL
-        "Inst_SDRAMInterface/current.cnt_0" BEL
-        "Inst_SDRAMInterface/current.cnt_1" BEL
-        "Inst_SDRAMInterface/current.cnt_2" BEL
-        "Inst_SDRAMInterface/current.cnt_3" BEL
-        "Inst_SDRAMInterface/current.cnt_4" BEL
-        "Inst_SDRAMInterface/current.cnt_5" BEL
-        "Inst_SDRAMInterface/current.cnt_6" BEL
-        "Inst_SDRAMInterface/current.cnt_7" BEL
-        "Inst_SDRAMInterface/current.cnt_8" BEL
-        "Inst_SDRAMInterface/Filestart" BEL
-        "Inst_SDRAMInterface/current.state_FSM_FFd1" BEL
-        "Inst_SDRAMInterface/current.state_FSM_FFd2" BEL
-        "Inst_SDRAMInterface/current.state_FSM_FFd3" BEL
-        "Inst_SDRAMInterface/current.state_FSM_FFd4" BEL
-        "Inst_SDRAMInterface/current.state_FSM_FFd5" BEL
-        "Inst_SDRAMInterface/current.state_FSM_FFd6" BEL
-        "Inst_SDRAMInterface/current.state_FSM_FFd7" BEL
-        "Inst_SDRAMInterface/current.state_FSM_FFd8" BEL
-        "Inst_controlunit/errorcode_0" BEL "Inst_controlunit/errorcode_1" BEL
-        "Inst_controlunit/errorcode_2" BEL "Inst_controlunit/errorcode_3" BEL
-        "Inst_controlunit/bitspersampleout_0" BEL
-        "Inst_controlunit/bitspersampleout_1" BEL
-        "Inst_controlunit/bitspersampleout_2" BEL
-        "Inst_controlunit/current.TwoByteWord_0" BEL
-        "Inst_controlunit/current.TwoByteWord_1" BEL
-        "Inst_controlunit/current.TwoByteWord_2" BEL
-        "Inst_controlunit/current.TwoByteWord_3" BEL
-        "Inst_controlunit/current.TwoByteWord_4" BEL
-        "Inst_controlunit/current.TwoByteWord_5" BEL
-        "Inst_controlunit/current.TwoByteWord_6" BEL
-        "Inst_controlunit/current.TwoByteWord_7" BEL
-        "Inst_controlunit/current.TwoByteWord_8" BEL
-        "Inst_controlunit/current.TwoByteWord_9" BEL
-        "Inst_controlunit/current.TwoByteWord_10" BEL
-        "Inst_controlunit/current.TwoByteWord_11" BEL
-        "Inst_controlunit/current.TwoByteWord_12" BEL
-        "Inst_controlunit/current.TwoByteWord_13" BEL
-        "Inst_controlunit/current.TwoByteWord_14" BEL
-        "Inst_controlunit/current.TwoByteWord_15" BEL
-        "Inst_controlunit/current.TwoByteWord_16" BEL
-        "Inst_controlunit/current.TwoByteWord_17" BEL
-        "Inst_controlunit/current.TwoByteWord_18" BEL
-        "Inst_controlunit/current.TwoByteWord_19" BEL
-        "Inst_controlunit/current.TwoByteWord_20" BEL
-        "Inst_controlunit/current.TwoByteWord_21" BEL
-        "Inst_controlunit/current.TwoByteWord_22" BEL
-        "Inst_controlunit/current.TwoByteWord_23" BEL
-        "Inst_controlunit/current.TwoByteWord_24" BEL
-        "Inst_controlunit/current.TwoByteWord_25" BEL
-        "Inst_controlunit/current.TwoByteWord_26" BEL
-        "Inst_controlunit/current.TwoByteWord_27" BEL
-        "Inst_controlunit/current.TwoByteWord_28" BEL
-        "Inst_controlunit/current.TwoByteWord_29" BEL
-        "Inst_controlunit/current.TwoByteWord_30" BEL
-        "Inst_controlunit/current.TwoByteWord_31" BEL
-        "Inst_controlunit/NumChannelsout_0" BEL
-        "Inst_controlunit/NumChannelsout_1" BEL
+        "Inst_SDRAMInterface/byteout_6" BEL "Inst_SDRAMInterface/byteout_5"
+        BEL "Inst_SDRAMInterface/byteout_4" BEL
+        "Inst_SDRAMInterface/byteout_3" BEL "Inst_SDRAMInterface/byteout_2"
+        BEL "Inst_SDRAMInterface/byteout_1" BEL
+        "Inst_SDRAMInterface/byteout_0" BEL "Inst_SDRAMInterface/MemCLK" BEL
+        "Inst_DAC_top/inst_DMC/clkout1_buf" BEL "Inst_DAC_top/channel_cnt_8"
+        BEL "Inst_DAC_top/channel_cnt_7" BEL "Inst_DAC_top/channel_cnt_6" BEL
+        "Inst_DAC_top/channel_cnt_5" BEL "Inst_DAC_top/channel_cnt_4" BEL
+        "Inst_DAC_top/channel_cnt_3" BEL "Inst_DAC_top/channel_cnt_2" BEL
+        "Inst_DAC_top/channel_cnt_1" BEL "Inst_DAC_top/channel_cnt_0" BEL
+        "Inst_DAC_top/LRCLK" BEL "Inst_DAC_top/Inst_Dataconverter/cnt_4" BEL
+        "Inst_DAC_top/Inst_Dataconverter/cnt_3" BEL
+        "Inst_DAC_top/Inst_Dataconverter/cnt_2" BEL
+        "Inst_DAC_top/Inst_Dataconverter/cnt_1" BEL
+        "Inst_DAC_top/Inst_Dataconverter/cnt_0" BEL
+        "Inst_DAC_top/Inst_Dataconverter/dataout" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_0" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_1" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_2" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_3" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_4" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_5" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_6" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_7" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_8" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_9" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_10" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_11" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_12" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_13" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_14" BEL
+        "Inst_DAC_top/Inst_Dataconverter/current_sample_out_15" BEL
+        "Inst_DAC_top/Inst_Dataconverter/lastLRclk" BEL
+        "Inst_decoder2/SampleOutRight_15" BEL
+        "Inst_decoder2/SampleOutRight_14" BEL
+        "Inst_decoder2/SampleOutRight_13" BEL
+        "Inst_decoder2/SampleOutRight_12" BEL
+        "Inst_decoder2/SampleOutRight_11" BEL
+        "Inst_decoder2/SampleOutRight_10" BEL "Inst_decoder2/SampleOutRight_9"
+        BEL "Inst_decoder2/SampleOutRight_8" BEL
+        "Inst_decoder2/SampleOutRight_7" BEL "Inst_decoder2/SampleOutRight_6"
+        BEL "Inst_decoder2/SampleOutRight_5" BEL
+        "Inst_decoder2/SampleOutRight_4" BEL "Inst_decoder2/SampleOutRight_3"
+        BEL "Inst_decoder2/SampleOutRight_2" BEL
+        "Inst_decoder2/SampleOutRight_1" BEL "Inst_decoder2/SampleOutRight_0"
+        BEL "Inst_decoder2/SampleOutLeft_15" BEL
+        "Inst_decoder2/SampleOutLeft_14" BEL "Inst_decoder2/SampleOutLeft_13"
+        BEL "Inst_decoder2/SampleOutLeft_12" BEL
+        "Inst_decoder2/SampleOutLeft_11" BEL "Inst_decoder2/SampleOutLeft_10"
+        BEL "Inst_decoder2/SampleOutLeft_9" BEL
+        "Inst_decoder2/SampleOutLeft_8" BEL "Inst_decoder2/SampleOutLeft_7"
+        BEL "Inst_decoder2/SampleOutLeft_6" BEL
+        "Inst_decoder2/SampleOutLeft_5" BEL "Inst_decoder2/SampleOutLeft_4"
+        BEL "Inst_decoder2/SampleOutLeft_3" BEL
+        "Inst_decoder2/SampleOutLeft_2" BEL "Inst_decoder2/SampleOutLeft_1"
+        BEL "Inst_decoder2/SampleOutLeft_0" BEL "Inst_decoder2/current_cnt_2"
+        BEL "Inst_decoder2/current_cnt_1" BEL "Inst_decoder2/current_cnt_0"
+        BEL "Inst_decoder2/current_fourByteWord_15" BEL
+        "Inst_decoder2/current_fourByteWord_14" BEL
+        "Inst_decoder2/current_fourByteWord_13" BEL
+        "Inst_decoder2/current_fourByteWord_12" BEL
+        "Inst_decoder2/current_fourByteWord_11" BEL
+        "Inst_decoder2/current_fourByteWord_10" BEL
+        "Inst_decoder2/current_fourByteWord_9" BEL
+        "Inst_decoder2/current_fourByteWord_8" BEL
+        "Inst_decoder2/current_fourByteWord_7" BEL
+        "Inst_decoder2/current_fourByteWord_6" BEL
+        "Inst_decoder2/current_fourByteWord_5" BEL
+        "Inst_decoder2/current_fourByteWord_4" BEL
+        "Inst_decoder2/current_fourByteWord_3" BEL
+        "Inst_decoder2/current_fourByteWord_2" BEL
+        "Inst_decoder2/current_fourByteWord_1" BEL
+        "Inst_decoder2/current_fourByteWord_0" BEL
+        "Inst_decoder2/current_Channel" BEL
+        "Inst_controlunit/current_state_FSM_FFd1" BEL
+        "Inst_controlunit/current_state_FSM_FFd2" BEL
+        "Inst_controlunit/current_state_FSM_FFd4" BEL
+        "Inst_controlunit/current_state_FSM_FFd3" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_31" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_30" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_29" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_28" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_27" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_26" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_25" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_24" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_23" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_22" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_21" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_20" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_19" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_18" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_17" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_16" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_15" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_14" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_13" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_12" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_11" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_10" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_9" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_8" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_7" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_6" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_5" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_4" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_3" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_2" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_1" BEL
+        "Inst_controlunit/current_ChunkBytesLeft_0" BEL
+        "Inst_controlunit/errorcode_3" BEL "Inst_controlunit/errorcode_2" BEL
+        "Inst_controlunit/errorcode_1" BEL "Inst_controlunit/errorcode_0" BEL
+        "Inst_controlunit/current_cnt_3" BEL "Inst_controlunit/current_cnt_2"
+        BEL "Inst_controlunit/current_cnt_1" BEL
+        "Inst_controlunit/current_cnt_0" BEL
         "Inst_controlunit/NumChannelsout_2" BEL
-        "Inst_controlunit/samplerateout" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_0" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_1" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_2" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_3" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_4" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_5" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_6" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_7" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_8" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_9" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_10" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_11" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_12" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_13" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_14" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_15" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_16" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_17" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_18" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_19" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_20" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_21" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_22" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_23" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_24" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_25" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_26" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_27" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_28" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_29" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_30" BEL
-        "Inst_controlunit/current.ChunkBytesLeft_31" BEL
-        "Inst_controlunit/ModeSelect_0" BEL "Inst_controlunit/watchdogstate_0"
-        BEL "Inst_controlunit/watchdogstate_1" BEL
-        "Inst_controlunit/watchdogstate_2" BEL
-        "Inst_controlunit/watchdogstate_3" BEL
-        "Inst_controlunit/watchdogstate_4" BEL
-        "Inst_controlunit/watchdogstate_5" BEL
-        "Inst_controlunit/watchdogstate_6" BEL
-        "Inst_controlunit/watchdogstate_7" BEL
-        "Inst_controlunit/watchdogstate_8" BEL
-        "Inst_controlunit/watchdogstate_9" BEL
-        "Inst_controlunit/watchdogstate_10" BEL
-        "Inst_controlunit/watchdogstate_11" BEL
-        "Inst_controlunit/watchdogstate_12" BEL
-        "Inst_controlunit/watchdogstate_13" BEL
-        "Inst_controlunit/watchdogstate_14" BEL
-        "Inst_controlunit/watchdogstate_15" BEL
-        "Inst_controlunit/watchdogcnt_0" BEL "Inst_controlunit/watchdogcnt_1"
-        BEL "Inst_controlunit/watchdogcnt_2" BEL
-        "Inst_controlunit/watchdogcnt_3" BEL "Inst_controlunit/watchdogcnt_4"
-        BEL "Inst_controlunit/watchdogcnt_5" BEL
-        "Inst_controlunit/current.state_FSM_FFd1" BEL
-        "Inst_controlunit/current.state_FSM_FFd2" BEL
-        "Inst_controlunit/current.state_FSM_FFd3" BEL
-        "Inst_controlunit/current.state_FSM_FFd4" BEL
-        "Inst_controlunit/current.state_FSM_FFd5" BEL
-        "Inst_controlunit/current.state_FSM_FFd6" BEL
-        "Inst_controlunit/current.state_FSM_FFd7" BEL
-        "Inst_controlunit/current.state_FSM_FFd8" BEL
-        "Inst_controlunit/current.state_FSM_FFd9" BEL
-        "Inst_controlunit/current.state_FSM_FFd10" BEL
-        "Inst_controlunit/current.state_FSM_FFd11" BEL
-        "Inst_controlunit/current.state_FSM_FFd12" BEL
-        "Inst_controlunit/current.state_FSM_FFd13" BEL
-        "Inst_controlunit/current.state_FSM_FFd14" BEL
-        "Inst_controlunit/current.state_FSM_FFd15" BEL
-        "Inst_controlunit/current.state_FSM_FFd16" BEL
-        "Inst_controlunit/current.cnt_3" BEL "Inst_controlunit/current.cnt_2"
-        BEL "Inst_controlunit/current.cnt_1" BEL
-        "Inst_controlunit/current.cnt_0" BEL "clk_BUFGP/BUFG.GCLKMUX" BEL
-        "clk_BUFGP/BUFG";
-TS_clk = PERIOD TIMEGRP "clk" 83.3 ns HIGH 50%;
+        "Inst_controlunit/NumChannelsout_1" BEL
+        "Inst_controlunit/NumChannelsout_0" BEL
+        "Inst_controlunit/bitspersampleout_2" BEL
+        "Inst_controlunit/bitspersampleout_1" BEL
+        "Inst_controlunit/bitspersampleout_0" BEL
+        "Inst_controlunit/current_TwoByteWord_29" BEL
+        "Inst_controlunit/current_TwoByteWord_28" BEL
+        "Inst_controlunit/current_TwoByteWord_27" BEL
+        "Inst_controlunit/current_TwoByteWord_26" BEL
+        "Inst_controlunit/current_TwoByteWord_25" BEL
+        "Inst_controlunit/current_TwoByteWord_24" BEL
+        "Inst_controlunit/current_TwoByteWord_21" BEL
+        "Inst_controlunit/current_TwoByteWord_20" BEL
+        "Inst_controlunit/current_TwoByteWord_19" BEL
+        "Inst_controlunit/current_TwoByteWord_18" BEL
+        "Inst_controlunit/current_TwoByteWord_17" BEL
+        "Inst_controlunit/current_TwoByteWord_16" BEL
+        "Inst_controlunit/current_TwoByteWord_13" BEL
+        "Inst_controlunit/current_TwoByteWord_12" BEL
+        "Inst_controlunit/current_TwoByteWord_11" BEL
+        "Inst_controlunit/current_TwoByteWord_10" BEL
+        "Inst_controlunit/current_TwoByteWord_9" BEL
+        "Inst_controlunit/current_TwoByteWord_8" BEL
+        "Inst_controlunit/current_TwoByteWord_5" BEL
+        "Inst_controlunit/current_TwoByteWord_4" BEL
+        "Inst_controlunit/current_TwoByteWord_3" BEL
+        "Inst_controlunit/current_TwoByteWord_2" BEL
+        "Inst_controlunit/current_TwoByteWord_1" BEL
+        "Inst_controlunit/current_TwoByteWord_0" BEL
+        "Inst_controlunit/ModeSelect" BEL "Inst_SDRAMInterface/current_clkena"
+        BEL "Inst_controlunit/current_state_FSM_FFd1_1" BEL
+        "Inst_controlunit/current_cnt_1_1" BEL
+        "Inst_controlunit/current_cnt_0_1" BEL
+        "Inst_SDRAMInterface/byteout_4_1" BEL
+        "Inst_SDRAMInterface/byteout_1_1" BEL
+        "Inst_controlunit/current_state_FSM_FFd2_1" BEL
+        "Inst_controlunit/current_state_FSM_FFd3_1" BEL
+        "Inst_controlunit/current_state_FSM_FFd4_1" BEL
+        "Inst_SDRAMInterface/byteout_0_1" BEL
+        "Inst_SDRAMInterface/byteout_3_1" BEL
+        "Inst_controlunit/current_state_FSM_FFd1_2" BEL
+        "Inst_controlunit/current_state_FSM_FFd2_2" BEL
+        "Inst_controlunit/current_state_FSM_FFd3_2" BEL
+        "Inst_controlunit/current_cnt_1_2" BEL "Inst_controlunit/ModeSelect_1"
+        BEL "Inst_SDRAMInterface/byteout_5_1" BEL
+        "Inst_SDRAMInterface/byteout_4_2" BEL
+        "Inst_SDRAMInterface/byteout_1_2" BEL
+        "Inst_SDRAMInterface/byteout_0_2" BEL
+        "Inst_SDRAMInterface/byteout_0_3" BEL
+        "Inst_controlunit/current_state_FSM_FFd2_3" BEL
+        "Inst_controlunit/current_state_FSM_FFd3_3" PIN
+        "ODDR2_inst_BCLK_pins<1>" PIN "ODDR2_inst_BCLK_pins<2>" PIN
+        "ODDR2_inst_BCLK_pins<1>" PIN "ODDR2_inst_BCLK_pins<2>" PIN
+        "ODDR2_inst_MCLK_pins<1>" PIN "ODDR2_inst_MCLK_pins<2>" PIN
+        "ODDR2_inst_MCLK_pins<1>" PIN "ODDR2_inst_MCLK_pins<2>";
+PIN Inst_DAC_top/inst_DMC/pll_base_inst/PLL_ADV_pins<2> = BEL
+        "Inst_DAC_top/inst_DMC/pll_base_inst/PLL_ADV" PINNAME CLKIN1;
+TIMEGRP Inst_DAC_top_inst_DMC_12_to_96_clkfx = BEL
+        "Inst_DAC_top/inst_DMC_12_to_96/clkout1_buf" PIN
+        "Inst_DAC_top/inst_DMC/pll_base_inst/PLL_ADV_pins<2>";
+PIN SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0> = BEL "SP6_BUFIO_INSERT_ML_BUFIO2_0"
+        PINNAME DIVCLK;
+PIN Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst_pins<2> = BEL
+        "Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst" PINNAME CLKIN;
+TIMEGRP clk = PIN "SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0>" PIN
+        "Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst_pins<2>";
+TS_clk = PERIOD TIMEGRP "clk" 83.3333 ns HIGH 50%;
+TS_Inst_DAC_top_inst_DMC_12_to_96_clkfx = PERIOD TIMEGRP
+        "Inst_DAC_top_inst_DMC_12_to_96_clkfx" TS_clk / 8 HIGH 50%;
+TS_Inst_DAC_top_inst_DMC_clkout0 = PERIOD TIMEGRP
+        "Inst_DAC_top_inst_DMC_clkout0"
+        TS_Inst_DAC_top_inst_DMC_12_to_96_clkfx / 0.117647059 HIGH 50%;
 SCHEMATIC END;
 

@@ -10,13 +10,17 @@ port(
   rst     	   : in STD_LOGIC;								-- Global Reset
   MemDataIn   : in STD_LOGIC_VECTOR(15 downto 0);	-- Data input from SDRAM
   requestread : in STD_LOGIC;                     -- Bit that indicated data to be read
-  AddressOut  : OUT STD_LOGIC_VECTOR(11 downto 0);	-- Address to SDRAM
+  AddressOut  : OUT STD_LOGIC_VECTOR(12 downto 0);	-- Address to SDRAM
   MemCLKOut   : OUT STD_LOGIC;							-- Clock to SDRAM
   WEOut       : OUT STD_LOGIC;							-- Write Enable to SDRAM
   RASOut      : OUT STD_LOGIC;							-- RAS to SDRAM
   CASOut      : OUT STD_LOGIC;							-- CAS to SDRAM
-  BSOut		     : OUT STD_LOGIC;							-- BS to SDRAM
+  BSOut		  : OUT STD_LOGIC_vector(1 downto 0);	-- BS to SDRAM
   Filestart   : OUT STD_LOGIC;							-- Signals the start of a file
+  CS			  : OUT STD_LOGIC;
+  CKE			  : OUT STD_LOGIC;
+  LDQM		  : OUT STD_LOGIC;
+  UDQM		  : OUT STD_LOGIC;
 --  testout     : OUT STD_LOGIC;
   byteout     : out sTD_LOGIC_VECTOR(7 downto 0)	-- The current read byte
   );
@@ -37,12 +41,13 @@ architecture interface of SDRAMInterface is
   type Registerinouts is record
 	  state  : statetype;
 	  cnt    : INTEGER RANGE 0 to 2**9 - 1;
-	  cnt2   : INTEGER RANGE 0 to 2**12 -1;
-	  Addr   : STD_LOGIC_VECTOR(11 downto 0);
+	  cnt2   : INTEGER RANGE 0 to 2**13 -1;
+	  Addr   : STD_LOGIC_VECTOR(12 downto 0);
 	  clkena : STD_LOGIC;
 	  WE     : STD_LOGIC;
 	  RAS    : STD_LOGIC;
 	  CAS    : STD_LOGIC;
+
   end record;
 	  
   signal current,nxt : RegisterInOuts;
@@ -52,7 +57,11 @@ architecture interface of SDRAMInterface is
   
   
 begin
- BSOut <= '0';
+ BSOut <= "00";
+ cs <= '0';
+ CKE <= '1';
+ LDQM <= '0';
+ UDQM <= '0';
  
 process(current,requestread)
 begin
@@ -87,7 +96,7 @@ begin
 		  nxt.cnt <= 0;
 		  nxt.cnt2 <= 0;
 		  nxt.state <= precharge;
-		  nxt.addr <= STD_LOGIC_VECTOR(to_unsigned(544,12));
+		  nxt.addr <= STD_LOGIC_VECTOR(to_unsigned(544,13));
 		  
 			
 		when precharge => 
@@ -95,7 +104,7 @@ begin
 		  nxt.Ras <= '0';
 		  nxt.WE <= '0';
 		  nxt.Cas <= '1';
-		  nxt.ADDR <= "000000000000";
+		  nxt.ADDR <= (others => '0');
 		  nxt.state <= waitstate;
 		  nxt.cnt <= 0;
 		  
@@ -118,7 +127,7 @@ begin
 		  nxt.state <= prereading;
 		  nxt.cnt <= 0;
 		 -- nxt.cnt2 <= current.cnt2 + 1;
-		  nxt.ADDR <= STD_LOGIC_VECTOR(to_Unsigned(current.cnt2,12));
+		  nxt.ADDR <= STD_LOGIC_VECTOR(to_Unsigned(current.cnt2,13));
 		  
 		when prereading =>
 		  nxt.Ras <= '1';
@@ -139,12 +148,12 @@ begin
 		  
 --		  nxt.cnt <= current.cnt + 1;
       if (requestread = '1') then
-		    nxt.ADDR <= STD_LOGIC_VECTOR(to_Unsigned(current.cnt,12));		    
+		    nxt.ADDR <= STD_LOGIC_VECTOR(to_Unsigned(current.cnt,13));		    
 		  elsif (current.cnt = 2**9-1) then --AND (Current.addr = x"1FF") then
 		      nxt.state <= precharge;
 					nxt.cnt2 <= current.cnt2 +1;
 	 	  end if;
-	 	  if (((current.cnt = 22) AND (current.addr = x"015")) AND (current.cnt2 = 0)) NAND (requestread = '1') then
+	 	  if (((current.cnt = 22) AND (current.addr = '0' & x"015")) AND (current.cnt2 = 0)) NAND (requestread = '1') then
 	 	    if current.cnt /= 2**9-1 then
 	 	      nxt.cnt <= current.cnt + 1;
 	 	    end if;

@@ -1,0 +1,38 @@
+NET "rst" CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "clk" LOC = A9;
+NET "MCLK_out" LOC = M15;
+NET "BCLK_out" LOC = R16;
+
+NET "BCLK_out" IOSTANDARD = LVTTL;
+NET "clk" IOSTANDARD = LVTTL;
+NET "DACDAT" IOSTANDARD = LVTTL;
+NET "MCLK_out" IOSTANDARD = LVTTL;
+NET "rst" IOSTANDARD = LVTTL;
+NET "BCLK_out" DRIVE = 24;
+NET "clk" DRIVE = 12;
+NET "DACDAT" DRIVE = 12;
+NET "MCLK_out" DRIVE = 24;
+NET "rst" DRIVE = 12;
+NET "BCLK_out" SLEW = FAST;
+NET "clk" SLEW = SLOW;
+NET "DACDAT" SLEW = SLOW;
+NET "LRCLK" SLEW = SLOW;
+NET "MCLK_out" SLEW = FAST;
+NET "rst" SLEW = SLOW;
+
+NET "rst" LOC = R1;
+
+NET "rst" PULLUP;
+#pin2ucf - Sat Mar 29 23:26:46 2014
+#The following constraints were newly added
+NET "DACDAT" LOC = R7;
+#Created by Constraints Editor (xc6slx9-ftg256-3) - 2014/03/30
+NET "clk" TNM_NET = "clk";
+TIMESPEC TS_clk = PERIOD "clk" 83.3333 ns HIGH 50 %;
+
+
+NET "LRCLK_out" LOC = R15;
+
+
+NET "LRCLK_out" IOSTANDARD = LVTTL;
