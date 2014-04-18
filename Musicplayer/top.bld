@@ -1,0 +1,62 @@
+Release 14.7 ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -sd ipcore_dir -nt timestamp -uc decoder.ucf -p xc6slx9-ftg256-3
+top.ngc top.ngd
+
+Reading NGO file "C:/Dropbox/github/musicplayer/project/Musicplayer/top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "decoder.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'clk', used in period specification 'TS_clk',
+   was traced into DCM_SP instance Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst.
+   The following new TNM groups and period specifications were generated at the
+   DCM_SP output(s): 
+   CLKFX: <TIMESPEC TS_Inst_DAC_top_inst_DMC_12_to_96_clkfx = PERIOD
+   "Inst_DAC_top_inst_DMC_12_to_96_clkfx" TS_clk / 8 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'Inst_DAC_top_inst_DMC_12_to_96_clkfx', used in
+   period specification 'TS_Inst_DAC_top_inst_DMC_12_to_96_clkfx', was traced
+   into PLL_ADV instance PLL_ADV. The following new TNM groups and period
+   specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_Inst_DAC_top_inst_DMC_clkout0 = PERIOD
+   "Inst_DAC_top_inst_DMC_clkout0" TS_Inst_DAC_top_inst_DMC_12_to_96_clkfx /
+   0.117647059 HIGH 50%>
+
+Done...
+
+WARNING:NgdBuild:1212 - User specified non-default attribute value
+   (83.3333333333) was detected for the CLKIN_PERIOD attribute on DCM
+   "Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst".  This does not match the PERIOD
+   constraint value (83.3333 ns.).  The uncertainty calculation will use the
+   non-default attribute value.  This could result in incorrect uncertainty
+   calculated for DCM output clocks.
+WARNING:NgdBuild:1440 - User specified non-default attribute value (10.416) was
+   detected for the CLKIN1_PERIOD attribute on PLL "PLL_ADV".  This does not
+   match the PERIOD constraint value (10.4166625 ns.).  The uncertainty
+   calculation will use the PERIOD constraint value.  This could result in
+   incorrect uncertainty calculated for PLL output clocks.
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   2
+
+Total memory usage is 122844 kilobytes
+
+Writing NGD file "top.ngd" ...
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
+
+Writing NGDBUILD log file "top.bld"...

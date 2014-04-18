@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Dropbox\github\musicplayer\project\Musicplayer\top.ncd
+OUTFILE=C:\Dropbox\github\musicplayer\project\Musicplayer\top.bit
+FAMILY=Spartan6
+PART=xc6slx9-3ftg256
+WORKINGDIR=C:\Dropbox\github\musicplayer\project\Musicplayer
+LICENSE=WebPack
+USER_INFO=210655449_178259189_210574059_844

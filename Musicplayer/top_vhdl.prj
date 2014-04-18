@@ -1,0 +1,7 @@
+vhdl work "C:\Dropbox\github\musicplayer\project\Musicplayer\functions.vhd"
+vhdl work "C:\Dropbox\github\musicplayer\project\Musicplayer\SDRAMInterface.vhd"
+vhdl work "C:\Dropbox\github\musicplayer\project\Musicplayer\SampleENA.vhd"
+vhdl work "C:\Dropbox\github\musicplayer\project\Musicplayer\modules.vhd"
+vhdl work "C:\Dropbox\github\musicplayer\project\Musicplayer\Decoder2.vhd"
+vhdl work "C:\Dropbox\github\musicplayer\project\Musicplayer\controlunit.vhd"
+vhdl work "C:\Dropbox\github\musicplayer\project\Musicplayer\top.vhd"

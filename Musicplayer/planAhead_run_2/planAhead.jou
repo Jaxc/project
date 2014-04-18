@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Fri Apr 18 17:03:23 2014
+# Process ID: 2428
+# Log file: C:/Dropbox/github/musicplayer/project/Musicplayer/planAhead_run_2/planAhead.log
+# Journal file: C:/Dropbox/github/musicplayer/project/Musicplayer/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Dropbox/github/musicplayer/project/Musicplayer/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
