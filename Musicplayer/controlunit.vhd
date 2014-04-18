@@ -49,15 +49,17 @@ begin
 process(clk,current)
 begin
 if rising_edge(clk) then
-watchdogcnt <= watchdogcnt + 1;
+--watchdogcnt <= watchdogcnt + 1;
 watchdogstate <= current.state;
-if watchdogstate /= current.state then
-watchdogcnt <= 0;
-elsif watchdogcnt > 3 then
-	errorcode <= errorcodebuf;
-else
-	errorcode <= "0000";
-end if;
+--if watchdogstate /= current.state then
+--watchdogcnt <= 0;--
+--elsif watchdogcnt > 3 then
+--	errorcode <= errorcodebuf;
+--	watchdogcnt <= 4;
+--else
+--	errorcode <= "0000";
+--end if;
+errorcode <= errorcodebuf;
 end if;
 end process;
 

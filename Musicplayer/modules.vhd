@@ -17,19 +17,34 @@ package modules is
 		rst : IN std_logic;
 		MemDataIn : IN std_logic_vector(15 downto 0);
 		requestread : in STD_LOGIC;          
-		AddressOut : OUT std_logic_vector(11 downto 0);
+		AddressOut : OUT std_logic_vector(12 downto 0);
 		MemCLKOut : OUT std_logic;
 		WEOut : OUT std_logic;
 		RASOut : OUT std_logic;
 		CASOut : OUT std_logic;
-		BSOUT	 : OUT STD_LOGIC;
+		BSOUT	 : OUT STD_LOGIC_VECTOR(1 downto 0);
 		Filestart   : OUT STD_LOGIC;
+		CS			  : OUT STD_LOGIC;
+		CKE			  : OUT STD_LOGIC;
+		LDQM	: OUT STD_LOGIC;
+		UDQM	: OUT STD_LOGIC;
 --		testout : Out STD_LOGIC;
 --		CLKENAOUT 	: OUT STD_LOGIC;
 		byteout : OUT std_logic_vector(7 downto 0)
 		);
 	END COMPONENT;
 
+	COMPONENT DAC_top
+	PORT(
+		clk : IN std_logic;
+		rst : IN std_logic;          
+		DACDAT : OUT std_logic;
+		sample_left : in STD_LOGIC_VECTOR(23 downto 0);
+		sample_right : in STD_LOGIC_VECTOR(23 downto 0);
+		LRCLK_out : OUT std_logic;
+		MCLK_out : OUT std_logic
+		);
+	END COMPONENT;
 
 COMPONENT decoder
 	PORT(
@@ -97,7 +112,7 @@ COMPONENT SampleENA
 	PORT(
 		CLK : IN std_logic;
 		RST : IN std_logic;
-		samplerate : in std_logic;
+		LRCLK : in STD_LOGIC;
 		SampleCLKEna : out std_logic      
 		);
 	END COMPONENT;

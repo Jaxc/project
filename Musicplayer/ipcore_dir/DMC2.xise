@@ -27,6 +27,7 @@
     </file>
   </files>
 
+<<<<<<< HEAD
   <autoManagedFiles>
     <!-- The following files are identified by `include statements in verilog -->
     <!-- source files and are automatically managed by Project Navigator.     -->
@@ -36,6 +37,8 @@
     <!-- include files.                                                       -->
   </autoManagedFiles>
 
+=======
+>>>>>>> newHardware
   <properties>
     <property xil_pn:name="Auto Implementation Top" xil_pn:value="false" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Device" xil_pn:value="xc6slx9" xil_pn:valueState="non-default"/>
@@ -71,4 +74,16 @@
 
   <libraries/>
 
+<<<<<<< HEAD
+=======
+  <autoManagedFiles>
+    <!-- The following files are identified by `include statements in verilog -->
+    <!-- source files and are automatically managed by Project Navigator.     -->
+    <!--                                                                      -->
+    <!-- Do not hand-edit this section, as it will be overwritten when the    -->
+    <!-- project is analyzed based on files automatically identified as       -->
+    <!-- include files.                                                       -->
+  </autoManagedFiles>
+
+>>>>>>> newHardware
 </project>

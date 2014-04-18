@@ -33,28 +33,35 @@ use IEEE.numeric_std.ALL;
 entity SampleENA is
     Port ( CLK : in  STD_LOGIC;
            RST : in  STD_LOGIC;
-			  samplerate : STD_LOGIC;
+		   LRCLK : in STD_LOGIC;
            SampleCLKEna : out  STD_LOGIC);
 end SampleENA;
 
 architecture Behavioral of SampleENA is
 signal cnt : integer RAnGE 0 to 292;
+signal lastLRCLK : STD_LOGIC;
 begin
 
-
+--SampleCLKEna <= LRCLK and not(lastLRCLK);
 process(rst,CLK)
 begin
 if rst = '0' then
-	cnt <= 0;
-	SampleClkEna <= '0';
+	-- cnt <= 0;
+	-- SampleClkEna <= '0';
 elsif rising_edge(clk) then
-	if (cnt = 291) And (Samplerate = '1') then
-		cnt <= 0;
+	lastLRCLK <= LRCLK;
+	if LRCLK = '1' and LastLRCLK = '0' then
 		sampleCLKEna <= '1';
 	else
-		cnt <= cnt + 1;
 		sampleCLKEna <= '0';
 	end if;
+	-- if (cnt = 271) And (Samplerate = '1') then
+		-- cnt <= 0;
+		-- sampleCLKEna <= '1';
+	-- else
+		-- cnt <= cnt + 1;
+		-- sampleCLKEna <= '0';
+	-- end if;
 end if;
 End process;
 end Behavioral;

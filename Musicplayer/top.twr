@@ -2,12 +2,12 @@
 Release 14.7 Trace  (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf decoder.ucf
 
 Design file:              top.ncd
 Physical constraint file: top.pcf
-Device,package,speed:     xc3s200a,vq100,-4 (PRODUCTION 1.42 2013-10-13)
+Device,package,speed:     xc6slx9,ftg256,C,-3 (PRODUCTION 1.23 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -23,498 +23,534 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
    a 50 Ohm transmission line loading model.  For the details of this model, 
    and for more information on accounting for different loading conditions, 
    please see the device datasheet.
-INFO:Timing:3390 - This architecture does not support a default System Jitter 
-   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
-   Uncertainty calculation.
-INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
-   'Phase Error' calculations, these terms will be zero in the Clock 
-   Uncertainty calculation.  Please make appropriate modification to 
-   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
-   Error.
 
 ================================================================================
-Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 83.3 ns HIGH 50%;
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 83.3333 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 12814 paths analyzed, 974 endpoints analyzed, 0 failing endpoints
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is  32.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 83.3333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 7.747ns (period - min period limit)
+  Period: 10.417ns
+  Min period limit: 2.670ns (374.532MHz) (Tdcmper_CLKFX)
+  Physical resource: Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst/CLKFX
+  Logical resource: Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst/CLKFX
+  Location pin: DCM_X0Y2.CLKFX
+  Clock network: Inst_DAC_top/inst_DMC_12_to_96/clkfx
+--------------------------------------------------------------------------------
+Slack: 51.333ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 16.000ns (Tdcmpw_CLKIN_10_25)
+  Physical resource: Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst/CLKIN
+  Logical resource: Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst/CLKIN
+  Location pin: DCM_X0Y2.CLKIN
+  Clock network: Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 51.333ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 83.333ns
+  High pulse: 41.666ns
+  High pulse limit: 16.000ns (Tdcmpw_CLKIN_10_25)
+  Physical resource: Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst/CLKIN
+  Logical resource: Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst/CLKIN
+  Location pin: DCM_X0Y2.CLKIN
+  Clock network: Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_Inst_DAC_top_inst_DMC_12_to_96_clkfx = PERIOD TIMEGRP     
+    "Inst_DAC_top_inst_DMC_12_to_96_clkfx" TS_clk / 8 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   5.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_Inst_DAC_top_inst_DMC_12_to_96_clkfx = PERIOD TIMEGRP
+        "Inst_DAC_top_inst_DMC_12_to_96_clkfx" TS_clk / 8 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 5.416ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.416ns
+  Low pulse: 5.208ns
+  Low pulse limit: 2.500ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: Inst_DAC_top/inst_DMC/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: Inst_DAC_top/inst_DMC/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN2
+  Clock network: Inst_DAC_top/CLK_96MHz
+--------------------------------------------------------------------------------
+Slack: 5.416ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.416ns
+  High pulse: 5.208ns
+  High pulse limit: 2.500ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: Inst_DAC_top/inst_DMC/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: Inst_DAC_top/inst_DMC/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN2
+  Clock network: Inst_DAC_top/CLK_96MHz
+--------------------------------------------------------------------------------
+Slack: 8.564ns (period - min period limit)
+  Period: 10.416ns
+  Min period limit: 1.852ns (539.957MHz) (Tpllper_CLKIN(Finmax))
+  Physical resource: Inst_DAC_top/inst_DMC/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: Inst_DAC_top/inst_DMC/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN2
+  Clock network: Inst_DAC_top/CLK_96MHz
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_Inst_DAC_top_inst_DMC_clkout0 = PERIOD TIMEGRP         
+"Inst_DAC_top_inst_DMC_clkout0"         TS_Inst_DAC_top_inst_DMC_12_to_96_clkfx 
+/ 0.117647059 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 12100 paths analyzed, 1192 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  12.573ns.
+ Minimum period is   9.730ns.
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_SDRAMInterface/current.cnt2_1 (SLICE_X0Y5.CE), 53 paths
+Paths for end point Inst_DAC_top/Inst_Dataconverter/current_sample_out_2 (SLICE_X12Y38.C4), 3 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     70.727ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_SampleENA/SampleCLKEna (FF)
-  Destination:          Inst_SDRAMInterface/current.cnt2_1 (FF)
-  Requirement:          83.300ns
-  Data Path Delay:      12.489ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.084ns (0.576 - 0.660)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
-  Clock Uncertainty:    0.000ns
+Slack (setup path):     40.151ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controlunit/bitspersampleout_0 (FF)
+  Destination:          Inst_DAC_top/Inst_Dataconverter/current_sample_out_2 (FF)
+  Requirement:          44.270ns
+  Data Path Delay:      3.947ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.025ns (0.232 - 0.257)
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK falling at 44.270ns
+  Clock Uncertainty:    0.147ns
 
-  Maximum Data Path: Inst_SampleENA/SampleCLKEna to Inst_SDRAMInterface/current.cnt2_1
+  Clock Uncertainty:          0.147ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.284ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_controlunit/bitspersampleout_0 to Inst_DAC_top/Inst_Dataconverter/current_sample_out_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X28Y10.YQ      Tcko                  0.676   Inst_SampleENA/cnt<0>
-                                                       Inst_SampleENA/SampleCLKEna
-    SLICE_X19Y22.G3      net (fanout=12)       1.806   SampleCLKEna
-    SLICE_X19Y22.Y       Tilo                  0.648   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf_SW0
-    SLICE_X19Y22.F3      net (fanout=2)        0.080   Inst_decoder2/N101
-    SLICE_X19Y22.X       Tilo                  0.643   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf
-    SLICE_X19Y43.F2      net (fanout=1)        1.032   RequestReadDec
-    SLICE_X19Y43.X       Tilo                  0.643   sampleclkout_OBUF
-                                                       Inst_controlunit/RequestDataOut
-    SLICE_X4Y20.G4       net (fanout=22)       2.434   sampleclkout_OBUF
-    SLICE_X4Y20.Y        Tilo                  0.707   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.F4       net (fanout=2)        0.094   Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.X        Tilo                  0.692   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_cnt2_and00001
-    SLICE_X0Y5.CE        net (fanout=29)       2.723   Inst_SDRAMInterface/current_cnt2_and0000
-    SLICE_X0Y5.CLK       Tceck                 0.311   Inst_SDRAMInterface/current.cnt2_1
-                                                       Inst_SDRAMInterface/current.cnt2_1
+    SLICE_X14Y32.AQ      Tcko                  0.408   Inst_controlunit/bitspersampleout<1>
+                                                       Inst_controlunit/bitspersampleout_0
+    SLICE_X4Y37.B1       net (fanout=29)       2.018   Inst_controlunit/bitspersampleout<0>
+    SLICE_X4Y37.B        Tilo                  0.203   Inst_DAC_top/Inst_Dataconverter/current_sample_out<9>
+                                                       _n0042<2>1
+    SLICE_X12Y38.C4      net (fanout=8)        1.029   _n0042
+    SLICE_X12Y38.CLK     Tas                   0.289   Inst_DAC_top/Inst_Dataconverter/current_sample_out<3>
+                                                       Inst_DAC_top/Inst_Dataconverter/Mmux_DatainRight[23]_Datainleft[23]_mux_0_OUT141
+                                                       Inst_DAC_top/Inst_Dataconverter/current_sample_out_2
     -------------------------------------------------  ---------------------------
-    Total                                     12.489ns (4.320ns logic, 8.169ns route)
-                                                       (34.6% logic, 65.4% route)
+    Total                                      3.947ns (0.900ns logic, 3.047ns route)
+                                                       (22.8% logic, 77.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     70.921ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_decoder2/current.cnt_3 (FF)
-  Destination:          Inst_SDRAMInterface/current.cnt2_1 (FF)
-  Requirement:          83.300ns
-  Data Path Delay:      12.311ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.068ns (0.576 - 0.644)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
-  Clock Uncertainty:    0.000ns
+Slack (setup path):     40.733ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controlunit/bitspersampleout_1 (FF)
+  Destination:          Inst_DAC_top/Inst_Dataconverter/current_sample_out_2 (FF)
+  Requirement:          44.270ns
+  Data Path Delay:      3.365ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.025ns (0.232 - 0.257)
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK falling at 44.270ns
+  Clock Uncertainty:    0.147ns
 
-  Maximum Data Path: Inst_decoder2/current.cnt_3 to Inst_SDRAMInterface/current.cnt2_1
+  Clock Uncertainty:          0.147ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.284ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_controlunit/bitspersampleout_1 to Inst_DAC_top/Inst_Dataconverter/current_sample_out_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y25.YQ      Tcko                  0.580   Inst_decoder2/current.cnt_3
-                                                       Inst_decoder2/current.cnt_3
-    SLICE_X22Y25.G1      net (fanout=3)        0.550   Inst_decoder2/current.cnt_3
-    SLICE_X22Y25.Y       Tilo                  0.707   Inst_decoder2/nxt_cnt_cmp_eq0001
-                                                       Inst_decoder2/nxt_cnt_cmp_eq000111
-    SLICE_X19Y22.F2      net (fanout=12)       1.195   Inst_decoder2/requestreadbuf_and0000
-    SLICE_X19Y22.X       Tilo                  0.643   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf
-    SLICE_X19Y43.F2      net (fanout=1)        1.032   RequestReadDec
-    SLICE_X19Y43.X       Tilo                  0.643   sampleclkout_OBUF
-                                                       Inst_controlunit/RequestDataOut
-    SLICE_X4Y20.G4       net (fanout=22)       2.434   sampleclkout_OBUF
-    SLICE_X4Y20.Y        Tilo                  0.707   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.F4       net (fanout=2)        0.094   Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.X        Tilo                  0.692   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_cnt2_and00001
-    SLICE_X0Y5.CE        net (fanout=29)       2.723   Inst_SDRAMInterface/current_cnt2_and0000
-    SLICE_X0Y5.CLK       Tceck                 0.311   Inst_SDRAMInterface/current.cnt2_1
-                                                       Inst_SDRAMInterface/current.cnt2_1
+    SLICE_X14Y32.CQ      Tcko                  0.408   Inst_controlunit/bitspersampleout<1>
+                                                       Inst_controlunit/bitspersampleout_1
+    SLICE_X4Y37.B3       net (fanout=25)       1.436   Inst_controlunit/bitspersampleout<1>
+    SLICE_X4Y37.B        Tilo                  0.203   Inst_DAC_top/Inst_Dataconverter/current_sample_out<9>
+                                                       _n0042<2>1
+    SLICE_X12Y38.C4      net (fanout=8)        1.029   _n0042
+    SLICE_X12Y38.CLK     Tas                   0.289   Inst_DAC_top/Inst_Dataconverter/current_sample_out<3>
+                                                       Inst_DAC_top/Inst_Dataconverter/Mmux_DatainRight[23]_Datainleft[23]_mux_0_OUT141
+                                                       Inst_DAC_top/Inst_Dataconverter/current_sample_out_2
     -------------------------------------------------  ---------------------------
-    Total                                     12.311ns (4.283ns logic, 8.028ns route)
-                                                       (34.8% logic, 65.2% route)
+    Total                                      3.365ns (0.900ns logic, 2.465ns route)
+                                                       (26.7% logic, 73.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     70.950ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_decoder2/current.cnt_2 (FF)
-  Destination:          Inst_SDRAMInterface/current.cnt2_1 (FF)
-  Requirement:          83.300ns
-  Data Path Delay:      12.280ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.070ns (0.576 - 0.646)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
-  Clock Uncertainty:    0.000ns
+Slack (setup path):     40.768ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controlunit/bitspersampleout_2 (FF)
+  Destination:          Inst_DAC_top/Inst_Dataconverter/current_sample_out_2 (FF)
+  Requirement:          44.270ns
+  Data Path Delay:      3.336ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.019ns (0.144 - 0.163)
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK falling at 44.270ns
+  Clock Uncertainty:    0.147ns
 
-  Maximum Data Path: Inst_decoder2/current.cnt_2 to Inst_SDRAMInterface/current.cnt2_1
+  Clock Uncertainty:          0.147ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.284ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_controlunit/bitspersampleout_2 to Inst_DAC_top/Inst_Dataconverter/current_sample_out_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X25Y25.XQ      Tcko                  0.591   Inst_decoder2/current.cnt_2
-                                                       Inst_decoder2/current.cnt_2
-    SLICE_X22Y25.G2      net (fanout=4)        0.508   Inst_decoder2/current.cnt_2
-    SLICE_X22Y25.Y       Tilo                  0.707   Inst_decoder2/nxt_cnt_cmp_eq0001
-                                                       Inst_decoder2/nxt_cnt_cmp_eq000111
-    SLICE_X19Y22.F2      net (fanout=12)       1.195   Inst_decoder2/requestreadbuf_and0000
-    SLICE_X19Y22.X       Tilo                  0.643   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf
-    SLICE_X19Y43.F2      net (fanout=1)        1.032   RequestReadDec
-    SLICE_X19Y43.X       Tilo                  0.643   sampleclkout_OBUF
-                                                       Inst_controlunit/RequestDataOut
-    SLICE_X4Y20.G4       net (fanout=22)       2.434   sampleclkout_OBUF
-    SLICE_X4Y20.Y        Tilo                  0.707   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.F4       net (fanout=2)        0.094   Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.X        Tilo                  0.692   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_cnt2_and00001
-    SLICE_X0Y5.CE        net (fanout=29)       2.723   Inst_SDRAMInterface/current_cnt2_and0000
-    SLICE_X0Y5.CLK       Tceck                 0.311   Inst_SDRAMInterface/current.cnt2_1
-                                                       Inst_SDRAMInterface/current.cnt2_1
+    SLICE_X12Y32.AQ      Tcko                  0.447   Inst_controlunit/bitspersampleout<2>
+                                                       Inst_controlunit/bitspersampleout_2
+    SLICE_X4Y37.B5       net (fanout=10)       1.368   Inst_controlunit/bitspersampleout<2>
+    SLICE_X4Y37.B        Tilo                  0.203   Inst_DAC_top/Inst_Dataconverter/current_sample_out<9>
+                                                       _n0042<2>1
+    SLICE_X12Y38.C4      net (fanout=8)        1.029   _n0042
+    SLICE_X12Y38.CLK     Tas                   0.289   Inst_DAC_top/Inst_Dataconverter/current_sample_out<3>
+                                                       Inst_DAC_top/Inst_Dataconverter/Mmux_DatainRight[23]_Datainleft[23]_mux_0_OUT141
+                                                       Inst_DAC_top/Inst_Dataconverter/current_sample_out_2
     -------------------------------------------------  ---------------------------
-    Total                                     12.280ns (4.294ns logic, 7.986ns route)
-                                                       (35.0% logic, 65.0% route)
+    Total                                      3.336ns (0.939ns logic, 2.397ns route)
+                                                       (28.1% logic, 71.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_SDRAMInterface/current.cnt2_0 (SLICE_X0Y5.CE), 53 paths
+Paths for end point Inst_DAC_top/Inst_Dataconverter/current_sample_out_3 (SLICE_X12Y38.D4), 3 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     70.727ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_SampleENA/SampleCLKEna (FF)
-  Destination:          Inst_SDRAMInterface/current.cnt2_0 (FF)
-  Requirement:          83.300ns
-  Data Path Delay:      12.489ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.084ns (0.576 - 0.660)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
-  Clock Uncertainty:    0.000ns
+Slack (setup path):     40.151ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controlunit/bitspersampleout_0 (FF)
+  Destination:          Inst_DAC_top/Inst_Dataconverter/current_sample_out_3 (FF)
+  Requirement:          44.270ns
+  Data Path Delay:      3.947ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.025ns (0.232 - 0.257)
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK falling at 44.270ns
+  Clock Uncertainty:    0.147ns
 
-  Maximum Data Path: Inst_SampleENA/SampleCLKEna to Inst_SDRAMInterface/current.cnt2_0
+  Clock Uncertainty:          0.147ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.284ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_controlunit/bitspersampleout_0 to Inst_DAC_top/Inst_Dataconverter/current_sample_out_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X28Y10.YQ      Tcko                  0.676   Inst_SampleENA/cnt<0>
-                                                       Inst_SampleENA/SampleCLKEna
-    SLICE_X19Y22.G3      net (fanout=12)       1.806   SampleCLKEna
-    SLICE_X19Y22.Y       Tilo                  0.648   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf_SW0
-    SLICE_X19Y22.F3      net (fanout=2)        0.080   Inst_decoder2/N101
-    SLICE_X19Y22.X       Tilo                  0.643   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf
-    SLICE_X19Y43.F2      net (fanout=1)        1.032   RequestReadDec
-    SLICE_X19Y43.X       Tilo                  0.643   sampleclkout_OBUF
-                                                       Inst_controlunit/RequestDataOut
-    SLICE_X4Y20.G4       net (fanout=22)       2.434   sampleclkout_OBUF
-    SLICE_X4Y20.Y        Tilo                  0.707   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.F4       net (fanout=2)        0.094   Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.X        Tilo                  0.692   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_cnt2_and00001
-    SLICE_X0Y5.CE        net (fanout=29)       2.723   Inst_SDRAMInterface/current_cnt2_and0000
-    SLICE_X0Y5.CLK       Tceck                 0.311   Inst_SDRAMInterface/current.cnt2_1
-                                                       Inst_SDRAMInterface/current.cnt2_0
+    SLICE_X14Y32.AQ      Tcko                  0.408   Inst_controlunit/bitspersampleout<1>
+                                                       Inst_controlunit/bitspersampleout_0
+    SLICE_X4Y37.B1       net (fanout=29)       2.018   Inst_controlunit/bitspersampleout<0>
+    SLICE_X4Y37.B        Tilo                  0.203   Inst_DAC_top/Inst_Dataconverter/current_sample_out<9>
+                                                       _n0042<2>1
+    SLICE_X12Y38.D4      net (fanout=8)        1.029   _n0042
+    SLICE_X12Y38.CLK     Tas                   0.289   Inst_DAC_top/Inst_Dataconverter/current_sample_out<3>
+                                                       Inst_DAC_top/Inst_Dataconverter/Mmux_DatainRight[23]_Datainleft[23]_mux_0_OUT131
+                                                       Inst_DAC_top/Inst_Dataconverter/current_sample_out_3
     -------------------------------------------------  ---------------------------
-    Total                                     12.489ns (4.320ns logic, 8.169ns route)
-                                                       (34.6% logic, 65.4% route)
+    Total                                      3.947ns (0.900ns logic, 3.047ns route)
+                                                       (22.8% logic, 77.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     70.921ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_decoder2/current.cnt_3 (FF)
-  Destination:          Inst_SDRAMInterface/current.cnt2_0 (FF)
-  Requirement:          83.300ns
-  Data Path Delay:      12.311ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.068ns (0.576 - 0.644)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
-  Clock Uncertainty:    0.000ns
+Slack (setup path):     40.733ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controlunit/bitspersampleout_1 (FF)
+  Destination:          Inst_DAC_top/Inst_Dataconverter/current_sample_out_3 (FF)
+  Requirement:          44.270ns
+  Data Path Delay:      3.365ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.025ns (0.232 - 0.257)
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK falling at 44.270ns
+  Clock Uncertainty:    0.147ns
 
-  Maximum Data Path: Inst_decoder2/current.cnt_3 to Inst_SDRAMInterface/current.cnt2_0
+  Clock Uncertainty:          0.147ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.284ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_controlunit/bitspersampleout_1 to Inst_DAC_top/Inst_Dataconverter/current_sample_out_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y25.YQ      Tcko                  0.580   Inst_decoder2/current.cnt_3
-                                                       Inst_decoder2/current.cnt_3
-    SLICE_X22Y25.G1      net (fanout=3)        0.550   Inst_decoder2/current.cnt_3
-    SLICE_X22Y25.Y       Tilo                  0.707   Inst_decoder2/nxt_cnt_cmp_eq0001
-                                                       Inst_decoder2/nxt_cnt_cmp_eq000111
-    SLICE_X19Y22.F2      net (fanout=12)       1.195   Inst_decoder2/requestreadbuf_and0000
-    SLICE_X19Y22.X       Tilo                  0.643   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf
-    SLICE_X19Y43.F2      net (fanout=1)        1.032   RequestReadDec
-    SLICE_X19Y43.X       Tilo                  0.643   sampleclkout_OBUF
-                                                       Inst_controlunit/RequestDataOut
-    SLICE_X4Y20.G4       net (fanout=22)       2.434   sampleclkout_OBUF
-    SLICE_X4Y20.Y        Tilo                  0.707   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.F4       net (fanout=2)        0.094   Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.X        Tilo                  0.692   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_cnt2_and00001
-    SLICE_X0Y5.CE        net (fanout=29)       2.723   Inst_SDRAMInterface/current_cnt2_and0000
-    SLICE_X0Y5.CLK       Tceck                 0.311   Inst_SDRAMInterface/current.cnt2_1
-                                                       Inst_SDRAMInterface/current.cnt2_0
+    SLICE_X14Y32.CQ      Tcko                  0.408   Inst_controlunit/bitspersampleout<1>
+                                                       Inst_controlunit/bitspersampleout_1
+    SLICE_X4Y37.B3       net (fanout=25)       1.436   Inst_controlunit/bitspersampleout<1>
+    SLICE_X4Y37.B        Tilo                  0.203   Inst_DAC_top/Inst_Dataconverter/current_sample_out<9>
+                                                       _n0042<2>1
+    SLICE_X12Y38.D4      net (fanout=8)        1.029   _n0042
+    SLICE_X12Y38.CLK     Tas                   0.289   Inst_DAC_top/Inst_Dataconverter/current_sample_out<3>
+                                                       Inst_DAC_top/Inst_Dataconverter/Mmux_DatainRight[23]_Datainleft[23]_mux_0_OUT131
+                                                       Inst_DAC_top/Inst_Dataconverter/current_sample_out_3
     -------------------------------------------------  ---------------------------
-    Total                                     12.311ns (4.283ns logic, 8.028ns route)
-                                                       (34.8% logic, 65.2% route)
+    Total                                      3.365ns (0.900ns logic, 2.465ns route)
+                                                       (26.7% logic, 73.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     70.950ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_decoder2/current.cnt_2 (FF)
-  Destination:          Inst_SDRAMInterface/current.cnt2_0 (FF)
-  Requirement:          83.300ns
-  Data Path Delay:      12.280ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.070ns (0.576 - 0.646)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
-  Clock Uncertainty:    0.000ns
+Slack (setup path):     40.768ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controlunit/bitspersampleout_2 (FF)
+  Destination:          Inst_DAC_top/Inst_Dataconverter/current_sample_out_3 (FF)
+  Requirement:          44.270ns
+  Data Path Delay:      3.336ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.019ns (0.144 - 0.163)
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK falling at 44.270ns
+  Clock Uncertainty:    0.147ns
 
-  Maximum Data Path: Inst_decoder2/current.cnt_2 to Inst_SDRAMInterface/current.cnt2_0
+  Clock Uncertainty:          0.147ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.284ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_controlunit/bitspersampleout_2 to Inst_DAC_top/Inst_Dataconverter/current_sample_out_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X25Y25.XQ      Tcko                  0.591   Inst_decoder2/current.cnt_2
-                                                       Inst_decoder2/current.cnt_2
-    SLICE_X22Y25.G2      net (fanout=4)        0.508   Inst_decoder2/current.cnt_2
-    SLICE_X22Y25.Y       Tilo                  0.707   Inst_decoder2/nxt_cnt_cmp_eq0001
-                                                       Inst_decoder2/nxt_cnt_cmp_eq000111
-    SLICE_X19Y22.F2      net (fanout=12)       1.195   Inst_decoder2/requestreadbuf_and0000
-    SLICE_X19Y22.X       Tilo                  0.643   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf
-    SLICE_X19Y43.F2      net (fanout=1)        1.032   RequestReadDec
-    SLICE_X19Y43.X       Tilo                  0.643   sampleclkout_OBUF
-                                                       Inst_controlunit/RequestDataOut
-    SLICE_X4Y20.G4       net (fanout=22)       2.434   sampleclkout_OBUF
-    SLICE_X4Y20.Y        Tilo                  0.707   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.F4       net (fanout=2)        0.094   Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.X        Tilo                  0.692   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_cnt2_and00001
-    SLICE_X0Y5.CE        net (fanout=29)       2.723   Inst_SDRAMInterface/current_cnt2_and0000
-    SLICE_X0Y5.CLK       Tceck                 0.311   Inst_SDRAMInterface/current.cnt2_1
-                                                       Inst_SDRAMInterface/current.cnt2_0
+    SLICE_X12Y32.AQ      Tcko                  0.447   Inst_controlunit/bitspersampleout<2>
+                                                       Inst_controlunit/bitspersampleout_2
+    SLICE_X4Y37.B5       net (fanout=10)       1.368   Inst_controlunit/bitspersampleout<2>
+    SLICE_X4Y37.B        Tilo                  0.203   Inst_DAC_top/Inst_Dataconverter/current_sample_out<9>
+                                                       _n0042<2>1
+    SLICE_X12Y38.D4      net (fanout=8)        1.029   _n0042
+    SLICE_X12Y38.CLK     Tas                   0.289   Inst_DAC_top/Inst_Dataconverter/current_sample_out<3>
+                                                       Inst_DAC_top/Inst_Dataconverter/Mmux_DatainRight[23]_Datainleft[23]_mux_0_OUT131
+                                                       Inst_DAC_top/Inst_Dataconverter/current_sample_out_3
     -------------------------------------------------  ---------------------------
-    Total                                     12.280ns (4.294ns logic, 7.986ns route)
-                                                       (35.0% logic, 65.0% route)
+    Total                                      3.336ns (0.939ns logic, 2.397ns route)
+                                                       (28.1% logic, 71.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_SDRAMInterface/current.cnt2_11 (SLICE_X0Y8.CE), 53 paths
+Paths for end point Inst_DAC_top/Inst_Dataconverter/current_sample_out_1 (SLICE_X12Y38.B5), 3 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     70.976ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_SampleENA/SampleCLKEna (FF)
-  Destination:          Inst_SDRAMInterface/current.cnt2_11 (FF)
-  Requirement:          83.300ns
-  Data Path Delay:      12.233ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.091ns (0.569 - 0.660)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
-  Clock Uncertainty:    0.000ns
+Slack (setup path):     40.232ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controlunit/bitspersampleout_0 (FF)
+  Destination:          Inst_DAC_top/Inst_Dataconverter/current_sample_out_1 (FF)
+  Requirement:          44.270ns
+  Data Path Delay:      3.866ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.025ns (0.232 - 0.257)
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK falling at 44.270ns
+  Clock Uncertainty:    0.147ns
 
-  Maximum Data Path: Inst_SampleENA/SampleCLKEna to Inst_SDRAMInterface/current.cnt2_11
+  Clock Uncertainty:          0.147ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.284ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_controlunit/bitspersampleout_0 to Inst_DAC_top/Inst_Dataconverter/current_sample_out_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X28Y10.YQ      Tcko                  0.676   Inst_SampleENA/cnt<0>
-                                                       Inst_SampleENA/SampleCLKEna
-    SLICE_X19Y22.G3      net (fanout=12)       1.806   SampleCLKEna
-    SLICE_X19Y22.Y       Tilo                  0.648   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf_SW0
-    SLICE_X19Y22.F3      net (fanout=2)        0.080   Inst_decoder2/N101
-    SLICE_X19Y22.X       Tilo                  0.643   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf
-    SLICE_X19Y43.F2      net (fanout=1)        1.032   RequestReadDec
-    SLICE_X19Y43.X       Tilo                  0.643   sampleclkout_OBUF
-                                                       Inst_controlunit/RequestDataOut
-    SLICE_X4Y20.G4       net (fanout=22)       2.434   sampleclkout_OBUF
-    SLICE_X4Y20.Y        Tilo                  0.707   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.F4       net (fanout=2)        0.094   Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.X        Tilo                  0.692   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_cnt2_and00001
-    SLICE_X0Y8.CE        net (fanout=29)       2.467   Inst_SDRAMInterface/current_cnt2_and0000
-    SLICE_X0Y8.CLK       Tceck                 0.311   Inst_SDRAMInterface/current.cnt2_11
-                                                       Inst_SDRAMInterface/current.cnt2_11
+    SLICE_X14Y32.AQ      Tcko                  0.408   Inst_controlunit/bitspersampleout<1>
+                                                       Inst_controlunit/bitspersampleout_0
+    SLICE_X4Y37.B1       net (fanout=29)       2.018   Inst_controlunit/bitspersampleout<0>
+    SLICE_X4Y37.B        Tilo                  0.203   Inst_DAC_top/Inst_Dataconverter/current_sample_out<9>
+                                                       _n0042<2>1
+    SLICE_X12Y38.B5      net (fanout=8)        0.948   _n0042
+    SLICE_X12Y38.CLK     Tas                   0.289   Inst_DAC_top/Inst_Dataconverter/current_sample_out<3>
+                                                       Inst_DAC_top/Inst_Dataconverter/Mmux_DatainRight[23]_Datainleft[23]_mux_0_OUT151
+                                                       Inst_DAC_top/Inst_Dataconverter/current_sample_out_1
     -------------------------------------------------  ---------------------------
-    Total                                     12.233ns (4.320ns logic, 7.913ns route)
-                                                       (35.3% logic, 64.7% route)
+    Total                                      3.866ns (0.900ns logic, 2.966ns route)
+                                                       (23.3% logic, 76.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     71.170ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_decoder2/current.cnt_3 (FF)
-  Destination:          Inst_SDRAMInterface/current.cnt2_11 (FF)
-  Requirement:          83.300ns
-  Data Path Delay:      12.055ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.075ns (0.569 - 0.644)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
-  Clock Uncertainty:    0.000ns
+Slack (setup path):     40.814ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controlunit/bitspersampleout_1 (FF)
+  Destination:          Inst_DAC_top/Inst_Dataconverter/current_sample_out_1 (FF)
+  Requirement:          44.270ns
+  Data Path Delay:      3.284ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.025ns (0.232 - 0.257)
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK falling at 44.270ns
+  Clock Uncertainty:    0.147ns
 
-  Maximum Data Path: Inst_decoder2/current.cnt_3 to Inst_SDRAMInterface/current.cnt2_11
+  Clock Uncertainty:          0.147ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.284ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_controlunit/bitspersampleout_1 to Inst_DAC_top/Inst_Dataconverter/current_sample_out_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y25.YQ      Tcko                  0.580   Inst_decoder2/current.cnt_3
-                                                       Inst_decoder2/current.cnt_3
-    SLICE_X22Y25.G1      net (fanout=3)        0.550   Inst_decoder2/current.cnt_3
-    SLICE_X22Y25.Y       Tilo                  0.707   Inst_decoder2/nxt_cnt_cmp_eq0001
-                                                       Inst_decoder2/nxt_cnt_cmp_eq000111
-    SLICE_X19Y22.F2      net (fanout=12)       1.195   Inst_decoder2/requestreadbuf_and0000
-    SLICE_X19Y22.X       Tilo                  0.643   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf
-    SLICE_X19Y43.F2      net (fanout=1)        1.032   RequestReadDec
-    SLICE_X19Y43.X       Tilo                  0.643   sampleclkout_OBUF
-                                                       Inst_controlunit/RequestDataOut
-    SLICE_X4Y20.G4       net (fanout=22)       2.434   sampleclkout_OBUF
-    SLICE_X4Y20.Y        Tilo                  0.707   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.F4       net (fanout=2)        0.094   Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.X        Tilo                  0.692   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_cnt2_and00001
-    SLICE_X0Y8.CE        net (fanout=29)       2.467   Inst_SDRAMInterface/current_cnt2_and0000
-    SLICE_X0Y8.CLK       Tceck                 0.311   Inst_SDRAMInterface/current.cnt2_11
-                                                       Inst_SDRAMInterface/current.cnt2_11
+    SLICE_X14Y32.CQ      Tcko                  0.408   Inst_controlunit/bitspersampleout<1>
+                                                       Inst_controlunit/bitspersampleout_1
+    SLICE_X4Y37.B3       net (fanout=25)       1.436   Inst_controlunit/bitspersampleout<1>
+    SLICE_X4Y37.B        Tilo                  0.203   Inst_DAC_top/Inst_Dataconverter/current_sample_out<9>
+                                                       _n0042<2>1
+    SLICE_X12Y38.B5      net (fanout=8)        0.948   _n0042
+    SLICE_X12Y38.CLK     Tas                   0.289   Inst_DAC_top/Inst_Dataconverter/current_sample_out<3>
+                                                       Inst_DAC_top/Inst_Dataconverter/Mmux_DatainRight[23]_Datainleft[23]_mux_0_OUT151
+                                                       Inst_DAC_top/Inst_Dataconverter/current_sample_out_1
     -------------------------------------------------  ---------------------------
-    Total                                     12.055ns (4.283ns logic, 7.772ns route)
-                                                       (35.5% logic, 64.5% route)
+    Total                                      3.284ns (0.900ns logic, 2.384ns route)
+                                                       (27.4% logic, 72.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     71.199ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_decoder2/current.cnt_2 (FF)
-  Destination:          Inst_SDRAMInterface/current.cnt2_11 (FF)
-  Requirement:          83.300ns
-  Data Path Delay:      12.024ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.077ns (0.569 - 0.646)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
-  Clock Uncertainty:    0.000ns
+Slack (setup path):     40.849ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controlunit/bitspersampleout_2 (FF)
+  Destination:          Inst_DAC_top/Inst_Dataconverter/current_sample_out_1 (FF)
+  Requirement:          44.270ns
+  Data Path Delay:      3.255ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.019ns (0.144 - 0.163)
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK falling at 44.270ns
+  Clock Uncertainty:    0.147ns
 
-  Maximum Data Path: Inst_decoder2/current.cnt_2 to Inst_SDRAMInterface/current.cnt2_11
+  Clock Uncertainty:          0.147ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.284ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_controlunit/bitspersampleout_2 to Inst_DAC_top/Inst_Dataconverter/current_sample_out_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X25Y25.XQ      Tcko                  0.591   Inst_decoder2/current.cnt_2
-                                                       Inst_decoder2/current.cnt_2
-    SLICE_X22Y25.G2      net (fanout=4)        0.508   Inst_decoder2/current.cnt_2
-    SLICE_X22Y25.Y       Tilo                  0.707   Inst_decoder2/nxt_cnt_cmp_eq0001
-                                                       Inst_decoder2/nxt_cnt_cmp_eq000111
-    SLICE_X19Y22.F2      net (fanout=12)       1.195   Inst_decoder2/requestreadbuf_and0000
-    SLICE_X19Y22.X       Tilo                  0.643   RequestReadDec
-                                                       Inst_decoder2/requestreadbuf
-    SLICE_X19Y43.F2      net (fanout=1)        1.032   RequestReadDec
-    SLICE_X19Y43.X       Tilo                  0.643   sampleclkout_OBUF
-                                                       Inst_controlunit/RequestDataOut
-    SLICE_X4Y20.G4       net (fanout=22)       2.434   sampleclkout_OBUF
-    SLICE_X4Y20.Y        Tilo                  0.707   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.F4       net (fanout=2)        0.094   Inst_SDRAMInterface/current_state_and0000
-    SLICE_X4Y20.X        Tilo                  0.692   Inst_SDRAMInterface/current_cnt2_and0000
-                                                       Inst_SDRAMInterface/current_cnt2_and00001
-    SLICE_X0Y8.CE        net (fanout=29)       2.467   Inst_SDRAMInterface/current_cnt2_and0000
-    SLICE_X0Y8.CLK       Tceck                 0.311   Inst_SDRAMInterface/current.cnt2_11
-                                                       Inst_SDRAMInterface/current.cnt2_11
+    SLICE_X12Y32.AQ      Tcko                  0.447   Inst_controlunit/bitspersampleout<2>
+                                                       Inst_controlunit/bitspersampleout_2
+    SLICE_X4Y37.B5       net (fanout=10)       1.368   Inst_controlunit/bitspersampleout<2>
+    SLICE_X4Y37.B        Tilo                  0.203   Inst_DAC_top/Inst_Dataconverter/current_sample_out<9>
+                                                       _n0042<2>1
+    SLICE_X12Y38.B5      net (fanout=8)        0.948   _n0042
+    SLICE_X12Y38.CLK     Tas                   0.289   Inst_DAC_top/Inst_Dataconverter/current_sample_out<3>
+                                                       Inst_DAC_top/Inst_Dataconverter/Mmux_DatainRight[23]_Datainleft[23]_mux_0_OUT151
+                                                       Inst_DAC_top/Inst_Dataconverter/current_sample_out_1
     -------------------------------------------------  ---------------------------
-    Total                                     12.024ns (4.294ns logic, 7.730ns route)
-                                                       (35.7% logic, 64.3% route)
+    Total                                      3.255ns (0.939ns logic, 2.316ns route)
+                                                       (28.8% logic, 71.2% route)
 
 --------------------------------------------------------------------------------
 
-Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 83.3 ns HIGH 50%;
+Hold Paths: TS_Inst_DAC_top_inst_DMC_clkout0 = PERIOD TIMEGRP
+        "Inst_DAC_top_inst_DMC_clkout0"
+        TS_Inst_DAC_top_inst_DMC_12_to_96_clkfx / 0.117647059 HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_controlunit/watchdogcnt_0 (SLICE_X24Y61.BX), 1 path
+Paths for end point Inst_SDRAMInterface/current_Addr_8 (SLICE_X14Y51.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.101ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               Inst_controlunit/watchdogcnt_0 (FF)
-  Destination:          Inst_controlunit/watchdogcnt_0 (FF)
+Slack (hold path):      0.421ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_SDRAMInterface/current_Addr_8 (FF)
+  Destination:          Inst_SDRAMInterface/current_Addr_8 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.101ns (Levels of Logic = 0)
+  Data Path Delay:      0.421ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 83.300ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK rising at 0.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: Inst_controlunit/watchdogcnt_0 to Inst_controlunit/watchdogcnt_0
+  Minimum Data Path at Fast Process Corner: Inst_SDRAMInterface/current_Addr_8 to Inst_SDRAMInterface/current_Addr_8
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y61.XQ      Tcko                  0.505   Inst_controlunit/watchdogcnt<0>
-                                                       Inst_controlunit/watchdogcnt_0
-    SLICE_X24Y61.BX      net (fanout=5)        0.451   Inst_controlunit/watchdogcnt<0>
-    SLICE_X24Y61.CLK     Tckdi       (-Th)    -0.145   Inst_controlunit/watchdogcnt<0>
-                                                       Inst_controlunit/watchdogcnt_0
+    SLICE_X14Y51.AQ      Tcko                  0.200   Inst_SDRAMInterface/current_Addr<9>
+                                                       Inst_SDRAMInterface/current_Addr_8
+    SLICE_X14Y51.A6      net (fanout=3)        0.031   Inst_SDRAMInterface/current_Addr<8>
+    SLICE_X14Y51.CLK     Tah         (-Th)    -0.190   Inst_SDRAMInterface/current_Addr<9>
+                                                       Inst_SDRAMInterface/current_Addr_8_dpot1
+                                                       Inst_SDRAMInterface/current_Addr_8
     -------------------------------------------------  ---------------------------
-    Total                                      1.101ns (0.650ns logic, 0.451ns route)
-                                                       (59.0% logic, 41.0% route)
+    Total                                      0.421ns (0.390ns logic, 0.031ns route)
+                                                       (92.6% logic, 7.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_SDRAMInterface/Filestart (SLICE_X8Y31.CE), 1 path
+Paths for end point Inst_SDRAMInterface/current_Addr_4 (SLICE_X14Y54.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.127ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               Inst_SDRAMInterface/MemCLK (FF)
-  Destination:          Inst_SDRAMInterface/Filestart (FF)
+Slack (hold path):      0.424ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_SDRAMInterface/current_Addr_4 (FF)
+  Destination:          Inst_SDRAMInterface/current_Addr_4 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.223ns (Levels of Logic = 0)
-  Clock Path Skew:      0.096ns (0.641 - 0.545)
-  Source Clock:         clk_BUFGP rising at 83.300ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: Inst_SDRAMInterface/MemCLK to Inst_SDRAMInterface/Filestart
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X8Y32.YQ       Tcko                  0.541   Inst_SDRAMInterface/MemCLK
-                                                       Inst_SDRAMInterface/MemCLK
-    SLICE_X8Y31.CE       net (fanout=21)       0.682   Inst_SDRAMInterface/MemCLK
-    SLICE_X8Y31.CLK      Tckce       (-Th)     0.000   filestart
-                                                       Inst_SDRAMInterface/Filestart
-    -------------------------------------------------  ---------------------------
-    Total                                      1.223ns (0.541ns logic, 0.682ns route)
-                                                       (44.2% logic, 55.8% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point Inst_SDRAMInterface/MemCLK (SLICE_X8Y32.BY), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      1.194ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               Inst_SDRAMInterface/MemCLK (FF)
-  Destination:          Inst_SDRAMInterface/MemCLK (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      1.194ns (Levels of Logic = 0)
+  Data Path Delay:      0.424ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 83.300ns
-  Destination Clock:    clk_BUFGP rising at 83.300ns
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK rising at 0.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: Inst_SDRAMInterface/MemCLK to Inst_SDRAMInterface/MemCLK
+  Minimum Data Path at Fast Process Corner: Inst_SDRAMInterface/current_Addr_4 to Inst_SDRAMInterface/current_Addr_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X8Y32.YQ       Tcko                  0.541   Inst_SDRAMInterface/MemCLK
-                                                       Inst_SDRAMInterface/MemCLK
-    SLICE_X8Y32.BY       net (fanout=21)       0.480   Inst_SDRAMInterface/MemCLK
-    SLICE_X8Y32.CLK      Tckdi       (-Th)    -0.173   Inst_SDRAMInterface/MemCLK
-                                                       Inst_SDRAMInterface/MemCLK
+    SLICE_X14Y54.AQ      Tcko                  0.200   Inst_SDRAMInterface/current_Addr<5>
+                                                       Inst_SDRAMInterface/current_Addr_4
+    SLICE_X14Y54.A6      net (fanout=3)        0.034   Inst_SDRAMInterface/current_Addr<4>
+    SLICE_X14Y54.CLK     Tah         (-Th)    -0.190   Inst_SDRAMInterface/current_Addr<5>
+                                                       Inst_SDRAMInterface/current_Addr_4_dpot1
+                                                       Inst_SDRAMInterface/current_Addr_4
     -------------------------------------------------  ---------------------------
-    Total                                      1.194ns (0.714ns logic, 0.480ns route)
-                                                       (59.8% logic, 40.2% route)
+    Total                                      0.424ns (0.390ns logic, 0.034ns route)
+                                                       (92.0% logic, 8.0% route)
 
 --------------------------------------------------------------------------------
 
-Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 83.3 ns HIGH 50%;
+Paths for end point Inst_SDRAMInterface/current_Addr_12 (SLICE_X14Y48.A6), 1 path
 --------------------------------------------------------------------------------
-Slack: 80.096ns (period - (min low pulse limit / (low pulse / period)))
-  Period: 83.300ns
-  Low pulse: 41.650ns
-  Low pulse limit: 1.602ns (Trpw)
-  Physical resource: Inst_SampleENA/cnt<0>/SR
-  Logical resource: Inst_SampleENA/cnt_0/SR
-  Location pin: SLICE_X28Y10.SR
-  Clock network: rst_IBUF
---------------------------------------------------------------------------------
-Slack: 80.096ns (period - (min high pulse limit / (high pulse / period)))
-  Period: 83.300ns
-  High pulse: 41.650ns
-  High pulse limit: 1.602ns (Trpw)
-  Physical resource: Inst_SampleENA/cnt<0>/SR
-  Logical resource: Inst_SampleENA/cnt_0/SR
-  Location pin: SLICE_X28Y10.SR
-  Clock network: rst_IBUF
---------------------------------------------------------------------------------
-Slack: 80.096ns (period - (min low pulse limit / (low pulse / period)))
-  Period: 83.300ns
-  Low pulse: 41.650ns
-  Low pulse limit: 1.602ns (Trpw)
-  Physical resource: Inst_SampleENA/cnt<0>/SR
-  Logical resource: Inst_SampleENA/SampleCLKEna/SR
-  Location pin: SLICE_X28Y10.SR
-  Clock network: rst_IBUF
+Slack (hold path):      0.428ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_SDRAMInterface/current_Addr_12 (FF)
+  Destination:          Inst_SDRAMInterface/current_Addr_12 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.428ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         MCLK rising at 0.000ns
+  Destination Clock:    MCLK rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Inst_SDRAMInterface/current_Addr_12 to Inst_SDRAMInterface/current_Addr_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y48.AQ      Tcko                  0.200   Inst_SDRAMInterface/current_Addr<12>
+                                                       Inst_SDRAMInterface/current_Addr_12
+    SLICE_X14Y48.A6      net (fanout=4)        0.038   Inst_SDRAMInterface/current_Addr<12>
+    SLICE_X14Y48.CLK     Tah         (-Th)    -0.190   Inst_SDRAMInterface/current_Addr<12>
+                                                       Inst_SDRAMInterface/current_Addr_12_dpot1
+                                                       Inst_SDRAMInterface/current_Addr_12
+    -------------------------------------------------  ---------------------------
+    Total                                      0.428ns (0.390ns logic, 0.038ns route)
+                                                       (91.1% logic, 8.9% route)
+
 --------------------------------------------------------------------------------
 
+Component Switching Limit Checks: TS_Inst_DAC_top_inst_DMC_clkout0 = PERIOD TIMEGRP
+        "Inst_DAC_top_inst_DMC_clkout0"
+        TS_Inst_DAC_top_inst_DMC_12_to_96_clkfx / 0.117647059 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 86.811ns (period - min period limit)
+  Period: 88.541ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: Inst_DAC_top/inst_DMC/clkout1_buf/I0
+  Logical resource: Inst_DAC_top/inst_DMC/clkout1_buf/I0
+  Location pin: BUFGMUX_X2Y2.I0
+  Clock network: Inst_DAC_top/inst_DMC/clkout0
+--------------------------------------------------------------------------------
+Slack: 86.902ns (period - min period limit)
+  Period: 88.541ns
+  Min period limit: 1.639ns (610.128MHz) (Tockper)
+  Physical resource: BCLK_out_OBUF/CLK0
+  Logical resource: ODDR2_inst_BCLK/CK0
+  Location pin: OLOGIC_X12Y16.CLK0
+  Clock network: MCLK
+--------------------------------------------------------------------------------
+Slack: 86.902ns (period - min period limit)
+  Period: 88.541ns
+  Min period limit: 1.639ns (610.128MHz) (Tockper)
+  Physical resource: MCLK_out_OBUF/CLK0
+  Logical resource: ODDR2_inst_MCLK/CK0
+  Location pin: OLOGIC_X12Y23.CLK0
+  Clock network: MCLK
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_clk
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk                         |     83.333ns|     32.000ns|     40.000ns|            0|            0|            0|        12100|
+| TS_Inst_DAC_top_inst_DMC_12_to|     10.417ns|      5.000ns|      1.145ns|            0|            0|            0|        12100|
+| _96_clkfx                     |             |             |             |             |             |             |             |
+|  TS_Inst_DAC_top_inst_DMC_clko|     88.542ns|      9.730ns|          N/A|            0|            0|        12100|            0|
+|  ut0                          |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
 
@@ -528,7 +564,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   12.573|         |         |         |
+clk            |    9.730|    2.668|    4.119|    3.759|
 ---------------+---------+---------+---------+---------+
 
 
@@ -537,23 +573,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 12814 paths, 0 nets, and 2585 connections
+Constraints cover 12100 paths, 0 nets, and 2357 connections
 
 Design statistics:
-   Minimum period:  12.573ns{1}   (Maximum frequency:  79.536MHz)
+   Minimum period:  32.000ns{1}   (Maximum frequency:  31.250MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Fri Feb 14 12:15:15 2014 
+Analysis completed Fri Apr 18 21:09:14 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 126 MB
+Peak Memory Usage: 151 MB
 
 
 
