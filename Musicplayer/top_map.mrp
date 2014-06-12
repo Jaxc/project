@@ -10,36 +10,36 @@ Target Device  : xc6slx9
 Target Package : ftg256
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Apr 18 21:08:18 2014
+Mapped Date    : Wed Jun 11 10:07:16 2014
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:  114
 Slice Logic Utilization:
-  Number of Slice Registers:                   237 out of  11,440    2%
-    Number used as Flip Flops:                 237
+  Number of Slice Registers:                   219 out of  11,440    1%
+    Number used as Flip Flops:                 219
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        463 out of   5,720    8%
-    Number used as logic:                      463 out of   5,720    8%
-      Number using O6 output only:             386
+  Number of Slice LUTs:                        354 out of   5,720    6%
+    Number used as logic:                      354 out of   5,720    6%
+      Number using O6 output only:             291
       Number using O5 output only:               1
-      Number using O5 and O6:                   76
+      Number using O5 and O6:                   62
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   146 out of   1,430   10%
-  Number of MUXCYs used:                        60 out of   2,860    2%
-  Number of LUT Flip Flop pairs used:          481
-    Number with an unused Flip Flop:           249 out of     481   51%
-    Number with an unused LUT:                  18 out of     481    3%
-    Number of fully used LUT-FF pairs:         214 out of     481   44%
-    Number of unique control sets:              23
+  Number of occupied Slices:                   115 out of   1,430    8%
+  Number of MUXCYs used:                        44 out of   2,860    1%
+  Number of LUT Flip Flop pairs used:          369
+    Number with an unused Flip Flop:           158 out of     369   42%
+    Number with an unused LUT:                  15 out of     369    4%
+    Number of fully used LUT-FF pairs:         196 out of     369   53%
+    Number of unique control sets:              22
     Number of slice register sites lost
-      to control set restrictions:              99 out of  11,440    1%
+      to control set restrictions:              77 out of  11,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -48,8 +48,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        53 out of     186   28%
-    Number of LOCed IOBs:                       53 out of      53  100%
+  Number of bonded IOBs:                        56 out of     186   30%
+    Number of LOCed IOBs:                       56 out of      56  100%
     IOB Flip Flops:                              2
 
 Specific Feature Utilization:
@@ -83,11 +83,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.35
+Average Fanout of Non-Clock Nets:                4.34
 
-Peak Memory Usage:  270 MB
-Total REAL time to MAP completion:  14 secs 
-Total CPU time to MAP completion:   14 secs 
+Peak Memory Usage:  300 MB
+Total REAL time to MAP completion:  23 secs 
+Total CPU time to MAP completion:   10 secs 
 
 Table of Contents
 -----------------
@@ -110,13 +110,361 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:Pack:1186 - One or more I/O components have conflicting property values.
+    For each occurrence, the system will use the property value attached to the
+   pad.  Otherwise, the system will use the first property value read.  To view
+   each occurrence, create a detailed map report (run map using the -detail
+   option).
 WARNING:Timing:3402 - The Clock Modifying COMP, Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst, has the attribute CLK_FEEDBACK set to NONE.  No
    phase relationship exists between the input and output clocks of this Clock Modifying COMP. Data paths between these clock domains must
    be constrained using FROM/TO constraints.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network MemCLKIN_IBUF has no load.
+INFO:LIT:243 - Logical network miso_i has no load.
+INFO:LIT:395 - The above info message is repeated 4 more times for the following
+   (max. 5 shown):
+   cs_bo,
+   sclk_o,
+   mosi_o,
+   MemCLKIN_IBUF
+   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -134,13 +482,233 @@ INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   2 block(s) optimized away
+  10 block(s) removed
+  97 block(s) optimized away
+  18 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
 
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "Inst_SDRAMInterface/_n0181_inv" is unused and has been removed.
+ Unused block "Inst_SDRAMInterface/_n0181_inv1" (ROM) removed.
+The signal "Inst_SDRAMInterface/_n0143<0>" is unused and has been removed.
+The signal "Inst_SDRAMInterface/_n0143<1>" is unused and has been removed.
+The signal "Inst_SDRAMInterface/_n0143<2>" is unused and has been removed.
+The signal "Inst_SDRAMInterface/_n0143<3>" is unused and has been removed.
+The signal "Inst_SDRAMInterface/_n0143<4>" is unused and has been removed.
+The signal "Inst_SDRAMInterface/_n0143<5>" is unused and has been removed.
+The signal "Inst_SDRAMInterface/_n0143<6>" is unused and has been removed.
+The signal "Inst_SDRAMInterface/_n0143<7>" is unused and has been removed.
+The signal "Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT1841" is unused
+and has been removed.
+ Unused block "Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT18411" (ROM)
+removed.
+The signal "Inst_controlunit/Mmux_nxt_TwoByteWord1101" is unused and has been
+removed.
+ Unused block "Inst_controlunit/Mmux_nxt_TwoByteWord11011" (ROM) removed.
+The signal "Inst_controlunit/Mmux_nxt_TwoByteWord102" is unused and has been
+removed.
+ Unused block "Inst_controlunit/Mmux_nxt_TwoByteWord1021" (ROM) removed.
+The signal "Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT187112" is
+unused and has been removed.
+ Unused block "Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT187112" (ROM)
+removed.
+The signal "Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT187115" is
+unused and has been removed.
+ Unused block "Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT187115" (ROM)
+removed.
+  The signal "N121" is unused and has been removed.
+   Unused block "Inst_controlunit/n0012<7>2_SW1" (ROM) removed.
+The signal "N93" is unused and has been removed.
+ Unused block "Inst_controlunit/n0012<7>2_SW0" (ROM) removed.
+The signal "N106" is unused and has been removed.
+ Unused block "Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT18732_SW0"
+(ROM) removed.
+The signal "N115" is unused and has been removed.
+ Unused block "Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT187113_SW0"
+(ROM) removed.
+
 Optimized Block(s):
 TYPE 		BLOCK
+LUT3 		Inst_SDRAMInterface/Mmux__n014311
+   optimized to 0
+LUT3 		Inst_SDRAMInterface/Mmux__n014321
+   optimized to 0
+LUT3 		Inst_SDRAMInterface/Mmux__n014331
+   optimized to 0
+LUT3 		Inst_SDRAMInterface/Mmux__n014341
+   optimized to 0
+LUT3 		Inst_SDRAMInterface/Mmux__n014351
+   optimized to 0
+LUT3 		Inst_SDRAMInterface/Mmux__n014361
+   optimized to 0
+LUT3 		Inst_SDRAMInterface/Mmux__n014371
+   optimized to 0
+LUT3 		Inst_SDRAMInterface/Mmux__n014381
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_0
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_0_1
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_0_2
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_1
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_1_1
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_1_2
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_2
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_3
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_3_1
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_3_2
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_3_3
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_4
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_4_1
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_4_2
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_4_3
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_5
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_5_1
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_5_2
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_6
+   optimized to 0
+FDCE 		Inst_SDRAMInterface/byteout_7
+   optimized to 0
+IBUF 		Inst_SDRAMInterface/tristate[0].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[10].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[11].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[12].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[13].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[14].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[15].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[1].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[2].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[3].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[4].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[5].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[6].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[7].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[8].IOBUF_inst/IBUF
+IBUF 		Inst_SDRAMInterface/tristate[9].IOBUF_inst/IBUF
+LUT3 		Inst_controlunit/GND_25_o_ByteIn[7]_equal_139_o<7>1
+   optimized to 0
+LUT6 		Inst_controlunit/GND_25_o_ByteIn[7]_equal_139_o<7>11
+   optimized to 0
+LUT5 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT1311_F
+   optimized to 0
+LUT5 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT1311_G
+   optimized to 0
+LUT5 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT1321
+   optimized to 1
+LUT6 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT1331
+   optimized to 0
+LUT6 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT1511
+   optimized to 0
+LUT5 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT1511_SW0
+   optimized to 1
+LUT5 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT1511_SW1
+   optimized to 1
+LUT6 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT1834
+   optimized to 1
+LUT6 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT187113
+   optimized to 0
+LUT4 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT187113_SW1
+   optimized to 1
+LUT5 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT187114
+   optimized to 0
+LUT6 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT187116
+   optimized to 0
+LUT6 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT18733
+   optimized to 1
+LUT6 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT18734
+   optimized to 1
+LUT6 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT18734_SW3
+   optimized to 1
+LUT6 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT18734_SW4
+   optimized to 1
+LUT5 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT18735
+   optimized to 1
+LUT5 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT251
+   optimized to 0
+LUT5 		Inst_controlunit/Mmux_GND_25_o_nxt_cnt[3]_mux_184_OUT66_F
+   optimized to 0
+LUT6 		Inst_controlunit/Mmux_nxt_TwoByteWord201
+   optimized to 0
+LUT6 		Inst_controlunit/Mmux_nxt_TwoByteWord21
+   optimized to 0
+LUT6 		Inst_controlunit/Mmux_nxt_TwoByteWord321
+   optimized to 0
+LUT6 		Inst_controlunit/Mmux_nxt_TwoByteWord361
+   optimized to 0
+LUT6 		Inst_controlunit/Mmux_nxt_TwoByteWord381
+   optimized to 0
+LUT6 		Inst_controlunit/Mmux_nxt_TwoByteWord401
+   optimized to 0
+LUT6 		Inst_controlunit/current_state_FSM_FFd1-In1
+   optimized to 0
+LUT6 		Inst_controlunit/current_state_FSM_FFd1-In221
+   optimized to 0
+LUT6 		Inst_controlunit/current_state_FSM_FFd2-In1111
+   optimized to 0
+LUT5 		Inst_controlunit/current_state_FSM_FFd2-In1211
+   optimized to 0
+LUT6 		Inst_controlunit/current_state_FSM_FFd2-In12111
+   optimized to 0
+LUT5 		Inst_controlunit/current_state_FSM_FFd2-In2
+   optimized to 0
+LUT6 		Inst_controlunit/current_state_FSM_FFd3-In1
+   optimized to 1
+LUT6 		Inst_controlunit/current_state_FSM_FFd3-In121
+   optimized to 1
+LUT4 		Inst_controlunit/current_state_FSM_FFd4-In141_SW0
+   optimized to 1
+LUT6 		Inst_controlunit/current_state_FSM_FFd4-In2
+   optimized to 0
+LUT6 		Inst_controlunit/current_state_FSM_FFd4-In211
+   optimized to 0
+LUT6 		Inst_controlunit/n0002<7>
+   optimized to 0
+LUT3 		Inst_controlunit/n0006<7>1
+   optimized to 0
+LUT4 		Inst_controlunit/n0012<7>11
+   optimized to 0
+LUT5 		Inst_controlunit/n0012<7>2
+   optimized to 0
+LUT5 		Inst_controlunit/n0012<7>2_SW4
+   optimized to 1
+LUT3 		Inst_controlunit/n0029<7>1
+   optimized to 0
+LUT5 		Inst_controlunit/n0037<7>1
+   optimized to 0
+LUT6 		Inst_controlunit/n0053<7>
+   optimized to 0
+LUT3 		Inst_controlunit/n0053<7>_SW0
+   optimized to 1
+LUT6 		Inst_controlunit/n0059<7>
+   optimized to 0
+LUT3 		Inst_controlunit/n0059<7>_SW0
+   optimized to 0
+LUT3 		Inst_controlunit/n0059<7>_SW1
+   optimized to 1
+LUT5 		Inst_controlunit/n0123<7>1
+   optimized to 0
 GND 		XST_GND
 VCC 		XST_VCC
 
@@ -181,31 +749,34 @@ Section 6 - IOB Properties
 | MemCLKIN                           | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | MemCLKOut                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | RASOut                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| SCL_out                            | IOB              | OUTPUT    | I2C                  |       |          |      |              |          |          |
+| SDA                                | IOB              | BIDIR     | I2C                  |       |          |      |              |          |          |
 | UDQM                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | WEOut                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | clk                                | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<0>                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<1>                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<2>                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<3>                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<4>                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<5>                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<6>                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<7>                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<8>                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<9>                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<10>                              | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<11>                              | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<12>                              | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<13>                              | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<14>                              | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| d<15>                              | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| d<0>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<1>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<2>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<3>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<4>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<5>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<6>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<7>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<8>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<9>                               | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<10>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<11>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<12>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<13>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<14>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| d<15>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | errorcode<0>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | errorcode<1>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | errorcode<2>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | errorcode<3>                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | errorout                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | rst                                | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLUP   |          |
+| rst_out                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | sampleclkout                       | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 

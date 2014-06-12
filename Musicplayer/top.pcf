@@ -1,10 +1,12 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Apr 18 21:08:31 2014
+// Written by: Map P.20131013 on Wed Jun 11 10:07:38 2014
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "CS" LOCATE = SITE "H4" LEVEL 1;
+COMP "SCL_out" LOCATE = SITE "T4" LEVEL 1;
 COMP "CKE" LOCATE = SITE "J12" LEVEL 1;
+COMP "SDA" LOCATE = SITE "R2" LEVEL 1;
 COMP "clk" LOCATE = SITE "A9" LEVEL 1;
 COMP "rst" LOCATE = SITE "J14" LEVEL 1;
 COMP "A<0>" LOCATE = SITE "E4" LEVEL 1;
@@ -43,10 +45,11 @@ COMP "WEOut" LOCATE = SITE "M3" LEVEL 1;
 COMP "BitsPerSampleOut" LOCATE = SITE "F15" LEVEL 1;
 COMP "MemCLKOut" LOCATE = SITE "K12" LEVEL 1;
 COMP "DACDAT" LOCATE = SITE "R7" LEVEL 1;
+COMP "rst_out" LOCATE = SITE "R1" LEVEL 1;
 COMP "CASOut" LOCATE = SITE "L3" LEVEL 1;
 COMP "RASOut" LOCATE = SITE "L4" LEVEL 1;
-COMP "sampleclkout" LOCATE = SITE "R1" LEVEL 1;
-COMP "errorout" LOCATE = SITE "T4" LEVEL 1;
+COMP "sampleclkout" LOCATE = SITE "M2" LEVEL 1;
+COMP "errorout" LOCATE = SITE "M1" LEVEL 1;
 COMP "errorcode<0>" LOCATE = SITE "M16" LEVEL 1;
 COMP "errorcode<1>" LOCATE = SITE "K15" LEVEL 1;
 COMP "errorcode<2>" LOCATE = SITE "K16" LEVEL 1;
@@ -61,60 +64,15 @@ PIN ODDR2_inst_BCLK_pins<2> = BEL "ODDR2_inst_BCLK" PINNAME CK1;
 PIN ODDR2_inst_MCLK_pins<1> = BEL "ODDR2_inst_MCLK" PINNAME CK0;
 PIN ODDR2_inst_MCLK_pins<2> = BEL "ODDR2_inst_MCLK" PINNAME CK1;
 TIMEGRP Inst_DAC_top_inst_DMC_clkout0 = BEL "Inst_SampleENA/lastLRCLK" BEL
-        "Inst_SampleENA/SampleCLKEna" BEL
-        "Inst_SDRAMInterface/current_cnt2_12" BEL
-        "Inst_SDRAMInterface/current_cnt2_11" BEL
-        "Inst_SDRAMInterface/current_cnt2_10" BEL
-        "Inst_SDRAMInterface/current_cnt2_9" BEL
-        "Inst_SDRAMInterface/current_cnt2_8" BEL
-        "Inst_SDRAMInterface/current_cnt2_7" BEL
-        "Inst_SDRAMInterface/current_cnt2_6" BEL
-        "Inst_SDRAMInterface/current_cnt2_5" BEL
-        "Inst_SDRAMInterface/current_cnt2_4" BEL
-        "Inst_SDRAMInterface/current_cnt2_3" BEL
-        "Inst_SDRAMInterface/current_cnt2_2" BEL
-        "Inst_SDRAMInterface/current_cnt2_1" BEL
-        "Inst_SDRAMInterface/current_cnt2_0" BEL
-        "Inst_SDRAMInterface/current_state_FSM_FFd1" BEL
-        "Inst_SDRAMInterface/current_state_FSM_FFd2" BEL
-        "Inst_SDRAMInterface/current_state_FSM_FFd3" BEL
-        "Inst_SDRAMInterface/current_Addr_12" BEL
-        "Inst_SDRAMInterface/current_Addr_11" BEL
-        "Inst_SDRAMInterface/current_Addr_10" BEL
-        "Inst_SDRAMInterface/current_Addr_9" BEL
-        "Inst_SDRAMInterface/current_Addr_8" BEL
-        "Inst_SDRAMInterface/current_Addr_7" BEL
-        "Inst_SDRAMInterface/current_Addr_6" BEL
-        "Inst_SDRAMInterface/current_Addr_5" BEL
-        "Inst_SDRAMInterface/current_Addr_4" BEL
-        "Inst_SDRAMInterface/current_Addr_3" BEL
-        "Inst_SDRAMInterface/current_Addr_2" BEL
-        "Inst_SDRAMInterface/current_Addr_1" BEL
-        "Inst_SDRAMInterface/current_Addr_0" BEL
-        "Inst_SDRAMInterface/current_cnt_8" BEL
-        "Inst_SDRAMInterface/current_cnt_7" BEL
-        "Inst_SDRAMInterface/current_cnt_6" BEL
-        "Inst_SDRAMInterface/current_cnt_5" BEL
-        "Inst_SDRAMInterface/current_cnt_4" BEL
-        "Inst_SDRAMInterface/current_cnt_3" BEL
-        "Inst_SDRAMInterface/current_cnt_2" BEL
-        "Inst_SDRAMInterface/current_cnt_1" BEL
-        "Inst_SDRAMInterface/current_cnt_0" BEL
-        "Inst_SDRAMInterface/MemCLKOut" BEL "Inst_SDRAMInterface/Filestart"
-        BEL "Inst_SDRAMInterface/current_RAS" BEL
-        "Inst_SDRAMInterface/current_WE" BEL "Inst_SDRAMInterface/current_CAS"
-        BEL "Inst_SDRAMInterface/byteout_7" BEL
-        "Inst_SDRAMInterface/byteout_6" BEL "Inst_SDRAMInterface/byteout_5"
-        BEL "Inst_SDRAMInterface/byteout_4" BEL
-        "Inst_SDRAMInterface/byteout_3" BEL "Inst_SDRAMInterface/byteout_2"
-        BEL "Inst_SDRAMInterface/byteout_1" BEL
-        "Inst_SDRAMInterface/byteout_0" BEL "Inst_SDRAMInterface/MemCLK" BEL
-        "Inst_DAC_top/inst_DMC/clkout1_buf" BEL "Inst_DAC_top/channel_cnt_8"
-        BEL "Inst_DAC_top/channel_cnt_7" BEL "Inst_DAC_top/channel_cnt_6" BEL
-        "Inst_DAC_top/channel_cnt_5" BEL "Inst_DAC_top/channel_cnt_4" BEL
-        "Inst_DAC_top/channel_cnt_3" BEL "Inst_DAC_top/channel_cnt_2" BEL
-        "Inst_DAC_top/channel_cnt_1" BEL "Inst_DAC_top/channel_cnt_0" BEL
-        "Inst_DAC_top/LRCLK" BEL "Inst_DAC_top/Inst_Dataconverter/cnt_4" BEL
+        "Inst_SampleENA/SampleCLKEna" BEL "Inst_CLK_div/cnt_0" BEL
+        "Inst_CLK_div/cnt_1" BEL "Inst_CLK_div/cnt_2" BEL "Inst_CLK_div/cnt_3"
+        BEL "Inst_CLK_div/cnt_4" BEL "Inst_DAC_top/inst_DMC/clkout1_buf" BEL
+        "Inst_DAC_top/channel_cnt_8" BEL "Inst_DAC_top/channel_cnt_7" BEL
+        "Inst_DAC_top/channel_cnt_6" BEL "Inst_DAC_top/channel_cnt_5" BEL
+        "Inst_DAC_top/channel_cnt_4" BEL "Inst_DAC_top/channel_cnt_3" BEL
+        "Inst_DAC_top/channel_cnt_2" BEL "Inst_DAC_top/channel_cnt_1" BEL
+        "Inst_DAC_top/channel_cnt_0" BEL "Inst_DAC_top/LRCLK" BEL
+        "Inst_DAC_top/Inst_Dataconverter/cnt_4" BEL
         "Inst_DAC_top/Inst_Dataconverter/cnt_3" BEL
         "Inst_DAC_top/Inst_Dataconverter/cnt_2" BEL
         "Inst_DAC_top/Inst_Dataconverter/cnt_1" BEL
@@ -137,6 +95,31 @@ TIMEGRP Inst_DAC_top_inst_DMC_clkout0 = BEL "Inst_SampleENA/lastLRCLK" BEL
         "Inst_DAC_top/Inst_Dataconverter/current_sample_out_14" BEL
         "Inst_DAC_top/Inst_Dataconverter/current_sample_out_15" BEL
         "Inst_DAC_top/Inst_Dataconverter/lastLRclk" BEL
+        "Inst_SDRAMInterface/current_state_FSM_FFd1" BEL
+        "Inst_SDRAMInterface/current_state_FSM_FFd2" BEL
+        "Inst_SDRAMInterface/current_state_FSM_FFd3" BEL
+        "Inst_SDRAMInterface/current_Addr_9" BEL
+        "Inst_SDRAMInterface/current_Addr_8" BEL
+        "Inst_SDRAMInterface/current_Addr_7" BEL
+        "Inst_SDRAMInterface/current_Addr_6" BEL
+        "Inst_SDRAMInterface/current_Addr_5" BEL
+        "Inst_SDRAMInterface/current_Addr_4" BEL
+        "Inst_SDRAMInterface/current_Addr_3" BEL
+        "Inst_SDRAMInterface/current_Addr_2" BEL
+        "Inst_SDRAMInterface/current_Addr_1" BEL
+        "Inst_SDRAMInterface/current_Addr_0" BEL
+        "Inst_SDRAMInterface/current_WE" BEL "Inst_SDRAMInterface/MemCLKOut"
+        BEL "Inst_SDRAMInterface/current_cnt_8" BEL
+        "Inst_SDRAMInterface/current_cnt_7" BEL
+        "Inst_SDRAMInterface/current_cnt_6" BEL
+        "Inst_SDRAMInterface/current_cnt_5" BEL
+        "Inst_SDRAMInterface/current_cnt_4" BEL
+        "Inst_SDRAMInterface/current_cnt_3" BEL
+        "Inst_SDRAMInterface/current_cnt_2" BEL
+        "Inst_SDRAMInterface/current_cnt_1" BEL
+        "Inst_SDRAMInterface/current_cnt_0" BEL
+        "Inst_SDRAMInterface/current_CAS" BEL
+        "Inst_SDRAMInterface/current_RAS" BEL "Inst_SDRAMInterface/MemCLK" BEL
         "Inst_decoder2/SampleOutRight_15" BEL
         "Inst_decoder2/SampleOutRight_14" BEL
         "Inst_decoder2/SampleOutRight_13" BEL
@@ -177,7 +160,6 @@ TIMEGRP Inst_DAC_top_inst_DMC_clkout0 = BEL "Inst_SampleENA/lastLRCLK" BEL
         "Inst_decoder2/current_fourByteWord_2" BEL
         "Inst_decoder2/current_fourByteWord_1" BEL
         "Inst_decoder2/current_fourByteWord_0" BEL
-        "Inst_decoder2/current_Channel" BEL
         "Inst_controlunit/current_state_FSM_FFd1" BEL
         "Inst_controlunit/current_state_FSM_FFd2" BEL
         "Inst_controlunit/current_state_FSM_FFd4" BEL
@@ -249,32 +231,26 @@ TIMEGRP Inst_DAC_top_inst_DMC_clkout0 = BEL "Inst_SampleENA/lastLRCLK" BEL
         "Inst_controlunit/current_TwoByteWord_2" BEL
         "Inst_controlunit/current_TwoByteWord_1" BEL
         "Inst_controlunit/current_TwoByteWord_0" BEL
-        "Inst_controlunit/ModeSelect" BEL "Inst_SDRAMInterface/current_clkena"
-        BEL "Inst_controlunit/current_state_FSM_FFd1_1" BEL
+        "Inst_SDRAMInterface/current_clkena" BEL
         "Inst_controlunit/current_cnt_1_1" BEL
         "Inst_controlunit/current_cnt_0_1" BEL
-        "Inst_SDRAMInterface/byteout_4_1" BEL
-        "Inst_SDRAMInterface/byteout_1_1" BEL
         "Inst_controlunit/current_state_FSM_FFd2_1" BEL
-        "Inst_controlunit/current_state_FSM_FFd3_1" BEL
+        "Inst_controlunit/current_state_FSM_FFd1_1" BEL
         "Inst_controlunit/current_state_FSM_FFd4_1" BEL
-        "Inst_SDRAMInterface/byteout_0_1" BEL
-        "Inst_SDRAMInterface/byteout_3_1" BEL
-        "Inst_controlunit/current_state_FSM_FFd1_2" BEL
-        "Inst_controlunit/current_state_FSM_FFd2_2" BEL
+        "Inst_controlunit/current_state_FSM_FFd3_1" BEL
+        "Inst_controlunit/current_cnt_0_2" BEL
+        "Inst_controlunit/bitspersampleout_0_1" BEL
+        "Inst_controlunit/bitspersampleout_1_1" BEL
+        "Inst_controlunit/current_state_FSM_FFd4_2" BEL
         "Inst_controlunit/current_state_FSM_FFd3_2" BEL
-        "Inst_controlunit/current_cnt_1_2" BEL "Inst_controlunit/ModeSelect_1"
-        BEL "Inst_SDRAMInterface/byteout_5_1" BEL
-        "Inst_SDRAMInterface/byteout_4_2" BEL
-        "Inst_SDRAMInterface/byteout_1_2" BEL
-        "Inst_SDRAMInterface/byteout_0_2" BEL
-        "Inst_SDRAMInterface/byteout_0_3" BEL
-        "Inst_controlunit/current_state_FSM_FFd2_3" BEL
-        "Inst_controlunit/current_state_FSM_FFd3_3" PIN
-        "ODDR2_inst_BCLK_pins<1>" PIN "ODDR2_inst_BCLK_pins<2>" PIN
-        "ODDR2_inst_BCLK_pins<1>" PIN "ODDR2_inst_BCLK_pins<2>" PIN
-        "ODDR2_inst_MCLK_pins<1>" PIN "ODDR2_inst_MCLK_pins<2>" PIN
-        "ODDR2_inst_MCLK_pins<1>" PIN "ODDR2_inst_MCLK_pins<2>";
+        "Inst_controlunit/current_state_FSM_FFd2_2" BEL
+        "Inst_controlunit/current_cnt_1_2" BEL "Inst_SDRAMInterface/Filestart"
+        BEL "Inst_decoder2/current_Channel" BEL "Inst_CLK_div/clk_400k" BEL
+        "Inst_controlunit/ModeSelect" PIN "ODDR2_inst_BCLK_pins<1>" PIN
+        "ODDR2_inst_BCLK_pins<2>" PIN "ODDR2_inst_BCLK_pins<1>" PIN
+        "ODDR2_inst_BCLK_pins<2>" PIN "ODDR2_inst_MCLK_pins<1>" PIN
+        "ODDR2_inst_MCLK_pins<2>" PIN "ODDR2_inst_MCLK_pins<1>" PIN
+        "ODDR2_inst_MCLK_pins<2>";
 PIN Inst_DAC_top/inst_DMC/pll_base_inst/PLL_ADV_pins<2> = BEL
         "Inst_DAC_top/inst_DMC/pll_base_inst/PLL_ADV" PINNAME CLKIN1;
 TIMEGRP Inst_DAC_top_inst_DMC_12_to_96_clkfx = BEL

@@ -11,6 +11,9 @@ set_property library work $hdlfile
 set hdlfile [add_files [list {ipcore_dir/DMC2.vhd}]]
 set_property file_type VHDL $hdlfile
 set_property library work $hdlfile
+set hdlfile [add_files [list {I2CInterface.vhd}]]
+set_property file_type VHDL $hdlfile
+set_property library work $hdlfile
 set hdlfile [add_files [list {functions.vhd}]]
 set_property file_type VHDL $hdlfile
 set_property library work $hdlfile
@@ -26,6 +29,9 @@ set_property library work $hdlfile
 set hdlfile [add_files [list {modules.vhd}]]
 set_property file_type VHDL $hdlfile
 set_property library work $hdlfile
+set hdlfile [add_files [list {IO_explander_interface.vhd}]]
+set_property file_type VHDL $hdlfile
+set_property library work $hdlfile
 set hdlfile [add_files [list {Decoder2.vhd}]]
 set_property file_type VHDL $hdlfile
 set_property library work $hdlfile
@@ -33,6 +39,9 @@ set hdlfile [add_files [list {DAC_test_top.vhd}]]
 set_property file_type VHDL $hdlfile
 set_property library work $hdlfile
 set hdlfile [add_files [list {controlunit.vhd}]]
+set_property file_type VHDL $hdlfile
+set_property library work $hdlfile
+set hdlfile [add_files [list {CLK_div.vhd}]]
 set_property file_type VHDL $hdlfile
 set_property library work $hdlfile
 set hdlfile [add_files [list {top.vhd}]]

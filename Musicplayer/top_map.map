@@ -10,10 +10,351 @@ Target Device  : xc6slx9
 Target Package : ftg256
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Apr 18 21:08:18 2014
+Mapped Date    : Wed Jun 11 10:07:16 2014
 
 Mapping design into LUTs...
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<15> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<14> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<13> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<12> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<11> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<10> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<9> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<8> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<7> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<6> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<5> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<4> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<3> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<2> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<1> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network d<0> is driven by a constant.  This
+   can result in a short.  This can be fixed by removing the constant source or
+   changing the bi-directional network.
 Running directed packing...
+WARNING:Pack:1186 - One or more I/O components have conflicting property values.
+    For each occurrence, the system will use the property value attached to the
+   pad.  Otherwise, the system will use the first property value read.  To view
+   each occurrence, create a detailed map report (run map using the -detail
+   option).
 Running delay-based LUT packing...
 Updating timing models...
 WARNING:Timing:3402 - The Clock Modifying COMP, Inst_DAC_top/inst_DMC_12_to_96/dcm_sp_inst, has the attribute CLK_FEEDBACK set to NONE.  No
@@ -22,54 +363,54 @@ WARNING:Timing:3402 - The Clock Modifying COMP, Inst_DAC_top/inst_DMC_12_to_96/d
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 7 secs 
-Total CPU  time at the beginning of Placer: 6 secs 
+Total REAL time at the beginning of Placer: 15 secs 
+Total CPU  time at the beginning of Placer: 5 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:cef9026a) REAL time: 7 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:1de304ce) REAL time: 18 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:cef9026a) REAL time: 7 secs 
+Phase 2.7  Design Feasibility Check (Checksum:1de304ce) REAL time: 18 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:cef9026a) REAL time: 7 secs 
+Phase 3.31  Local Placement Optimization (Checksum:1de304ce) REAL time: 18 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:66b0a8a4) REAL time: 11 secs 
+(Checksum:555c6050) REAL time: 20 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:66b0a8a4) REAL time: 11 secs 
+Phase 5.36  Local Placement Optimization (Checksum:555c6050) REAL time: 20 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:66b0a8a4) REAL time: 11 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:555c6050) REAL time: 20 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:66b0a8a4) REAL time: 11 secs 
+Phase 7.3  Local Placement Optimization (Checksum:555c6050) REAL time: 20 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:66b0a8a4) REAL time: 11 secs 
+Phase 8.5  Local Placement Optimization (Checksum:555c6050) REAL time: 20 secs 
 
 Phase 9.8  Global Placement
-.......................................................
-..................................................
-Phase 9.8  Global Placement (Checksum:5871699a) REAL time: 12 secs 
+...........................
+......................
+Phase 9.8  Global Placement (Checksum:d57ddc30) REAL time: 21 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:5871699a) REAL time: 12 secs 
+Phase 10.5  Local Placement Optimization (Checksum:d57ddc30) REAL time: 21 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:53c00872) REAL time: 13 secs 
+Phase 11.18  Placement Optimization (Checksum:b3629ad8) REAL time: 21 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:53c00872) REAL time: 13 secs 
+Phase 12.5  Local Placement Optimization (Checksum:b3629ad8) REAL time: 21 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:530a54d3) REAL time: 13 secs 
+Phase 13.34  Placement Validation (Checksum:b202cd55) REAL time: 21 secs 
 
-Total REAL time to Placer completion: 13 secs 
-Total CPU  time to Placer completion: 13 secs 
+Total REAL time to Placer completion: 21 secs 
+Total CPU  time to Placer completion: 9 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -78,31 +419,31 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:  114
 Slice Logic Utilization:
-  Number of Slice Registers:                   237 out of  11,440    2%
-    Number used as Flip Flops:                 237
+  Number of Slice Registers:                   219 out of  11,440    1%
+    Number used as Flip Flops:                 219
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        463 out of   5,720    8%
-    Number used as logic:                      463 out of   5,720    8%
-      Number using O6 output only:             386
+  Number of Slice LUTs:                        354 out of   5,720    6%
+    Number used as logic:                      354 out of   5,720    6%
+      Number using O6 output only:             291
       Number using O5 output only:               1
-      Number using O5 and O6:                   76
+      Number using O5 and O6:                   62
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   146 out of   1,430   10%
-  Number of MUXCYs used:                        60 out of   2,860    2%
-  Number of LUT Flip Flop pairs used:          481
-    Number with an unused Flip Flop:           249 out of     481   51%
-    Number with an unused LUT:                  18 out of     481    3%
-    Number of fully used LUT-FF pairs:         214 out of     481   44%
-    Number of unique control sets:              23
+  Number of occupied Slices:                   115 out of   1,430    8%
+  Number of MUXCYs used:                        44 out of   2,860    1%
+  Number of LUT Flip Flop pairs used:          369
+    Number with an unused Flip Flop:           158 out of     369   42%
+    Number with an unused LUT:                  15 out of     369    4%
+    Number of fully used LUT-FF pairs:         196 out of     369   53%
+    Number of unique control sets:              22
     Number of slice register sites lost
-      to control set restrictions:              99 out of  11,440    1%
+      to control set restrictions:              77 out of  11,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -111,8 +452,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        53 out of     186   28%
-    Number of LOCed IOBs:                       53 out of      53  100%
+  Number of bonded IOBs:                        56 out of     186   30%
+    Number of LOCed IOBs:                       56 out of      56  100%
     IOB Flip Flops:                              2
 
 Specific Feature Utilization:
@@ -146,11 +487,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.35
+Average Fanout of Non-Clock Nets:                4.34
 
-Peak Memory Usage:  270 MB
-Total REAL time to MAP completion:  14 secs 
-Total CPU time to MAP completion:   14 secs 
+Peak Memory Usage:  300 MB
+Total REAL time to MAP completion:  23 secs 
+Total CPU time to MAP completion:   10 secs 
 
 Mapping completed.
 See MAP report file "top_map.mrp" for details.

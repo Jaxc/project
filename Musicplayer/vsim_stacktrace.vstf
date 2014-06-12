@@ -1,0 +1,33 @@
+# Current time Sat Apr 19 19:14:44 2014
+# ModelSim PE Student Edition Stack Trace
+# Program = vsim
+# Id = "10.3"
+# Version = "2014.01"
+# Date = "Jan  6 2014"
+# Platform = win32pe
+# 0    0x004fecb8: '<unknown (@0x4fecb8)>'
+# 1    0x004f9aee: '<unknown (@0x4f9aee)>'
+# 2    0x004fa124: '<unknown (@0x4fa124)>'
+# 3    0x004ff2b2: '<unknown (@0x4ff2b2)>'
+# 4    0x7e98a435: 'C:/Dropbox/github/musicplayer/project/Musicplayer/memory.vhd:27'
+# 5    0x7e8b6bb9: 'C:/Dropbox/github/musicplayer/project/Musicplayer/memory.vhd:60'
+# 6    0x005194e2: '<unknown (@0x5194e2)>'
+# 7    0x0051972c: '<unknown (@0x51972c)>'
+# 8    0x004edf1d: '<unknown (@0x4edf1d)>'
+# 9    0x004ee36d: '<unknown (@0x4ee36d)>'
+# 10   0x7e8b55d1: 'C:/Dropbox/github/musicplayer/project/Musicplayer/WAV_TB.vhd:128'
+# 11   0x005194e2: '<unknown (@0x5194e2)>'
+# 12   0x0051972c: '<unknown (@0x51972c)>'
+# 13   0x0069c228: '<unknown (@0x69c228)>'
+# 14   0x0069d3f3: '<unknown (@0x69d3f3)>'
+# 15   0x0069ffa4: '<unknown (@0x69ffa4)>'
+# 16   0x007d2e7f: '<unknown (@0x7d2e7f)>'
+# 17   0x007d300e: '<unknown (@0x7d300e)>'
+# 18   0x007d3102: '<unknown (@0x7d3102)>'
+# 19   0x1000cb1f: 'TclInvokeStringCommand + 0x8f' in 'c:\modeltech_pe_edu_10.3\win32pe_edu\tcl85.dll'
+# 20   0x100473b5: 'Tcl_ExprObj + 0x1605' in 'c:\modeltech_pe_edu_10.3\win32pe_edu\tcl85.dll'
+# 21   0x100462b5: 'Tcl_ExprObj + 0x505' in 'c:\modeltech_pe_edu_10.3\win32pe_edu\tcl85.dll'
+# 22   0x1000f6a9: 'TclEvalObjEx + 0x2f9' in 'c:\modeltech_pe_edu_10.3\win32pe_edu\tcl85.dll'
+# End of Stack Trace
+
+

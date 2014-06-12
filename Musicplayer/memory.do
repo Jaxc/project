@@ -1,5 +1,7 @@
 restart -f
 
+force inst_top/SDA L
+
 #force rst 0 0, 1 100 ns
 #?force clk 0 0, 1 41.667 ns -repeat 83.333 ns
 #force Inst_top/Inst_DAC_top/MCLK 0 0, 1 44 -repeat 88.577 ns
