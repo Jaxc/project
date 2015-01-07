@@ -1,0 +1,628 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/media/jaxc/Programs/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle
+ise -v 3 -s 2 -n 3 -fastpaths -xml leon3mp.twx leon3mp.ncd -o leon3mp.twr
+leon3mp.pcf -ucf leon3mp.ucf
+
+Design file:              leon3mp.ncd
+Physical constraint file: leon3mp.pcf
+Device,package,speed:     xc6slx16,csg324,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   5.340ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 2.010ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 2.990ns (334.448MHz) (Tdcmper_CLKOUT)
+  Physical resource: clkgen0/xc3s.v/dll0/CLK2X
+  Logical resource: clkgen0/xc3s.v/dll0/CLK2X
+  Location pin: DCM_X0Y1.CLK2X
+  Clock network: clkgen0/xc3s.v/clk_x
+--------------------------------------------------------------------------------
+Slack: 4.010ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 5.990ns (166.945MHz) (Tdcmper_CLKIN)
+  Physical resource: clkgen0/xc3s.v/dll0/CLKIN
+  Logical resource: clkgen0/xc3s.v/dll0/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: clkgen0/xc3s.v/dll0_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 4.660ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 2.670ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: clkgen0/xc3s.v/dll0/CLKIN
+  Logical resource: clkgen0/xc3s.v/dll0/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: clkgen0/xc3s.v/dll0_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clkgen0_xc3s_v_clk0B = PERIOD TIMEGRP 
+"clkgen0_xc3s_v_clk0B" TS_sys_clk_pin         * 0.5 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 19971404 paths analyzed, 17304 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  19.766ns.
+--------------------------------------------------------------------------------
+
+Paths for end point leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP48_X0Y9.C13), 281916 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.234ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 (FF)
+  Destination:          leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      19.417ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.014ns (0.319 - 0.333)
+  Source Clock:         clkm rising at 0.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.335ns
+
+  Clock Uncertainty:          0.335ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.600ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 to leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y32.AQ      Tcko                  0.525   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(3)
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2
+    SLICE_X17Y15.B5      net (fanout=8)        1.916   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(2)
+    SLICE_X17Y15.B       Tilo                  0.259   leon3gen.dsugen.dsu0/x0/GND_114_o_tr_tbreg2_read_AND_2978_o10
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/Mmux_comb.ex_op1131
+    DSP48_X0Y6.A2        net (fanout=11)       1.607   leon3gen.cpu[0].u0/leon3x0/p0/divi_op1(2)
+    DSP48_X0Y6.P24       Tdspdo_A_P            3.926   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+    DSP48_X0Y7.C7        net (fanout=1)        1.842   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod_P24_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y7.PCOUT0    Tdspdo_C_PCOUT        3.149   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y8.PCIN0     net (fanout=1)        0.059   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1_PCOUT_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_PCIN_0
+    DSP48_X0Y8.P30       Tdspdo_PCIN_P         2.645   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+    DSP48_X0Y9.C13       net (fanout=1)        1.239   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_P30_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    DSP48_X0Y9.CLK       Tdspdck_C_PREG        2.250   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    -------------------------------------------------  ---------------------------
+    Total                                     19.417ns (12.754ns logic, 6.663ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.234ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 (FF)
+  Destination:          leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      19.417ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.014ns (0.319 - 0.333)
+  Source Clock:         clkm rising at 0.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.335ns
+
+  Clock Uncertainty:          0.335ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.600ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 to leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y32.AQ      Tcko                  0.525   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(3)
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2
+    SLICE_X17Y15.B5      net (fanout=8)        1.916   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(2)
+    SLICE_X17Y15.B       Tilo                  0.259   leon3gen.dsugen.dsu0/x0/GND_114_o_tr_tbreg2_read_AND_2978_o10
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/Mmux_comb.ex_op1131
+    DSP48_X0Y6.A2        net (fanout=11)       1.607   leon3gen.cpu[0].u0/leon3x0/p0/divi_op1(2)
+    DSP48_X0Y6.P24       Tdspdo_A_P            3.926   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+    DSP48_X0Y7.C7        net (fanout=1)        1.842   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod_P24_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y7.PCOUT9    Tdspdo_C_PCOUT        3.149   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y8.PCIN9     net (fanout=1)        0.059   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1_PCOUT_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_PCIN_9
+    DSP48_X0Y8.P30       Tdspdo_PCIN_P         2.645   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+    DSP48_X0Y9.C13       net (fanout=1)        1.239   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_P30_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    DSP48_X0Y9.CLK       Tdspdck_C_PREG        2.250   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    -------------------------------------------------  ---------------------------
+    Total                                     19.417ns (12.754ns logic, 6.663ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.234ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 (FF)
+  Destination:          leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      19.417ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.014ns (0.319 - 0.333)
+  Source Clock:         clkm rising at 0.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.335ns
+
+  Clock Uncertainty:          0.335ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.600ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 to leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y32.AQ      Tcko                  0.525   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(3)
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2
+    SLICE_X17Y15.B5      net (fanout=8)        1.916   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(2)
+    SLICE_X17Y15.B       Tilo                  0.259   leon3gen.dsugen.dsu0/x0/GND_114_o_tr_tbreg2_read_AND_2978_o10
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/Mmux_comb.ex_op1131
+    DSP48_X0Y6.A2        net (fanout=11)       1.607   leon3gen.cpu[0].u0/leon3x0/p0/divi_op1(2)
+    DSP48_X0Y6.P24       Tdspdo_A_P            3.926   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+    DSP48_X0Y7.C7        net (fanout=1)        1.842   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod_P24_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y7.PCOUT1    Tdspdo_C_PCOUT        3.149   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y8.PCIN1     net (fanout=1)        0.059   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1_PCOUT_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_PCIN_1
+    DSP48_X0Y8.P30       Tdspdo_PCIN_P         2.645   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+    DSP48_X0Y9.C13       net (fanout=1)        1.239   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_P30_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    DSP48_X0Y9.CLK       Tdspdck_C_PREG        2.250   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    -------------------------------------------------  ---------------------------
+    Total                                     19.417ns (12.754ns logic, 6.663ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP48_X0Y9.C25), 281916 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.238ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 (FF)
+  Destination:          leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      19.413ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.014ns (0.319 - 0.333)
+  Source Clock:         clkm rising at 0.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.335ns
+
+  Clock Uncertainty:          0.335ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.600ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 to leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y32.AQ      Tcko                  0.525   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(3)
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2
+    SLICE_X17Y15.B5      net (fanout=8)        1.916   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(2)
+    SLICE_X17Y15.B       Tilo                  0.259   leon3gen.dsugen.dsu0/x0/GND_114_o_tr_tbreg2_read_AND_2978_o10
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/Mmux_comb.ex_op1131
+    DSP48_X0Y6.A2        net (fanout=11)       1.607   leon3gen.cpu[0].u0/leon3x0/p0/divi_op1(2)
+    DSP48_X0Y6.P24       Tdspdo_A_P            3.926   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+    DSP48_X0Y7.C7        net (fanout=1)        1.842   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod_P24_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y7.PCOUT0    Tdspdo_C_PCOUT        3.149   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y8.PCIN0     net (fanout=1)        0.059   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1_PCOUT_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_PCIN_0
+    DSP48_X0Y8.P42       Tdspdo_PCIN_P         2.645   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+    DSP48_X0Y9.C25       net (fanout=1)        1.235   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_P42_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    DSP48_X0Y9.CLK       Tdspdck_C_PREG        2.250   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    -------------------------------------------------  ---------------------------
+    Total                                     19.413ns (12.754ns logic, 6.659ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.238ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 (FF)
+  Destination:          leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      19.413ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.014ns (0.319 - 0.333)
+  Source Clock:         clkm rising at 0.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.335ns
+
+  Clock Uncertainty:          0.335ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.600ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 to leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y32.AQ      Tcko                  0.525   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(3)
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2
+    SLICE_X17Y15.B5      net (fanout=8)        1.916   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(2)
+    SLICE_X17Y15.B       Tilo                  0.259   leon3gen.dsugen.dsu0/x0/GND_114_o_tr_tbreg2_read_AND_2978_o10
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/Mmux_comb.ex_op1131
+    DSP48_X0Y6.A2        net (fanout=11)       1.607   leon3gen.cpu[0].u0/leon3x0/p0/divi_op1(2)
+    DSP48_X0Y6.P24       Tdspdo_A_P            3.926   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+    DSP48_X0Y7.C7        net (fanout=1)        1.842   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod_P24_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y7.PCOUT9    Tdspdo_C_PCOUT        3.149   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y8.PCIN9     net (fanout=1)        0.059   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1_PCOUT_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_PCIN_9
+    DSP48_X0Y8.P42       Tdspdo_PCIN_P         2.645   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+    DSP48_X0Y9.C25       net (fanout=1)        1.235   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_P42_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    DSP48_X0Y9.CLK       Tdspdck_C_PREG        2.250   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    -------------------------------------------------  ---------------------------
+    Total                                     19.413ns (12.754ns logic, 6.659ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.238ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 (FF)
+  Destination:          leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      19.413ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.014ns (0.319 - 0.333)
+  Source Clock:         clkm rising at 0.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.335ns
+
+  Clock Uncertainty:          0.335ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.600ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 to leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y32.AQ      Tcko                  0.525   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(3)
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2
+    SLICE_X17Y15.B5      net (fanout=8)        1.916   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(2)
+    SLICE_X17Y15.B       Tilo                  0.259   leon3gen.dsugen.dsu0/x0/GND_114_o_tr_tbreg2_read_AND_2978_o10
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/Mmux_comb.ex_op1131
+    DSP48_X0Y6.A2        net (fanout=11)       1.607   leon3gen.cpu[0].u0/leon3x0/p0/divi_op1(2)
+    DSP48_X0Y6.P24       Tdspdo_A_P            3.926   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+    DSP48_X0Y7.C7        net (fanout=1)        1.842   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod_P24_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y7.PCOUT1    Tdspdo_C_PCOUT        3.149   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y8.PCIN1     net (fanout=1)        0.059   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1_PCOUT_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_PCIN_1
+    DSP48_X0Y8.P42       Tdspdo_PCIN_P         2.645   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+    DSP48_X0Y9.C25       net (fanout=1)        1.235   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_P42_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    DSP48_X0Y9.CLK       Tdspdck_C_PREG        2.250   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    -------------------------------------------------  ---------------------------
+    Total                                     19.413ns (12.754ns logic, 6.659ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP48_X0Y9.C15), 281916 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.268ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 (FF)
+  Destination:          leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      19.383ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.014ns (0.319 - 0.333)
+  Source Clock:         clkm rising at 0.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.335ns
+
+  Clock Uncertainty:          0.335ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.600ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 to leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y32.AQ      Tcko                  0.525   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(3)
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2
+    SLICE_X17Y15.B5      net (fanout=8)        1.916   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(2)
+    SLICE_X17Y15.B       Tilo                  0.259   leon3gen.dsugen.dsu0/x0/GND_114_o_tr_tbreg2_read_AND_2978_o10
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/Mmux_comb.ex_op1131
+    DSP48_X0Y6.A2        net (fanout=11)       1.607   leon3gen.cpu[0].u0/leon3x0/p0/divi_op1(2)
+    DSP48_X0Y6.P24       Tdspdo_A_P            3.926   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+    DSP48_X0Y7.C7        net (fanout=1)        1.842   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod_P24_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y7.PCOUT0    Tdspdo_C_PCOUT        3.149   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y8.PCIN0     net (fanout=1)        0.059   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1_PCOUT_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_PCIN_0
+    DSP48_X0Y8.P32       Tdspdo_PCIN_P         2.645   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+    DSP48_X0Y9.C15       net (fanout=1)        1.205   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_P32_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    DSP48_X0Y9.CLK       Tdspdck_C_PREG        2.250   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    -------------------------------------------------  ---------------------------
+    Total                                     19.383ns (12.754ns logic, 6.629ns route)
+                                                       (65.8% logic, 34.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.268ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 (FF)
+  Destination:          leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      19.383ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.014ns (0.319 - 0.333)
+  Source Clock:         clkm rising at 0.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.335ns
+
+  Clock Uncertainty:          0.335ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.600ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 to leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y32.AQ      Tcko                  0.525   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(3)
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2
+    SLICE_X17Y15.B5      net (fanout=8)        1.916   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(2)
+    SLICE_X17Y15.B       Tilo                  0.259   leon3gen.dsugen.dsu0/x0/GND_114_o_tr_tbreg2_read_AND_2978_o10
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/Mmux_comb.ex_op1131
+    DSP48_X0Y6.A2        net (fanout=11)       1.607   leon3gen.cpu[0].u0/leon3x0/p0/divi_op1(2)
+    DSP48_X0Y6.P24       Tdspdo_A_P            3.926   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+    DSP48_X0Y7.C7        net (fanout=1)        1.842   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod_P24_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y7.PCOUT9    Tdspdo_C_PCOUT        3.149   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y8.PCIN9     net (fanout=1)        0.059   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1_PCOUT_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_PCIN_9
+    DSP48_X0Y8.P32       Tdspdo_PCIN_P         2.645   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+    DSP48_X0Y9.C15       net (fanout=1)        1.205   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_P32_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    DSP48_X0Y9.CLK       Tdspdck_C_PREG        2.250   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    -------------------------------------------------  ---------------------------
+    Total                                     19.383ns (12.754ns logic, 6.629ns route)
+                                                       (65.8% logic, 34.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.268ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 (FF)
+  Destination:          leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      19.383ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.014ns (0.319 - 0.333)
+  Source Clock:         clkm rising at 0.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.335ns
+
+  Clock Uncertainty:          0.335ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.600ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2 to leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y32.AQ      Tcko                  0.525   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(3)
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0_2
+    SLICE_X17Y15.B5      net (fanout=8)        1.916   leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_data_0(2)
+    SLICE_X17Y15.B       Tilo                  0.259   leon3gen.dsugen.dsu0/x0/GND_114_o_tr_tbreg2_read_AND_2978_o10
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/iu/Mmux_comb.ex_op1131
+    DSP48_X0Y6.A2        net (fanout=11)       1.607   leon3gen.cpu[0].u0/leon3x0/p0/divi_op1(2)
+    DSP48_X0Y6.P24       Tdspdo_A_P            3.926   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod
+    DSP48_X0Y7.C7        net (fanout=1)        1.842   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod_P24_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y7.PCOUT1    Tdspdo_C_PCOUT        3.149   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1
+    DSP48_X0Y8.PCIN1     net (fanout=1)        0.059   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod1_PCOUT_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_PCIN_1
+    DSP48_X0Y8.P32       Tdspdo_PCIN_P         2.645   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2
+    DSP48_X0Y9.C15       net (fanout=1)        1.205   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod2_P32_to_xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    DSP48_X0Y9.CLK       Tdspdck_C_PREG        2.250   leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+                                                       leon3gen.cpu[0].u0/leon3x0/p0/mgen.mul0/xm3232.m3232/pipe2.arch0.dwm/Mmult_prod3
+    -------------------------------------------------  ---------------------------
+    Total                                     19.383ns (12.754ns logic, 6.629ns route)
+                                                       (65.8% logic, 34.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clkgen0_xc3s_v_clk0B = PERIOD TIMEGRP "clkgen0_xc3s_v_clk0B" TS_sys_clk_pin
+        * 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_19 (SLICE_X26Y47.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.390ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg (FF)
+  Destination:          ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_19 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.402ns (Levels of Logic = 0)
+  Clock Path Skew:      0.012ns (0.103 - 0.091)
+  Source Clock:         clkm rising at 20.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg to ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y46.BQ      Tcko                  0.198   ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg
+                                                       ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg
+    SLICE_X26Y47.CE      net (fanout=56)       0.312   ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg
+    SLICE_X26Y47.CLK     Tckce       (-Th)     0.108   ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg(19)
+                                                       ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_19
+    -------------------------------------------------  ---------------------------
+    Total                                      0.402ns (0.090ns logic, 0.312ns route)
+                                                       (22.4% logic, 77.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_17 (SLICE_X26Y47.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.394ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg (FF)
+  Destination:          ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_17 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.406ns (Levels of Logic = 0)
+  Clock Path Skew:      0.012ns (0.103 - 0.091)
+  Source Clock:         clkm rising at 20.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg to ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y46.BQ      Tcko                  0.198   ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg
+                                                       ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg
+    SLICE_X26Y47.CE      net (fanout=56)       0.312   ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg
+    SLICE_X26Y47.CLK     Tckce       (-Th)     0.104   ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg(19)
+                                                       ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_17
+    -------------------------------------------------  ---------------------------
+    Total                                      0.406ns (0.094ns logic, 0.312ns route)
+                                                       (23.2% logic, 76.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_15 (SLICE_X26Y47.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.396ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg (FF)
+  Destination:          ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_15 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.408ns (Levels of Logic = 0)
+  Clock Path Skew:      0.012ns (0.103 - 0.091)
+  Source Clock:         clkm rising at 20.000ns
+  Destination Clock:    clkm rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg to ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y46.BQ      Tcko                  0.198   ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg
+                                                       ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg
+    SLICE_X26Y47.CE      net (fanout=56)       0.312   ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_qual_dreg
+    SLICE_X26Y47.CLK     Tckce       (-Th)     0.102   ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg(19)
+                                                       ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_areg_15
+    -------------------------------------------------  ---------------------------
+    Total                                      0.408ns (0.096ns logic, 0.312ns route)
+                                                       (23.5% logic, 76.5% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clkgen0_xc3s_v_clk0B = PERIOD TIMEGRP "clkgen0_xc3s_v_clk0B" TS_sys_clk_pin
+        * 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: leon3gen.dsugen.dsu0/x0/tb0.mem0/mem0[1].ram0/nopar.s64.xc2v.x0/a8.r0/CLKA
+  Logical resource: leon3gen.dsugen.dsu0/x0/tb0.mem0/mem0[1].ram0/nopar.s64.xc2v.x0/a8.r0/CLKA
+  Location pin: RAMB16_X0Y10.CLKA
+  Clock network: clkm
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
+  Physical resource: leon3gen.dsugen.dsu0/x0/tb0.mem0/mem0[1].ram0/nopar.s64.xc2v.x0/a8.r0/CLKB
+  Logical resource: leon3gen.dsugen.dsu0/x0/tb0.mem0/mem0[1].ram0/nopar.s64.xc2v.x0/a8.r0/CLKB
+  Location pin: RAMB16_X0Y10.CLKB
+  Clock network: clkm
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: leon3gen.cpu[0].u0/leon3x0/tbmem_gen.tbmem0/mem0[1].ram0/nopar.s64.xc2v.x0/a8.r0/CLKA
+  Logical resource: leon3gen.cpu[0].u0/leon3x0/tbmem_gen.tbmem0/mem0[1].ram0/nopar.s64.xc2v.x0/a8.r0/CLKA
+  Location pin: RAMB16_X0Y4.CLKA
+  Clock network: clkm
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     10.000ns|      5.340ns|      9.883ns|            0|            0|            0|     19971404|
+| TS_clkgen0_xc3s_v_clk0B       |     20.000ns|     19.766ns|          N/A|            0|            0|     19971404|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   19.766|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 19971404 paths, 0 nets, and 44487 connections
+
+Design statistics:
+   Minimum period:  19.766ns{1}   (Maximum frequency:  50.592MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Jan  6 12:59:55 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 542 MB
+
+
+
