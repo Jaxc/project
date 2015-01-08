@@ -4,25 +4,30 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.functions.all;
 
+Library UNISIM;
+use UNISIM.vcomponents.all;
+
 entity SDRAMInterface is									
 port(
-  clk     	   : in STD_LOGIC;								-- Global clockinput
-  rst     	   : in STD_LOGIC;								-- Global Reset
-  MemDataIn   : in STD_LOGIC_VECTOR(15 downto 0);	-- Data input from SDRAM
-  requestread : in STD_LOGIC;                     -- Bit that indicated data to be read
-  AddressOut  : OUT STD_LOGIC_VECTOR(12 downto 0);	-- Address to SDRAM
-  MemCLKOut   : OUT STD_LOGIC;							-- Clock to SDRAM
-  WEOut       : OUT STD_LOGIC;							-- Write Enable to SDRAM
-  RASOut      : OUT STD_LOGIC;							-- RAS to SDRAM
-  CASOut      : OUT STD_LOGIC;							-- CAS to SDRAM
-  BSOut		  : OUT STD_LOGIC_vector(1 downto 0);	-- BS to SDRAM
-  Filestart   : OUT STD_LOGIC;							-- Signals the start of a file
-  CS			  : OUT STD_LOGIC;
-  CKE			  : OUT STD_LOGIC;
-  LDQM		  : OUT STD_LOGIC;
-  UDQM		  : OUT STD_LOGIC;
+  clk     	   	: in STD_LOGIC;								-- Global clockinput
+  rst     	   	: in STD_LOGIC;								-- Global Reset
+  Mem_Data   	: inout STD_LOGIC_VECTOR(15 downto 0);	-- Data input from SDRAM
+  requestread 	: in STD_LOGIC;                     -- Bit that indicated data to be read
+  read_write	: in STD_LOGIC;						-- High Read, low write
+  AddressOut  	: OUT STD_LOGIC_VECTOR(12 downto 0);	-- Address to SDRAM
+  MemCLKOut   	: OUT STD_LOGIC;							-- Clock to SDRAM
+  WEOut       	: OUT STD_LOGIC;							-- Write Enable to SDRAM
+  RASOut      	: OUT STD_LOGIC;							-- RAS to SDRAM
+  CASOut      	: OUT STD_LOGIC;							-- CAS to SDRAM
+  BSOut		  	: OUT STD_LOGIC_vector(1 downto 0);	-- BS to SDRAM
+  Filestart   	: OUT STD_LOGIC;							-- Signals the start of a file
+  CS			: OUT STD_LOGIC;
+  CKE			: OUT STD_LOGIC;
+  LDQM		  	: OUT STD_LOGIC;
+  UDQM		  	: OUT STD_LOGIC;
 --  testout     : OUT STD_LOGIC;
-  byteout     : out sTD_LOGIC_VECTOR(7 downto 0)	-- The current read byte
+  wordin		: IN STD_LOGIC_VECTOR(15 downto 0);
+  byteout     	: out sTD_LOGIC_VECTOR(7 downto 0)	-- The current read byte
   );
 end SDRAMInterface
 ;
@@ -54,16 +59,42 @@ architecture interface of SDRAMInterface is
   
   signal MemCLK : STD_LOGIC;
 --  signal Address : unsigned(11 downto 0);
+
+	signal mem_data_in : STD_LOGIC_VECTOR(15 downto 0);
+	
+	signal Mem_data_out : STD_LOGIC_VECTOR(15 downto 0);
+	
+	signal mem_data_dir : STD_LOGIC;
   
   
 begin
- BSOut <= "00";
- cs <= '0';
- CKE <= '1';
- LDQM <= '0';
- UDQM <= '0';
+
+BSOut <= "00";
+cs <= '0';
+CKE <= '1';
+LDQM <= '0';
+UDQM <= '0';
  
-process(current,requestread)
+mem_data_dir <= read_write;
+ 
+ tristate:
+ for i in 0 to 15 generate
+ 
+ IOBUF_inst : IOBUF
+   generic map (
+      DRIVE => 12,
+      IOSTANDARD => "DEFAULT",
+      SLEW => "SLOW")
+   port map (
+      O => Mem_data_in(i),     -- Buffer output
+      IO => Mem_data(i),   -- Buffer inout port (connect directly to top-level port)
+      I => mem_data_out(i),     -- Buffer input
+      T => mem_data_dir      -- 3-state enable input, high=input, low=output 
+   );
+ 
+ end generate tristate;
+ 
+ process(current,requestread,read_write)
 begin
   nxt <= current;
   case current.state is
@@ -144,20 +175,15 @@ begin
 		when reading =>
 		  nxt.Ras <= '1';
 		  nxt.Cas <= '0';
-		  nxt.WE <= '1';			
-		  
---		  nxt.cnt <= current.cnt + 1;
-      if (requestread = '1') then
-		    nxt.ADDR <= STD_LOGIC_VECTOR(to_Unsigned(current.cnt,13));		    
-		  elsif (current.cnt = 2**9-1) then --AND (Current.addr = x"1FF") then
-		      nxt.state <= precharge;
-					nxt.cnt2 <= current.cnt2 +1;
-	 	  end if;
-	 	  if (((current.cnt = 22) AND (current.addr = '0' & x"015")) AND (current.cnt2 = 0)) NAND (requestread = '1') then
-	 	    if current.cnt /= 2**9-1 then
-	 	      nxt.cnt <= current.cnt + 1;
-	 	    end if;
-		  end if;
+		  nxt.WE <= not(read_write);			
+
+		if (requestread = '1') then
+			nxt.ADDR <= STD_LOGIC_VECTOR(to_Unsigned(current.cnt,13));		    
+		end if;
+ 	    if current.cnt /= 2**9-1 then
+			nxt.cnt <= current.cnt + 1;
+--	 	    end if;
+		end if;
     when others =>
   end case;
 end process;
@@ -178,6 +204,7 @@ end process;
         MemclkOut <= '0';
       end if;
       if MemCLK = '1' then 
+		Mem_data_out <= wordin;
         if (requestread = '1') or (current.state /= reading) OR (current.cnt = 2**9-1) or (current.cnt = 0) then       
           current <= nxt;
         end if;
@@ -188,7 +215,7 @@ end process;
             Filestart <= '0';
           end if;
           if requestread = '1' then
-            Byteout <= memdatain(15 downto 8) ;
+            Byteout <= mem_data_in(15 downto 8) ;
 			--	Byteout(1) <= memdatain(8);
 			--	Byteout(0) <= memdatain(9);
           end if;
@@ -198,7 +225,7 @@ end process;
       else
         if (current.state = reading) then
           if requestread = '1' then
-            Byteout <= memdatain(7 downto 0);
+            Byteout <= mem_data_in(7 downto 0);
 			--	Byteout(1) <= memdatain(1);
 			--	Byteout(0) <= memdatain(0);			
           end if;

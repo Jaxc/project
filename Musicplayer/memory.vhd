@@ -16,7 +16,7 @@ port(
   WEin      : IN STD_LOGIC;
   
   
-  D  : out sTD_LOGIC_VECTOR(15 downto 0)
+  D  : inout sTD_LOGIC_VECTOR(15 downto 0)
   );
 end memory;
 

@@ -33,7 +33,8 @@ use UNISIM.vcomponents.all;
 
 entity IO_explander_interface is
 
-    Port (		SCL : in STD_LOGIC;
+    Port (		clk : in STD_LOGIC;
+			SCL : in STD_LOGIC;
 			rst : in  STD_LOGIC;
 			I2C_slave_Address :in STD_LOGIC_VECTOR(6 downto 0);
 			
@@ -90,7 +91,7 @@ begin
    IOBUF_inst : IOBUF
    generic map (
       DRIVE => 12,
-      IOSTANDARD => "LVTTL",
+      IOSTANDARD => "I2C",
       SLEW => "SLOW")
    port map (
       O => SDA_in,     -- Buffer output
@@ -133,7 +134,7 @@ begin
 			I2C_reset <= '1';
 			SDA_out <= SDA_temp;
 			SCL_ena <= '1';
-			Dataout <= I2C_slave_Address & '0';
+			Dataout <= "0100111" & '0';
 			I2C_direction <= '1';
 			IO_ready <= '0';
 			if (I2C_byte_done = '1') then -- and (SDA_in = '0') then
@@ -188,7 +189,7 @@ begin
 		when stop2 => 
 			dataout <= x"00";
 			SCL_ena <= '0';
-			SDA_out <= '0';
+			SDA_out <= '1';
 			I2C_direction <= '1';
 			I2C_reset <= '0';
 			nxt.I2C_STATE <= start1;
@@ -298,8 +299,8 @@ begin
 		when stop => 
 			I2C_reset <= '0';
 			dataout <= x"00";
-			SCL_ena <= '1';
-			SDA_out <= '0';
+			SCL_ena <= '0';
+			SDA_out <= '1';
 			I2C_direction <= '1';
 			IO_ready <= '0';
 			nxt.I2C_STATE <= stop2;
@@ -308,8 +309,8 @@ begin
 		when stop2 => 
 			dataout <= x"00";
 			SCL_ena <= '0';
-			SDA_out <= '0';
-			I2C_direction <= '1';
+			SDA_out <= '1';
+			I2C_direction <= '0';
 			I2C_reset <= '0';
 			nxt.state <= idle; 	
 
@@ -330,7 +331,7 @@ begin
 end process;
 
 
-process(SCL,rst)
+process(SCL,clk,rst)
 begin
 	if rst = '0' then
 		crnt.state <= reset;

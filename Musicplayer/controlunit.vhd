@@ -9,6 +9,7 @@ port(
   filestart       : IN STD_LOGIC;
   ByteIn          : IN STD_LOGIC_VECTOR(7 downto 0);
   RequestDataIn   : in STD_LOGIC;
+  read_write	  : out STD_LOGIC;
   RequestDataOut  : out STD_LOGIC;
   ModeSelect      : out STD_LOGIC_VECTOR(3 downto 0);
   NumChannelsout  : OUT STD_LOGIC_VECTOR(2 downto 0);

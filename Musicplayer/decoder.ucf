@@ -139,7 +139,6 @@ NET "WEOut" SLEW = SLOW;
 
 
 NET "clk" LOC = A9;
-NET "errorout" LOC = T4;
 NET "MemCLKOut" LOC = K12;
 NET "RASOut" LOC = L4;
 NET "WEOut" LOC = M3;
@@ -177,7 +176,6 @@ NET "clk" TNM_NET = "clk";
 TIMESPEC TS_clk = PERIOD "clk" 83.3333 ns HIGH 50 %;
 
 
-NET "sampleclkout" LOC = R1;
 
 
 NET "rst" PULLUP;
@@ -202,6 +200,22 @@ NET "errorcode[3]" LOC = J16;
 
 NET "BitsPerSampleOut" IOSTANDARD = LVTTL;
 
-# PlanAhead Generated physical constraints 
 
 NET "BitsPerSampleOut" LOC = F15;
+
+
+NET "rst_out" LOC = R1;
+NET "SCL_out" LOC = T4;
+NET "SDA" LOC = R2;
+
+
+NET "rst_out" IOSTANDARD = LVTTL;
+NET "SCL_out" IOSTANDARD = I2C;
+
+
+NET "SDA" IOSTANDARD = I2C;
+
+# PlanAhead Generated physical constraints 
+
+NET "sampleclkout" LOC = M2;
+NET "errorout" LOC = M1;

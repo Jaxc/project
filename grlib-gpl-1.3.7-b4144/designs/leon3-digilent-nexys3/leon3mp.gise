@@ -77,6 +77,8 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="leon3mp_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="leon3mp_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="leon3mp_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_2"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -113,14 +115,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1420545180" xil_pn:in_ck="216476849769228952" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="343523713943516950" xil_pn:start_ts="1420544973">
+    <transform xil_pn:end_ts="1420736315" xil_pn:in_ck="-3953503192756976863" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="343523713943516950" xil_pn:start_ts="1420736037">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="leon3mp.lso"/>
@@ -136,72 +135,73 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1420545181" xil_pn:in_ck="170258959983741258" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8278415830998054507" xil_pn:start_ts="1420545180">
+    <transform xil_pn:end_ts="1420707225" xil_pn:in_ck="170258959983741258" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8278415830998054507" xil_pn:start_ts="1420707225">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1420545197" xil_pn:in_ck="3767972021640817358" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3272992436108493908" xil_pn:start_ts="1420545181">
+    <transform xil_pn:end_ts="1420736335" xil_pn:in_ck="3767972021640817358" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3272992436108493908" xil_pn:start_ts="1420736315">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="leon3mp.bld"/>
+      <outfile xil_pn:name="leon3mp.ngd"/>
+      <outfile xil_pn:name="leon3mp_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1420545442" xil_pn:in_ck="3818514128154544175" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-413096939309881980" xil_pn:start_ts="1420545197">
+    <transform xil_pn:end_ts="1420736624" xil_pn:in_ck="3818514128154544175" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-413096939309881980" xil_pn:start_ts="1420736335">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="leon3mp.pcf"/>
+      <outfile xil_pn:name="leon3mp_map.map"/>
+      <outfile xil_pn:name="leon3mp_map.mrp"/>
+      <outfile xil_pn:name="leon3mp_map.ncd"/>
+      <outfile xil_pn:name="leon3mp_map.ngm"/>
+      <outfile xil_pn:name="leon3mp_map.xrpt"/>
+      <outfile xil_pn:name="leon3mp_summary.xml"/>
+      <outfile xil_pn:name="leon3mp_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1420545596" xil_pn:in_ck="-7067260023898369624" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1420545442">
+    <transform xil_pn:end_ts="1420736806" xil_pn:in_ck="-7067260023898369624" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1420736624">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="leon3mp.ncd"/>
+      <outfile xil_pn:name="leon3mp.pad"/>
+      <outfile xil_pn:name="leon3mp.par"/>
+      <outfile xil_pn:name="leon3mp.ptwx"/>
+      <outfile xil_pn:name="leon3mp.unroutes"/>
+      <outfile xil_pn:name="leon3mp.xpi"/>
+      <outfile xil_pn:name="leon3mp_pad.csv"/>
+      <outfile xil_pn:name="leon3mp_pad.txt"/>
+      <outfile xil_pn:name="leon3mp_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1420736860" xil_pn:in_ck="170258959983733633" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="-756618280222731634" xil_pn:start_ts="1420736806">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="leon3mp.bgn"/>
+      <outfile xil_pn:name="leon3mp.bit"/>
+      <outfile xil_pn:name="leon3mp.msk"/>
+      <outfile xil_pn:name="leon3mp.ut"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1420735720" xil_pn:in_ck="170258959983720779" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1420735716">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1420545648" xil_pn:in_ck="170258959983733633" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="-756618280222731634" xil_pn:start_ts="1420545596">
+    <transform xil_pn:end_ts="1420736806" xil_pn:in_ck="-2853043931657395669" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1420736781">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1420546542" xil_pn:in_ck="170258959983720779" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1420546540">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1420545596" xil_pn:in_ck="-2853043931657395669" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1420545574">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="leon3mp.twr"/>
+      <outfile xil_pn:name="leon3mp.twx"/>
     </transform>
   </transforms>
 

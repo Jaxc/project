@@ -15,8 +15,9 @@ package modules is
 	PORT(
 		clk : IN std_logic;
 		rst : IN std_logic;
-		MemDataIn : IN std_logic_vector(15 downto 0);
+		Mem_Data : INOUT std_logic_vector(15 downto 0);
 		requestread : in STD_LOGIC;          
+		read_write	: in STD_LOGIC;						-- High Read, low write
 		AddressOut : OUT std_logic_vector(12 downto 0);
 		MemCLKOut : OUT std_logic;
 		WEOut : OUT std_logic;
@@ -30,10 +31,34 @@ package modules is
 		UDQM	: OUT STD_LOGIC;
 --		testout : Out STD_LOGIC;
 --		CLKENAOUT 	: OUT STD_LOGIC;
+		wordin		: IN STD_LOGIC_VECTOR(15 downto 0);
 		byteout : OUT std_logic_vector(7 downto 0)
 		);
 	END COMPONENT;
 
+	COMPONENT IO_explander_interface
+	PORT(
+		clk : IN std_logic;
+		SCL : IN std_logic;
+		rst : IN std_logic;
+		start_transmission : IN std_logic;
+		Invector : IN std_logic_vector(7 downto 0);
+		SDA_in : IN std_logic;          
+		IO_Ready : OUT std_logic;
+		SCL_ena : OUT std_logic;
+		SDA_direction : OUT std_logic;
+		SDA_out : OUT std_logic
+		);
+	END COMPONENT;	
+	
+	COMPONENT CLK_div
+	PORT(
+		clk : IN std_logic;
+		rst : IN std_logic;          
+		clk_400k : OUT std_logic
+		);
+	END COMPONENT;	
+	
 	COMPONENT DAC_top
 	PORT(
 		clk : IN std_logic;
@@ -93,7 +118,8 @@ COMPONENT decoder
 		samplerateout : OUT STD_LOGIC;
 		errorout          : OUT STD_LOGIC;
 		errorcode : OUT STD_LOGIC_VECTOR(3 downto 0);
-		bitspersampleout : out STD_LOGIC_VECTOR(2 downto 0)
+		bitspersampleout : out STD_LOGIC_VECTOR(2 downto 0);
+		read_write : OUT STD_LOGIC
 		);
 	END COMPONENT;
 	

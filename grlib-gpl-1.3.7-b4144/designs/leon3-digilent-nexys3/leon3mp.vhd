@@ -139,7 +139,11 @@ entity leon3mp is
 
     -- USB-RS232 interface
     RsRx            : in    std_logic;
-    RsTx            : out   std_logic
+    RsTx            : out   std_logic;
+
+    -- I2C interface
+    SDA 		: inout STD_LOGIC;
+    SCL			: out STD_LOGIC
 
     );
 end;
@@ -197,6 +201,7 @@ architecture rtl of leon3mp is
   -- RS232 APB Uart
   signal rxd1 : std_logic;
   signal txd1 : std_logic;
+  signal test : STD_LOGIC_VECTOR(1 downto 0);
   
   attribute keep                     : boolean;
   attribute syn_keep                 : boolean;
@@ -212,6 +217,23 @@ architecture rtl of leon3mp is
 
   constant BOARD_FREQ : integer := 100000;                                -- CLK input frequency in KHz
   constant CPU_FREQ   : integer := BOARD_FREQ * CFG_CLKMUL / CFG_CLKDIV;  -- cpu frequency in KHz
+
+  COMPONENT IO_expander_APB
+  generic(
+    pindex      : integer := 0;
+    paddr       : integer := 0;
+    pmask       : integer := 16#fff#);
+	PORT(
+		rstn : IN std_logic;
+		clk : IN std_logic;
+    		apbi   	: in  apb_slv_in_type;
+    		apbo   	: out apb_slv_out_type;  
+		SDA : INOUT std_logic;      
+		SCL_out : OUT std_logic;
+		test : out STD_LOGIC_VECTOR(1 downto 0)
+		);
+	END COMPONENT;
+
 begin
 
 ----------------------------------------------------------------------
@@ -220,7 +242,8 @@ begin
 
   vcc <= '1';
   gnd <= '0';
-  led(7 downto 4) <= (others =>'0'); -- unused leds off
+  led(7 downto 6) <= (others =>'0'); -- unused leds off
+  led(5 downto 4) <= test;
   
   cgi.pllctrl <= "00";
   cgi.pllrst <= rstraw;
@@ -403,6 +426,19 @@ begin
   nospi: if CFG_SPICTRL_ENABLE = 0 and CFG_SPIMCTRL = 0 generate
     apbo(7) <= apb_none;
   end generate;
+
+   -- I2C io module
+	Inst_IO_expander_APB: IO_expander_APB 
+generic map ( pindex => 5,paddr => 5)
+PORT MAP(
+		rstn => rstn,
+		clk => clkm,
+		apbi => apbi,
+		apbo => apbo(5),
+		SDA => SDA,
+		SCL_out => SCL,
+		test => test
+	);
 
 -----------------------------------------------------------------------
 ---  ETHERNET ---------------------------------------------------------

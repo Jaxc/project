@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> 
 
@@ -506,6 +506,9 @@ Parsing entity <grethc>.
 Parsing architecture <rtl> of entity <grethc>.
 Parsing VHDL file "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/comp/ethcomp.vhd" into library eth
 Parsing package <ethcomp>.
+Parsing VHDL file "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/I2CInterface.vhd" into library work
+Parsing entity <I2CInterface>.
+Parsing architecture <Behavioral> of entity <i2cinterface>.
 Parsing VHDL file "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/pads_unisim.vhd" into library techmap
 Parsing entity <unisim_inpad>.
 Parsing architecture <rtl> of entity <unisim_inpad>.
@@ -585,6 +588,9 @@ Parsing entity <greth>.
 Parsing architecture <rtl> of entity <greth>.
 Parsing VHDL file "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/esa/memoryctrl/memoryctrl.vhd" into library esa
 Parsing package <memoryctrl>.
+Parsing VHDL file "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" into library work
+Parsing entity <IO_explander_interface>.
+Parsing architecture <Behavioral> of entity <io_explander_interface>.
 Parsing VHDL file "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/maps/outpad.vhd" into library techmap
 Parsing entity <outpad>.
 Parsing architecture <rtl> of entity <outpad>.
@@ -649,6 +655,9 @@ Parsing architecture <rtl> of entity <grethm>.
 Parsing VHDL file "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/esa/memoryctrl/mctrl.vhd" into library esa
 Parsing entity <mctrl>.
 Parsing architecture <rtl> of entity <mctrl>.
+Parsing VHDL file "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_expander_APB.vhd" into library work
+Parsing entity <IO_expander_APB>.
+Parsing architecture <rtl> of entity <io_expander_apb>.
 Parsing VHDL file "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/config.vhd" into library work
 Parsing package <config>.
 Parsing VHDL file "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/ahbrom.vhd" into library work
@@ -663,8 +672,8 @@ Parsing architecture <rtl> of entity <leon3mp>.
 =========================================================================
 
 Elaborating entity <leon3mp> (architecture <rtl>) with generics from library <work>.
-WARNING:HDLCompiler:871 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 153: Using initial value "U" for wpo since it is never assigned
-WARNING:HDLCompiler:1127 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 221: Assignment to vcc ignored, since the identifier is never used
+WARNING:HDLCompiler:871 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 157: Using initial value "U" for wpo since it is never assigned
+WARNING:HDLCompiler:1127 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 243: Assignment to vcc ignored, since the identifier is never used
 
 Elaborating entity <rstgen> (architecture <rtl>) with generics from library <gaisler>.
 
@@ -831,7 +840,15 @@ INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/ga
 INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/gptimer.vhd" Line 344. Case statement is complete. others clause is never selected
 
 Elaborating entity <apbuart> (architecture <rtl>) with generics from library <gaisler>.
-WARNING:HDLCompiler:1127 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 394: Assignment to txd1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 417: Assignment to txd1 ignored, since the identifier is never used
+
+Elaborating entity <IO_expander_APB> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <IO_explander_interface> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" Line 241: i2c_slave_address should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" Line 327. Case statement is complete. others clause is never selected
+
+Elaborating entity <I2CInterface> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <grethm> (architecture <rtl>) with generics from library <gaisler>.
 
@@ -885,17 +902,17 @@ WARNING:HDLCompiler:89 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/
 Elaborating entity <inpadv> (architecture <rtl>) with generics from library <techmap>.
 
 Elaborating entity <outpadv> (architecture <rtl>) with generics from library <techmap>.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 151: Net <memi_data[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 159: Net <apbo[5]_prdata[31]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 161: Net <ahbso[15]_hready> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 163: Net <ahbmo[4]_hbusreq> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 165: Net <cgi_pllref> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 168: Net <dui_ctsn> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 177: Net <dsui_break> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 180: Net <ethi_gtx_clk> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 183: Net <gpti_wdogen> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 193: Net <tck> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 198: Net <rxd1> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 155: Net <memi_data[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 163: Net <apbo[6]_prdata[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 165: Net <ahbso[15]_hready> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 167: Net <ahbmo[4]_hbusreq> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 169: Net <cgi_pllref> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 172: Net <dui_ctsn> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 181: Net <dsui_break> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 184: Net <ethi_gtx_clk> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 187: Net <gpti_wdogen> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 197: Net <tck> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 202: Net <rxd1> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -920,83 +937,78 @@ Synthesizing Unit <leon3mp>.
     Set property "KEEP = TRUE" for signal <lock>.
 WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <btn<4:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 233: Output port <clkn> of the instance <clkgen0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 233: Output port <clk2x> of the instance <clkgen0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 233: Output port <sdclk> of the instance <clkgen0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 233: Output port <pciclk> of the instance <clkgen0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 233: Output port <cgo_pcilock> of the instance <clkgen0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 233: Output port <clk4x> of the instance <clkgen0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 233: Output port <clk1xu> of the instance <clkgen0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 233: Output port <clk2xu> of the instance <clkgen0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 233: Output port <clkb> of the instance <clkgen0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 233: Output port <clkc> of the instance <clkgen0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 233: Output port <clk8x> of the instance <clkgen0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 271: Output port <dsuo_pwd> of the instance <leon3gen.dsugen.dsu0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 284: Output port <uarto_scaler> of the instance <dcomgen.dcom0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 284: Output port <uarto_rtsn> of the instance <dcomgen.dcom0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 284: Output port <uarto_txen> of the instance <dcomgen.dcom0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 284: Output port <uarto_flow> of the instance <dcomgen.dcom0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 284: Output port <uarto_rxen> of the instance <dcomgen.dcom0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tapo_inst> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tapo_ninst> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tdo> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tapo_tck> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tapo_tdi> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tapo_rst> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tapo_capt> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tapo_shft> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tapo_upd> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tdoen> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tapo_tckn> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 295: Output port <tapo_iupd> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_sddata> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_ramoen> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_wrn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_vbdrive> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_svbdrive> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_sa> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_cb> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_scb> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_vcdrive> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_svcdrive> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <sdo_sdcke> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <sdo_sdcsn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <sdo_dqm> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_ramn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_romn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_iosn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_read> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_ce> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_sdram_en> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <memo_rs_edac_en> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <sdo_sdwen> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <sdo_rasn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 305: Output port <sdo_casn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 376: Output port <gpto_tick> of the instance <gpt.timer0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 376: Output port <gpto_timer1> of the instance <gpt.timer0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 376: Output port <gpto_wdogn> of the instance <gpt.timer0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 376: Output port <gpto_wdog> of the instance <gpt.timer0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 388: Output port <uarto_scaler> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 388: Output port <uarto_rtsn> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 388: Output port <uarto_txd> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 388: Output port <uarto_txen> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 388: Output port <uarto_flow> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 388: Output port <uarto_rxen> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 412: Output port <etho_reset> of the instance <eth0.e1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 412: Output port <etho_tx_clk> of the instance <eth0.e1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 412: Output port <etho_gbit> of the instance <eth0.e1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 412: Output port <etho_speed> of the instance <eth0.e1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 428: Output port <lock> of the instance <ethpads.etxc_pad> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 430: Output port <lock> of the instance <ethpads.erxc_pad> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <clkn> of the instance <clkgen0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <clk2x> of the instance <clkgen0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <sdclk> of the instance <clkgen0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <pciclk> of the instance <clkgen0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <cgo_pcilock> of the instance <clkgen0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <clk4x> of the instance <clkgen0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <clk1xu> of the instance <clkgen0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <clk2xu> of the instance <clkgen0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <clkb> of the instance <clkgen0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <clkc> of the instance <clkgen0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <clk8x> of the instance <clkgen0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 294: Output port <dsuo_pwd> of the instance <leon3gen.dsugen.dsu0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 307: Output port <uarto_scaler> of the instance <dcomgen.dcom0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 307: Output port <uarto_rtsn> of the instance <dcomgen.dcom0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 307: Output port <uarto_txen> of the instance <dcomgen.dcom0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 307: Output port <uarto_flow> of the instance <dcomgen.dcom0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 307: Output port <uarto_rxen> of the instance <dcomgen.dcom0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tapo_inst> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tapo_ninst> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tdo> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tapo_tck> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tapo_tdi> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tapo_rst> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tapo_capt> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tapo_shft> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tapo_upd> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tdoen> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tapo_tckn> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 318: Output port <tapo_iupd> of the instance <ahbjtaggen0.ahbjtag0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_sddata> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_ramoen> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_wrn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_vbdrive> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_svbdrive> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_sa> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_cb> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_scb> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_vcdrive> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_svcdrive> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <sdo_sdcke> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <sdo_sdcsn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <sdo_dqm> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_ramn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_romn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_iosn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_read> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_ce> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_sdram_en> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <memo_rs_edac_en> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <sdo_sdwen> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <sdo_rasn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 328: Output port <sdo_casn> of the instance <mg2.sr1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 399: Output port <gpto_tick> of the instance <gpt.timer0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 399: Output port <gpto_timer1> of the instance <gpt.timer0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 399: Output port <gpto_wdogn> of the instance <gpt.timer0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 399: Output port <gpto_wdog> of the instance <gpt.timer0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 411: Output port <uarto_scaler> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 411: Output port <uarto_rtsn> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 411: Output port <uarto_txd> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 411: Output port <uarto_txen> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 411: Output port <uarto_flow> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 411: Output port <uarto_rxen> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 448: Output port <etho_reset> of the instance <eth0.e1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 448: Output port <etho_tx_clk> of the instance <eth0.e1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 448: Output port <etho_gbit> of the instance <eth0.e1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 448: Output port <etho_speed> of the instance <eth0.e1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 464: Output port <lock> of the instance <ethpads.etxc_pad> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 466: Output port <lock> of the instance <ethpads.erxc_pad> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <memi_data(15:0)> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <memi_sd> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <memi_cb> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <memi_scb> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:2935 - Signal 'apbo[5]_prdata', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'apbo[5]_pirq', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'apbo(5)_pconfig(0)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'apbo(5)_pconfig(1)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'apbo[5]_pindex', unconnected in block 'leon3mp', is tied to its initial value (0000).
 WARNING:Xst:2935 - Signal 'apbo[6]_prdata', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
 WARNING:Xst:2935 - Signal 'apbo[6]_pirq', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
 WARNING:Xst:2935 - Signal 'apbo(6)_pconfig(0)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
@@ -1751,11 +1763,11 @@ WARNING:Xst:647 - Input <slvo[8]_hready> is never used. This port will be preser
     Found 1-bit 3-to-1 multiplexer for signal <slvo[0]_hconfig[7][1]_GND_27_o_mux_594_OUT(30)> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <slvo[1]_hconfig[7][1]_slvo[0]_hconfig[7][1]_Mux_257_o> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <slvo[2]_hconfig[4][1]_slvo[0]_hconfig[4][1]_Mux_270_o> created at line 440.
-    Found 1-bit 3-to-1 multiplexer for signal <slvo[2]_hconfig[4][1]_PWR_25_o_MUX_138_o> created at line 440.
+    Found 1-bit 3-to-1 multiplexer for signal <slvo[4]_hconfig[4][1]_slvo[3]_hconfig[4][1]_Mux_383_o> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <slvo[2]_hconfig[5][1]_slvo[2]_hconfig[4][1]_Mux_284_o> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <slvo[2]_hconfig[5][1]_PWR_25_o_MUX_142_o> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <slvo[2]_hconfig[6][1]_slvo[2]_hconfig[5][1]_Mux_298_o> created at line 440.
-    Found 1-bit 3-to-1 multiplexer for signal <slvo[2]_hconfig[6][1]_PWR_25_o_MUX_146_o> created at line 440.
+    Found 1-bit 3-to-1 multiplexer for signal <slvo[4]_hconfig[6][1]_slvo[3]_hconfig[6][1]_Mux_411_o> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <comb.bnslave(1)> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <slvo[4]_hconfig[7][1]_slvo[3]_hconfig[7][1]_Mux_425_o> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <slvo[5]_hconfig[4][1]_slvo[0]_hconfig[4][1]_Mux_438_o> created at line 440.
@@ -2420,12 +2432,12 @@ WARNING:Xst:653 - Signal <cpi_dbg_fsr> is used but never assigned. This sourcele
     Found 64x2-bit Read Only RAM for signal <r_e_ctrl_inst[24]_PWR_41_o_wide_mux_481_OUT>
     Found 4x1-bit Read Only RAM for signal <r_d_cnt[1]_GND_48_o_Mux_748_o>
     Found 4x3-bit Read Only RAM for signal <GND_48_o_GND_48_o_mux_615_OUT>
-    Found 64x13-bit Read Only RAM for signal <_n5576>
-    Found 64x2-bit Read Only RAM for signal <_n5728>
-    Found 32x2-bit Read Only RAM for signal <_n5865>
-    Found 8x6-bit Read Only RAM for signal <_n5891>
-    Found 32x2-bit Read Only RAM for signal <_n5981>
-    Found 16x2-bit Read Only RAM for signal <_n5998>
+    Found 64x13-bit Read Only RAM for signal <_n5574>
+    Found 64x2-bit Read Only RAM for signal <_n5725>
+    Found 32x2-bit Read Only RAM for signal <_n5862>
+    Found 8x6-bit Read Only RAM for signal <_n5888>
+    Found 32x2-bit Read Only RAM for signal <_n5921>
+    Found 16x2-bit Read Only RAM for signal <_n5938>
     Found 32-bit 5-to-1 multiplexer for signal <r_x_npc[2]_r_d_pc[31]_wide_mux_196_OUT> created at line 2552.
     Found 1-bit 4-to-1 multiplexer for signal <r_x_rstate[1]_rp_error_Mux_340_o> created at line 2757.
     Found 2-bit 4-to-1 multiplexer for signal <r_x_rstate[1]_r_x_rstate[1]_wide_mux_341_OUT> created at line 2757.
@@ -4533,7 +4545,7 @@ WARNING:Xst:653 - Signal <rrsbdrive> is used but never assigned. This sourceless
     Found 1-bit 6-to-1 multiplexer for signal <ctrl.v_echeck> created at line 477.
     Found 1-bit 7-to-1 multiplexer for signal <r_bstate[2]_GND_165_o_Mux_174_o> created at line 477.
     Found 32-bit 3-to-1 multiplexer for signal <ctrl.regsd> created at line 700.
-    Found 3-bit 7-to-1 multiplexer for signal <_n1645> created at line 477.
+    Found 3-bit 7-to-1 multiplexer for signal <_n1638> created at line 477.
     Summary:
 	inferred   2 RAM(s).
 	inferred   1 Adder/Subtractor(s).
@@ -4647,11 +4659,12 @@ WARNING:Xst:647 - Input <ahbi_hmastlock> is never used. This port will be preser
     Found 12-bit comparator equal for signal <r_haddr[19]_apbo[2]_pconfig[1][31]_equal_24_o> created at line 143
     Found 12-bit comparator equal for signal <r_haddr[19]_apbo[3]_pconfig[1][31]_equal_28_o> created at line 143
     Found 12-bit comparator equal for signal <r_haddr[19]_apbo[4]_pconfig[1][31]_equal_32_o> created at line 143
+    Found 12-bit comparator equal for signal <r_haddr[19]_apbo[5]_pconfig[1][31]_equal_36_o> created at line 143
     Found 12-bit comparator equal for signal <r_haddr[19]_apbo[15]_pconfig[1][31]_equal_76_o> created at line 143
     Summary:
 	inferred  91 D-type flip-flop(s).
-	inferred   6 Comparator(s).
-	inferred  47 Multiplexer(s).
+	inferred   7 Comparator(s).
+	inferred  48 Multiplexer(s).
 Unit <apbctrl> synthesized.
 
 Synthesizing Unit <irqmp>.
@@ -4830,12 +4843,72 @@ WARNING:Xst:647 - Input <apbi_testoen> is never used. This port will be preserve
     Found 11-bit 3-to-1 multiplexer for signal <uartop.v_tshift> created at line 362.
     Found 2-bit 4-to-1 multiplexer for signal <r_txstate[1]_r_txstate[1]_wide_mux_71_OUT> created at line 362.
     Found 3-bit 5-to-1 multiplexer for signal <r_rxstate[2]_X_100_o_wide_mux_107_OUT> created at line 437.
-    Found 32-bit 7-to-1 multiplexer for signal <_n0554> created at line 217.
+    Found 32-bit 7-to-1 multiplexer for signal <_n0553> created at line 217.
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred 119 D-type flip-flop(s).
 	inferred 114 Multiplexer(s).
 Unit <apbuart> synthesized.
+
+Synthesizing Unit <IO_expander_APB>.
+    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_expander_APB.vhd".
+        pindex = 5
+        paddr = 5
+        pmask = 4095
+WARNING:Xst:647 - Input <apbi_psel<0:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <apbi_psel<6:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <apbi_paddr<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <apbi_pirq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <apbi_testin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <apbi_penable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <apbi_testen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <apbi_testrst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <apbi_scanen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <apbi_testoen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <apbo_pirq> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 32-bit register for signal <apbo_prdata>.
+    Found 7-bit register for signal <I2c_address>.
+    Found 8-bit register for signal <I2c_message>.
+    Found 8-bit register for signal <freq_cnt>.
+    Found 32-bit register for signal <buff>.
+    Found 1-bit register for signal <SCL>.
+    Found 1-bit register for signal <Start_transmission>.
+    Found 8-bit adder for signal <freq_cnt[7]_GND_380_o_add_1_OUT> created at line 88.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  89 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <IO_expander_APB> synthesized.
+
+Synthesizing Unit <IO_explander_interface>.
+    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" line 347: Output port <Datain> of the instance <Inst_I2CInterface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" line 347: Output port <ACK> of the instance <Inst_I2CInterface> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <crnt_I2C_state>.
+    Found 1-bit register for signal <crnt_state>.
+    Found 4x1-bit Read Only RAM for signal <crnt_I2C_state[2]_GND_382_o_Mux_19_o>
+    Found 8x12-bit Read Only RAM for signal <_n0062>
+    Found 3-bit 8-to-1 multiplexer for signal <crnt_I2C_state[2]_PWR_121_o_wide_mux_18_OUT> created at line 214.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   4 D-type flip-flop(s).
+	inferred  17 Multiplexer(s).
+Unit <IO_explander_interface> synthesized.
+
+Synthesizing Unit <I2CInterface>.
+    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/I2CInterface.vhd".
+    Found 2-bit register for signal <crnt_state>.
+    Found 8-bit register for signal <Datain>.
+    Found 3-bit register for signal <crnt_cnt>.
+    Found 3-bit adder for signal <crnt_cnt[2]_GND_383_o_add_1_OUT> created at line 83.
+    Found 1-bit 8-to-1 multiplexer for signal <crnt_cnt[2]_Dataout[0]_Mux_4_o> created at line 85.
+    Found 1-bit 3-to-1 multiplexer for signal <SDA_direction> created at line 66.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+Unit <I2CInterface> synthesized.
 
 Synthesizing Unit <grethm>.
     Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/grethm.vhd".
@@ -5123,78 +5196,78 @@ WARNING:Xst:653 - Signal <ahbmo2_hwrite> is used but never assigned. This source
     Found 1-bit register for signal <r_erxidle>.
     Found 48-bit register for signal <r_emacaddr>.
     Found 12-bit register for signal <n2217>.
-    Found 12-bit subtractor for signal <GND_385_o_GND_385_o_sub_235_OUT> created at line 1136.
-    Found 12-bit subtractor for signal <GND_385_o_GND_385_o_sub_237_OUT> created at line 1138.
-    Found 11-bit adder for signal <r_txcnt[10]_GND_385_o_add_62_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_txburstcnt[1]_GND_385_o_add_108_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_tfwpnt[6]_GND_385_o_add_112_OUT> created at line 1241.
-    Found 8-bit adder for signal <r_tfcnt[7]_GND_385_o_add_113_OUT> created at line 1241.
-    Found 32-bit adder for signal <r_tmsto_addr[31]_GND_385_o_add_126_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_txdsel[9]_GND_385_o_add_128_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_tpnt[1]_GND_385_o_add_136_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_tfrpnt[6]_GND_385_o_add_178_OUT> created at line 1241.
-    Found 11-bit adder for signal <r_rxcnt[10]_GND_385_o_add_192_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_rxburstcnt[1]_GND_385_o_add_238_OUT> created at line 1241.
-    Found 32-bit adder for signal <r_rmsto_addr[31]_GND_385_o_add_257_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rxdsel[9]_GND_385_o_add_261_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_rfrpnt[1]_GND_385_o_add_275_OUT> created at line 1241.
-    Found 11-bit adder for signal <r_rxcnt[10]_GND_385_o_add_277_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_rfwpnt[1]_GND_385_o_add_366_OUT> created at line 1241.
-    Found 3-bit adder for signal <r_rxdstate[2]_GND_385_o_add_367_OUT> created at line 1241.
-    Found 5-bit adder for signal <r_cnt[4]_GND_385_o_add_394_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntl[6]_GND_385_o_add_452_OUT> created at line 1241.
-    Found 18-bit adder for signal <GND_385_o_r_ipcrc[17]_add_475_OUT> created at line 280.
-    Found 7-bit adder for signal <r_rcntl[6]_GND_385_o_add_479_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntm[6]_GND_385_o_add_480_OUT> created at line 1241.
-    Found 16-bit adder for signal <GND_385_o_GND_385_o_add_489_OUT> created at line 1241.
-    Found 18-bit adder for signal <GND_385_o_r_ipcrc[17]_add_490_OUT> created at line 280.
-    Found 18-bit adder for signal <GND_385_o_GND_385_o_add_546_OUT> created at line 280.
-    Found 16-bit adder for signal <r_applength[15]_GND_385_o_add_553_OUT> created at line 1241.
-    Found 16-bit adder for signal <r_applength[15]_GND_385_o_add_554_OUT> created at line 1241.
-    Found 14-bit adder for signal <r_seq[13]_GND_385_o_add_559_OUT> created at line 1241.
-    Found 4-bit adder for signal <r_ecnt[3]_GND_385_o_add_561_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntm[6]_GND_385_o_add_562_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntl[6]_GND_385_o_add_564_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntm[6]_GND_385_o_add_569_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntl[6]_GND_385_o_add_576_OUT> created at line 1241.
-    Found 3-bit adder for signal <r_abufs[2]_GND_385_o_add_592_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_rpnt[1]_GND_385_o_add_593_OUT> created at line 1241.
-    Found 8-bit adder for signal <r_txdstate[3]_GND_385_o_add_633_OUT> created at line 1241.
-    Found 11-bit adder for signal <r_txlength[10]_GND_385_o_add_638_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_tcnt[6]_GND_385_o_add_675_OUT> created at line 1241.
-    Found 8-bit subtractor for signal <GND_385_o_GND_385_o_sub_46_OUT(7:0)> created at line 339.
-    Found 11-bit subtractor for signal <GND_385_o_GND_385_o_sub_117_OUT(10:0)> created at line 1308.
-    Found 3-bit subtractor for signal <GND_385_o_GND_385_o_sub_136_OUT(2:0)> created at line 1308.
-    Found 8-bit subtractor for signal <GND_385_o_GND_385_o_sub_178_OUT(7:0)> created at line 1308.
-    Found 3-bit subtractor for signal <GND_385_o_GND_385_o_sub_277_OUT(2:0)> created at line 1308.
-    Found 8-bit subtractor for signal <GND_385_o_GND_385_o_sub_374_OUT(7:0)> created at line 1308.
-    Found 5-bit subtractor for signal <GND_385_o_GND_385_o_sub_406_OUT(4:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_385_o_GND_385_o_sub_430_OUT(6:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_385_o_GND_385_o_sub_443_OUT(6:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_385_o_GND_385_o_sub_478_OUT(6:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_385_o_GND_385_o_sub_479_OUT(6:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_385_o_GND_385_o_sub_568_OUT(6:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_385_o_GND_385_o_sub_569_OUT(6:0)> created at line 1308.
-    Found 32-bit subtractor for signal <GND_385_o_GND_385_o_sub_670_OUT(31:0)> created at line 1308.
-    Found 3-bit subtractor for signal <GND_385_o_GND_385_o_sub_685_OUT(2:0)> created at line 1308.
-    Found 2-bit subtractor for signal <GND_385_o_GND_385_o_sub_768_OUT(1:0)> created at line 1308.
-    Found 32-bit subtractor for signal <GND_385_o_GND_385_o_sub_772_OUT(31:0)> created at line 1308.
-    Found 2-bit subtractor for signal <GND_385_o_GND_385_o_sub_773_OUT(1:0)> created at line 1308.
-    Found 8x1-bit Read Only RAM for signal <r_ecnt[3]_PWR_124_o_Mux_582_o>
-    Found 16x3-bit Read Only RAM for signal <_n5202>
+    Found 12-bit subtractor for signal <GND_390_o_GND_390_o_sub_235_OUT> created at line 1136.
+    Found 12-bit subtractor for signal <GND_390_o_GND_390_o_sub_237_OUT> created at line 1138.
+    Found 11-bit adder for signal <r_txcnt[10]_GND_390_o_add_62_OUT> created at line 1241.
+    Found 2-bit adder for signal <r_txburstcnt[1]_GND_390_o_add_108_OUT> created at line 1241.
+    Found 7-bit adder for signal <r_tfwpnt[6]_GND_390_o_add_112_OUT> created at line 1241.
+    Found 8-bit adder for signal <r_tfcnt[7]_GND_390_o_add_113_OUT> created at line 1241.
+    Found 32-bit adder for signal <r_tmsto_addr[31]_GND_390_o_add_126_OUT> created at line 1241.
+    Found 7-bit adder for signal <r_txdsel[9]_GND_390_o_add_128_OUT> created at line 1241.
+    Found 2-bit adder for signal <r_tpnt[1]_GND_390_o_add_136_OUT> created at line 1241.
+    Found 7-bit adder for signal <r_tfrpnt[6]_GND_390_o_add_178_OUT> created at line 1241.
+    Found 11-bit adder for signal <r_rxcnt[10]_GND_390_o_add_192_OUT> created at line 1241.
+    Found 2-bit adder for signal <r_rxburstcnt[1]_GND_390_o_add_238_OUT> created at line 1241.
+    Found 32-bit adder for signal <r_rmsto_addr[31]_GND_390_o_add_257_OUT> created at line 1241.
+    Found 7-bit adder for signal <r_rxdsel[9]_GND_390_o_add_261_OUT> created at line 1241.
+    Found 2-bit adder for signal <r_rfrpnt[1]_GND_390_o_add_275_OUT> created at line 1241.
+    Found 11-bit adder for signal <r_rxcnt[10]_GND_390_o_add_277_OUT> created at line 1241.
+    Found 2-bit adder for signal <r_rfwpnt[1]_GND_390_o_add_366_OUT> created at line 1241.
+    Found 3-bit adder for signal <r_rxdstate[2]_GND_390_o_add_367_OUT> created at line 1241.
+    Found 5-bit adder for signal <r_cnt[4]_GND_390_o_add_394_OUT> created at line 1241.
+    Found 7-bit adder for signal <r_rcntl[6]_GND_390_o_add_452_OUT> created at line 1241.
+    Found 18-bit adder for signal <GND_390_o_r_ipcrc[17]_add_475_OUT> created at line 280.
+    Found 7-bit adder for signal <r_rcntl[6]_GND_390_o_add_479_OUT> created at line 1241.
+    Found 7-bit adder for signal <r_rcntm[6]_GND_390_o_add_480_OUT> created at line 1241.
+    Found 16-bit adder for signal <GND_390_o_GND_390_o_add_489_OUT> created at line 1241.
+    Found 18-bit adder for signal <GND_390_o_r_ipcrc[17]_add_490_OUT> created at line 280.
+    Found 18-bit adder for signal <GND_390_o_GND_390_o_add_546_OUT> created at line 280.
+    Found 16-bit adder for signal <r_applength[15]_GND_390_o_add_553_OUT> created at line 1241.
+    Found 16-bit adder for signal <r_applength[15]_GND_390_o_add_554_OUT> created at line 1241.
+    Found 14-bit adder for signal <r_seq[13]_GND_390_o_add_559_OUT> created at line 1241.
+    Found 4-bit adder for signal <r_ecnt[3]_GND_390_o_add_561_OUT> created at line 1241.
+    Found 7-bit adder for signal <r_rcntm[6]_GND_390_o_add_562_OUT> created at line 1241.
+    Found 7-bit adder for signal <r_rcntl[6]_GND_390_o_add_564_OUT> created at line 1241.
+    Found 7-bit adder for signal <r_rcntm[6]_GND_390_o_add_569_OUT> created at line 1241.
+    Found 7-bit adder for signal <r_rcntl[6]_GND_390_o_add_576_OUT> created at line 1241.
+    Found 3-bit adder for signal <r_abufs[2]_GND_390_o_add_592_OUT> created at line 1241.
+    Found 2-bit adder for signal <r_rpnt[1]_GND_390_o_add_593_OUT> created at line 1241.
+    Found 8-bit adder for signal <r_txdstate[3]_GND_390_o_add_633_OUT> created at line 1241.
+    Found 11-bit adder for signal <r_txlength[10]_GND_390_o_add_638_OUT> created at line 1241.
+    Found 7-bit adder for signal <r_tcnt[6]_GND_390_o_add_675_OUT> created at line 1241.
+    Found 8-bit subtractor for signal <GND_390_o_GND_390_o_sub_46_OUT(7:0)> created at line 339.
+    Found 11-bit subtractor for signal <GND_390_o_GND_390_o_sub_117_OUT(10:0)> created at line 1308.
+    Found 3-bit subtractor for signal <GND_390_o_GND_390_o_sub_136_OUT(2:0)> created at line 1308.
+    Found 8-bit subtractor for signal <GND_390_o_GND_390_o_sub_178_OUT(7:0)> created at line 1308.
+    Found 3-bit subtractor for signal <GND_390_o_GND_390_o_sub_277_OUT(2:0)> created at line 1308.
+    Found 8-bit subtractor for signal <GND_390_o_GND_390_o_sub_374_OUT(7:0)> created at line 1308.
+    Found 5-bit subtractor for signal <GND_390_o_GND_390_o_sub_406_OUT(4:0)> created at line 1308.
+    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_430_OUT(6:0)> created at line 1308.
+    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_443_OUT(6:0)> created at line 1308.
+    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_478_OUT(6:0)> created at line 1308.
+    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_479_OUT(6:0)> created at line 1308.
+    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_568_OUT(6:0)> created at line 1308.
+    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_569_OUT(6:0)> created at line 1308.
+    Found 32-bit subtractor for signal <GND_390_o_GND_390_o_sub_670_OUT(31:0)> created at line 1308.
+    Found 3-bit subtractor for signal <GND_390_o_GND_390_o_sub_685_OUT(2:0)> created at line 1308.
+    Found 2-bit subtractor for signal <GND_390_o_GND_390_o_sub_768_OUT(1:0)> created at line 1308.
+    Found 32-bit subtractor for signal <GND_390_o_GND_390_o_sub_772_OUT(31:0)> created at line 1308.
+    Found 2-bit subtractor for signal <GND_390_o_GND_390_o_sub_773_OUT(1:0)> created at line 1308.
+    Found 8x1-bit Read Only RAM for signal <r_ecnt[3]_PWR_129_o_Mux_582_o>
+    Found 16x3-bit Read Only RAM for signal <_n5250>
     Found 32-bit 12-to-1 multiplexer for signal <comb.vprdata> created at line 694.
     Found 4-bit 12-to-1 multiplexer for signal <r_txdstate[3]_r_txdstate[3]_mux_679_OUT> created at line 830.
     Found 3-bit 8-to-1 multiplexer for signal <r_rxdstate[2]_r_rxdstate[2]_wide_mux_312_OUT> created at line 1054.
     Found 1-bit 16-to-1 multiplexer for signal <r_cnt[3]_r_mdio_ctrl_data[15]_Mux_408_o> created at line 1424.
-    Found 4-bit 12-to-1 multiplexer for signal <r_mdio_state[3]_X_106_o_wide_mux_421_OUT> created at line 1327.
-    Found 4-bit 14-to-1 multiplexer for signal <r_edclrstate[3]_X_106_o_wide_mux_600_OUT> created at line 1470.
+    Found 4-bit 12-to-1 multiplexer for signal <r_mdio_state[3]_X_110_o_wide_mux_421_OUT> created at line 1327.
+    Found 4-bit 14-to-1 multiplexer for signal <r_edclrstate[3]_X_110_o_wide_mux_600_OUT> created at line 1470.
     Found 1-bit 4-to-1 multiplexer for signal <r_tpnt[1]_r_write[3]_Mux_649_o> created at line 1760.
     Found 8-bit comparator lessequal for signal <n0092> created at line 819
-    Found 11-bit comparator greater for signal <PWR_124_o_r_txlength[10]_LessThan_83_o> created at line 884
+    Found 11-bit comparator greater for signal <PWR_129_o_r_txlength[10]_LessThan_83_o> created at line 884
     Found 11-bit comparator lessequal for signal <n0174> created at line 927
     Found 11-bit comparator lessequal for signal <n0177> created at line 928
-    Found 11-bit comparator greater for signal <GND_385_o_r_txcnt[10]_LessThan_116_o> created at line 944
-    Found 8-bit comparator greater for signal <r_tfcnt[7]_GND_385_o_LessThan_177_o> created at line 1031
+    Found 11-bit comparator greater for signal <GND_390_o_r_txcnt[10]_LessThan_116_o> created at line 944
+    Found 8-bit comparator greater for signal <r_tfcnt[7]_GND_390_o_LessThan_177_o> created at line 1031
     Found 3-bit comparator lessequal for signal <n0294> created at line 1043
     Found 11-bit comparator lessequal for signal <n0331> created at line 1119
     Found 12-bit comparator lessequal for signal <n0373> created at line 1135
@@ -5202,8 +5275,8 @@ WARNING:Xst:653 - Signal <ahbmo2_hwrite> is used but never assigned. This source
     Found 11-bit comparator greater for signal <r_rxcnt[10]_r_rxbytecount[10]_LessThan_274_o> created at line 1209
     Found 32-bit comparator equal for signal <r_mac_addr[47]_r_checkdata[31]_equal_341_o> created at line 1233
     Found 16-bit comparator equal for signal <r_mac_addr[15]_r_checkdata[31]_equal_343_o> created at line 1244
-    Found 16-bit comparator greater for signal <GND_385_o_rxo_lentype[15]_LessThan_351_o> created at line 1273
-    Found 11-bit comparator greater for signal <GND_385_o_rxo_lentype[10]_LessThan_353_o> created at line 1277
+    Found 16-bit comparator greater for signal <GND_390_o_rxo_lentype[15]_LessThan_351_o> created at line 1273
+    Found 11-bit comparator greater for signal <GND_390_o_rxo_lentype[10]_LessThan_353_o> created at line 1277
     Found 11-bit comparator not equal for signal <n0527> created at line 1278
     Found 32-bit comparator not equal for signal <n0673> created at line 1486
     Found 16-bit comparator not equal for signal <n0689> created at line 1504
@@ -5258,30 +5331,30 @@ INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/
     Found 2-bit register for signal <r_col>.
     Found 2-bit register for signal <r_fullduplex>.
     Found 3-bit register for signal <r_def_state>.
-    Found 2-bit adder for signal <r_icnt[1]_GND_386_o_add_13_OUT> created at line 1241.
-    Found 11-bit adder for signal <r_byte_count[10]_GND_386_o_add_31_OUT> created at line 1241.
-    Found 4-bit adder for signal <r_cnt[3]_GND_386_o_add_36_OUT> created at line 1241.
+    Found 2-bit adder for signal <r_icnt[1]_GND_391_o_add_13_OUT> created at line 1241.
+    Found 11-bit adder for signal <r_byte_count[10]_GND_391_o_add_31_OUT> created at line 1241.
+    Found 4-bit adder for signal <r_cnt[3]_GND_391_o_add_36_OUT> created at line 1241.
     Found 6-bit adder for signal <n0411> created at line 405.
-    Found 4-bit subtractor for signal <GND_386_o_GND_386_o_sub_48_OUT(3:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_386_o_GND_386_o_sub_76_OUT(6:0)> created at line 1308.
-    Found 10-bit subtractor for signal <GND_386_o_GND_386_o_sub_78_OUT(9:0)> created at line 1308.
-    Found 5-bit subtractor for signal <GND_386_o_GND_386_o_sub_111_OUT(4:0)> created at line 1308.
+    Found 4-bit subtractor for signal <GND_391_o_GND_391_o_sub_48_OUT(3:0)> created at line 1308.
+    Found 7-bit subtractor for signal <GND_391_o_GND_391_o_sub_76_OUT(6:0)> created at line 1308.
+    Found 10-bit subtractor for signal <GND_391_o_GND_391_o_sub_78_OUT(9:0)> created at line 1308.
+    Found 5-bit subtractor for signal <GND_391_o_GND_391_o_sub_111_OUT(4:0)> created at line 1308.
     Found 4-bit 4-to-1 multiplexer for signal <r_icnt[1]_r_data[7]_wide_mux_14_OUT> created at line 308.
     Found 4-bit 4-to-1 multiplexer for signal <r_icnt[1]_r_data[3]_wide_mux_28_OUT> created at line 335.
     Found 4-bit 8-to-1 multiplexer for signal <r_cnt[2]_r_crc[3]_wide_mux_46_OUT> created at line 362.
-    Found 4-bit 15-to-1 multiplexer for signal <r_main_state[3]_X_107_o_wide_mux_80_OUT> created at line 269.
-    Found 3-bit 5-to-1 multiplexer for signal <r_def_state[2]_X_107_o_wide_mux_116_OUT> created at line 426.
+    Found 4-bit 15-to-1 multiplexer for signal <r_main_state[3]_X_111_o_wide_mux_80_OUT> created at line 269.
+    Found 3-bit 5-to-1 multiplexer for signal <r_def_state[2]_X_111_o_wide_mux_116_OUT> created at line 426.
     Found 11-bit comparator equal for signal <txi_len[10]_r_byte_count[10]_equal_16_o> created at line 315
     Found 11-bit comparator greater for signal <n0060> created at line 317
-    Found 6-bit comparator greater for signal <GND_386_o_BUS_0006_LessThan_56_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_386_o_BUS_0007_LessThan_59_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_386_o_BUS_0008_LessThan_61_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_386_o_BUS_0009_LessThan_63_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_386_o_BUS_0010_LessThan_65_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_386_o_BUS_0011_LessThan_67_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_386_o_BUS_0012_LessThan_69_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_386_o_BUS_0013_LessThan_71_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_386_o_BUS_0014_LessThan_73_o> created at line 405
+    Found 6-bit comparator greater for signal <GND_391_o_BUS_0006_LessThan_56_o> created at line 405
+    Found 6-bit comparator greater for signal <GND_391_o_BUS_0007_LessThan_59_o> created at line 405
+    Found 6-bit comparator greater for signal <GND_391_o_BUS_0008_LessThan_61_o> created at line 405
+    Found 6-bit comparator greater for signal <GND_391_o_BUS_0009_LessThan_63_o> created at line 405
+    Found 6-bit comparator greater for signal <GND_391_o_BUS_0010_LessThan_65_o> created at line 405
+    Found 6-bit comparator greater for signal <GND_391_o_BUS_0011_LessThan_67_o> created at line 405
+    Found 6-bit comparator greater for signal <GND_391_o_BUS_0012_LessThan_69_o> created at line 405
+    Found 6-bit comparator greater for signal <GND_391_o_BUS_0013_LessThan_71_o> created at line 405
+    Found 6-bit comparator greater for signal <GND_391_o_BUS_0014_LessThan_73_o> created at line 405
     Summary:
 	inferred   8 Adder/Subtractor(s).
 	inferred 147 D-type flip-flop(s).
@@ -5335,11 +5408,11 @@ INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/
     Found 1-bit register for signal <r_got4b>.
     Found 6-bit register for signal <r_mcasthash>.
     Found 1-bit register for signal <r_er>.
-    Found 11-bit adder for signal <r_byte_count[10]_GND_388_o_add_36_OUT> created at line 1241.
-    Found 16-bit adder for signal <r_data[31]_GND_388_o_add_82_OUT> created at line 1241.
-    Found 11-bit subtractor for signal <GND_388_o_GND_388_o_sub_58_OUT(10:0)> created at line 1308.
-    Found 11-bit comparator greater for signal <PWR_132_o_r_byte_count[10]_LessThan_33_o> created at line 248
-    Found 11-bit comparator greater for signal <r_byte_count[10]_GND_388_o_LessThan_60_o> created at line 281
+    Found 11-bit adder for signal <r_byte_count[10]_GND_393_o_add_36_OUT> created at line 1241.
+    Found 16-bit adder for signal <r_data[31]_GND_393_o_add_82_OUT> created at line 1241.
+    Found 11-bit subtractor for signal <GND_393_o_GND_393_o_sub_58_OUT(10:0)> created at line 1308.
+    Found 11-bit comparator greater for signal <PWR_137_o_r_byte_count[10]_LessThan_33_o> created at line 248
+    Found 11-bit comparator greater for signal <r_byte_count[10]_GND_393_o_LessThan_60_o> created at line 281
     WARNING:Xst:2404 -  FFs/Latches <r_zero<0:0>> (without init value) have a constant value of 0 in block <greth_rx>.
     Summary:
 	inferred   3 Adder/Subtractor(s).
@@ -5528,13 +5601,13 @@ Unit <outpadv_2> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 20
+# RAMs                                                 : 22
  16x1-bit single-port Read Only RAM                    : 1
  16x2-bit single-port Read Only RAM                    : 1
  16x3-bit single-port Read Only RAM                    : 1
  32x1-bit single-port Read Only RAM                    : 1
  32x2-bit single-port Read Only RAM                    : 2
- 4x1-bit single-port Read Only RAM                     : 2
+ 4x1-bit single-port Read Only RAM                     : 3
  4x2-bit single-port Read Only RAM                     : 1
  4x3-bit single-port Read Only RAM                     : 1
  4x32-bit dual-port RAM                                : 1
@@ -5543,10 +5616,11 @@ Macro Statistics
  64x13-bit single-port Read Only RAM                   : 1
  64x2-bit single-port Read Only RAM                    : 2
  8x1-bit single-port Read Only RAM                     : 2
+ 8x12-bit single-port Read Only RAM                    : 1
  8x6-bit single-port Read Only RAM                     : 1
 # Multipliers                                          : 1
  33x33-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 111
+# Adders/Subtractors                                   : 113
  1-bit adder                                           : 2
  10-bit subtractor                                     : 1
  11-bit adder                                          : 5
@@ -5558,7 +5632,7 @@ Macro Statistics
  18-bit addsub                                         : 1
  2-bit adder                                           : 13
  2-bit subtractor                                      : 2
- 3-bit adder                                           : 13
+ 3-bit adder                                           : 14
  3-bit addsub                                          : 1
  3-bit subtractor                                      : 5
  30-bit adder                                          : 5
@@ -5573,12 +5647,12 @@ Macro Statistics
  6-bit subtractor                                      : 1
  7-bit adder                                           : 14
  7-bit subtractor                                      : 8
- 8-bit adder                                           : 4
+ 8-bit adder                                           : 5
  8-bit subtractor                                      : 3
  9-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 693
- 1-bit register                                        : 383
+# Registers                                            : 705
+ 1-bit register                                        : 386
  10-bit register                                       : 3
  11-bit register                                       : 9
  12-bit register                                       : 3
@@ -5586,13 +5660,13 @@ Macro Statistics
  15-bit register                                       : 4
  16-bit register                                       : 5
  18-bit register                                       : 3
- 2-bit register                                        : 67
+ 2-bit register                                        : 68
  20-bit register                                       : 2
  22-bit register                                       : 2
  25-bit register                                       : 1
- 3-bit register                                        : 29
+ 3-bit register                                        : 31
  30-bit register                                       : 16
- 32-bit register                                       : 57
+ 32-bit register                                       : 59
  33-bit register                                       : 2
  35-bit register                                       : 2
  4-bit register                                        : 32
@@ -5601,15 +5675,15 @@ Macro Statistics
  6-bit register                                        : 7
  65-bit register                                       : 1
  66-bit register                                       : 1
- 7-bit register                                        : 11
- 8-bit register                                        : 28
+ 7-bit register                                        : 12
+ 8-bit register                                        : 31
  9-bit register                                        : 2
-# Comparators                                          : 110
+# Comparators                                          : 111
  11-bit comparator equal                               : 1
  11-bit comparator greater                             : 7
  11-bit comparator lessequal                           : 3
  11-bit comparator not equal                           : 1
- 12-bit comparator equal                               : 54
+ 12-bit comparator equal                               : 55
  12-bit comparator lessequal                           : 2
  14-bit comparator equal                               : 2
  14-bit comparator lessequal                           : 1
@@ -5629,14 +5703,14 @@ Macro Statistics
  8-bit comparator equal                                : 9
  8-bit comparator greater                              : 1
  8-bit comparator lessequal                            : 1
-# Multiplexers                                         : 3803
+# Multiplexers                                         : 3837
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 2288
- 1-bit 3-to-1 multiplexer                              : 37
+ 1-bit 2-to-1 multiplexer                              : 2312
+ 1-bit 3-to-1 multiplexer                              : 38
  1-bit 4-to-1 multiplexer                              : 39
  1-bit 6-to-1 multiplexer                              : 1
  1-bit 7-to-1 multiplexer                              : 2
- 1-bit 8-to-1 multiplexer                              : 5
+ 1-bit 8-to-1 multiplexer                              : 6
  10-bit 2-to-1 multiplexer                             : 25
  10-bit 4-to-1 multiplexer                             : 1
  11-bit 2-to-1 multiplexer                             : 52
@@ -5648,7 +5722,7 @@ Macro Statistics
  16-bit 2-to-1 multiplexer                             : 21
  18-bit 2-to-1 multiplexer                             : 25
  19-bit 2-to-1 multiplexer                             : 3
- 2-bit 2-to-1 multiplexer                              : 143
+ 2-bit 2-to-1 multiplexer                              : 144
  2-bit 3-to-1 multiplexer                              : 5
  2-bit 4-to-1 multiplexer                              : 5
  2-bit 7-to-1 multiplexer                              : 1
@@ -5656,13 +5730,13 @@ Macro Statistics
  20-bit 2-to-1 multiplexer                             : 9
  24-bit 2-to-1 multiplexer                             : 2
  25-bit 2-to-1 multiplexer                             : 2
- 3-bit 2-to-1 multiplexer                              : 140
+ 3-bit 2-to-1 multiplexer                              : 144
  3-bit 3-to-1 multiplexer                              : 1
  3-bit 4-to-1 multiplexer                              : 5
  3-bit 5-to-1 multiplexer                              : 2
  3-bit 6-to-1 multiplexer                              : 1
  3-bit 7-to-1 multiplexer                              : 2
- 3-bit 8-to-1 multiplexer                              : 1
+ 3-bit 8-to-1 multiplexer                              : 2
  30-bit 2-to-1 multiplexer                             : 31
  30-bit 3-to-1 multiplexer                             : 1
  30-bit 4-to-1 multiplexer                             : 1
@@ -5692,7 +5766,7 @@ Macro Statistics
  6-bit 3-to-1 multiplexer                              : 1
  65-bit 2-to-1 multiplexer                             : 3
  7-bit 2-to-1 multiplexer                              : 98
- 8-bit 2-to-1 multiplexer                              : 57
+ 8-bit 2-to-1 multiplexer                              : 59
  8-bit 4-to-1 multiplexer                              : 1
 # Xors                                                 : 118
  1-bit xor2                                            : 114
@@ -5713,6 +5787,12 @@ INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_3> in Unit <iu> is equivalent to the
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_tt_1> in Unit <iu> is equivalent to the following 4 FFs/Latches, which will be removed : <r_a_ctrl_tt_2> <r_a_ctrl_tt_3> <r_a_ctrl_tt_4> <r_a_ctrl_tt_5> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_12> in Unit <iu> is equivalent to the following FF/Latch, which will be removed : <r_a_imm_22> 
 INFO:Xst:2261 - The FF/Latch <ar_qual_areg> in Unit <newcom.jtagcom0> is equivalent to the following FF/Latch, which will be removed : <ar_qual_dreg> 
+INFO:Xst:2261 - The FF/Latch <buff_0> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_0> 
+INFO:Xst:2261 - The FF/Latch <buff_1> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_1> 
+INFO:Xst:2261 - The FF/Latch <buff_2> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_2> 
+INFO:Xst:2261 - The FF/Latch <buff_3> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_3> 
+INFO:Xst:2261 - The FF/Latch <I2c_address_3> in Unit <Inst_IO_expander_APB> is equivalent to the following 2 FFs/Latches, which will be removed : <I2c_address_4> <I2c_address_6> 
+INFO:Xst:2261 - The FF/Latch <I2c_address_0> in Unit <Inst_IO_expander_APB> is equivalent to the following 3 FFs/Latches, which will be removed : <I2c_address_1> <I2c_address_2> <I2c_address_5> 
 INFO:Xst:2261 - The FF/Latch <r_applength_10> in Unit <ethc0> is equivalent to the following 5 FFs/Latches, which will be removed : <r_applength_11> <r_applength_12> <r_applength_13> <r_applength_14> <r_applength_15> 
 WARNING:Xst:1710 - FF/Latch <r_data_2> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_data_3> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
@@ -5735,6 +5815,7 @@ WARNING:Xst:1710 - FF/Latch <r_ctsn_0> (without init value) has a constant value
 WARNING:Xst:1710 - FF/Latch <r_extclk> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_rxf_0> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_tcnt_1> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I2c_address_3> (without init value) has a constant value of 0 in block <Inst_IO_expander_APB>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_rxen_0> (without init value) has a constant value of 1 in block <rx_rmii0.rx0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_applength_10> (without init value) has a constant value of 0 in block <ethc0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_lock> (without init value) has a constant value of 0 in block <icache0>. This FF/Latch will be trimmed during the optimization process.
@@ -5817,8 +5898,38 @@ WARNING:Xst:1898 - Due to constant pushing, FF/Latch <r_echeck> is unconnected i
 WARNING:Xst:2404 -  FFs/Latches <r_a_ctrl_tt<5:1>> (without init value) have a constant value of 0 in block <iu3>.
 WARNING:Xst:2404 -  FFs/Latches <r_rcnt<1:1>> (without init value) have a constant value of 0 in block <apbuart>.
 WARNING:Xst:2404 -  FFs/Latches <r_tcnt<1:1>> (without init value) have a constant value of 0 in block <apbuart>.
+WARNING:Xst:2404 -  FFs/Latches <I2c_address<6:6>> (without init value) have a constant value of 0 in block <IO_expander_APB>.
 WARNING:Xst:2404 -  FFs/Latches <r_applength<15:10>> (without init value) have a constant value of 0 in block <grethc>.
 WARNING:Xst:2404 -  FFs/Latches <r_done_ack<1:1>> (without init value) have a constant value of 0 in block <greth_rx>.
+
+Synthesizing (advanced) Unit <IO_expander_APB>.
+The following registers are absorbed into counter <freq_cnt>: 1 register on signal <freq_cnt>.
+Unit <IO_expander_APB> synthesized (advanced).
+
+Synthesizing (advanced) Unit <IO_explander_interface>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_crnt_I2C_state[2]_GND_382_o_Mux_19_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(crnt_I2C_state(2),crnt_I2C_state(1))> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0062> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(crnt_I2C_state(2),crnt_I2C_state(1),crnt_I2C_state(0))> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <IO_explander_interface> synthesized (advanced).
 
 Synthesizing (advanced) Unit <div32>.
 INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_state> prevents it from being combined with the RAM <Mram_divcomb.vready> for implementation as read-only block RAM.
@@ -5875,7 +5986,7 @@ The following registers are absorbed into counter <r_rxburstcnt>: 1 register on 
 The following registers are absorbed into counter <r_seq>: 1 register on signal <r_seq>.
 The following registers are absorbed into counter <r_tpnt>: 1 register on signal <r_tpnt>.
 The following registers are absorbed into counter <r_rpnt>: 1 register on signal <r_rpnt>.
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_ecnt> prevents it from being combined with the RAM <Mram_r_ecnt[3]_PWR_124_o_Mux_582_o> for implementation as read-only block RAM.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_ecnt> prevents it from being combined with the RAM <Mram_r_ecnt[3]_PWR_129_o_Mux_582_o> for implementation as read-only block RAM.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5886,7 +5997,7 @@ INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_ecnt> prevents it from being combined with the RAM <Mram__n5202> for implementation as read-only block RAM.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_ecnt> prevents it from being combined with the RAM <Mram__n5250> for implementation as read-only block RAM.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5966,7 +6077,7 @@ INFO:Xst:3231 - The small RAM <Mram_GND_48_o_GND_48_o_mux_615_OUT> will be imple
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5576> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5574> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5977,7 +6088,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5576> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5891> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5888> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5988,7 +6099,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5891> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5981> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5921> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5999,7 +6110,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5981> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5998> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5938> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -6010,7 +6121,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5998> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5728> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5725> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -6021,7 +6132,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5728> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5865> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5862> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -6125,13 +6236,13 @@ WARNING:Xst:2677 - Node <r_status_phystat_0> of sequential type is unconnected i
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 20
+# RAMs                                                 : 22
  16x1-bit single-port distributed Read Only RAM        : 1
  16x2-bit single-port distributed Read Only RAM        : 1
  16x3-bit single-port distributed Read Only RAM        : 1
  32x1-bit single-port distributed Read Only RAM        : 1
  32x2-bit single-port distributed Read Only RAM        : 2
- 4x1-bit single-port distributed Read Only RAM         : 2
+ 4x1-bit single-port distributed Read Only RAM         : 3
  4x2-bit single-port distributed Read Only RAM         : 1
  4x3-bit single-port distributed Read Only RAM         : 1
  4x32-bit dual-port distributed RAM                    : 1
@@ -6140,10 +6251,11 @@ Macro Statistics
  64x13-bit single-port distributed Read Only RAM       : 1
  64x2-bit single-port distributed Read Only RAM        : 2
  8x1-bit single-port distributed Read Only RAM         : 2
+ 8x12-bit single-port distributed Read Only RAM        : 1
  8x6-bit single-port distributed Read Only RAM         : 1
 # Multipliers                                          : 1
  33x33-bit registered multiplier                       : 1
-# Adders/Subtractors                                   : 101
+# Adders/Subtractors                                   : 102
  10-bit subtractor                                     : 1
  11-bit adder                                          : 5
  11-bit subtractor                                     : 2
@@ -6152,7 +6264,7 @@ Macro Statistics
  18-bit adder                                          : 3
  18-bit addsub                                         : 1
  2-bit adder                                           : 10
- 3-bit adder                                           : 13
+ 3-bit adder                                           : 14
  3-bit addsub                                          : 1
  3-bit subtractor                                      : 4
  30-bit adder                                          : 5
@@ -6172,21 +6284,22 @@ Macro Statistics
  8-bit subtractor                                      : 3
  9-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Counters                                             : 10
+# Counters                                             : 11
  1-bit up counter                                      : 2
  14-bit up counter                                     : 1
  2-bit down counter                                    : 2
  2-bit up counter                                      : 3
  3-bit down counter                                    : 1
+ 8-bit up counter                                      : 1
  9-bit up counter                                      : 1
-# Registers                                            : 4205
- Flip-Flops                                            : 4205
-# Comparators                                          : 110
+# Registers                                            : 4302
+ Flip-Flops                                            : 4302
+# Comparators                                          : 111
  11-bit comparator equal                               : 1
  11-bit comparator greater                             : 7
  11-bit comparator lessequal                           : 3
  11-bit comparator not equal                           : 1
- 12-bit comparator equal                               : 54
+ 12-bit comparator equal                               : 55
  12-bit comparator lessequal                           : 2
  14-bit comparator equal                               : 2
  14-bit comparator lessequal                           : 1
@@ -6206,14 +6319,14 @@ Macro Statistics
  8-bit comparator equal                                : 9
  8-bit comparator greater                              : 1
  8-bit comparator lessequal                            : 1
-# Multiplexers                                         : 4214
+# Multiplexers                                         : 4244
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 2632
- 1-bit 3-to-1 multiplexer                              : 37
+ 1-bit 2-to-1 multiplexer                              : 2653
+ 1-bit 3-to-1 multiplexer                              : 38
  1-bit 4-to-1 multiplexer                              : 71
  1-bit 6-to-1 multiplexer                              : 33
  1-bit 7-to-1 multiplexer                              : 34
- 1-bit 8-to-1 multiplexer                              : 5
+ 1-bit 8-to-1 multiplexer                              : 6
  10-bit 2-to-1 multiplexer                             : 25
  10-bit 4-to-1 multiplexer                             : 1
  11-bit 2-to-1 multiplexer                             : 52
@@ -6225,7 +6338,7 @@ Macro Statistics
  16-bit 2-to-1 multiplexer                             : 21
  18-bit 2-to-1 multiplexer                             : 25
  19-bit 2-to-1 multiplexer                             : 3
- 2-bit 2-to-1 multiplexer                              : 137
+ 2-bit 2-to-1 multiplexer                              : 138
  2-bit 3-to-1 multiplexer                              : 5
  2-bit 4-to-1 multiplexer                              : 5
  2-bit 7-to-1 multiplexer                              : 1
@@ -6233,13 +6346,13 @@ Macro Statistics
  20-bit 2-to-1 multiplexer                             : 9
  24-bit 2-to-1 multiplexer                             : 2
  25-bit 2-to-1 multiplexer                             : 2
- 3-bit 2-to-1 multiplexer                              : 138
+ 3-bit 2-to-1 multiplexer                              : 142
  3-bit 3-to-1 multiplexer                              : 1
  3-bit 4-to-1 multiplexer                              : 5
  3-bit 5-to-1 multiplexer                              : 2
  3-bit 6-to-1 multiplexer                              : 1
  3-bit 7-to-1 multiplexer                              : 2
- 3-bit 8-to-1 multiplexer                              : 1
+ 3-bit 8-to-1 multiplexer                              : 2
  30-bit 2-to-1 multiplexer                             : 31
  30-bit 3-to-1 multiplexer                             : 1
  30-bit 4-to-1 multiplexer                             : 1
@@ -6269,7 +6382,7 @@ Macro Statistics
  6-bit 3-to-1 multiplexer                              : 1
  65-bit 2-to-1 multiplexer                             : 3
  7-bit 2-to-1 multiplexer                              : 98
- 8-bit 2-to-1 multiplexer                              : 55
+ 8-bit 2-to-1 multiplexer                              : 56
  8-bit 4-to-1 multiplexer                              : 1
 # Xors                                                 : 118
  1-bit xor2                                            : 114
@@ -6333,6 +6446,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsubre_1> (withou
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsubre_2> (without init value) has a constant value of 0 in block <dsu3x>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_mcfg2_sdren> (without init value) has a constant value of 0 in block <mctrl>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_rwaddr_0> (without init value) has a constant value of 0 in block <apbuart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I2c_address_3> (without init value) has a constant value of 0 in block <IO_expander_APB>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I2c_address_4> (without init value) has a constant value of 0 in block <IO_expander_APB>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_rxen_0> (without init value) has a constant value of 1 in block <greth_rx>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_mcasthash_0> (without init value) has a constant value of 0 in block <greth_rx>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_mcasthash_1> (without init value) has a constant value of 0 in block <greth_rx>. This FF/Latch will be trimmed during the optimization process.
@@ -6347,6 +6462,11 @@ INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_2> in Unit <iu3> is equivalent to th
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_3> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_rfa2_3> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_12> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_imm_22> 
 INFO:Xst:2261 - The FF/Latch <ar_qual_dreg> in Unit <jtagcom2> is equivalent to the following FF/Latch, which will be removed : <ar_qual_areg> 
+INFO:Xst:2261 - The FF/Latch <buff_0> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_0> 
+INFO:Xst:2261 - The FF/Latch <buff_1> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_1> 
+INFO:Xst:2261 - The FF/Latch <buff_2> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_2> 
+INFO:Xst:2261 - The FF/Latch <buff_3> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_3> 
+INFO:Xst:2261 - The FF/Latch <I2c_address_0> in Unit <IO_expander_APB> is equivalent to the following 3 FFs/Latches, which will be removed : <I2c_address_1> <I2c_address_2> <I2c_address_5> 
 INFO:Xst:2261 - The FF/Latch <r_data_0> in Unit <mctrl> is equivalent to the following 15 FFs/Latches, which will be removed : <r_data_1> <r_data_2> <r_data_3> <r_data_4> <r_data_5> <r_data_6> <r_data_7> <r_data_8> <r_data_9> <r_data_10> <r_data_11> <r_data_12> <r_data_13> <r_data_14> <r_data_15> 
 INFO:Xst:2261 - The FF/Latch <r_brdyn> in Unit <mctrl> is equivalent to the following FF/Latch, which will be removed : <r_bexcn> 
 INFO:Xst:2261 - The FF/Latch <r_ctsn_0> in Unit <apbuart> is equivalent to the following 2 FFs/Latches, which will be removed : <r_extclk> <r_rxf_0> 
@@ -6454,6 +6574,12 @@ Optimizing unit <gptimer> ...
 
 Optimizing unit <apbuart> ...
 WARNING:Xst:1710 - FF/Latch <r_tshift_10> (without init value) has a constant value of 1 in block <apbuart>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <IO_expander_APB> ...
+
+Optimizing unit <IO_explander_interface> ...
+
+Optimizing unit <I2CInterface> ...
 
 Optimizing unit <grethc> ...
 WARNING:Xst:1710 - FF/Latch <r_rmsto_addr_0> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
@@ -6642,6 +6768,14 @@ WARNING:Xst:2677 - Node <gpt.timer0/r_wdogn> of sequential type is unconnected i
 WARNING:Xst:2677 - Node <gpt.timer0/r_wdog> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:2677 - Node <ua1.uart1/r_rtsn> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:2677 - Node <ua1.uart1/r_txd> of sequential type is unconnected in block <leon3mp>.
+WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_7> of sequential type is unconnected in block <leon3mp>.
+WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_6> of sequential type is unconnected in block <leon3mp>.
+WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_5> of sequential type is unconnected in block <leon3mp>.
+WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_4> of sequential type is unconnected in block <leon3mp>.
+WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_3> of sequential type is unconnected in block <leon3mp>.
+WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_2> of sequential type is unconnected in block <leon3mp>.
+WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_1> of sequential type is unconnected in block <leon3mp>.
+WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_0> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:2677 - Node <eth0.e1/m100.u0/ethc0/r_ctrl_edcldis_4> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:2677 - Node <eth0.e1/m100.u0/ethc0/r_rxrenable> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:1710 - FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/a0/r_retry> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
@@ -6666,6 +6800,7 @@ INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vadd
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_5> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_5> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_6> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_6> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_7> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_7> 
+INFO:Xst:2261 - The FF/Latch <Inst_IO_expander_APB/I2c_address_0> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <Inst_IO_expander_APB/Start_transmission> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_8> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_8> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_9> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_9> 
 INFO:Xst:2261 - The FF/Latch <ahb0/r_hrdatas_17> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <ahb0/r_hrdatas_16> 
@@ -6759,9 +6894,9 @@ Mapping all equations...
 Annotating constraints using XCF file 'leon3mp.xcf'
 XCF parsing done.
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block leon3mp, actual ratio is 145.
+Found area constraint ratio of 100 (+ 5) on block leon3mp, actual ratio is 146.
 Optimizing block <leon3mp> to meet ratio 100 (+ 5) of 2278 slices :
-WARNING:Xst:2254 - Area constraint could not be met for block <leon3mp>, final ratio is 145.
+WARNING:Xst:2254 - Area constraint could not be met for block <leon3mp>, final ratio is 146.
 Replicating register mg2.sr1/r_address_26 to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_address_25 to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_address_24 to handle IOB=TRUE attribute
@@ -6805,6 +6940,7 @@ Replicating register mg2.sr1/r_writedata_19 to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_writedata_18 to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_writedata_17 to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_writedata_16 to handle IOB=TRUE attribute
+Replicating register Inst_IO_expander_APB/SCL to handle IOB=TRUE attribute
 Replicating register leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_nerror to handle IOB=TRUE attribute
 Replicating register eth0.e1/m100.u0/ethc0/tx_rmii0.tx0/r_txd_3 to handle IOB=TRUE attribute
 Replicating register eth0.e1/m100.u0/ethc0/tx_rmii0.tx0/r_txd_2 to handle IOB=TRUE attribute
@@ -6865,8 +7001,8 @@ Unit <leon3mp> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 3854
- Flip-Flops                                            : 3854
+# Registers                                            : 3942
+ Flip-Flops                                            : 3942
 # Shift Registers                                      : 37
  2-bit shift register                                  : 26
  3-bit shift register                                  : 6
@@ -6893,27 +7029,28 @@ Top Level Output File Name         : leon3mp.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 10072
+# BELS                             : 10139
 #      GND                         : 1
-#      INV                         : 88
+#      INV                         : 89
 #      LUT1                        : 173
-#      LUT2                        : 453
-#      LUT3                        : 819
-#      LUT4                        : 1133
-#      LUT5                        : 1959
-#      LUT6                        : 4354
-#      MUXCY                       : 531
-#      MUXF7                       : 121
+#      LUT2                        : 435
+#      LUT3                        : 842
+#      LUT4                        : 1137
+#      LUT5                        : 1994
+#      LUT6                        : 4353
+#      MUXCY                       : 538
+#      MUXF7                       : 129
 #      MUXF8                       : 1
 #      VCC                         : 1
-#      XORCY                       : 438
-# FlipFlops/Latches                : 3891
+#      XORCY                       : 446
+# FlipFlops/Latches                : 3979
 #      FD                          : 531
-#      FDC                         : 23
-#      FDCE                        : 2
+#      FDC                         : 35
+#      FDC_1                       : 5
+#      FDCE                        : 13
 #      FDE                         : 2191
-#      FDP                         : 17
-#      FDPE                        : 5
+#      FDP                         : 49
+#      FDPE                        : 33
 #      FDR                         : 341
 #      FDRE                        : 672
 #      FDS                         : 40
@@ -6926,11 +7063,11 @@ Primitive and Black Box Usage:
 #      SRLC16E                     : 37
 # Clock Buffers                    : 5
 #      BUFG                        : 5
-# IO Buffers                       : 83
+# IO Buffers                       : 85
 #      IBUF                        : 10
 #      IBUFG                       : 3
-#      IOBUF                       : 17
-#      OBUF                        : 53
+#      IOBUF                       : 18
+#      OBUF                        : 54
 # DCMs                             : 1
 #      DCM_SP                      : 1
 # DSPs                             : 4
@@ -6945,24 +7082,24 @@ Selected Device : 6slx16csg324-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            3789  out of  18224    20%  
- Number of Slice LUTs:                 9040  out of   9112    99%  
-    Number used as Logic:              8979  out of   9112    98%  
+ Number of Slice Registers:            3876  out of  18224    21%  
+ Number of Slice LUTs:                 9084  out of   9112    99%  
+    Number used as Logic:              9023  out of   9112    99%  
     Number used as Memory:               61  out of   2176     2%  
        Number used as RAM:               24
        Number used as SRL:               37
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   9416
-   Number with an unused Flip Flop:    5627  out of   9416    59%  
-   Number with an unused LUT:           376  out of   9416     3%  
-   Number of fully used LUT-FF pairs:  3413  out of   9416    36%  
-   Number of unique control sets:       306
+ Number of LUT Flip Flop pairs used:   9479
+   Number with an unused Flip Flop:    5603  out of   9479    59%  
+   Number with an unused LUT:           395  out of   9479     4%  
+   Number of fully used LUT-FF pairs:  3481  out of   9479    36%  
+   Number of unique control sets:       310
 
 IO Utilization: 
- Number of IOs:                         100
- Number of bonded IOBs:                  83  out of    232    35%  
-    IOB Flip Flops/Latches:             102
+ Number of IOs:                         102
+ Number of bonded IOBs:                  85  out of    232    36%  
+    IOB Flip Flops/Latches:             103
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               25  out of     32    78%  
@@ -6988,14 +7125,16 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+--------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)    | Load  |
------------------------------------+--------------------------+-------+
-clk                                | clkgen0/xc3s.v/dll0:CLKFX| 3530  |
-ahbjtaggen0.ahbjtag0/lltck         | BUFG                     | 117   |
-PhyRxClk                           | IBUFG+BUFG               | 157   |
-PhyTxClk                           | IBUFG+BUFG               | 157   |
------------------------------------+--------------------------+-------+
+-----------------------------------+------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                  | Load  |
+-----------------------------------+------------------------------------------------------------------------+-------+
+clk                                | clkgen0/xc3s.v/dll0:CLKFX                                              | 3609  |
+ahbjtaggen0.ahbjtag0/lltck         | BUFG                                                                   | 117   |
+Inst_IO_expander_APB/SCL_1         | NONE(Inst_IO_expander_APB/Inst_IO_explander_interface/crnt_I2C_state_2)| 9     |
+PhyRxClk                           | IBUFG+BUFG                                                             | 157   |
+PhyTxClk                           | IBUFG+BUFG                                                             | 157   |
+-----------------------------------+------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -7007,13 +7146,13 @@ Speed Grade: -2
 
    Minimum period: 10.847ns (Maximum Frequency: 92.191MHz)
    Minimum input arrival time before clock: 6.771ns
-   Maximum output required time after clock: 6.717ns
+   Maximum output required time after clock: 8.804ns
    Maximum combinational path delay: 5.901ns
 
 =========================================================================
 Timing constraint: NET clk PERIOD = 10 nS HIGH 5 nS
   Clock period: 9.797ns (frequency: 102.072MHz)
-  Total number of paths / destination ports: 17091880 / 8303
+  Total number of paths / destination ports: 17095264 / 8499
   Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
 -------------------------------------------------------------------------
 Slack:                  0.203ns
@@ -7042,6 +7181,15 @@ Slack:                  0.203ns
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock Inst_IO_expander_APB/SCL_1
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+Inst_IO_expander_APB/SCL_1|    3.505|    3.073|    3.615|         |
+clk                       |    6.128|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock PhyRxClk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
@@ -7066,7 +7214,7 @@ Clock to Setup on destination clock ahbjtaggen0.ahbjtag0/lltck
 Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------+---------+---------+---------+---------+
 ahbjtaggen0.ahbjtag0/lltck|    4.832|    4.154|    4.751|         |
-clk                       |    6.105|         |    6.105|         |
+clk                       |    6.128|         |    6.128|         |
 --------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -7074,6 +7222,7 @@ Clock to Setup on destination clock clk
                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------+---------+---------+---------+---------+
+Inst_IO_expander_APB/SCL_1|    5.336|         |         |         |
 PhyRxClk                  |   14.584|         |         |         |
 PhyTxClk                  |    2.831|         |         |         |
 ahbjtaggen0.ahbjtag0/lltck|    3.539|    3.446|         |         |
@@ -7083,15 +7232,15 @@ clk                       |   19.594|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 200.00 secs
-Total CPU time to Xst completion: 196.05 secs
+Total REAL time to Xst completion: 261.00 secs
+Total CPU time to Xst completion: 203.22 secs
  
 --> 
 
 
-Total memory usage is 712248 kilobytes
+Total memory usage is 727824 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 2331 (   0 filtered)
-Number of infos    :  392 (   0 filtered)
+Number of warnings : 2351 (   0 filtered)
+Number of infos    :  409 (   0 filtered)
 

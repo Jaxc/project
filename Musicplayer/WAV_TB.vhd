@@ -22,7 +22,7 @@ signal clk , rst : std_logic;
 	PORT(
   clk           : in STD_LOGIC;
   rst           : in STD_LOGIC;
-  d				 : in STD_LOGIC_VECTOR(15 downto 0);
+  d				 : inout STD_LOGIC_VECTOR(15 downto 0);
   A				 : OUT STD_LOGIC_VECTOR(12 downto 0);
   sampleclkout	 : Out STD_LOGIC;
   
@@ -43,7 +43,9 @@ signal clk , rst : std_logic;
   CKE			  	 : OUT STD_LOGIC;
   LDQM			 : OUT STD_LOGIC;
   UDQM			 : OUT STD_LOGIC;
-  WEOut 			 : OUT STD_LOGIC
+  WEOut 			 : OUT STD_LOGIC;
+  
+  miso_i 		: in STD_LOGIC
 		);
 	END COMPONENT;
 
@@ -67,7 +69,7 @@ signal clk , rst : std_logic;
     LDQM : out STD_LOGIC; 
     UDQM : out STD_LOGIC; 
     WEOut : out STD_LOGIC; 
-    d : in STD_LOGIC_VECTOR ( 15 downto 0 ); 
+    d : inout STD_LOGIC_VECTOR ( 15 downto 0 ); 
     A : out STD_LOGIC_VECTOR ( 12 downto 0 ); 
     BSOut : out STD_LOGIC_VECTOR ( 1 downto 0 ); 
     errorcode : out STD_LOGIC_VECTOR ( 3 downto 0 )
@@ -83,7 +85,7 @@ signal clk , rst : std_logic;
 		CASin     : IN STD_LOGIC;
     RASin     : IN STD_LOGIC;
     WEin      : IN STD_LOGIC;       
-		D         : OUT std_logic_vector(15 downto 0)
+		D         : inOUT std_logic_vector(15 downto 0)
 		);
 	END COMPONENT; 
 	
@@ -92,6 +94,8 @@ signal clk , rst : std_logic;
 	SIGNAL D : STD_LOGIC_VECTOR(15 downto 0);
 
 	signal leftsample,rightsample,leftsynth,rightsynth : STD_LOGIC_VECTOR(7 downto 0);
+	
+	signal miso_i : STD_LOGIC;
  
 begin
 
@@ -116,6 +120,8 @@ clk <= '1';
 wait for 41.7777 ns;
 end process;
 
+miso_i <= '0';
+
 	Inst_memory: memory PORT MAP(
 		clk => memclk,
 		rst => rst,
@@ -132,35 +138,31 @@ end process;
 		clk => clk,
 		rst => rst,
 		d => D,
---		A => A,
---		sampleclkout => leftsample,
---		sampleoutleft => leftsample,
---		SampleOutRight => rightsample,
---		MemCLKOut => memclk,
---		CASOut => cas,
---		RASOut => ras,
---		BSOut => ,
---		ByteRateOut => ,
---		BlockAlignOut => ,
-		MemCLKIN => memclk
---		BitsPerSampleOut => ,
---		WEOut => we
-	);
-
-  	Inst_top_synth: top_synth PORT MAP(
-		clk => clk,
-		rst => rst,
-		d => D,
 		A => A,
---		sampleclkout => leftsynth,
 		MemCLKOut => memclk,
 		CASOut => cas,
 		RASOut => ras,
---		BSOut => ,
---		ByteRateOut => ,
---		BlockAlignOut => ,
+		BSOut => open,
+		miso_i => miso_i,
 		MemCLKIN => memclk,
---		BitsPerSampleOut => ,
+		BitsPerSampleOut => open,
 		WEOut => we
 	);
+
+ -- 	Inst_top_synth: top_synth PORT MAP(
+--		clk => clk,
+--	rst => rst,
+--		d => D,
+--		A => A,
+--		sampleclkout => leftsynth,
+		-- MemCLKOut => memclk,
+		-- CASOut => cas,
+		-- RASOut => ras,
+-- --		BSOut => ,
+-- --		ByteRateOut => ,
+-- --		BlockAlignOut => ,
+		-- MemCLKIN => memclk,
+-- --		BitsPerSampleOut => ,
+		-- WEOut => we
+	-- );
 end TESTBENCH;

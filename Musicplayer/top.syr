@@ -1,18 +1,21 @@
-Release 14.7 - xst P.20131013 (nt)
+Release 14.7 - xst P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
---> Reading design: top.prj
+--> 
+Reading design: top.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -108,36 +111,45 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Dropbox\github\musicplayer\project\Musicplayer\ipcore_dir\DMC.vhd" into library work
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/ipcore_dir/DMC.vhd" into library work
 Parsing entity <DMC>.
 Parsing architecture <xilinx> of entity <dmc>.
-Parsing VHDL file "C:\Dropbox\github\musicplayer\project\Musicplayer\ipcore_dir\DMC2.vhd" into library work
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/ipcore_dir/DMC2.vhd" into library work
 Parsing entity <DMC2>.
 Parsing architecture <xilinx> of entity <dmc2>.
-Parsing VHDL file "C:\Dropbox\github\musicplayer\project\Musicplayer\functions.vhd" into library work
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/I2CInterface.vhd" into library work
+Parsing entity <I2CInterface>.
+Parsing architecture <Behavioral> of entity <i2cinterface>.
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/functions.vhd" into library work
 Parsing package <functions>.
 Parsing package body <functions>.
-Parsing VHDL file "C:\Dropbox\github\musicplayer\project\Musicplayer\dataconverter.vhd" into library work
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/dataconverter.vhd" into library work
 Parsing entity <Dataconverter>.
 Parsing architecture <Behavioral> of entity <dataconverter>.
-Parsing VHDL file "C:\Dropbox\github\musicplayer\project\Musicplayer\SDRAMInterface.vhd" into library work
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/SDRAMInterface.vhd" into library work
 Parsing entity <SDRAMInterface>.
 Parsing architecture <interface> of entity <sdraminterface>.
-Parsing VHDL file "C:\Dropbox\github\musicplayer\project\Musicplayer\SampleENA.vhd" into library work
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/SampleENA.vhd" into library work
 Parsing entity <SampleENA>.
 Parsing architecture <Behavioral> of entity <sampleena>.
-Parsing VHDL file "C:\Dropbox\github\musicplayer\project\Musicplayer\modules.vhd" into library work
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/modules.vhd" into library work
 Parsing package <modules>.
-Parsing VHDL file "C:\Dropbox\github\musicplayer\project\Musicplayer\Decoder2.vhd" into library work
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/IO_explander_interface.vhd" into library work
+Parsing entity <IO_explander_interface>.
+Parsing architecture <Behavioral> of entity <io_explander_interface>.
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/Decoder2.vhd" into library work
 Parsing entity <decoder2>.
 Parsing architecture <stuff> of entity <decoder2>.
-Parsing VHDL file "C:\Dropbox\github\musicplayer\project\Musicplayer\DAC_test_top.vhd" into library work
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/DAC_test_top.vhd" into library work
 Parsing entity <DAC_top>.
 Parsing architecture <Behavioral> of entity <dac_top>.
-Parsing VHDL file "C:\Dropbox\github\musicplayer\project\Musicplayer\controlunit.vhd" into library work
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/controlunit.vhd" into library work
 Parsing entity <controlunit>.
 Parsing architecture <control> of entity <controlunit>.
-Parsing VHDL file "C:\Dropbox\github\musicplayer\project\Musicplayer\top.vhd" into library work
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/CLK_div.vhd" into library work
+Parsing entity <CLK_div>.
+Parsing architecture <Behavioral> of entity <clk_div>.
+Parsing VHDL file "/home/jaxc/Desktop/git repo/Musicplayer/top.vhd" into library work
 Parsing entity <top>.
 Parsing architecture <beh> of entity <top>.
 
@@ -152,7 +164,12 @@ Elaborating entity <SampleENA> (architecture <Behavioral>) from library <work>.
 Elaborating entity <decoder2> (architecture <stuff>) from library <work>.
 
 Elaborating entity <SDRAMInterface> (architecture <interface>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Dropbox\github\musicplayer\project\Musicplayer\SDRAMInterface.vhd" Line 161. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/Musicplayer/SDRAMInterface.vhd" Line 187. Case statement is complete. others clause is never selected
+
+Elaborating entity <IO_explander_interface> (architecture <Behavioral>) with generics from library <work>.
+INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/Musicplayer/IO_explander_interface.vhd" Line 312. Case statement is complete. others clause is never selected
+
+Elaborating entity <I2CInterface> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <DAC_top> (architecture <Behavioral>) from library <work>.
 
@@ -162,23 +179,29 @@ Elaborating entity <DMC2> (architecture <xilinx>) from library <work>.
 
 Elaborating entity <Dataconverter> (architecture <Behavioral>) from library <work>.
 
+Elaborating entity <CLK_div> (architecture <Behavioral>) from library <work>.
+
 Elaborating entity <controlunit> (architecture <control>) from library <work>.
-WARNING:HDLCompiler:1127 - "C:\Dropbox\github\musicplayer\project\Musicplayer\controlunit.vhd" Line 49: Assignment to watchdogstate ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/jaxc/Desktop/git repo/Musicplayer/controlunit.vhd" Line 50: Assignment to watchdogstate ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/Musicplayer/top.vhd" Line 86: Net <wordin[15]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <top>.
-    Related source file is "C:\Dropbox\github\musicplayer\project\Musicplayer\top.vhd".
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/top.vhd".
 WARNING:Xst:647 - Input <MemCLKIN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Dropbox\github\musicplayer\project\Musicplayer\top.vhd" line 157: Output port <samplerateout> of the instance <Inst_controlunit> is unconnected or connected to loadless signal.
+WARNING:Xst:647 - Input <miso_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/Musicplayer/top.vhd" line 154: Output port <IO_Ready> of the instance <Inst_IO_explander_interface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/Musicplayer/top.vhd" line 252: Output port <samplerateout> of the instance <Inst_controlunit> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <wordin> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	inferred   2 Multiplexer(s).
 Unit <top> synthesized.
 
 Synthesizing Unit <SampleENA>.
-    Related source file is "C:\Dropbox\github\musicplayer\project\Musicplayer\SampleENA.vhd".
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/SampleENA.vhd".
     Found 1-bit register for signal <SampleCLKEna>.
     Found 1-bit register for signal <lastLRCLK>.
     Summary:
@@ -186,7 +209,7 @@ Synthesizing Unit <SampleENA>.
 Unit <SampleENA> synthesized.
 
 Synthesizing Unit <decoder2>.
-    Related source file is "C:\Dropbox\github\musicplayer\project\Musicplayer\Decoder2.vhd".
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/Decoder2.vhd".
     Found 16-bit register for signal <current_fourByteWord>.
     Found 16-bit register for signal <SampleOutLeft>.
     Found 16-bit register for signal <SampleOutRight>.
@@ -204,7 +227,7 @@ Synthesizing Unit <decoder2>.
 Unit <decoder2> synthesized.
 
 Synthesizing Unit <SDRAMInterface>.
-    Related source file is "C:\Dropbox\github\musicplayer\project\Musicplayer\SDRAMInterface.vhd".
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/SDRAMInterface.vhd".
     Found 8-bit register for signal <byteout>.
     Found 3-bit register for signal <current_state>.
     Found 1-bit register for signal <MemCLK>.
@@ -217,11 +240,12 @@ Synthesizing Unit <SDRAMInterface>.
     Found 1-bit register for signal <current_WE>.
     Found 1-bit register for signal <current_RAS>.
     Found 1-bit register for signal <current_CAS>.
+    Found 16-bit register for signal <Mem_data_out>.
     Found finite state machine <FSM_0> for signal <current_state>.
     -----------------------------------------------------------------------
     | States             | 8                                              |
-    | Transitions        | 29                                             |
-    | Inputs             | 6                                              |
+    | Transitions        | 25                                             |
+    | Inputs             | 4                                              |
     | Outputs            | 10                                             |
     | Clock              | clk (rising_edge)                              |
     | Reset              | rst (negative)                                 |
@@ -231,21 +255,77 @@ Synthesizing Unit <SDRAMInterface>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 13-bit adder for signal <current_cnt2[12]_GND_11_o_add_15_OUT> created at line 154.
-    Found 9-bit adder for signal <current_cnt[8]_GND_11_o_add_25_OUT> created at line 158.
-    Found 9-bit 7-to-1 multiplexer for signal <nxt_cnt> created at line 69.
+    Found 9-bit adder for signal <current_cnt[8]_GND_11_o_add_16_OUT> created at line 184.
+    Found 9-bit 7-to-1 multiplexer for signal <nxt_cnt> created at line 100.
     Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred  50 D-type flip-flop(s).
-	inferred  14 Multiplexer(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  66 D-type flip-flop(s).
+	inferred  15 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <SDRAMInterface> synthesized.
 
+Synthesizing Unit <IO_explander_interface>.
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/IO_explander_interface.vhd".
+        I2C_slave_Address = "0100111"
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/Musicplayer/IO_explander_interface.vhd" line 332: Output port <Datain> of the instance <Inst_I2CInterface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/Musicplayer/IO_explander_interface.vhd" line 332: Output port <ACK> of the instance <Inst_I2CInterface> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <crnt_I2C_state>.
+    Found 1-bit register for signal <crnt_state>.
+INFO:Xst:1799 - State data2 is never reached in FSM <crnt_I2C_state>.
+    Found finite state machine <FSM_1> for signal <crnt_I2C_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 19                                             |
+    | Clock              | SCL (rising_edge)                              |
+    | Reset              | rst (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | start1                                         |
+    | Power Up State     | start1                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred  10 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <IO_explander_interface> synthesized.
+
+Synthesizing Unit <I2CInterface>.
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/I2CInterface.vhd".
+    Found 2-bit register for signal <crnt_state>.
+    Found 8-bit register for signal <Datain>.
+    Found 3-bit register for signal <crnt_cnt>.
+    Found finite state machine <FSM_2> for signal <crnt_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | SCL (falling_edge)                             |
+    | Reset              | rst (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | reset                                          |
+    | Power Up State     | reset                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <crnt_cnt[2]_GND_13_o_add_1_OUT> created at line 83.
+    Found 1-bit 8-to-1 multiplexer for signal <crnt_cnt[2]_Dataout[0]_Mux_4_o> created at line 85.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred  12 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <I2CInterface> synthesized.
+
 Synthesizing Unit <DAC_top>.
-    Related source file is "C:\Dropbox\github\musicplayer\project\Musicplayer\DAC_test_top.vhd".
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/DAC_test_top.vhd".
     Found 9-bit register for signal <channel_cnt>.
     Found 1-bit register for signal <LRCLK>.
-    Found 9-bit adder for signal <channel_cnt[8]_GND_12_o_add_2_OUT> created at line 143.
+    Found 9-bit adder for signal <channel_cnt[8]_GND_21_o_add_2_OUT> created at line 143.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  10 D-type flip-flop(s).
@@ -253,33 +333,45 @@ Synthesizing Unit <DAC_top>.
 Unit <DAC_top> synthesized.
 
 Synthesizing Unit <DMC>.
-    Related source file is "C:\Dropbox\github\musicplayer\project\Musicplayer\ipcore_dir\DMC.vhd".
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/ipcore_dir/DMC.vhd".
     Summary:
 	no macro.
 Unit <DMC> synthesized.
 
 Synthesizing Unit <DMC2>.
-    Related source file is "C:\Dropbox\github\musicplayer\project\Musicplayer\ipcore_dir\DMC2.vhd".
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/ipcore_dir/DMC2.vhd".
     Summary:
 	no macro.
 Unit <DMC2> synthesized.
 
 Synthesizing Unit <Dataconverter>.
-    Related source file is "C:\Dropbox\github\musicplayer\project\Musicplayer\dataconverter.vhd".
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/dataconverter.vhd".
     Found 5-bit register for signal <cnt>.
     Found 1-bit register for signal <dataout>.
     Found 1-bit register for signal <lastLRclk>.
     Found 24-bit register for signal <current_sample_out>.
-    Found 5-bit adder for signal <cnt[4]_GND_21_o_add_4_OUT> created at line 83.
-    Found 1-bit 24-to-1 multiplexer for signal <cnt[4]_X_17_o_Mux_5_o> created at line 84.
+    Found 5-bit adder for signal <cnt[4]_GND_30_o_add_4_OUT> created at line 83.
+    Found 1-bit 24-to-1 multiplexer for signal <cnt[4]_X_19_o_Mux_5_o> created at line 84.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  31 D-type flip-flop(s).
 	inferred   6 Multiplexer(s).
 Unit <Dataconverter> synthesized.
 
+Synthesizing Unit <CLK_div>.
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/CLK_div.vhd".
+    Found 5-bit register for signal <cnt>.
+    Found 1-bit register for signal <clk_400k>.
+    Found 5-bit adder for signal <cnt[4]_GND_31_o_add_3_OUT> created at line 56.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CLK_div> synthesized.
+
 Synthesizing Unit <controlunit>.
-    Related source file is "C:\Dropbox\github\musicplayer\project\Musicplayer\controlunit.vhd".
+    Related source file is "/home/jaxc/Desktop/git repo/Musicplayer/controlunit.vhd".
+WARNING:Xst:653 - Signal <read_write> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 5-bit register for signal <current_state>.
     Found 32-bit register for signal <current_TwoByteWord>.
     Found 3-bit register for signal <bitspersampleout>.
@@ -290,7 +382,7 @@ Synthesizing Unit <controlunit>.
     Found 32-bit register for signal <current_ChunkBytesLeft>.
     Found 4-bit register for signal <ModeSelect>.
 INFO:Xst:1799 - State syncwait is never reached in FSM <current_state>.
-    Found finite state machine <FSM_1> for signal <current_state>.
+    Found finite state machine <FSM_3> for signal <current_state>.
     -----------------------------------------------------------------------
     | States             | 17                                             |
     | Transitions        | 84                                             |
@@ -304,12 +396,12 @@ INFO:Xst:1799 - State syncwait is never reached in FSM <current_state>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <current_cnt[3]_GND_22_o_add_141_OUT> created at line 316.
-    Found 32-bit subtractor for signal <GND_22_o_GND_22_o_sub_130_OUT<31:0>> created at line 1308.
-    Found 4-bit subtractor for signal <GND_22_o_GND_22_o_sub_159_OUT<3:0>> created at line 344.
-    Found 4-bit 4-to-1 multiplexer for signal <_n0327> created at line 92.
-    Found 4-bit 4-to-1 multiplexer for signal <_n0333> created at line 139.
-    Found 4-bit 4-to-1 multiplexer for signal <_n0339> created at line 171.
+    Found 4-bit adder for signal <current_cnt[3]_GND_32_o_add_141_OUT> created at line 317.
+    Found 32-bit subtractor for signal <GND_32_o_GND_32_o_sub_130_OUT<31:0>> created at line 1308.
+    Found 4-bit subtractor for signal <GND_32_o_GND_32_o_sub_159_OUT<3:0>> created at line 345.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0327> created at line 93.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0333> created at line 140.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0339> created at line 172.
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred  83 D-type flip-flop(s).
@@ -321,41 +413,43 @@ Unit <controlunit> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 11
- 13-bit adder                                          : 1
+# Adders/Subtractors                                   : 12
+ 3-bit adder                                           : 1
  3-bit subtractor                                      : 1
  32-bit subtractor                                     : 1
  4-bit adder                                           : 1
  4-bit subtractor                                      : 2
- 5-bit adder                                           : 1
+ 5-bit adder                                           : 2
  5-bit subtractor                                      : 2
  9-bit adder                                           : 2
-# Registers                                            : 32
- 1-bit register                                        : 14
+# Registers                                            : 38
+ 1-bit register                                        : 16
  13-bit register                                       : 2
- 16-bit register                                       : 3
+ 16-bit register                                       : 4
  24-bit register                                       : 1
- 3-bit register                                        : 2
+ 3-bit register                                        : 3
  32-bit register                                       : 2
  4-bit register                                        : 3
- 5-bit register                                        : 2
- 8-bit register                                        : 1
+ 5-bit register                                        : 3
+ 8-bit register                                        : 2
  9-bit register                                        : 2
-# Multiplexers                                         : 164
+# Multiplexers                                         : 188
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 87
+ 1-bit 2-to-1 multiplexer                              : 108
  1-bit 24-to-1 multiplexer                             : 1
- 13-bit 2-to-1 multiplexer                             : 5
+ 1-bit 8-to-1 multiplexer                              : 1
+ 13-bit 2-to-1 multiplexer                             : 4
  16-bit 2-to-1 multiplexer                             : 6
  24-bit 2-to-1 multiplexer                             : 3
+ 3-bit 2-to-1 multiplexer                              : 2
  32-bit 2-to-1 multiplexer                             : 12
  4-bit 2-to-1 multiplexer                              : 33
  4-bit 4-to-1 multiplexer                              : 3
- 5-bit 2-to-1 multiplexer                              : 5
- 8-bit 2-to-1 multiplexer                              : 1
- 9-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 6
+ 8-bit 2-to-1 multiplexer                              : 2
+ 9-bit 2-to-1 multiplexer                              : 5
  9-bit 7-to-1 multiplexer                              : 1
-# FSMs                                                 : 2
+# FSMs                                                 : 4
 # Xors                                                 : 1
  1-bit xor2                                            : 1
 
@@ -367,7 +461,40 @@ Macro Statistics
 
 INFO:Xst:2261 - The FF/Latch <ModeSelect_1> in Unit <Inst_controlunit> is equivalent to the following 2 FFs/Latches, which will be removed : <ModeSelect_2> <ModeSelect_3> 
 WARNING:Xst:1710 - FF/Latch <ModeSelect_1> (without init value) has a constant value of 0 in block <Inst_controlunit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_12> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_11> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_10> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_9> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_8> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_7> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_6> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_5> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_4> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_3> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_2> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_1> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <current_cnt2_0> has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_15> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_14> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_13> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_12> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_11> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_10> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_9> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_8> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_7> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_6> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_5> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_4> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_3> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_2> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_1> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_data_out_0> (without init value) has a constant value of 0 in block <Inst_SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2404 -  FFs/Latches <ModeSelect<3:1>> (without init value) have a constant value of 0 in block <controlunit>.
+
+Synthesizing (advanced) Unit <CLK_div>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <CLK_div> synthesized (advanced).
 
 Synthesizing (advanced) Unit <DAC_top>.
 The following registers are absorbed into counter <channel_cnt>: 1 register on signal <channel_cnt>.
@@ -377,15 +504,12 @@ Synthesizing (advanced) Unit <Dataconverter>.
 The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
 Unit <Dataconverter> synthesized (advanced).
 
-Synthesizing (advanced) Unit <SDRAMInterface>.
-The following registers are absorbed into counter <current_cnt2>: 1 register on signal <current_cnt2>.
-Unit <SDRAMInterface> synthesized (advanced).
-
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 8
+# Adders/Subtractors                                   : 9
+ 3-bit adder                                           : 1
  3-bit subtractor                                      : 1
  32-bit subtractor                                     : 1
  4-bit adder                                           : 1
@@ -393,26 +517,27 @@ Macro Statistics
  5-bit subtractor                                      : 2
  9-bit adder                                           : 1
 # Counters                                             : 3
- 13-bit up counter                                     : 1
- 5-bit up counter                                      : 1
+ 5-bit up counter                                      : 2
  9-bit up counter                                      : 1
-# Registers                                            : 200
- Flip-Flops                                            : 200
-# Multiplexers                                         : 161
+# Registers                                            : 242
+ Flip-Flops                                            : 242
+# Multiplexers                                         : 185
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 87
+ 1-bit 2-to-1 multiplexer                              : 108
  1-bit 24-to-1 multiplexer                             : 1
+ 1-bit 8-to-1 multiplexer                              : 1
  13-bit 2-to-1 multiplexer                             : 4
  16-bit 2-to-1 multiplexer                             : 6
  24-bit 2-to-1 multiplexer                             : 3
+ 3-bit 2-to-1 multiplexer                              : 2
  32-bit 2-to-1 multiplexer                             : 12
  4-bit 2-to-1 multiplexer                              : 33
  4-bit 4-to-1 multiplexer                              : 3
  5-bit 2-to-1 multiplexer                              : 4
- 8-bit 2-to-1 multiplexer                              : 1
- 9-bit 2-to-1 multiplexer                              : 5
+ 8-bit 2-to-1 multiplexer                              : 2
+ 9-bit 2-to-1 multiplexer                              : 4
  9-bit 7-to-1 multiplexer                              : 1
-# FSMs                                                 : 2
+# FSMs                                                 : 4
 # Xors                                                 : 1
  1-bit xor2                                            : 1
 
@@ -421,6 +546,35 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1293 - FF/Latch <current_cnt2_12> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_11> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_10> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_9> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_8> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_7> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_6> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_5> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_4> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_3> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_2> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_1> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <current_cnt2_0> has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_15> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_14> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_13> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_12> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_11> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_10> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_9> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_8> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_7> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_6> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_5> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_4> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_3> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_2> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_1> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mem_data_out_0> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <Inst_SDRAMInterface/FSM_0> on signal <current_state[1:3]> with user encoding.
 ---------------------------
@@ -436,7 +590,30 @@ Optimizing FSM <Inst_SDRAMInterface/FSM_0> on signal <current_state[1:3]> with u
  reading       | 111
 ---------------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <Inst_controlunit/FSM_1> on signal <current_state[1:4]> with gray encoding.
+Optimizing FSM <Inst_IO_explander_interface/FSM_1> on signal <crnt_I2C_state[1:7]> with one-hot encoding.
+---------------------
+ State   | Encoding
+---------------------
+ start1  | 0000001
+ start2  | 0000010
+ op      | 0000100
+ address | 0010000
+ data    | 0100000
+ data2   | unreached
+ stop    | 0001000
+ stop2   | 1000000
+---------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Inst_IO_explander_interface/Inst_I2CInterface/FSM_2> on signal <crnt_state[1:2]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ reset    | 00
+ send     | 01
+ ackstate | 10
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Inst_controlunit/FSM_3> on signal <current_state[1:4]> with gray encoding.
 ---------------------------
  State         | Encoding
 ---------------------------
@@ -458,19 +635,26 @@ Optimizing FSM <Inst_controlunit/FSM_1> on signal <current_state[1:4]> with gray
  data          | 1000
  error         | 0010
 ---------------------------
+WARNING:Xst:1710 - FF/Latch <current_Addr_10> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <current_Addr_11> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <current_Addr_12> (without init value) has a constant value of 0 in block <SDRAMInterface>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:1901 - Instance inst_DMC/pll_base_inst in unit inst_DMC/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
 
 Optimizing unit <top> ...
-
-Optimizing unit <SDRAMInterface> ...
 
 Optimizing unit <DAC_top> ...
 
 Optimizing unit <Dataconverter> ...
 
+Optimizing unit <SDRAMInterface> ...
+
 Optimizing unit <decoder2> ...
 WARNING:Xst:1293 - FF/Latch <current_cnt_4> has a constant value of 0 in block <decoder2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <current_cnt_3> has a constant value of 0 in block <decoder2>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <IO_explander_interface> ...
+
+Optimizing unit <I2CInterface> ...
 
 Optimizing unit <controlunit> ...
 WARNING:Xst:1710 - FF/Latch <Inst_DAC_top/Inst_Dataconverter/current_sample_out_16> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
@@ -481,6 +665,14 @@ WARNING:Xst:1710 - FF/Latch <Inst_DAC_top/Inst_Dataconverter/current_sample_out_
 WARNING:Xst:1710 - FF/Latch <Inst_DAC_top/Inst_Dataconverter/current_sample_out_21> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Inst_DAC_top/Inst_Dataconverter/current_sample_out_22> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Inst_DAC_top/Inst_Dataconverter/current_sample_out_23> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Inst_IO_explander_interface/Inst_I2CInterface/Datain_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Inst_IO_explander_interface/Inst_I2CInterface/Datain_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Inst_IO_explander_interface/Inst_I2CInterface/Datain_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Inst_IO_explander_interface/Inst_I2CInterface/Datain_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Inst_IO_explander_interface/Inst_I2CInterface/Datain_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Inst_IO_explander_interface/Inst_I2CInterface/Datain_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Inst_IO_explander_interface/Inst_I2CInterface/Datain_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Inst_IO_explander_interface/Inst_I2CInterface/Datain_0> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <Inst_controlunit/current_TwoByteWord_31> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <Inst_controlunit/current_TwoByteWord_30> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <Inst_controlunit/current_TwoByteWord_23> of sequential type is unconnected in block <top>.
@@ -494,18 +686,19 @@ WARNING:Xst:2677 - Node <Inst_controlunit/samplerateout> of sequential type is u
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 9.
-FlipFlop Inst_SDRAMInterface/byteout_0 has been replicated 3 time(s)
+FlipFlop Inst_SDRAMInterface/byteout_0 has been replicated 2 time(s)
 FlipFlop Inst_SDRAMInterface/byteout_1 has been replicated 2 time(s)
-FlipFlop Inst_SDRAMInterface/byteout_3 has been replicated 1 time(s)
-FlipFlop Inst_SDRAMInterface/byteout_4 has been replicated 2 time(s)
-FlipFlop Inst_SDRAMInterface/byteout_5 has been replicated 1 time(s)
-FlipFlop Inst_controlunit/ModeSelect has been replicated 1 time(s)
-FlipFlop Inst_controlunit/current_cnt_0 has been replicated 1 time(s)
+FlipFlop Inst_SDRAMInterface/byteout_3 has been replicated 3 time(s)
+FlipFlop Inst_SDRAMInterface/byteout_4 has been replicated 3 time(s)
+FlipFlop Inst_SDRAMInterface/byteout_5 has been replicated 2 time(s)
+FlipFlop Inst_controlunit/bitspersampleout_0 has been replicated 1 time(s)
+FlipFlop Inst_controlunit/bitspersampleout_1 has been replicated 1 time(s)
+FlipFlop Inst_controlunit/current_cnt_0 has been replicated 2 time(s)
 FlipFlop Inst_controlunit/current_cnt_1 has been replicated 2 time(s)
-FlipFlop Inst_controlunit/current_state_FSM_FFd1 has been replicated 2 time(s)
-FlipFlop Inst_controlunit/current_state_FSM_FFd2 has been replicated 3 time(s)
-FlipFlop Inst_controlunit/current_state_FSM_FFd3 has been replicated 3 time(s)
-FlipFlop Inst_controlunit/current_state_FSM_FFd4 has been replicated 1 time(s)
+FlipFlop Inst_controlunit/current_state_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop Inst_controlunit/current_state_FSM_FFd2 has been replicated 2 time(s)
+FlipFlop Inst_controlunit/current_state_FSM_FFd3 has been replicated 2 time(s)
+FlipFlop Inst_controlunit/current_state_FSM_FFd4 has been replicated 2 time(s)
 
 Final Macro Processing ...
 
@@ -513,8 +706,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 237
- Flip-Flops                                            : 237
+# Registers                                            : 243
+ Flip-Flops                                            : 243
 
 =========================================================================
 
@@ -537,37 +730,38 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 608
+# BELS                             : 560
 #      GND                         : 1
 #      INV                         : 36
 #      LUT1                        : 1
-#      LUT2                        : 35
-#      LUT3                        : 50
-#      LUT4                        : 98
-#      LUT5                        : 69
-#      LUT6                        : 204
-#      MUXCY                       : 51
-#      MUXF7                       : 8
+#      LUT2                        : 26
+#      LUT3                        : 53
+#      LUT4                        : 79
+#      LUT5                        : 71
+#      LUT6                        : 205
+#      MUXCY                       : 39
+#      MUXF7                       : 7
 #      VCC                         : 1
-#      XORCY                       : 54
-# FlipFlops/Latches                : 239
-#      FD                          : 1
-#      FDC                         : 27
-#      FDC_1                       : 1
-#      FDCE                        : 110
+#      XORCY                       : 41
+# FlipFlops/Latches                : 245
+#      FD                          : 3
+#      FDC                         : 39
+#      FDC_1                       : 6
+#      FDCE                        : 113
 #      FDCE_1                      : 1
-#      FDE                         : 72
+#      FDE                         : 56
 #      FDE_1                       : 17
-#      FDPE                        : 2
-#      FDRE                        : 2
+#      FDP                         : 1
+#      FDPE                        : 3
 #      FDS                         : 4
 #      ODDR2                       : 2
 # Clock Buffers                    : 3
 #      BUFG                        : 3
-# IO Buffers                       : 52
-#      IBUF                        : 17
+# IO Buffers                       : 55
+#      IBUF                        : 1
 #      IBUFG                       : 1
-#      OBUF                        : 34
+#      IOBUF                       : 17
+#      OBUF                        : 36
 # DCMs                             : 1
 #      DCM_SP                      : 1
 # Others                           : 1
@@ -580,20 +774,20 @@ Selected Device : 6slx9ftg256-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             239  out of  11440     2%  
- Number of Slice LUTs:                  493  out of   5720     8%  
-    Number used as Logic:               493  out of   5720     8%  
+ Number of Slice Registers:             245  out of  11440     2%  
+ Number of Slice LUTs:                  471  out of   5720     8%  
+    Number used as Logic:               471  out of   5720     8%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    539
-   Number with an unused Flip Flop:     300  out of    539    55%  
-   Number with an unused LUT:            46  out of    539     8%  
-   Number of fully used LUT-FF pairs:   193  out of    539    35%  
+ Number of LUT Flip Flop pairs used:    519
+   Number with an unused Flip Flop:     274  out of    519    52%  
+   Number with an unused LUT:            48  out of    519     9%  
+   Number of fully used LUT-FF pairs:   197  out of    519    37%  
    Number of unique control sets:        21
 
 IO Utilization: 
- Number of IOs:                          53
- Number of bonded IOBs:                  52  out of    186    27%  
+ Number of IOs:                          60
+ Number of bonded IOBs:                  55  out of    186    29%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
@@ -617,11 +811,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------+------------------------+-------+
-Clock Signal                               | Clock buffer(FF name)  | Load  |
--------------------------------------------+------------------------+-------+
-Inst_DAC_top/inst_DMC/pll_base_inst/CLKOUT0| BUFG                   | 241   |
--------------------------------------------+------------------------+-------+
+-------------------------------------------+----------------------------------------------------------+-------+
+Clock Signal                               | Clock buffer(FF name)                                    | Load  |
+-------------------------------------------+----------------------------------------------------------+-------+
+Inst_DAC_top/inst_DMC/pll_base_inst/CLKOUT0| BUFG                                                     | 234   |
+Inst_CLK_div/clk_400k                      | NONE(Inst_IO_explander_interface/crnt_I2C_state_FSM_FFd6)| 13    |
+-------------------------------------------+----------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -631,10 +827,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.543ns (Maximum Frequency: 152.823MHz)
-   Minimum input arrival time before clock: 5.013ns
-   Maximum output required time after clock: 6.032ns
-   Maximum combinational path delay: No path found
+   Minimum period: 6.521ns (Maximum Frequency: 153.361MHz)
+   Minimum input arrival time before clock: 5.128ns
+   Maximum output required time after clock: 6.056ns
+   Maximum combinational path delay: 5.056ns
 
 Timing Details:
 ---------------
@@ -642,10 +838,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Inst_DAC_top/inst_DMC/pll_base_inst/CLKOUT0'
-  Clock period: 6.543ns (frequency: 152.823MHz)
-  Total number of paths / destination ports: 12100 / 442
+  Clock period: 6.521ns (frequency: 153.361MHz)
+  Total number of paths / destination ports: 10321 / 421
 -------------------------------------------------------------------------
-Delay:               6.543ns (Levels of Logic = 6)
+Delay:               6.521ns (Levels of Logic = 6)
   Source:            Inst_SDRAMInterface/byteout_7 (FF)
   Destination:       Inst_controlunit/current_cnt_3 (FF)
   Source Clock:      Inst_DAC_top/inst_DMC/pll_base_inst/CLKOUT0 rising
@@ -656,81 +852,172 @@ Delay:               6.543ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             9   0.447   1.058  Inst_SDRAMInterface/byteout_7 (Inst_SDRAMInterface/byteout_7)
-     LUT4:I1->O           16   0.205   1.005  Inst_controlunit/n0012<7>11 (Inst_controlunit/n0012<7>1)
+     LUT4:I1->O           15   0.205   0.982  Inst_controlunit/n0012<7>11 (Inst_controlunit/n0012<7>1)
      LUT5:I4->O            4   0.205   0.684  Inst_controlunit/n0012<7>2 (Inst_controlunit/n0012)
-     LUT6:I5->O            2   0.205   0.721  Inst_controlunit/Mmux_GND_22_o_nxt_cnt[3]_mux_184_OUT18411 (Inst_controlunit/Mmux_GND_22_o_nxt_cnt[3]_mux_184_OUT1841)
-     LUT6:I4->O            1   0.203   0.580  Inst_controlunit/Mmux_GND_22_o_nxt_cnt[3]_mux_184_OUT187116 (Inst_controlunit/Mmux_GND_22_o_nxt_cnt[3]_mux_184_OUT187116)
-     LUT4:I3->O            2   0.205   0.721  Inst_controlunit/Mmux_GND_22_o_nxt_cnt[3]_mux_184_OUT187117 (Inst_controlunit/Mmux_GND_22_o_nxt_cnt[3]_mux_184_OUT18711)
-     LUT6:I4->O            1   0.203   0.000  Inst_controlunit/Mmux_GND_22_o_nxt_cnt[3]_mux_184_OUT247 (Inst_controlunit/GND_22_o_nxt_cnt[3]_mux_184_OUT<3>)
+     LUT6:I5->O            2   0.205   0.721  Inst_controlunit/Mmux_GND_32_o_nxt_cnt[3]_mux_184_OUT18411 (Inst_controlunit/Mmux_GND_32_o_nxt_cnt[3]_mux_184_OUT1841)
+     LUT6:I4->O            1   0.203   0.580  Inst_controlunit/Mmux_GND_32_o_nxt_cnt[3]_mux_184_OUT187116 (Inst_controlunit/Mmux_GND_32_o_nxt_cnt[3]_mux_184_OUT187116)
+     LUT4:I3->O            2   0.205   0.721  Inst_controlunit/Mmux_GND_32_o_nxt_cnt[3]_mux_184_OUT187117 (Inst_controlunit/Mmux_GND_32_o_nxt_cnt[3]_mux_184_OUT18711)
+     LUT6:I4->O            1   0.203   0.000  Inst_controlunit/Mmux_GND_32_o_nxt_cnt[3]_mux_184_OUT247 (Inst_controlunit/GND_32_o_nxt_cnt[3]_mux_184_OUT<3>)
      FDCE:D                    0.102          Inst_controlunit/current_cnt_3
     ----------------------------------------
-    Total                      6.543ns (1.775ns logic, 4.769ns route)
-                                       (27.1% logic, 72.9% route)
+    Total                      6.521ns (1.775ns logic, 4.746ns route)
+                                       (27.2% logic, 72.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_CLK_div/clk_400k'
+  Clock period: 5.538ns (frequency: 180.587MHz)
+  Total number of paths / destination ports: 54 / 18
+-------------------------------------------------------------------------
+Delay:               2.769ns (Levels of Logic = 1)
+  Source:            Inst_IO_explander_interface/crnt_I2C_state_FSM_FFd3 (FF)
+  Destination:       Inst_IO_explander_interface/Inst_I2CInterface/crnt_state_FSM_FFd2 (FF)
+  Source Clock:      Inst_CLK_div/clk_400k rising
+  Destination Clock: Inst_CLK_div/clk_400k falling
+
+  Data Path: Inst_IO_explander_interface/crnt_I2C_state_FSM_FFd3 to Inst_IO_explander_interface/Inst_I2CInterface/crnt_state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.447   0.973  Inst_IO_explander_interface/crnt_I2C_state_FSM_FFd3 (Inst_IO_explander_interface/crnt_I2C_state_FSM_FFd3)
+     LUT3:I0->O            5   0.205   0.714  Inst_IO_explander_interface/Inst_I2CInterface/rst_inv1 (Inst_IO_explander_interface/Inst_I2CInterface/rst_inv)
+     FDC_1:CLR                 0.430          Inst_IO_explander_interface/Inst_I2CInterface/crnt_cnt_0
+    ----------------------------------------
+    Total                      2.769ns (1.082ns logic, 1.687ns route)
+                                       (39.1% logic, 60.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_DAC_top/inst_DMC/pll_base_inst/CLKOUT0'
-  Total number of paths / destination ports: 271 / 254
+  Total number of paths / destination ports: 270 / 248
 -------------------------------------------------------------------------
-Offset:              5.013ns (Levels of Logic = 2)
+Offset:              5.128ns (Levels of Logic = 2)
   Source:            rst (PAD)
-  Destination:       Inst_SDRAMInterface/current_state_FSM_FFd1 (FF)
+  Destination:       Inst_CLK_div/cnt_0 (FF)
   Destination Clock: Inst_DAC_top/inst_DMC/pll_base_inst/CLKOUT0 rising
 
-  Data Path: rst to Inst_SDRAMInterface/current_state_FSM_FFd1
+  Data Path: rst to Inst_CLK_div/cnt_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            25   1.222   1.192  rst_IBUF (rst_IBUF)
-     INV:I->O            133   0.206   1.963  rst_inv1_INV_0 (Inst_DAC_top/Inst_Dataconverter/rst_inv)
-     FDC:CLR                   0.430          Inst_SDRAMInterface/MemCLK
+     IBUF:I->O            30   1.222   1.263  rst_IBUF (rst_out_OBUF)
+     INV:I->O            150   0.206   2.008  rst_inv1_INV_0 (Inst_DAC_top/Inst_Dataconverter/rst_inv)
+     FDC:CLR                   0.430          Inst_CLK_div/cnt_0
     ----------------------------------------
-    Total                      5.013ns (1.858ns logic, 3.155ns route)
-                                       (37.1% logic, 62.9% route)
+    Total                      5.128ns (1.858ns logic, 3.270ns route)
+                                       (36.2% logic, 63.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_CLK_div/clk_400k'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              5.128ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       Inst_IO_explander_interface/crnt_I2C_state_FSM_FFd6 (FF)
+  Destination Clock: Inst_CLK_div/clk_400k rising
+
+  Data Path: rst to Inst_IO_explander_interface/crnt_I2C_state_FSM_FFd6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            30   1.222   1.263  rst_IBUF (rst_out_OBUF)
+     INV:I->O            150   0.206   2.008  rst_inv1_INV_0 (Inst_DAC_top/Inst_Dataconverter/rst_inv)
+     FDC:CLR                   0.430          Inst_IO_explander_interface/crnt_state
+    ----------------------------------------
+    Total                      5.128ns (1.858ns logic, 3.270ns route)
+                                       (36.2% logic, 63.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_DAC_top/inst_DMC/pll_base_inst/CLKOUT0'
-  Total number of paths / destination ports: 29 / 26
+  Total number of paths / destination ports: 27 / 24
 -------------------------------------------------------------------------
-Offset:              6.032ns (Levels of Logic = 2)
-  Source:            Inst_controlunit/current_state_FSM_FFd2 (FF)
+Offset:              6.056ns (Levels of Logic = 2)
+  Source:            Inst_controlunit/current_state_FSM_FFd4 (FF)
   Destination:       errorout (PAD)
   Source Clock:      Inst_DAC_top/inst_DMC/pll_base_inst/CLKOUT0 rising
 
-  Data Path: Inst_controlunit/current_state_FSM_FFd2 to errorout
+  Data Path: Inst_controlunit/current_state_FSM_FFd4 to errorout
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             81   0.447   1.980  Inst_controlunit/current_state_FSM_FFd2 (Inst_controlunit/current_state_FSM_FFd2)
-     LUT4:I1->O            9   0.205   0.829  Inst_controlunit/errorout1 (errorout_OBUF)
+     FDC:C->Q             82   0.447   2.006  Inst_controlunit/current_state_FSM_FFd4 (Inst_controlunit/current_state_FSM_FFd4)
+     LUT4:I0->O            9   0.203   0.829  Inst_controlunit/errorout1 (errorout_OBUF)
      OBUF:I->O                 2.571          errorout_OBUF (errorout)
     ----------------------------------------
-    Total                      6.032ns (3.223ns logic, 2.809ns route)
-                                       (53.4% logic, 46.6% route)
+    Total                      6.056ns (3.221ns logic, 2.835ns route)
+                                       (53.2% logic, 46.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_CLK_div/clk_400k'
+  Total number of paths / destination ports: 26 / 2
+-------------------------------------------------------------------------
+Offset:              5.944ns (Levels of Logic = 4)
+  Source:            Inst_IO_explander_interface/Inst_I2CInterface/crnt_cnt_0 (FF)
+  Destination:       SDA (PAD)
+  Source Clock:      Inst_CLK_div/clk_400k falling
+
+  Data Path: Inst_IO_explander_interface/Inst_I2CInterface/crnt_cnt_0 to SDA
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            7   0.447   1.118  Inst_IO_explander_interface/Inst_I2CInterface/crnt_cnt_0 (Inst_IO_explander_interface/Inst_I2CInterface/crnt_cnt_0)
+     LUT5:I0->O            1   0.203   0.000  Inst_IO_explander_interface/Inst_I2CInterface/Mmux_crnt_cnt[2]_Dataout[0]_Mux_4_o_31 (Inst_IO_explander_interface/Inst_I2CInterface/Mmux_crnt_cnt[2]_Dataout[0]_Mux_4_o_3)
+     MUXF7:I1->O           1   0.140   0.684  Inst_IO_explander_interface/Inst_I2CInterface/Mmux_crnt_cnt[2]_Dataout[0]_Mux_4_o_2_f7 (Inst_IO_explander_interface/Inst_I2CInterface/crnt_cnt[2]_Dataout[0]_Mux_4_o)
+     LUT3:I1->O            1   0.203   0.579  Inst_IO_explander_interface/Mmux_SDA_out13 (I2C_tristate_out)
+     IOBUF:I->IO               2.571          IOBUF_inst (SDA)
+    ----------------------------------------
+    Total                      5.944ns (3.564ns logic, 2.380ns route)
+                                       (60.0% logic, 40.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               5.056ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       rst_out (PAD)
+
+  Data Path: rst to rst_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            30   1.222   1.263  rst_IBUF (rst_out_OBUF)
+     OBUF:I->O                 2.571          rst_out_OBUF (rst_out)
+    ----------------------------------------
+    Total                      5.056ns (3.793ns logic, 1.263ns route)
+                                       (75.0% logic, 25.0% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock Inst_CLK_div/clk_400k
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+Inst_CLK_div/clk_400k|    1.829|    1.899|    2.769|         |
+---------------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock Inst_DAC_top/inst_DMC/pll_base_inst/CLKOUT0
 -------------------------------------------+---------+---------+---------+---------+
                                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------------------+---------+---------+---------+---------+
-Inst_DAC_top/inst_DMC/pll_base_inst/CLKOUT0|    6.543|    2.106|    4.654|         |
+Inst_DAC_top/inst_DMC/pll_base_inst/CLKOUT0|    6.521|    2.106|    4.409|         |
 -------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 14.89 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.74 secs
  
 --> 
 
-Total memory usage is 208528 kilobytes
+
+Total memory usage is 411220 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   23 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   97 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
 
