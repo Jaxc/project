@@ -104,28 +104,30 @@ SCL_out <= SCL when '1',
 			apbo.prdata <= x"FFFFFFFF";
 			buff <= x"FFFFFFF0";
 		elsif rising_edge(clk) then
-			if apbi.psel(pindex) = '1' then
-			if apbi.paddr(31 downto 8) = x"0000" & std_logic_vector(to_unsigned(paddr,8)) then
+			if IO_Ready = '1' then
+				if apbi.psel(pindex) = '1' then
+--					if apbi.paddr(31 downto 8) = x"0000" & std_logic_vector(to_unsigned(paddr,8)) then
+					
+						if apbi.pwrite = '1' then
+							buff 	<= apbi.pwdata;
+							I2C_address <= "0100111";--apbi.paddr(6 downto 0);
+		--					apbo.prdata <= apbi.pwdata;
+							I2C_message <= apbi.pwdata(7 downto 0);
+							start_transmission <= '1';
 				
-				if IO_Ready = '1' then
-					if apbi.pwrite = '1' then
-					buff 	<= apbi.pwdata;
-					I2C_address <= "0100111";--apbi.paddr(6 downto 0);
---					apbo.prdata <= apbi.pwdata;
-					I2C_message <= apbi.pwdata(7 downto 0);
-					start_transmission <= '1';
-				else
-					start_transmission <= '0';
-					end if;
+						end if;
+--					end if;
 				end if;
+			else
+				start_transmission <= '0';
 			end if;
-			end if;
+
 		apbo.prdata <= buff;
 		end if;
 	end process;
 
 
-test <= SCL & SCL_ena;
+test <= IO_Ready & start_transmission;
 
 
 

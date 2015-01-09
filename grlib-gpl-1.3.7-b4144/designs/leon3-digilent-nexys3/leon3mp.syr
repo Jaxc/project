@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 
@@ -845,71 +845,17 @@ WARNING:HDLCompiler:1127 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/de
 Elaborating entity <IO_expander_APB> (architecture <rtl>) with generics from library <work>.
 
 Elaborating entity <IO_explander_interface> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" Line 241: i2c_slave_address should be on the sensitivity list of the process
-INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" Line 327. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" Line 251: i2c_slave_address should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" Line 349. Case statement is complete. others clause is never selected
 
 Elaborating entity <I2CInterface> (architecture <Behavioral>) from library <work>.
-
-Elaborating entity <grethm> (architecture <rtl>) with generics from library <gaisler>.
-
-Elaborating entity <greth> (architecture <rtl>) with generics from library <gaisler>.
-
-Elaborating entity <grethc> (architecture <rtl>) with generics from library <eth>.
-WARNING:HDLCompiler:1127 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/grethc.vhd" Line 485: Assignment to vcc ignored, since the identifier is never used
-INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/grethc.vhd" Line 1218. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/grethc.vhd" Line 1446. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:1127 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/grethc.vhd" Line 490: Assignment to ovrunstop ignored, since the identifier is never used
-
-Elaborating entity <greth_tx> (architecture <rtl>) with generics from library <eth>.
-
-Elaborating entity <eth_rstgen> (architecture <rtl>) with generics from library <eth>.
-INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/greth_tx.vhd" Line 372. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/greth_tx.vhd" Line 418. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/greth_tx.vhd" Line 464. Case statement is complete. others clause is never selected
-
-Elaborating entity <greth_rx> (architecture <rtl>) with generics from library <eth>.
-
-Elaborating entity <eth_ahb_mst> (architecture <rtl>) from library <eth>.
-INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/eth_ahb_mst.vhd" Line 125. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/eth_ahb_mst.vhd" Line 136. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/grethc.vhd" Line 460: Net <tmsti2_grant> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/grethc.vhd" Line 469: Net <ahbmo2_hbusreq> does not have a driver.
-
-Elaborating entity <syncram_2p> (architecture <rtl>) with generics from library <techmap>.
-
-Elaborating entity <unisim_syncram_2p> (architecture <behav>) with generics from library <techmap>.
-
-Elaborating entity <unisim_syncram_dp> (architecture <behav>) with generics from library <techmap>.
-
-Elaborating entity <syncram_2p> (architecture <rtl>) with generics from library <techmap>.
-
-Elaborating entity <unisim_syncram_2p> (architecture <behav>) with generics from library <techmap>.
-
-Elaborating entity <generic_syncram_2p> (architecture <behav>) with generics from library <techmap>.
-
-Elaborating entity <syncram_2p> (architecture <rtl>) with generics from library <techmap>.
-
-Elaborating entity <unisim_syncram_2p> (architecture <behav>) with generics from library <techmap>.
-
-Elaborating entity <unisim_syncram_dp> (architecture <behav>) with generics from library <techmap>.
-
-Elaborating entity <clkpad> (architecture <rtl>) with generics from library <techmap>.
-
-Elaborating entity <unisim_clkpad> (architecture <rtl>) with generics from library <techmap>.
-WARNING:HDLCompiler:89 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/pads_unisim.vhd" Line 535: <ibufg> remains a black-box since it has no binding entity.
-WARNING:HDLCompiler:89 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/pads_unisim.vhd" Line 542: <bufg> remains a black-box since it has no binding entity.
-
-Elaborating entity <inpadv> (architecture <rtl>) with generics from library <techmap>.
-
-Elaborating entity <outpadv> (architecture <rtl>) with generics from library <techmap>.
 WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 155: Net <memi_data[15]> does not have a driver.
 WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 163: Net <apbo[6]_prdata[31]> does not have a driver.
 WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 165: Net <ahbso[15]_hready> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 167: Net <ahbmo[4]_hbusreq> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 167: Net <ahbmo[3]_hbusreq> does not have a driver.
 WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 169: Net <cgi_pllref> does not have a driver.
 WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 172: Net <dui_ctsn> does not have a driver.
 WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 181: Net <dsui_break> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 184: Net <ethi_gtx_clk> does not have a driver.
 WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 187: Net <gpti_wdogen> does not have a driver.
 WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 197: Net <tck> does not have a driver.
 WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 202: Net <rxd1> does not have a driver.
@@ -937,6 +883,13 @@ Synthesizing Unit <leon3mp>.
     Set property "KEEP = TRUE" for signal <lock>.
 WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <btn<4:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PhyRxd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PhyCrs> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PhyCol> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PhyTxClk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PhyRxDv> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PhyRxEr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PhyRxClk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <clkn> of the instance <clkgen0> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <clk2x> of the instance <clkgen0> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 256: Output port <sdclk> of the instance <clkgen0> is unconnected or connected to loadless signal.
@@ -999,12 +952,6 @@ INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3
 INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 411: Output port <uarto_txen> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 411: Output port <uarto_flow> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 411: Output port <uarto_rxen> of the instance <ua1.uart1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 448: Output port <etho_reset> of the instance <eth0.e1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 448: Output port <etho_tx_clk> of the instance <eth0.e1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 448: Output port <etho_gbit> of the instance <eth0.e1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 448: Output port <etho_speed> of the instance <eth0.e1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 464: Output port <lock> of the instance <ethpads.etxc_pad> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" line 466: Output port <lock> of the instance <ethpads.erxc_pad> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <memi_data(15:0)> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <memi_sd> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <memi_cb> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -1049,6 +996,11 @@ WARNING:Xst:2935 - Signal 'apbo[14]_pirq', unconnected in block 'leon3mp', is ti
 WARNING:Xst:2935 - Signal 'apbo(14)_pconfig(0)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
 WARNING:Xst:2935 - Signal 'apbo(14)_pconfig(1)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
 WARNING:Xst:2935 - Signal 'apbo[14]_pindex', unconnected in block 'leon3mp', is tied to its initial value (0000).
+WARNING:Xst:2935 - Signal 'apbo[15]_prdata', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'apbo[15]_pirq', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'apbo(15)_pconfig(0)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'apbo(15)_pconfig(1)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'apbo[15]_pindex', unconnected in block 'leon3mp', is tied to its initial value (0000).
 WARNING:Xst:2935 - Signal 'ahbso[15]_hresp', unconnected in block 'leon3mp', is tied to its initial value (00).
 WARNING:Xst:2935 - Signal 'ahbso[15]_hrdata', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
 WARNING:Xst:2935 - Signal 'ahbso[15]_hsplit', unconnected in block 'leon3mp', is tied to its initial value (0000000000000000).
@@ -1192,26 +1144,23 @@ WARNING:Xst:2935 - Signal 'ahbso(0)_hconfig(5)', unconnected in block 'leon3mp',
 WARNING:Xst:2935 - Signal 'ahbso(0)_hconfig(6)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
 WARNING:Xst:2935 - Signal 'ahbso(0)_hconfig(7)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
 WARNING:Xst:2935 - Signal 'ahbso[0]_hindex', unconnected in block 'leon3mp', is tied to its initial value (0000).
-WARNING:Xst:2935 - Signal 'ahbmo[4]_htrans', unconnected in block 'leon3mp', is tied to its initial value (00).
-WARNING:Xst:2935 - Signal 'ahbmo[4]_haddr', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'ahbmo[4]_hsize', unconnected in block 'leon3mp', is tied to its initial value (000).
-WARNING:Xst:2935 - Signal 'ahbmo[4]_hburst', unconnected in block 'leon3mp', is tied to its initial value (000).
-WARNING:Xst:2935 - Signal 'ahbmo[4]_hprot', unconnected in block 'leon3mp', is tied to its initial value (0000).
-WARNING:Xst:2935 - Signal 'ahbmo[4]_hwdata', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'ahbmo[4]_hirq', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'ahbmo(4)_hconfig(0)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'ahbmo(4)_hconfig(1)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'ahbmo(4)_hconfig(2)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'ahbmo(4)_hconfig(3)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'ahbmo(4)_hconfig(4)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'ahbmo(4)_hconfig(5)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'ahbmo(4)_hconfig(6)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'ahbmo(4)_hconfig(7)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
-WARNING:Xst:2935 - Signal 'ahbmo[4]_hindex', unconnected in block 'leon3mp', is tied to its initial value (0000).
+WARNING:Xst:2935 - Signal 'ahbmo[3]_htrans', unconnected in block 'leon3mp', is tied to its initial value (00).
+WARNING:Xst:2935 - Signal 'ahbmo[3]_haddr', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'ahbmo[3]_hsize', unconnected in block 'leon3mp', is tied to its initial value (000).
+WARNING:Xst:2935 - Signal 'ahbmo[3]_hburst', unconnected in block 'leon3mp', is tied to its initial value (000).
+WARNING:Xst:2935 - Signal 'ahbmo[3]_hprot', unconnected in block 'leon3mp', is tied to its initial value (0000).
+WARNING:Xst:2935 - Signal 'ahbmo[3]_hwdata', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'ahbmo[3]_hirq', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'ahbmo(3)_hconfig(0)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'ahbmo(3)_hconfig(1)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'ahbmo(3)_hconfig(2)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'ahbmo(3)_hconfig(3)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'ahbmo(3)_hconfig(4)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'ahbmo(3)_hconfig(5)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'ahbmo(3)_hconfig(6)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'ahbmo(3)_hconfig(7)', unconnected in block 'leon3mp', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'ahbmo[3]_hindex', unconnected in block 'leon3mp', is tied to its initial value (0000).
 WARNING:Xst:653 - Signal <cgi_clksel> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ethi_rxd(7:4)> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ethi_phyrstaddr> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ethi_edcladdr> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <memi_edac> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:2935 - Signal 'ahbso[15]_hready', unconnected in block 'leon3mp', is tied to its initial value (1).
 WARNING:Xst:2935 - Signal 'ahbso[14]_hready', unconnected in block 'leon3mp', is tied to its initial value (1).
@@ -1224,21 +1173,13 @@ WARNING:Xst:2935 - Signal 'ahbso[8]_hready', unconnected in block 'leon3mp', is 
 WARNING:Xst:2935 - Signal 'ahbso[7]_hready', unconnected in block 'leon3mp', is tied to its initial value (1).
 WARNING:Xst:2935 - Signal 'ahbso[4]_hready', unconnected in block 'leon3mp', is tied to its initial value (1).
 WARNING:Xst:2935 - Signal 'ahbso[0]_hready', unconnected in block 'leon3mp', is tied to its initial value (1).
-WARNING:Xst:2935 - Signal 'ahbmo[4]_hbusreq', unconnected in block 'leon3mp', is tied to its initial value (0).
-WARNING:Xst:2935 - Signal 'ahbmo[4]_hlock', unconnected in block 'leon3mp', is tied to its initial value (0).
-WARNING:Xst:2935 - Signal 'ahbmo[4]_hwrite', unconnected in block 'leon3mp', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'ahbmo[3]_hbusreq', unconnected in block 'leon3mp', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'ahbmo[3]_hlock', unconnected in block 'leon3mp', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'ahbmo[3]_hwrite', unconnected in block 'leon3mp', is tied to its initial value (0).
 WARNING:Xst:653 - Signal <cgi_pllref> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <dui_ctsn> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <dui_extclk> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <dsui_break> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ethi_gtx_clk> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ethi_rmii_clk> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ethi_tx_clk_90> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ethi_tx_dv> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ethi_rx_en> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ethi_mdint> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ethi_edclsepahb> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ethi_edcldisable> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <gpti_wdogen> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <tck> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <tms> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -1326,7 +1267,7 @@ Synthesizing Unit <ahbctrl>.
         iomask = 4095
         cfgaddr = 4080
         cfgmask = 4080
-        nahbm = 4
+        nahbm = 3
         nahbs = 8
         ioen = 1
         disirq = 0
@@ -1541,6 +1482,7 @@ WARNING:Xst:647 - Input <msto(4)_hconfig(5)> is never used. This port will be pr
 WARNING:Xst:647 - Input <msto(4)_hconfig(6)> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <msto(4)_hconfig(7)> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <msto[4]_hindex> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[3]_hirq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <msto(3)_hconfig(1)> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <msto(3)_hconfig(2)> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <msto(3)_hconfig(3)> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -1767,7 +1709,7 @@ WARNING:Xst:647 - Input <slvo[8]_hready> is never used. This port will be preser
     Found 1-bit 3-to-1 multiplexer for signal <slvo[2]_hconfig[5][1]_slvo[2]_hconfig[4][1]_Mux_284_o> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <slvo[2]_hconfig[5][1]_PWR_25_o_MUX_142_o> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <slvo[2]_hconfig[6][1]_slvo[2]_hconfig[5][1]_Mux_298_o> created at line 440.
-    Found 1-bit 3-to-1 multiplexer for signal <slvo[4]_hconfig[6][1]_slvo[3]_hconfig[6][1]_Mux_411_o> created at line 440.
+    Found 1-bit 3-to-1 multiplexer for signal <slvo[2]_hconfig[6][1]_PWR_25_o_MUX_146_o> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <comb.bnslave(1)> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <slvo[4]_hconfig[7][1]_slvo[3]_hconfig[7][1]_Mux_425_o> created at line 440.
     Found 1-bit 3-to-1 multiplexer for signal <slvo[5]_hconfig[4][1]_slvo[0]_hconfig[4][1]_Mux_438_o> created at line 440.
@@ -1789,7 +1731,6 @@ WARNING:Xst:647 - Input <slvo[8]_hready> is never used. This port will be preser
     Found 32-bit 4-to-1 multiplexer for signal <comb.vslvi_hwdata> created at line 643.
     Found 2-bit comparator lessequal for signal <n0010> created at line 298
     Found 2-bit comparator lessequal for signal <n0013> created at line 298
-    Found 2-bit comparator lessequal for signal <n0016> created at line 298
     Found 12-bit comparator equal for signal <r_hmaster[1]_slvo[1]_hconfig[4][31]_equal_207_o> created at line 443
     Found 12-bit comparator equal for signal <r_hmaster[1]_slvo[1]_hconfig[4][31]_equal_213_o> created at line 449
     Found 12-bit comparator equal for signal <r_hmaster[1]_slvo[1]_hconfig[5][31]_equal_221_o> created at line 443
@@ -1818,7 +1759,7 @@ WARNING:Xst:647 - Input <slvo[8]_hready> is never used. This port will be preser
     WARNING:Xst:2404 -  FFs/Latches <r_ldefmst<0:0>> (without init value) have a constant value of 0 in block <ahbctrl>.
     Summary:
 	inferred  93 D-type flip-flop(s).
-	inferred  28 Comparator(s).
+	inferred  27 Comparator(s).
 	inferred 155 Multiplexer(s).
 Unit <ahbctrl> synthesized.
 
@@ -2432,12 +2373,12 @@ WARNING:Xst:653 - Signal <cpi_dbg_fsr> is used but never assigned. This sourcele
     Found 64x2-bit Read Only RAM for signal <r_e_ctrl_inst[24]_PWR_41_o_wide_mux_481_OUT>
     Found 4x1-bit Read Only RAM for signal <r_d_cnt[1]_GND_48_o_Mux_748_o>
     Found 4x3-bit Read Only RAM for signal <GND_48_o_GND_48_o_mux_615_OUT>
-    Found 64x13-bit Read Only RAM for signal <_n5574>
-    Found 64x2-bit Read Only RAM for signal <_n5725>
-    Found 32x2-bit Read Only RAM for signal <_n5862>
-    Found 8x6-bit Read Only RAM for signal <_n5888>
-    Found 32x2-bit Read Only RAM for signal <_n5921>
-    Found 16x2-bit Read Only RAM for signal <_n5938>
+    Found 64x13-bit Read Only RAM for signal <_n5573>
+    Found 64x2-bit Read Only RAM for signal <_n5722>
+    Found 32x2-bit Read Only RAM for signal <_n5859>
+    Found 8x6-bit Read Only RAM for signal <_n5885>
+    Found 32x2-bit Read Only RAM for signal <_n5918>
+    Found 16x2-bit Read Only RAM for signal <_n5935>
     Found 32-bit 5-to-1 multiplexer for signal <r_x_npc[2]_r_d_pc[31]_wide_mux_196_OUT> created at line 2552.
     Found 1-bit 4-to-1 multiplexer for signal <r_x_rstate[1]_rp_error_Mux_340_o> created at line 2757.
     Found 2-bit 4-to-1 multiplexer for signal <r_x_rstate[1]_r_x_rstate[1]_wide_mux_341_OUT> created at line 2757.
@@ -2494,7 +2435,7 @@ WARNING:Xst:653 - Signal <cpi_dbg_fsr> is used but never assigned. This sourcele
     Found 32-bit 3-to-1 multiplexer for signal <dbgi_daddr[7]_GND_48_o_wide_mux_897_OUT> created at line 567.
     Found 32-bit 8-to-1 multiplexer for signal <dbgo_data> created at line 544.
     Found 1-bit 4-to-1 multiplexer for signal <rpin_error> created at line 975.
-    Found 32-bit 4-to-1 multiplexer for signal <_n4568> created at line 1776.
+    Found 32-bit 4-to-1 multiplexer for signal <_n4571> created at line 1776.
     Found 4-bit comparator greater for signal <r_w_s_pil[3]_irqi_irl[3]_LessThan_457_o> created at line 2418
     Found 8-bit comparator equal for signal <r_e_ctrl_rd[7]_r_x_ctrl_rd[7]_equal_520_o> created at line 2039
     Found 8-bit comparator equal for signal <GND_48_o_r_a_ctrl_rd[7]_equal_761_o> created at line 1488
@@ -2751,7 +2692,7 @@ WARNING:Xst:653 - Signal <ictrl.tag(3)> is used but never assigned. This sourcel
     Found 2-bit adder for signal <r_waddress[3]_GND_62_o_add_11_OUT> created at line 1241.
     Found 2-bit adder for signal <ictrl.xaddr_inc> created at line 1241.
     Found 9-bit adder for signal <r_faddr[8]_GND_62_o_add_77_OUT> created at line 1241.
-    Found 4x2-bit Read Only RAM for signal <_n0587>
+    Found 4x2-bit Read Only RAM for signal <_n0588>
     Found 1-bit 4-to-1 multiplexer for signal <ictrl.validv(1)> created at line 170.
     Found 1-bit 4-to-1 multiplexer for signal <ictrl.validv(0)> created at line 170.
     Found 1-bit 4-to-1 multiplexer for signal <r_istate[1]_PWR_56_o_Mux_21_o> created at line 381.
@@ -3596,7 +3537,7 @@ Synthesizing Unit <regfile_3p>.
 	no macro.
 Unit <regfile_3p> synthesized.
 
-Synthesizing Unit <syncram_2p_1>.
+Synthesizing Unit <syncram_2p>.
     Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram_2p.vhd".
         tech = 35
         abits = 8
@@ -3619,9 +3560,9 @@ WARNING:Xst:647 - Input <customclk> is never used. This port will be preserved a
 	inferred  50 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 	inferred   1 Multiplexer(s).
-Unit <syncram_2p_1> synthesized.
+Unit <syncram_2p> synthesized.
 
-Synthesizing Unit <unisim_syncram_2p_1>.
+Synthesizing Unit <unisim_syncram_2p>.
     Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd".
         abits = 8
         dbits = 32
@@ -3630,9 +3571,9 @@ Synthesizing Unit <unisim_syncram_2p_1>.
 INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd" line 623: Output port <dataout1> of the instance <a6.x0> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
-Unit <unisim_syncram_2p_1> synthesized.
+Unit <unisim_syncram_2p> synthesized.
 
-Synthesizing Unit <unisim_syncram_dp_1>.
+Synthesizing Unit <unisim_syncram_dp>.
     Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd".
         abits = 8
         dbits = 32
@@ -3640,7 +3581,7 @@ INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/u
 INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd" line 443: Output port <DOPB> of the instance <a9.x[0].r0> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
-Unit <unisim_syncram_dp_1> synthesized.
+Unit <unisim_syncram_dp> synthesized.
 
 Synthesizing Unit <cachemem>.
     Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/leon3v3/cachemem.vhd".
@@ -4553,7 +4494,7 @@ WARNING:Xst:653 - Signal <rrsbdrive> is used but never assigned. This sourceless
 	inferred 318 Multiplexer(s).
 Unit <mctrl> synthesized.
 
-Synthesizing Unit <outpadv_1>.
+Synthesizing Unit <outpadv>.
     Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/maps/outpad.vhd".
         tech = 35
         level = 0
@@ -4563,7 +4504,7 @@ Synthesizing Unit <outpadv_1>.
         width = 26
     Summary:
 	no macro.
-Unit <outpadv_1> synthesized.
+Unit <outpadv> synthesized.
 
 Synthesizing Unit <iopadv>.
     Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/maps/iopad.vhd".
@@ -4660,11 +4601,10 @@ WARNING:Xst:647 - Input <ahbi_hmastlock> is never used. This port will be preser
     Found 12-bit comparator equal for signal <r_haddr[19]_apbo[3]_pconfig[1][31]_equal_28_o> created at line 143
     Found 12-bit comparator equal for signal <r_haddr[19]_apbo[4]_pconfig[1][31]_equal_32_o> created at line 143
     Found 12-bit comparator equal for signal <r_haddr[19]_apbo[5]_pconfig[1][31]_equal_36_o> created at line 143
-    Found 12-bit comparator equal for signal <r_haddr[19]_apbo[15]_pconfig[1][31]_equal_76_o> created at line 143
     Summary:
 	inferred  91 D-type flip-flop(s).
-	inferred   7 Comparator(s).
-	inferred  48 Multiplexer(s).
+	inferred   6 Comparator(s).
+	inferred  38 Multiplexer(s).
 Unit <apbctrl> synthesized.
 
 Synthesizing Unit <irqmp>.
@@ -4854,10 +4794,10 @@ Synthesizing Unit <IO_expander_APB>.
     Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_expander_APB.vhd".
         pindex = 5
         paddr = 5
-        pmask = 4095
+        pmask = 4094
 WARNING:Xst:647 - Input <apbi_psel<0:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <apbi_psel<6:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <apbi_paddr<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <apbi_paddr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <apbi_pirq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <apbi_testin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <apbi_penable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -4883,17 +4823,18 @@ Unit <IO_expander_APB> synthesized.
 Synthesizing Unit <IO_explander_interface>.
     Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" line 347: Output port <Datain> of the instance <Inst_I2CInterface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" line 347: Output port <ACK> of the instance <Inst_I2CInterface> is unconnected or connected to loadless signal.
-    Found 3-bit register for signal <crnt_I2C_state>.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" line 369: Output port <Datain> of the instance <Inst_I2CInterface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" line 369: Output port <ACK> of the instance <Inst_I2CInterface> is unconnected or connected to loadless signal.
+    Found 4-bit register for signal <crnt_I2C_state>.
     Found 1-bit register for signal <crnt_state>.
-    Found 4x1-bit Read Only RAM for signal <crnt_I2C_state[2]_GND_382_o_Mux_19_o>
-    Found 8x12-bit Read Only RAM for signal <_n0062>
-    Found 3-bit 8-to-1 multiplexer for signal <crnt_I2C_state[2]_PWR_121_o_wide_mux_18_OUT> created at line 214.
+    Found 4x1-bit Read Only RAM for signal <crnt_I2C_state[2]_GND_382_o_Mux_22_o>
+    Found 16x14-bit Read Only RAM for signal <_n0077>
+WARNING:Xst:737 - Found 1-bit latch for signal <IO_Ready>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   2 RAM(s).
-	inferred   4 D-type flip-flop(s).
-	inferred  17 Multiplexer(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred  26 Multiplexer(s).
 Unit <IO_explander_interface> synthesized.
 
 Synthesizing Unit <I2CInterface>.
@@ -4901,828 +4842,110 @@ Synthesizing Unit <I2CInterface>.
     Found 2-bit register for signal <crnt_state>.
     Found 8-bit register for signal <Datain>.
     Found 3-bit register for signal <crnt_cnt>.
-    Found 3-bit adder for signal <crnt_cnt[2]_GND_383_o_add_1_OUT> created at line 83.
+    Found 3-bit adder for signal <crnt_cnt[2]_GND_384_o_add_1_OUT> created at line 83.
     Found 1-bit 8-to-1 multiplexer for signal <crnt_cnt[2]_Dataout[0]_Mux_4_o> created at line 85.
-    Found 1-bit 3-to-1 multiplexer for signal <SDA_direction> created at line 66.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  13 D-type flip-flop(s).
-	inferred  14 Multiplexer(s).
+	inferred  13 Multiplexer(s).
 Unit <I2CInterface> synthesized.
-
-Synthesizing Unit <grethm>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/grethm.vhd".
-        hindex = 3
-        pindex = 15
-        paddr = 15
-        pmask = 4095
-        pirq = 12
-        memtech = 35
-        ifg_gap = 24
-        attempt_limit = 16
-        backoff_limit = 10
-        slot_time = 128
-        mdcscaler = 50
-        enable_mdio = 1
-        fifosize = 4
-        nsync = 1
-        edcl = 1
-        edclbufsz = 2
-        burstlength = 32
-        macaddrh = 131072
-        macaddrl = 0
-        ipaddrh = 49320
-        ipaddrl = 51
-        phyrstadr = 7
-        rmii = 0
-        sim = 0
-        giga = 0
-        oepol = 0
-        scanen = 0
-        ft = 0
-        edclft = 0
-        mdint_pol = 0
-        enable_mdint = 0
-        multicast = 0
-        ramdebug = 0
-        mdiohold = 1
-        maxsize = 1500
-        gmiimode = 0
-    Summary:
-	no macro.
-Unit <grethm> synthesized.
-
-Synthesizing Unit <greth>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd".
-        hindex = 3
-        pindex = 15
-        paddr = 15
-        pmask = 4095
-        pirq = 12
-        memtech = 35
-        ifg_gap = 24
-        attempt_limit = 16
-        backoff_limit = 10
-        slot_time = 128
-        mdcscaler = 50
-        enable_mdio = 1
-        fifosize = 4
-        nsync = 1
-        edcl = 1
-        edclbufsz = 2
-        macaddrh = 131072
-        macaddrl = 0
-        ipaddrh = 49320
-        ipaddrl = 51
-        phyrstadr = 7
-        rmii = 0
-        oepol = 0
-        scanen = 0
-        ft = 0
-        edclft = 0
-        mdint_pol = 0
-        enable_mdint = 0
-        multicast = 0
-        ramdebug = 0
-        mdiohold = 1
-        maxsize = 1500
-        gmiimode = 0
-WARNING:Xst:647 - Input <ahbmi_hgrant<0:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ahbmi_hgrant<4:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ahbmi_hirq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ahbmi_testin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <apbi_psel<0:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <apbi_pirq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <apbi_testin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ethi_rxd<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ahbmi_scanen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <apbi_testen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <apbi_testrst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <apbi_scanen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <apbi_testoen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ethi_gtx_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ethi_tx_clk_90> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 155: Output port <ehtrans> of the instance <ethc0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 155: Output port <ehaddr> of the instance <ethc0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 155: Output port <ehsize> of the instance <ethc0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 155: Output port <ehburst> of the instance <ethc0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 155: Output port <ehprot> of the instance <ethc0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 155: Output port <ehwdata> of the instance <ethc0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 155: Output port <ehbusreq> of the instance <ethc0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 155: Output port <ehlock> of the instance <ethc0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 155: Output port <ehwrite> of the instance <ethc0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 305: Output port <customout> of the instance <nft.tx_fifo0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 310: Output port <customout> of the instance <nft.rx_fifo0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 319: Output port <customout> of the instance <edclramnft.r0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd" line 322: Output port <customout> of the instance <edclramnft.r1> is unconnected or connected to loadless signal.
-    Summary:
-	no macro.
-Unit <greth> synthesized.
-
-Synthesizing Unit <grethc>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/grethc.vhd".
-WARNING:Xst:37 - Detected unknown constraint/property "sync_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-        ifg_gap = 24
-        attempt_limit = 16
-        backoff_limit = 10
-        mdcscaler = 50
-        enable_mdio = 1
-        fifosize = 4
-        nsync = 1
-        edcl = 1
-        edclbufsz = 2
-        macaddrh = 131072
-        macaddrl = 0
-        ipaddrh = 49320
-        ipaddrl = 51
-        phyrstadr = 7
-        rmii = 0
-        oepol = 0
-        scanen = 0
-        mdint_pol = 0
-        enable_mdint = 0
-        multicast = 0
-        edclsepahbg = 0
-        ramdebug = 0
-        mdiohold = 1
-        maxsize = 1500
-        gmiimode = 0
-WARNING:Xst:37 - Detected unknown constraint/property "sync_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-WARNING:Xst:37 - Detected unknown constraint/property "async_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-WARNING:Xst:37 - Detected unknown constraint/property "sync_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-WARNING:Xst:647 - Input <ehresp> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ehrdata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <paddr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <paddr<31:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <phyrstaddr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <edcladdr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ehgrant> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ehready> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <rmii_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <mdint> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <testrst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <testen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <testoen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <edclsepahb> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <edcldisable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/grethc.vhd" line 2232: Output port <rxo_mcasthash> of the instance <rx_rmii0.rx0> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <ahbmo2_htrans> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ahbmo2_haddr> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ahbmo2_hsize> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ahbmo2_hburst> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ahbmo2_hprot> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ahbmo2_hwdata> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <tmsti2_grant> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <tmsti2_ready> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <tmsti2_error> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <tmsti2_retry> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ahbmo2_hbusreq> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ahbmo2_hlock> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <ahbmo2_hwrite> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 9-bit register for signal <n2218>.
-    Found 5-bit register for signal <r_mdio_ctrl_phyadr>.
-    Found 5-bit register for signal <r_mdio_ctrl_regadr>.
-    Found 1-bit register for signal <r_mdio_ctrl_write>.
-    Found 1-bit register for signal <r_mdio_ctrl_read>.
-    Found 16-bit register for signal <r_mdio_ctrl_data>.
-    Found 1-bit register for signal <r_mdio_ctrl_busy>.
-    Found 1-bit register for signal <r_mdio_ctrl_linkfail>.
-    Found 48-bit register for signal <r_mac_addr>.
-    Found 22-bit register for signal <r_txdesc>.
-    Found 22-bit register for signal <r_rxdesc>.
-    Found 32-bit register for signal <r_edclip>.
-    Found 7-bit register for signal <r_txdsel>.
-    Found 1-bit register for signal <r_tmsto_req>.
-    Found 1-bit register for signal <r_tmsto_write>.
-    Found 32-bit register for signal <r_tmsto_addr>.
-    Found 32-bit register for signal <r_tmsto_data>.
-    Found 4-bit register for signal <r_txdstate>.
-    Found 1-bit register for signal <r_txwrap>.
-    Found 1-bit register for signal <r_txden>.
-    Found 1-bit register for signal <r_txirq>.
-    Found 30-bit register for signal <r_txaddr>.
-    Found 11-bit register for signal <r_txlength>.
-    Found 2-bit register for signal <r_txburstcnt>.
-    Found 7-bit register for signal <r_tfwpnt>.
-    Found 7-bit register for signal <r_tfrpnt>.
-    Found 8-bit register for signal <r_tfcnt>.
-    Found 11-bit register for signal <r_txcnt>.
-    Found 1-bit register for signal <r_txstart>.
-    Found 1-bit register for signal <r_txirqgen>.
-    Found 2-bit register for signal <r_txstatus>.
-    Found 1-bit register for signal <r_txvalid>.
-    Found 32-bit register for signal <r_txdata>.
-    Found 1-bit register for signal <r_writeok>.
-    Found 1-bit register for signal <r_txread>.
-    Found 2-bit register for signal <r_txrestart>.
-    Found 2-bit register for signal <r_txdone>.
-    Found 1-bit register for signal <r_txstart_sync>.
-    Found 1-bit register for signal <r_txreadack>.
-    Found 1-bit register for signal <r_txdataav>.
-    Found 1-bit register for signal <r_txburstav>.
-    Found 1-bit register for signal <r_rxrenable>.
-    Found 7-bit register for signal <r_rxdsel>.
-    Found 1-bit register for signal <r_rmsto_req>.
-    Found 1-bit register for signal <r_rmsto_write>.
-    Found 32-bit register for signal <r_rmsto_addr>.
-    Found 32-bit register for signal <r_rmsto_data>.
-    Found 3-bit register for signal <r_rxdstate>.
-    Found 5-bit register for signal <r_rxstatus>.
-    Found 30-bit register for signal <r_rxaddr>.
-    Found 11-bit register for signal <r_rxlength>.
-    Found 11-bit register for signal <r_rxbytecount>.
-    Found 1-bit register for signal <r_rxwrap>.
-    Found 1-bit register for signal <r_rxirq>.
-    Found 2-bit register for signal <r_rfwpnt>.
-    Found 2-bit register for signal <r_rfrpnt>.
-    Found 3-bit register for signal <r_rfcnt>.
-    Found 11-bit register for signal <r_rxcnt>.
-    Found 1-bit register for signal <r_rxdoneold>.
-    Found 1-bit register for signal <r_rxdoneack>.
-    Found 1-bit register for signal <r_rxdone>.
-    Found 2-bit register for signal <r_rxstart>.
-    Found 1-bit register for signal <r_rxwrite>.
-    Found 1-bit register for signal <r_rxwriteack>.
-    Found 2-bit register for signal <r_rxburstcnt>.
-    Found 1-bit register for signal <r_addrok>.
-    Found 1-bit register for signal <r_addrdone>.
-    Found 1-bit register for signal <r_ctrlpkt>.
-    Found 1-bit register for signal <r_check>.
-    Found 32-bit register for signal <r_checkdata>.
-    Found 1-bit register for signal <r_rxden>.
-    Found 1-bit register for signal <r_gotframe>.
-    Found 1-bit register for signal <r_bcast>.
-    Found 1-bit register for signal <r_msbgood>.
-    Found 1-bit register for signal <r_rxburstav>.
-    Found 8-bit register for signal <r_mdccnt>.
-    Found 1-bit register for signal <r_mdioclk>.
-    Found 1-bit register for signal <r_mdioclkold>.
-    Found 4-bit register for signal <r_mdio_state>.
-    Found 1-bit register for signal <r_mdioo>.
-    Found 1-bit register for signal <r_mdioi>.
-    Found 1-bit register for signal <r_mdioen>.
-    Found 5-bit register for signal <r_cnt>.
-    Found 3-bit register for signal <r_duplexstate>.
-    Found 1-bit register for signal <r_disableduplex>.
-    Found 1-bit register for signal <r_init_busy>.
-    Found 5-bit register for signal <r_regaddr>.
-    Found 1-bit register for signal <r_phywr>.
-    Found 1-bit register for signal <r_rstphy>.
-    Found 5-bit register for signal <r_capbil>.
-    Found 1-bit register for signal <r_rstaneg>.
-    Found 1-bit register for signal <r_erenable>.
-    Found 4-bit register for signal <r_edclrstate>.
-    Found 1-bit register for signal <r_edclactive>.
-    Found 1-bit register for signal <r_nak>.
-    Found 1-bit register for signal <r_ewr>.
-    Found 4-bit register for signal <r_write>.
-    Found 14-bit register for signal <r_seq>.
-    Found 3-bit register for signal <r_abufs>.
-    Found 2-bit register for signal <r_tpnt>.
-    Found 2-bit register for signal <r_rpnt>.
-    Found 7-bit register for signal <r_tcnt>.
-    Found 7-bit register for signal <r_rcntm>.
-    Found 7-bit register for signal <r_rcntl>.
-    Found 18-bit register for signal <r_ipcrc>.
-    Found 16-bit register for signal <r_applength>.
-    Found 10-bit register for signal <r_oplen>.
-    Found 16-bit register for signal <r_udpsrc>.
-    Found 4-bit register for signal <r_ecnt>.
-    Found 1-bit register for signal <r_tarp>.
-    Found 1-bit register for signal <r_tnak>.
-    Found 1-bit register for signal <r_tedcl>.
-    Found 1-bit register for signal <r_edclbcast>.
-    Found 1-bit register for signal <r_etxidle>.
-    Found 1-bit register for signal <r_erxidle>.
-    Found 48-bit register for signal <r_emacaddr>.
-    Found 12-bit register for signal <n2217>.
-    Found 12-bit subtractor for signal <GND_390_o_GND_390_o_sub_235_OUT> created at line 1136.
-    Found 12-bit subtractor for signal <GND_390_o_GND_390_o_sub_237_OUT> created at line 1138.
-    Found 11-bit adder for signal <r_txcnt[10]_GND_390_o_add_62_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_txburstcnt[1]_GND_390_o_add_108_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_tfwpnt[6]_GND_390_o_add_112_OUT> created at line 1241.
-    Found 8-bit adder for signal <r_tfcnt[7]_GND_390_o_add_113_OUT> created at line 1241.
-    Found 32-bit adder for signal <r_tmsto_addr[31]_GND_390_o_add_126_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_txdsel[9]_GND_390_o_add_128_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_tpnt[1]_GND_390_o_add_136_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_tfrpnt[6]_GND_390_o_add_178_OUT> created at line 1241.
-    Found 11-bit adder for signal <r_rxcnt[10]_GND_390_o_add_192_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_rxburstcnt[1]_GND_390_o_add_238_OUT> created at line 1241.
-    Found 32-bit adder for signal <r_rmsto_addr[31]_GND_390_o_add_257_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rxdsel[9]_GND_390_o_add_261_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_rfrpnt[1]_GND_390_o_add_275_OUT> created at line 1241.
-    Found 11-bit adder for signal <r_rxcnt[10]_GND_390_o_add_277_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_rfwpnt[1]_GND_390_o_add_366_OUT> created at line 1241.
-    Found 3-bit adder for signal <r_rxdstate[2]_GND_390_o_add_367_OUT> created at line 1241.
-    Found 5-bit adder for signal <r_cnt[4]_GND_390_o_add_394_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntl[6]_GND_390_o_add_452_OUT> created at line 1241.
-    Found 18-bit adder for signal <GND_390_o_r_ipcrc[17]_add_475_OUT> created at line 280.
-    Found 7-bit adder for signal <r_rcntl[6]_GND_390_o_add_479_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntm[6]_GND_390_o_add_480_OUT> created at line 1241.
-    Found 16-bit adder for signal <GND_390_o_GND_390_o_add_489_OUT> created at line 1241.
-    Found 18-bit adder for signal <GND_390_o_r_ipcrc[17]_add_490_OUT> created at line 280.
-    Found 18-bit adder for signal <GND_390_o_GND_390_o_add_546_OUT> created at line 280.
-    Found 16-bit adder for signal <r_applength[15]_GND_390_o_add_553_OUT> created at line 1241.
-    Found 16-bit adder for signal <r_applength[15]_GND_390_o_add_554_OUT> created at line 1241.
-    Found 14-bit adder for signal <r_seq[13]_GND_390_o_add_559_OUT> created at line 1241.
-    Found 4-bit adder for signal <r_ecnt[3]_GND_390_o_add_561_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntm[6]_GND_390_o_add_562_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntl[6]_GND_390_o_add_564_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntm[6]_GND_390_o_add_569_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_rcntl[6]_GND_390_o_add_576_OUT> created at line 1241.
-    Found 3-bit adder for signal <r_abufs[2]_GND_390_o_add_592_OUT> created at line 1241.
-    Found 2-bit adder for signal <r_rpnt[1]_GND_390_o_add_593_OUT> created at line 1241.
-    Found 8-bit adder for signal <r_txdstate[3]_GND_390_o_add_633_OUT> created at line 1241.
-    Found 11-bit adder for signal <r_txlength[10]_GND_390_o_add_638_OUT> created at line 1241.
-    Found 7-bit adder for signal <r_tcnt[6]_GND_390_o_add_675_OUT> created at line 1241.
-    Found 8-bit subtractor for signal <GND_390_o_GND_390_o_sub_46_OUT(7:0)> created at line 339.
-    Found 11-bit subtractor for signal <GND_390_o_GND_390_o_sub_117_OUT(10:0)> created at line 1308.
-    Found 3-bit subtractor for signal <GND_390_o_GND_390_o_sub_136_OUT(2:0)> created at line 1308.
-    Found 8-bit subtractor for signal <GND_390_o_GND_390_o_sub_178_OUT(7:0)> created at line 1308.
-    Found 3-bit subtractor for signal <GND_390_o_GND_390_o_sub_277_OUT(2:0)> created at line 1308.
-    Found 8-bit subtractor for signal <GND_390_o_GND_390_o_sub_374_OUT(7:0)> created at line 1308.
-    Found 5-bit subtractor for signal <GND_390_o_GND_390_o_sub_406_OUT(4:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_430_OUT(6:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_443_OUT(6:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_478_OUT(6:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_479_OUT(6:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_568_OUT(6:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_390_o_GND_390_o_sub_569_OUT(6:0)> created at line 1308.
-    Found 32-bit subtractor for signal <GND_390_o_GND_390_o_sub_670_OUT(31:0)> created at line 1308.
-    Found 3-bit subtractor for signal <GND_390_o_GND_390_o_sub_685_OUT(2:0)> created at line 1308.
-    Found 2-bit subtractor for signal <GND_390_o_GND_390_o_sub_768_OUT(1:0)> created at line 1308.
-    Found 32-bit subtractor for signal <GND_390_o_GND_390_o_sub_772_OUT(31:0)> created at line 1308.
-    Found 2-bit subtractor for signal <GND_390_o_GND_390_o_sub_773_OUT(1:0)> created at line 1308.
-    Found 8x1-bit Read Only RAM for signal <r_ecnt[3]_PWR_129_o_Mux_582_o>
-    Found 16x3-bit Read Only RAM for signal <_n5250>
-    Found 32-bit 12-to-1 multiplexer for signal <comb.vprdata> created at line 694.
-    Found 4-bit 12-to-1 multiplexer for signal <r_txdstate[3]_r_txdstate[3]_mux_679_OUT> created at line 830.
-    Found 3-bit 8-to-1 multiplexer for signal <r_rxdstate[2]_r_rxdstate[2]_wide_mux_312_OUT> created at line 1054.
-    Found 1-bit 16-to-1 multiplexer for signal <r_cnt[3]_r_mdio_ctrl_data[15]_Mux_408_o> created at line 1424.
-    Found 4-bit 12-to-1 multiplexer for signal <r_mdio_state[3]_X_110_o_wide_mux_421_OUT> created at line 1327.
-    Found 4-bit 14-to-1 multiplexer for signal <r_edclrstate[3]_X_110_o_wide_mux_600_OUT> created at line 1470.
-    Found 1-bit 4-to-1 multiplexer for signal <r_tpnt[1]_r_write[3]_Mux_649_o> created at line 1760.
-    Found 8-bit comparator lessequal for signal <n0092> created at line 819
-    Found 11-bit comparator greater for signal <PWR_129_o_r_txlength[10]_LessThan_83_o> created at line 884
-    Found 11-bit comparator lessequal for signal <n0174> created at line 927
-    Found 11-bit comparator lessequal for signal <n0177> created at line 928
-    Found 11-bit comparator greater for signal <GND_390_o_r_txcnt[10]_LessThan_116_o> created at line 944
-    Found 8-bit comparator greater for signal <r_tfcnt[7]_GND_390_o_LessThan_177_o> created at line 1031
-    Found 3-bit comparator lessequal for signal <n0294> created at line 1043
-    Found 11-bit comparator lessequal for signal <n0331> created at line 1119
-    Found 12-bit comparator lessequal for signal <n0373> created at line 1135
-    Found 12-bit comparator lessequal for signal <n0377> created at line 1137
-    Found 11-bit comparator greater for signal <r_rxcnt[10]_r_rxbytecount[10]_LessThan_274_o> created at line 1209
-    Found 32-bit comparator equal for signal <r_mac_addr[47]_r_checkdata[31]_equal_341_o> created at line 1233
-    Found 16-bit comparator equal for signal <r_mac_addr[15]_r_checkdata[31]_equal_343_o> created at line 1244
-    Found 16-bit comparator greater for signal <GND_390_o_rxo_lentype[15]_LessThan_351_o> created at line 1273
-    Found 11-bit comparator greater for signal <GND_390_o_rxo_lentype[10]_LessThan_353_o> created at line 1277
-    Found 11-bit comparator not equal for signal <n0527> created at line 1278
-    Found 32-bit comparator not equal for signal <n0673> created at line 1486
-    Found 16-bit comparator not equal for signal <n0689> created at line 1504
-    Found 14-bit comparator equal for signal <r_seq[13]_rxo_dataout[31]_equal_489_o> created at line 1566
-    Found 16-bit comparator not equal for signal <n0856> created at line 1662
-    Found 16-bit comparator not equal for signal <n0859> created at line 1669
-    Summary:
-	inferred   2 RAM(s).
-	inferred  56 Adder/Subtractor(s).
-	inferred 794 D-type flip-flop(s).
-	inferred  21 Comparator(s).
-	inferred 816 Multiplexer(s).
-Unit <grethc> synthesized.
-
-Synthesizing Unit <greth_tx>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/greth_tx.vhd".
-WARNING:Xst:37 - Detected unknown constraint/property "sync_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-        ifg_gap = 24
-        attempt_limit = 16
-        backoff_limit = 10
-        nsync = 1
-        rmii = 0
-        gmiimode = 0
-WARNING:Xst:37 - Detected unknown constraint/property "sync_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-WARNING:Xst:37 - Detected unknown constraint/property "sync_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-WARNING:Xst:647 - Input <txi_speed> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <txi_datavalid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/greth_tx.vhd" line 181: Output port <rstoutraw> of the instance <tx_rst> is unconnected or connected to loadless signal.
-    Found 5-bit register for signal <r_ifg_cycls>.
-    Found 1-bit register for signal <r_deferring>.
-    Found 4-bit register for signal <r_main_state>.
-    Found 1-bit register for signal <r_transmitting>.
-    Found 1-bit register for signal <r_tx_en>.
-    Found 4-bit register for signal <r_txd>.
-    Found 4-bit register for signal <r_cnt>.
-    Found 2-bit register for signal <r_icnt>.
-    Found 32-bit register for signal <r_crc>.
-    Found 1-bit register for signal <r_crc_en>.
-    Found 11-bit register for signal <r_byte_count>.
-    Found 7-bit register for signal <r_slot_count>.
-    Found 10-bit register for signal <r_random>.
-    Found 10-bit register for signal <r_delay_val>.
-    Found 5-bit register for signal <r_retry_cnt>.
-    Found 2-bit register for signal <r_status>.
-    Found 32-bit register for signal <r_data>.
-    Found 1-bit register for signal <r_read>.
-    Found 1-bit register for signal <r_done>.
-    Found 1-bit register for signal <r_restart>.
-    Found 2-bit register for signal <r_start>.
-    Found 1-bit register for signal <r_read_ack>.
-    Found 2-bit register for signal <r_crs>.
-    Found 2-bit register for signal <r_col>.
-    Found 2-bit register for signal <r_fullduplex>.
-    Found 3-bit register for signal <r_def_state>.
-    Found 2-bit adder for signal <r_icnt[1]_GND_391_o_add_13_OUT> created at line 1241.
-    Found 11-bit adder for signal <r_byte_count[10]_GND_391_o_add_31_OUT> created at line 1241.
-    Found 4-bit adder for signal <r_cnt[3]_GND_391_o_add_36_OUT> created at line 1241.
-    Found 6-bit adder for signal <n0411> created at line 405.
-    Found 4-bit subtractor for signal <GND_391_o_GND_391_o_sub_48_OUT(3:0)> created at line 1308.
-    Found 7-bit subtractor for signal <GND_391_o_GND_391_o_sub_76_OUT(6:0)> created at line 1308.
-    Found 10-bit subtractor for signal <GND_391_o_GND_391_o_sub_78_OUT(9:0)> created at line 1308.
-    Found 5-bit subtractor for signal <GND_391_o_GND_391_o_sub_111_OUT(4:0)> created at line 1308.
-    Found 4-bit 4-to-1 multiplexer for signal <r_icnt[1]_r_data[7]_wide_mux_14_OUT> created at line 308.
-    Found 4-bit 4-to-1 multiplexer for signal <r_icnt[1]_r_data[3]_wide_mux_28_OUT> created at line 335.
-    Found 4-bit 8-to-1 multiplexer for signal <r_cnt[2]_r_crc[3]_wide_mux_46_OUT> created at line 362.
-    Found 4-bit 15-to-1 multiplexer for signal <r_main_state[3]_X_111_o_wide_mux_80_OUT> created at line 269.
-    Found 3-bit 5-to-1 multiplexer for signal <r_def_state[2]_X_111_o_wide_mux_116_OUT> created at line 426.
-    Found 11-bit comparator equal for signal <txi_len[10]_r_byte_count[10]_equal_16_o> created at line 315
-    Found 11-bit comparator greater for signal <n0060> created at line 317
-    Found 6-bit comparator greater for signal <GND_391_o_BUS_0006_LessThan_56_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_391_o_BUS_0007_LessThan_59_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_391_o_BUS_0008_LessThan_61_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_391_o_BUS_0009_LessThan_63_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_391_o_BUS_0010_LessThan_65_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_391_o_BUS_0011_LessThan_67_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_391_o_BUS_0012_LessThan_69_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_391_o_BUS_0013_LessThan_71_o> created at line 405
-    Found 6-bit comparator greater for signal <GND_391_o_BUS_0014_LessThan_73_o> created at line 405
-    Summary:
-	inferred   8 Adder/Subtractor(s).
-	inferred 147 D-type flip-flop(s).
-	inferred  11 Comparator(s).
-	inferred  77 Multiplexer(s).
-Unit <greth_tx> synthesized.
-
-Synthesizing Unit <eth_rstgen>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/eth_rstgen.vhd".
-        acthigh = 0
-    Found 5-bit register for signal <r>.
-    Found 1-bit register for signal <rstout>.
-    Summary:
-	inferred   6 D-type flip-flop(s).
-Unit <eth_rstgen> synthesized.
-
-Synthesizing Unit <greth_rx>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/greth_rx.vhd".
-WARNING:Xst:37 - Detected unknown constraint/property "sync_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-        nsync = 1
-        rmii = 0
-        multicast = 0
-        maxsize = 1500
-        gmiimode = 0
-WARNING:Xst:37 - Detected unknown constraint/property "sync_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-WARNING:Xst:37 - Detected unknown constraint/property "sync_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-WARNING:Xst:647 - Input <rxi_speed> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <rxi_rx_crs> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <rxi_rx_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/greth_rx.vhd" line 107: Output port <rstoutraw> of the instance <rx_rst> is unconnected or connected to loadless signal.
-    Found 1-bit register for signal <r_en>.
-    Found 4-bit register for signal <r_rxd>.
-    Found 4-bit register for signal <r_rxdp>.
-    Found 32-bit register for signal <r_crc>.
-    Found 1-bit register for signal <r_sync_start>.
-    Found 1-bit register for signal <r_gotframe>.
-    Found 1-bit register for signal <r_start>.
-    Found 1-bit register for signal <r_write>.
-    Found 1-bit register for signal <r_done>.
-    Found 1-bit register for signal <r_odd_nibble>.
-    Found 16-bit register for signal <r_lentype>.
-    Found 1-bit register for signal <r_ltfound>.
-    Found 11-bit register for signal <r_byte_count>.
-    Found 32-bit register for signal <r_data>.
-    Found 32-bit register for signal <r_dataout>.
-    Found 4-bit register for signal <r_rx_state>.
-    Found 4-bit register for signal <r_status>.
-    Found 1-bit register for signal <r_write_ack>.
-    Found 2-bit register for signal <r_done_ack>.
-    Found 2-bit register for signal <r_rxen>.
-    Found 1-bit register for signal <r_got4b>.
-    Found 6-bit register for signal <r_mcasthash>.
-    Found 1-bit register for signal <r_er>.
-    Found 11-bit adder for signal <r_byte_count[10]_GND_393_o_add_36_OUT> created at line 1241.
-    Found 16-bit adder for signal <r_data[31]_GND_393_o_add_82_OUT> created at line 1241.
-    Found 11-bit subtractor for signal <GND_393_o_GND_393_o_sub_58_OUT(10:0)> created at line 1308.
-    Found 11-bit comparator greater for signal <PWR_137_o_r_byte_count[10]_LessThan_33_o> created at line 248
-    Found 11-bit comparator greater for signal <r_byte_count[10]_GND_393_o_LessThan_60_o> created at line 281
-    WARNING:Xst:2404 -  FFs/Latches <r_zero<0:0>> (without init value) have a constant value of 0 in block <greth_rx>.
-    Summary:
-	inferred   3 Adder/Subtractor(s).
-	inferred 160 D-type flip-flop(s).
-	inferred   2 Comparator(s).
-	inferred 102 Multiplexer(s).
-Unit <greth_rx> synthesized.
-
-Synthesizing Unit <eth_ahb_mst>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/eth/core/eth_ahb_mst.vhd".
-WARNING:Xst:37 - Detected unknown constraint/property "sync_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-WARNING:Xst:37 - Detected unknown constraint/property "sync_set_reset". This constraint/property is not supported by the current software release and will be ignored.
-    Found 5-bit register for signal <n0109>.
-    Summary:
-	inferred   5 D-type flip-flop(s).
-	inferred  33 Multiplexer(s).
-Unit <eth_ahb_mst> synthesized.
-
-Synthesizing Unit <syncram_2p_2>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram_2p.vhd".
-        tech = 35
-        abits = 7
-        dbits = 32
-        sepclk = 0
-        wrfst = 0
-        testen = 0
-        words = 0
-        custombits = 1
-WARNING:Xst:647 - Input <testin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <customin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <customclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Summary:
-	no macro.
-Unit <syncram_2p_2> synthesized.
-
-Synthesizing Unit <unisim_syncram_2p_2>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd".
-        abits = 7
-        dbits = 32
-        sepclk = 0
-        wrfst = 0
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd" line 623: Output port <dataout1> of the instance <a6.x0> is unconnected or connected to loadless signal.
-    Summary:
-	no macro.
-Unit <unisim_syncram_2p_2> synthesized.
-
-Synthesizing Unit <unisim_syncram_dp_2>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd".
-        abits = 7
-        dbits = 32
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd" line 443: Output port <DOPA> of the instance <a9.x[0].r0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd" line 443: Output port <DOPB> of the instance <a9.x[0].r0> is unconnected or connected to loadless signal.
-    Summary:
-	no macro.
-Unit <unisim_syncram_dp_2> synthesized.
-
-Synthesizing Unit <syncram_2p_3>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram_2p.vhd".
-        tech = 35
-        abits = 2
-        dbits = 32
-        sepclk = 0
-        wrfst = 0
-        testen = 0
-        words = 0
-        custombits = 1
-WARNING:Xst:647 - Input <testin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <customin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <customclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Summary:
-	no macro.
-Unit <syncram_2p_3> synthesized.
-
-Synthesizing Unit <unisim_syncram_2p_3>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd".
-        abits = 2
-        dbits = 32
-        sepclk = 0
-        wrfst = 0
-WARNING:Xst:647 - Input <renable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Summary:
-	no macro.
-Unit <unisim_syncram_2p_3> synthesized.
-
-Synthesizing Unit <generic_syncram_2p>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/memory_inferred.vhd".
-        abits = 2
-        dbits = 32
-        sepclk = 0
-WARNING:Xst:647 - Input <rclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 4x32-bit dual-port RAM <Mram_rfd> for signal <rfd>.
-    Found 32-bit register for signal <q>.
-    Summary:
-	inferred   1 RAM(s).
-	inferred  32 D-type flip-flop(s).
-Unit <generic_syncram_2p> synthesized.
-
-Synthesizing Unit <syncram_2p_4>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram_2p.vhd".
-        tech = 35
-        abits = 9
-        dbits = 16
-        sepclk = 0
-        wrfst = 0
-        testen = 0
-        words = 0
-        custombits = 1
-WARNING:Xst:647 - Input <testin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <customin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <customclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Summary:
-	no macro.
-Unit <syncram_2p_4> synthesized.
-
-Synthesizing Unit <unisim_syncram_2p_4>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd".
-        abits = 9
-        dbits = 16
-        sepclk = 0
-        wrfst = 0
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd" line 623: Output port <dataout1> of the instance <a6.x0> is unconnected or connected to loadless signal.
-    Summary:
-	no macro.
-Unit <unisim_syncram_2p_4> synthesized.
-
-Synthesizing Unit <unisim_syncram_dp_3>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd".
-        abits = 9
-        dbits = 16
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd" line 443: Output port <DOPA> of the instance <a9.x[0].r0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd" line 443: Output port <DOPB> of the instance <a9.x[0].r0> is unconnected or connected to loadless signal.
-    Summary:
-	no macro.
-Unit <unisim_syncram_dp_3> synthesized.
-
-Synthesizing Unit <clkpad>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/maps/clkpad.vhd".
-        tech = 35
-        level = 0
-        voltage = 3
-        arch = 2
-        hf = 0
-        filter = 0
-    Summary:
-	no macro.
-Unit <clkpad> synthesized.
-
-Synthesizing Unit <unisim_clkpad>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/pads_unisim.vhd".
-        level = 0
-        voltage = 3
-        arch = 2
-        hf = 0
-        tech = 35
-    Set property "syn_noprune = true" for instance <g2.ttl0.ip>.
-WARNING:Xst:647 - Input <rstn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Summary:
-	no macro.
-Unit <unisim_clkpad> synthesized.
-
-Synthesizing Unit <inpadv>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/maps/inpad.vhd".
-        tech = 35
-        level = 0
-        voltage = 3
-        width = 4
-        filter = 0
-        strength = 0
-    Summary:
-	no macro.
-Unit <inpadv> synthesized.
-
-Synthesizing Unit <outpadv_2>.
-    Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/lib/techmap/maps/outpad.vhd".
-        tech = 35
-        level = 0
-        slew = 0
-        voltage = 3
-        strength = 12
-        width = 4
-    Summary:
-	no macro.
-Unit <outpadv_2> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 22
+# RAMs                                                 : 19
  16x1-bit single-port Read Only RAM                    : 1
+ 16x14-bit single-port Read Only RAM                   : 1
  16x2-bit single-port Read Only RAM                    : 1
- 16x3-bit single-port Read Only RAM                    : 1
  32x1-bit single-port Read Only RAM                    : 1
  32x2-bit single-port Read Only RAM                    : 2
  4x1-bit single-port Read Only RAM                     : 3
  4x2-bit single-port Read Only RAM                     : 1
  4x3-bit single-port Read Only RAM                     : 1
- 4x32-bit dual-port RAM                                : 1
  4x4-bit single-port Read Only RAM                     : 2
  64x1-bit single-port Read Only RAM                    : 1
  64x13-bit single-port Read Only RAM                   : 1
  64x2-bit single-port Read Only RAM                    : 2
- 8x1-bit single-port Read Only RAM                     : 2
- 8x12-bit single-port Read Only RAM                    : 1
+ 8x1-bit single-port Read Only RAM                     : 1
  8x6-bit single-port Read Only RAM                     : 1
 # Multipliers                                          : 1
  33x33-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 113
+# Adders/Subtractors                                   : 46
  1-bit adder                                           : 2
- 10-bit subtractor                                     : 1
- 11-bit adder                                          : 5
- 11-bit subtractor                                     : 2
- 12-bit subtractor                                     : 3
- 14-bit adder                                          : 1
- 16-bit adder                                          : 4
- 18-bit adder                                          : 3
+ 12-bit subtractor                                     : 1
  18-bit addsub                                         : 1
- 2-bit adder                                           : 13
- 2-bit subtractor                                      : 2
- 3-bit adder                                           : 14
+ 2-bit adder                                           : 6
+ 3-bit adder                                           : 12
  3-bit addsub                                          : 1
- 3-bit subtractor                                      : 5
+ 3-bit subtractor                                      : 2
  30-bit adder                                          : 5
- 32-bit adder                                          : 2
- 32-bit subtractor                                     : 3
+ 32-bit subtractor                                     : 1
  33-bit adder                                          : 3
- 4-bit adder                                           : 2
- 4-bit subtractor                                      : 2
- 5-bit adder                                           : 2
- 5-bit subtractor                                      : 2
- 6-bit adder                                           : 2
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 1
  6-bit subtractor                                      : 1
- 7-bit adder                                           : 14
- 7-bit subtractor                                      : 8
- 8-bit adder                                           : 5
- 8-bit subtractor                                      : 3
+ 7-bit adder                                           : 2
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 3
  9-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 705
- 1-bit register                                        : 386
- 10-bit register                                       : 3
- 11-bit register                                       : 9
- 12-bit register                                       : 3
- 14-bit register                                       : 2
+# Registers                                            : 533
+ 1-bit register                                        : 308
+ 11-bit register                                       : 2
+ 12-bit register                                       : 2
+ 14-bit register                                       : 1
  15-bit register                                       : 4
- 16-bit register                                       : 5
- 18-bit register                                       : 3
- 2-bit register                                        : 68
+ 16-bit register                                       : 1
+ 18-bit register                                       : 2
+ 2-bit register                                        : 50
  20-bit register                                       : 2
- 22-bit register                                       : 2
  25-bit register                                       : 1
- 3-bit register                                        : 31
- 30-bit register                                       : 16
- 32-bit register                                       : 59
+ 3-bit register                                        : 25
+ 30-bit register                                       : 14
+ 32-bit register                                       : 46
  33-bit register                                       : 2
  35-bit register                                       : 2
- 4-bit register                                        : 32
- 48-bit register                                       : 2
- 5-bit register                                        : 19
- 6-bit register                                        : 7
+ 4-bit register                                        : 21
+ 5-bit register                                        : 8
+ 6-bit register                                        : 6
  65-bit register                                       : 1
  66-bit register                                       : 1
- 7-bit register                                        : 12
- 8-bit register                                        : 31
- 9-bit register                                        : 2
-# Comparators                                          : 111
- 11-bit comparator equal                               : 1
- 11-bit comparator greater                             : 7
- 11-bit comparator lessequal                           : 3
- 11-bit comparator not equal                           : 1
- 12-bit comparator equal                               : 55
- 12-bit comparator lessequal                           : 2
- 14-bit comparator equal                               : 2
+ 7-bit register                                        : 4
+ 8-bit register                                        : 29
+ 9-bit register                                        : 1
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 75
+ 12-bit comparator equal                               : 54
+ 14-bit comparator equal                               : 1
  14-bit comparator lessequal                           : 1
- 16-bit comparator equal                               : 1
- 16-bit comparator greater                             : 1
- 16-bit comparator not equal                           : 3
  19-bit comparator equal                               : 2
  2-bit comparator equal                                : 1
- 2-bit comparator lessequal                            : 4
+ 2-bit comparator lessequal                            : 3
  2-bit comparator not equal                            : 1
  20-bit comparator equal                               : 2
- 3-bit comparator lessequal                            : 1
- 32-bit comparator equal                               : 1
- 32-bit comparator not equal                           : 1
  4-bit comparator greater                              : 1
- 6-bit comparator greater                              : 9
  8-bit comparator equal                                : 9
- 8-bit comparator greater                              : 1
- 8-bit comparator lessequal                            : 1
-# Multiplexers                                         : 3837
- 1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 2312
- 1-bit 3-to-1 multiplexer                              : 38
- 1-bit 4-to-1 multiplexer                              : 39
+# Multiplexers                                         : 2807
+ 1-bit 2-to-1 multiplexer                              : 1798
+ 1-bit 3-to-1 multiplexer                              : 37
+ 1-bit 4-to-1 multiplexer                              : 38
  1-bit 6-to-1 multiplexer                              : 1
  1-bit 7-to-1 multiplexer                              : 2
  1-bit 8-to-1 multiplexer                              : 6
- 10-bit 2-to-1 multiplexer                             : 25
+ 10-bit 2-to-1 multiplexer                             : 22
  10-bit 4-to-1 multiplexer                             : 1
- 11-bit 2-to-1 multiplexer                             : 52
+ 11-bit 2-to-1 multiplexer                             : 6
  11-bit 3-to-1 multiplexer                             : 2
  12-bit 2-to-1 multiplexer                             : 6
  128-bit 2-to-1 multiplexer                            : 4
  15-bit 2-to-1 multiplexer                             : 11
  15-bit 4-to-1 multiplexer                             : 1
- 16-bit 2-to-1 multiplexer                             : 21
- 18-bit 2-to-1 multiplexer                             : 25
+ 18-bit 2-to-1 multiplexer                             : 21
  19-bit 2-to-1 multiplexer                             : 3
- 2-bit 2-to-1 multiplexer                              : 144
+ 2-bit 2-to-1 multiplexer                              : 105
  2-bit 3-to-1 multiplexer                              : 5
  2-bit 4-to-1 multiplexer                              : 5
  2-bit 7-to-1 multiplexer                              : 1
@@ -5730,19 +4953,17 @@ Macro Statistics
  20-bit 2-to-1 multiplexer                             : 9
  24-bit 2-to-1 multiplexer                             : 2
  25-bit 2-to-1 multiplexer                             : 2
- 3-bit 2-to-1 multiplexer                              : 144
+ 3-bit 2-to-1 multiplexer                              : 75
  3-bit 3-to-1 multiplexer                              : 1
  3-bit 4-to-1 multiplexer                              : 5
- 3-bit 5-to-1 multiplexer                              : 2
+ 3-bit 5-to-1 multiplexer                              : 1
  3-bit 6-to-1 multiplexer                              : 1
  3-bit 7-to-1 multiplexer                              : 2
- 3-bit 8-to-1 multiplexer                              : 2
- 30-bit 2-to-1 multiplexer                             : 31
+ 30-bit 2-to-1 multiplexer                             : 29
  30-bit 3-to-1 multiplexer                             : 1
  30-bit 4-to-1 multiplexer                             : 1
  32-bit 11-to-1 multiplexer                            : 1
- 32-bit 12-to-1 multiplexer                            : 1
- 32-bit 2-to-1 multiplexer                             : 342
+ 32-bit 2-to-1 multiplexer                             : 267
  32-bit 3-to-1 multiplexer                             : 7
  32-bit 4-to-1 multiplexer                             : 17
  32-bit 5-to-1 multiplexer                             : 1
@@ -5751,30 +4972,24 @@ Macro Statistics
  32-bit 8-to-1 multiplexer                             : 3
  33-bit 2-to-1 multiplexer                             : 10
  35-bit 2-to-1 multiplexer                             : 2
- 4-bit 12-to-1 multiplexer                             : 2
- 4-bit 14-to-1 multiplexer                             : 1
- 4-bit 15-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 279
+ 4-bit 2-to-1 multiplexer                              : 166
  4-bit 3-to-1 multiplexer                              : 2
- 4-bit 4-to-1 multiplexer                              : 5
+ 4-bit 4-to-1 multiplexer                              : 3
  4-bit 7-to-1 multiplexer                              : 1
- 4-bit 8-to-1 multiplexer                              : 1
- 48-bit 2-to-1 multiplexer                             : 3
- 5-bit 2-to-1 multiplexer                              : 48
+ 5-bit 2-to-1 multiplexer                              : 23
  5-bit 4-to-1 multiplexer                              : 1
  6-bit 2-to-1 multiplexer                              : 32
  6-bit 3-to-1 multiplexer                              : 1
  65-bit 2-to-1 multiplexer                             : 3
- 7-bit 2-to-1 multiplexer                              : 98
- 8-bit 2-to-1 multiplexer                              : 59
+ 7-bit 2-to-1 multiplexer                              : 11
+ 8-bit 2-to-1 multiplexer                              : 44
  8-bit 4-to-1 multiplexer                              : 1
-# Xors                                                 : 118
- 1-bit xor2                                            : 114
+# Xors                                                 : 33
+ 1-bit xor2                                            : 29
  30-bit xor2                                           : 2
  32-bit xor2                                           : 2
 
 =========================================================================
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
@@ -5787,13 +5002,13 @@ INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_3> in Unit <iu> is equivalent to the
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_tt_1> in Unit <iu> is equivalent to the following 4 FFs/Latches, which will be removed : <r_a_ctrl_tt_2> <r_a_ctrl_tt_3> <r_a_ctrl_tt_4> <r_a_ctrl_tt_5> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_12> in Unit <iu> is equivalent to the following FF/Latch, which will be removed : <r_a_imm_22> 
 INFO:Xst:2261 - The FF/Latch <ar_qual_areg> in Unit <newcom.jtagcom0> is equivalent to the following FF/Latch, which will be removed : <ar_qual_dreg> 
-INFO:Xst:2261 - The FF/Latch <buff_0> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_0> 
-INFO:Xst:2261 - The FF/Latch <buff_1> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_1> 
-INFO:Xst:2261 - The FF/Latch <buff_2> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_2> 
 INFO:Xst:2261 - The FF/Latch <buff_3> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_3> 
 INFO:Xst:2261 - The FF/Latch <I2c_address_3> in Unit <Inst_IO_expander_APB> is equivalent to the following 2 FFs/Latches, which will be removed : <I2c_address_4> <I2c_address_6> 
 INFO:Xst:2261 - The FF/Latch <I2c_address_0> in Unit <Inst_IO_expander_APB> is equivalent to the following 3 FFs/Latches, which will be removed : <I2c_address_1> <I2c_address_2> <I2c_address_5> 
-INFO:Xst:2261 - The FF/Latch <r_applength_10> in Unit <ethc0> is equivalent to the following 5 FFs/Latches, which will be removed : <r_applength_11> <r_applength_12> <r_applength_13> <r_applength_14> <r_applength_15> 
+INFO:Xst:2261 - The FF/Latch <buff_0> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_0> 
+INFO:Xst:2261 - The FF/Latch <buff_1> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_1> 
+INFO:Xst:2261 - The FF/Latch <buff_2> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_2> 
+WARNING:Xst:1710 - FF/Latch <r_data_1> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_data_2> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_data_3> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_data_4> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
@@ -5816,8 +5031,6 @@ WARNING:Xst:1710 - FF/Latch <r_extclk> (without init value) has a constant value
 WARNING:Xst:1710 - FF/Latch <r_rxf_0> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_tcnt_1> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <I2c_address_3> (without init value) has a constant value of 0 in block <Inst_IO_expander_APB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <r_rxen_0> (without init value) has a constant value of 1 in block <rx_rmii0.rx0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <r_applength_10> (without init value) has a constant value of 0 in block <ethc0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_lock> (without init value) has a constant value of 0 in block <icache0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_lock> (without init value) has a constant value of 0 in block <dcache0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_tadj_0> (without init value) has a constant value of 0 in block <dcache0>. This FF/Latch will be trimmed during the optimization process.
@@ -5836,12 +5049,10 @@ WARNING:Xst:1710 - FF/Latch <tr_hmaster_3> (without init value) has a constant v
 WARNING:Xst:1710 - FF/Latch <r_dsubre_0> (without init value) has a constant value of 0 in block <x0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_dsuen_0> (without init value) has a constant value of 1 in block <x0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_data_0> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <r_data_1> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsubre_1> (without init value) has a constant value of 0 in block <x0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_ctsn_1> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsuen_1> (without init value) has a constant value of 1 in block <x0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_rxf_1> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_rxen_1> (without init value) has a constant value of 1 in block <rx_rmii0.rx0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsubre_2> (without init value) has a constant value of 0 in block <x0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsuen_2> (without init value) has a constant value of 1 in block <x0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_en_0> (without init value) has a constant value of 1 in block <x0>. This FF/Latch will be trimmed during the optimization process.
@@ -5889,25 +5100,18 @@ WARNING:Xst:2677 - Node <r_mben_3> of sequential type is unconnected in block <m
 WARNING:Xst:2677 - Node <r_haddr_0> of sequential type is unconnected in block <apb0>.
 WARNING:Xst:2677 - Node <r_haddr_1> of sequential type is unconnected in block <apb0>.
 WARNING:Xst:2677 - Node <r_rcnt_1> of sequential type is unconnected in block <ua1.uart1>.
-WARNING:Xst:2677 - Node <r_done_ack_1> of sequential type is unconnected in block <rx_rmii0.rx0>.
-WARNING:Xst:2677 - Node <r_ctrl_edcldis_1> of sequential type is unconnected in block <ethc0>.
-WARNING:Xst:2677 - Node <r_ctrl_edcldis_2> of sequential type is unconnected in block <ethc0>.
-WARNING:Xst:2677 - Node <r_ctrl_edcldis_3> of sequential type is unconnected in block <ethc0>.
-WARNING:Xst:2677 - Node <r_status_phystat_0> of sequential type is unconnected in block <ethc0>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <r_echeck> is unconnected in block <mg2.sr1>.
 WARNING:Xst:2404 -  FFs/Latches <r_a_ctrl_tt<5:1>> (without init value) have a constant value of 0 in block <iu3>.
 WARNING:Xst:2404 -  FFs/Latches <r_rcnt<1:1>> (without init value) have a constant value of 0 in block <apbuart>.
 WARNING:Xst:2404 -  FFs/Latches <r_tcnt<1:1>> (without init value) have a constant value of 0 in block <apbuart>.
 WARNING:Xst:2404 -  FFs/Latches <I2c_address<6:6>> (without init value) have a constant value of 0 in block <IO_expander_APB>.
-WARNING:Xst:2404 -  FFs/Latches <r_applength<15:10>> (without init value) have a constant value of 0 in block <grethc>.
-WARNING:Xst:2404 -  FFs/Latches <r_done_ack<1:1>> (without init value) have a constant value of 0 in block <greth_rx>.
 
 Synthesizing (advanced) Unit <IO_expander_APB>.
 The following registers are absorbed into counter <freq_cnt>: 1 register on signal <freq_cnt>.
 Unit <IO_expander_APB> synthesized (advanced).
 
 Synthesizing (advanced) Unit <IO_explander_interface>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_crnt_I2C_state[2]_GND_382_o_Mux_19_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_crnt_I2C_state[2]_GND_382_o_Mux_22_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5918,14 +5122,14 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_crnt_I2C_state[2]_GND_382_o_Mux_19_o
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0062> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0077> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 8-word x 12-bit                     |          |
+    |     aspect ratio   | 16-word x 14-bit                    |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <(crnt_I2C_state(2),crnt_I2C_state(1),crnt_I2C_state(0))> |          |
+    |     addrA          | connected to signal <(crnt_I2C_state(3),crnt_I2C_state(2),crnt_I2C_state(1),crnt_I2C_state(0))> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
@@ -5956,59 +5160,9 @@ Synthesizing (advanced) Unit <gen_mult_pipe>.
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_prod by adding 6 register level(s).
 Unit <gen_mult_pipe> synthesized (advanced).
 
-Synthesizing (advanced) Unit <generic_syncram_2p>.
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_rfwpnt> prevents it from being combined with the RAM <Mram_rfd> for implementation as read-only block RAM.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 4-word x 32-bit                     |          |
-    |     clkA           | connected to signal <wclk>          | rise     |
-    |     weA            | connected to signal <wren>          | high     |
-    |     addrA          | connected to signal <(wraddress(1),wraddress(0))> |          |
-    |     diA            | connected to signal <(data(31),data(30),data(29),data(28),data(27),data(26),data(25),data(24),data(23),data(22),data(21),data(20),data(19),data(18),data(17),data(16),data(15),data(14),data(13),data(12),data(11),data(10),data(9),data(8),data(7),data(6),data(5),data(4),data(3),data(2),data(1),data(0))> |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 4-word x 32-bit                     |          |
-    |     addrB          | connected to signal <(rdaddress(1),rdaddress(0))> |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram_rfd> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
-Unit <generic_syncram_2p> synthesized (advanced).
-
 Synthesizing (advanced) Unit <gptimer>.
 The following registers are absorbed into counter <r_tsel>: 1 register on signal <r_tsel>.
 Unit <gptimer> synthesized (advanced).
-
-Synthesizing (advanced) Unit <grethc>.
-The following registers are absorbed into counter <r_txburstcnt>: 1 register on signal <r_txburstcnt>.
-The following registers are absorbed into counter <r_rxburstcnt>: 1 register on signal <r_rxburstcnt>.
-The following registers are absorbed into counter <r_seq>: 1 register on signal <r_seq>.
-The following registers are absorbed into counter <r_tpnt>: 1 register on signal <r_tpnt>.
-The following registers are absorbed into counter <r_rpnt>: 1 register on signal <r_rpnt>.
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_ecnt> prevents it from being combined with the RAM <Mram_r_ecnt[3]_PWR_129_o_Mux_582_o> for implementation as read-only block RAM.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 8-word x 1-bit                      |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <(r_ecnt(3),r_ecnt(2),r_ecnt(1))> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_ecnt> prevents it from being combined with the RAM <Mram__n5250> for implementation as read-only block RAM.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 3-bit                     |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <(r_ecnt(3),r_ecnt(2),r_ecnt(1),r_ecnt(0))> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-Unit <grethc> synthesized (advanced).
 
 Synthesizing (advanced) Unit <iu3>.
 INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_d_cnt> prevents it from being combined with the RAM <Mram_r_d_cnt[1]_GND_48_o_Mux_748_o> for implementation as read-only block RAM.
@@ -6077,7 +5231,7 @@ INFO:Xst:3231 - The small RAM <Mram_GND_48_o_GND_48_o_mux_615_OUT> will be imple
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5574> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5573> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -6088,7 +5242,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5574> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5888> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5885> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -6099,7 +5253,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5888> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5921> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5918> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -6110,7 +5264,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5921> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5938> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5935> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -6121,7 +5275,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5938> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5725> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5722> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -6132,7 +5286,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5725> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5862> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5859> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -6177,7 +5331,7 @@ Unit <mmu_dcache> synthesized (advanced).
 Synthesizing (advanced) Unit <mmu_icache>.
 The following registers are absorbed into counter <r_rndcnt_0>: 1 register on signal <r_rndcnt_0>.
 The following registers are absorbed into counter <r_faddr>: 1 register on signal <r_faddr>.
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_istate> prevents it from being combined with the RAM <Mram__n0587> for implementation as read-only block RAM.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_istate> prevents it from being combined with the RAM <Mram__n0588> for implementation as read-only block RAM.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -6227,118 +5381,85 @@ WARNING:Xst:2677 - Node <r_readdata_28> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <r_readdata_29> of sequential type is unconnected in block <mctrl>.
 WARNING:Xst:2677 - Node <r_readdata_30> of sequential type is unconnected in block <mctrl>.
 WARNING:Xst:2677 - Node <r_readdata_31> of sequential type is unconnected in block <mctrl>.
-WARNING:Xst:2677 - Node <r_ctrl_edcldis_1> of sequential type is unconnected in block <grethc>.
-WARNING:Xst:2677 - Node <r_ctrl_edcldis_2> of sequential type is unconnected in block <grethc>.
-WARNING:Xst:2677 - Node <r_ctrl_edcldis_3> of sequential type is unconnected in block <grethc>.
-WARNING:Xst:2677 - Node <r_status_phystat_0> of sequential type is unconnected in block <grethc>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 22
+# RAMs                                                 : 19
  16x1-bit single-port distributed Read Only RAM        : 1
+ 16x14-bit single-port distributed Read Only RAM       : 1
  16x2-bit single-port distributed Read Only RAM        : 1
- 16x3-bit single-port distributed Read Only RAM        : 1
  32x1-bit single-port distributed Read Only RAM        : 1
  32x2-bit single-port distributed Read Only RAM        : 2
  4x1-bit single-port distributed Read Only RAM         : 3
  4x2-bit single-port distributed Read Only RAM         : 1
  4x3-bit single-port distributed Read Only RAM         : 1
- 4x32-bit dual-port distributed RAM                    : 1
  4x4-bit single-port distributed Read Only RAM         : 2
  64x1-bit single-port distributed Read Only RAM        : 1
  64x13-bit single-port distributed Read Only RAM       : 1
  64x2-bit single-port distributed Read Only RAM        : 2
- 8x1-bit single-port distributed Read Only RAM         : 2
- 8x12-bit single-port distributed Read Only RAM        : 1
+ 8x1-bit single-port distributed Read Only RAM         : 1
  8x6-bit single-port distributed Read Only RAM         : 1
 # Multipliers                                          : 1
  33x33-bit registered multiplier                       : 1
-# Adders/Subtractors                                   : 102
- 10-bit subtractor                                     : 1
- 11-bit adder                                          : 5
- 11-bit subtractor                                     : 2
- 12-bit subtractor                                     : 3
- 16-bit adder                                          : 4
- 18-bit adder                                          : 3
+# Adders/Subtractors                                   : 40
+ 12-bit subtractor                                     : 1
  18-bit addsub                                         : 1
- 2-bit adder                                           : 10
- 3-bit adder                                           : 14
+ 2-bit adder                                           : 5
+ 3-bit adder                                           : 12
  3-bit addsub                                          : 1
- 3-bit subtractor                                      : 4
+ 3-bit subtractor                                      : 1
  30-bit adder                                          : 5
- 32-bit adder                                          : 2
- 32-bit subtractor                                     : 3
+ 32-bit subtractor                                     : 1
  33-bit adder                                          : 1
  33-bit adder carry in                                 : 1
- 4-bit adder                                           : 2
- 4-bit subtractor                                      : 2
- 5-bit adder                                           : 2
- 5-bit subtractor                                      : 2
- 6-bit adder                                           : 2
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 1
  6-bit subtractor                                      : 1
- 7-bit adder                                           : 14
- 7-bit subtractor                                      : 8
- 8-bit adder                                           : 4
- 8-bit subtractor                                      : 3
+ 7-bit adder                                           : 2
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 2
  9-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Counters                                             : 11
+# Counters                                             : 6
  1-bit up counter                                      : 2
- 14-bit up counter                                     : 1
- 2-bit down counter                                    : 2
- 2-bit up counter                                      : 3
+ 2-bit up counter                                      : 1
  3-bit down counter                                    : 1
  8-bit up counter                                      : 1
  9-bit up counter                                      : 1
-# Registers                                            : 4302
- Flip-Flops                                            : 4302
-# Comparators                                          : 111
- 11-bit comparator equal                               : 1
- 11-bit comparator greater                             : 7
- 11-bit comparator lessequal                           : 3
- 11-bit comparator not equal                           : 1
- 12-bit comparator equal                               : 55
- 12-bit comparator lessequal                           : 2
- 14-bit comparator equal                               : 2
+# Registers                                            : 3186
+ Flip-Flops                                            : 3186
+# Comparators                                          : 75
+ 12-bit comparator equal                               : 54
+ 14-bit comparator equal                               : 1
  14-bit comparator lessequal                           : 1
- 16-bit comparator equal                               : 1
- 16-bit comparator greater                             : 1
- 16-bit comparator not equal                           : 3
  19-bit comparator equal                               : 2
  2-bit comparator equal                                : 1
- 2-bit comparator lessequal                            : 4
+ 2-bit comparator lessequal                            : 3
  2-bit comparator not equal                            : 1
  20-bit comparator equal                               : 2
- 3-bit comparator lessequal                            : 1
- 32-bit comparator equal                               : 1
- 32-bit comparator not equal                           : 1
  4-bit comparator greater                              : 1
- 6-bit comparator greater                              : 9
  8-bit comparator equal                                : 9
- 8-bit comparator greater                              : 1
- 8-bit comparator lessequal                            : 1
-# Multiplexers                                         : 4244
- 1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 2653
- 1-bit 3-to-1 multiplexer                              : 38
- 1-bit 4-to-1 multiplexer                              : 71
+# Multiplexers                                         : 3157
+ 1-bit 2-to-1 multiplexer                              : 2077
+ 1-bit 3-to-1 multiplexer                              : 37
+ 1-bit 4-to-1 multiplexer                              : 70
  1-bit 6-to-1 multiplexer                              : 33
  1-bit 7-to-1 multiplexer                              : 34
  1-bit 8-to-1 multiplexer                              : 6
- 10-bit 2-to-1 multiplexer                             : 25
+ 10-bit 2-to-1 multiplexer                             : 22
  10-bit 4-to-1 multiplexer                             : 1
- 11-bit 2-to-1 multiplexer                             : 52
+ 11-bit 2-to-1 multiplexer                             : 6
  11-bit 3-to-1 multiplexer                             : 2
  12-bit 2-to-1 multiplexer                             : 5
  128-bit 2-to-1 multiplexer                            : 4
  15-bit 2-to-1 multiplexer                             : 11
  15-bit 4-to-1 multiplexer                             : 1
- 16-bit 2-to-1 multiplexer                             : 21
- 18-bit 2-to-1 multiplexer                             : 25
+ 18-bit 2-to-1 multiplexer                             : 21
  19-bit 2-to-1 multiplexer                             : 3
- 2-bit 2-to-1 multiplexer                              : 138
+ 2-bit 2-to-1 multiplexer                              : 102
  2-bit 3-to-1 multiplexer                              : 5
  2-bit 4-to-1 multiplexer                              : 5
  2-bit 7-to-1 multiplexer                              : 1
@@ -6346,19 +5467,17 @@ Macro Statistics
  20-bit 2-to-1 multiplexer                             : 9
  24-bit 2-to-1 multiplexer                             : 2
  25-bit 2-to-1 multiplexer                             : 2
- 3-bit 2-to-1 multiplexer                              : 142
+ 3-bit 2-to-1 multiplexer                              : 73
  3-bit 3-to-1 multiplexer                              : 1
  3-bit 4-to-1 multiplexer                              : 5
- 3-bit 5-to-1 multiplexer                              : 2
+ 3-bit 5-to-1 multiplexer                              : 1
  3-bit 6-to-1 multiplexer                              : 1
  3-bit 7-to-1 multiplexer                              : 2
- 3-bit 8-to-1 multiplexer                              : 2
- 30-bit 2-to-1 multiplexer                             : 31
+ 30-bit 2-to-1 multiplexer                             : 29
  30-bit 3-to-1 multiplexer                             : 1
  30-bit 4-to-1 multiplexer                             : 1
  32-bit 11-to-1 multiplexer                            : 1
- 32-bit 12-to-1 multiplexer                            : 1
- 32-bit 2-to-1 multiplexer                             : 334
+ 32-bit 2-to-1 multiplexer                             : 261
  32-bit 3-to-1 multiplexer                             : 7
  32-bit 4-to-1 multiplexer                             : 16
  32-bit 5-to-1 multiplexer                             : 1
@@ -6367,25 +5486,20 @@ Macro Statistics
  32-bit 8-to-1 multiplexer                             : 3
  33-bit 2-to-1 multiplexer                             : 9
  35-bit 2-to-1 multiplexer                             : 2
- 4-bit 12-to-1 multiplexer                             : 2
- 4-bit 14-to-1 multiplexer                             : 1
- 4-bit 15-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 275
+ 4-bit 2-to-1 multiplexer                              : 162
  4-bit 3-to-1 multiplexer                              : 2
- 4-bit 4-to-1 multiplexer                              : 5
+ 4-bit 4-to-1 multiplexer                              : 3
  4-bit 7-to-1 multiplexer                              : 1
- 4-bit 8-to-1 multiplexer                              : 1
- 48-bit 2-to-1 multiplexer                             : 3
- 5-bit 2-to-1 multiplexer                              : 48
+ 5-bit 2-to-1 multiplexer                              : 23
  5-bit 4-to-1 multiplexer                              : 1
  6-bit 2-to-1 multiplexer                              : 30
  6-bit 3-to-1 multiplexer                              : 1
  65-bit 2-to-1 multiplexer                             : 3
- 7-bit 2-to-1 multiplexer                              : 98
- 8-bit 2-to-1 multiplexer                              : 56
+ 7-bit 2-to-1 multiplexer                              : 11
+ 8-bit 2-to-1 multiplexer                              : 41
  8-bit 4-to-1 multiplexer                              : 1
-# Xors                                                 : 118
- 1-bit xor2                                            : 114
+# Xors                                                 : 33
+ 1-bit xor2                                            : 29
  30-bit xor2                                           : 2
  32-bit xor2                                           : 2
 
@@ -6448,25 +5562,17 @@ WARNING:Xst:1710 - FF/Latch <r_mcfg2_sdren> (without init value) has a constant 
 WARNING:Xst:1710 - FF/Latch <r_rwaddr_0> (without init value) has a constant value of 0 in block <apbuart>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <I2c_address_3> (without init value) has a constant value of 0 in block <IO_expander_APB>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I2c_address_4> (without init value) has a constant value of 0 in block <IO_expander_APB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <r_rxen_0> (without init value) has a constant value of 1 in block <greth_rx>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_mcasthash_0> (without init value) has a constant value of 0 in block <greth_rx>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_mcasthash_1> (without init value) has a constant value of 0 in block <greth_rx>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_mcasthash_2> (without init value) has a constant value of 0 in block <greth_rx>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_mcasthash_3> (without init value) has a constant value of 0 in block <greth_rx>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_mcasthash_4> (without init value) has a constant value of 0 in block <greth_rx>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_mcasthash_5> (without init value) has a constant value of 0 in block <greth_rx>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_rxen_1> (without init value) has a constant value of 1 in block <greth_rx>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_0> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_rfa2_0> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_1> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_rfa2_1> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_2> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_rfa2_2> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_3> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_rfa2_3> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_12> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_imm_22> 
 INFO:Xst:2261 - The FF/Latch <ar_qual_dreg> in Unit <jtagcom2> is equivalent to the following FF/Latch, which will be removed : <ar_qual_areg> 
+INFO:Xst:2261 - The FF/Latch <buff_3> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_3> 
+INFO:Xst:2261 - The FF/Latch <I2c_address_0> in Unit <IO_expander_APB> is equivalent to the following 3 FFs/Latches, which will be removed : <I2c_address_1> <I2c_address_2> <I2c_address_5> 
 INFO:Xst:2261 - The FF/Latch <buff_0> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_0> 
 INFO:Xst:2261 - The FF/Latch <buff_1> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_1> 
 INFO:Xst:2261 - The FF/Latch <buff_2> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_2> 
-INFO:Xst:2261 - The FF/Latch <buff_3> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_3> 
-INFO:Xst:2261 - The FF/Latch <I2c_address_0> in Unit <IO_expander_APB> is equivalent to the following 3 FFs/Latches, which will be removed : <I2c_address_1> <I2c_address_2> <I2c_address_5> 
 INFO:Xst:2261 - The FF/Latch <r_data_0> in Unit <mctrl> is equivalent to the following 15 FFs/Latches, which will be removed : <r_data_1> <r_data_2> <r_data_3> <r_data_4> <r_data_5> <r_data_6> <r_data_7> <r_data_8> <r_data_9> <r_data_10> <r_data_11> <r_data_12> <r_data_13> <r_data_14> <r_data_15> 
 INFO:Xst:2261 - The FF/Latch <r_brdyn> in Unit <mctrl> is equivalent to the following FF/Latch, which will be removed : <r_bexcn> 
 INFO:Xst:2261 - The FF/Latch <r_ctsn_0> in Unit <apbuart> is equivalent to the following 2 FFs/Latches, which will be removed : <r_extclk> <r_rxf_0> 
@@ -6487,10 +5593,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_hresp_1> (without
 WARNING:Xst:1710 - FF/Latch <r_rxf_2> (without init value) has a constant value of 0 in block <apbuart>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_rxf_3> (without init value) has a constant value of 0 in block <apbuart>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_rxf_4> (without init value) has a constant value of 0 in block <apbuart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <r_regaddr_1> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_regaddr_4> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <r_capbil_0> of sequential type is unconnected in block <grethc>.
-INFO:Xst:1901 - Instance xc2v.x0/a6.x0/a9.x[0].r0 in unit syncram_2p_1 of type RAMB16_S36_S36 has been replaced by RAMB16BWER
+INFO:Xst:1901 - Instance xc2v.x0/a6.x0/a9.x[0].r0 in unit syncram_2p of type RAMB16_S36_S36 has been replaced by RAMB16BWER
 INFO:Xst:1901 - Instance ime.im0[0].idata0/xc2v.x0/a11.x[3].r in unit cachemem of type RAMB16_S9 has been replaced by RAMB16BWER
 INFO:Xst:1901 - Instance ime.im0[0].idata0/xc2v.x0/a11.x[2].r in unit cachemem of type RAMB16_S9 has been replaced by RAMB16BWER
 INFO:Xst:1901 - Instance ime.im0[0].idata0/xc2v.x0/a11.x[1].r in unit cachemem of type RAMB16_S9 has been replaced by RAMB16BWER
@@ -6512,17 +5615,12 @@ INFO:Xst:1901 - Instance tb0.mem0/mem0[1].ram0/nopar.s64.xc2v.x0/a8.r0 in unit d
 INFO:Xst:1901 - Instance clkgen0/xc3s.v/dll0 in unit leon3mp of type DCM has been replaced by DCM_SP
 INFO:Xst:1901 - Instance leon3gen.cpu[0].u0/leon3x0/tbmem_gen.tbmem0/mem0[0].ram0/nopar.s64.xc2v.x0/a8.r0 in unit leon3mp of type RAMB16_S36_S36 has been replaced by RAMB16BWER
 INFO:Xst:1901 - Instance leon3gen.cpu[0].u0/leon3x0/tbmem_gen.tbmem0/mem0[1].ram0/nopar.s64.xc2v.x0/a8.r0 in unit leon3mp of type RAMB16_S36_S36 has been replaced by RAMB16BWER
-INFO:Xst:1901 - Instance eth0.e1/m100.u0/nft.tx_fifo0/xc2v.x0/a6.x0/a9.x[0].r0 in unit leon3mp of type RAMB16_S36_S36 has been replaced by RAMB16BWER
-INFO:Xst:1901 - Instance eth0.e1/m100.u0/edclramnft.r1/xc2v.x0/a6.x0/a9.x[0].r0 in unit leon3mp of type RAMB16_S36_S36 has been replaced by RAMB16BWER
-INFO:Xst:1901 - Instance eth0.e1/m100.u0/edclramnft.r0/xc2v.x0/a6.x0/a9.x[0].r0 in unit leon3mp of type RAMB16_S36_S36 has been replaced by RAMB16BWER
 WARNING:Xst:1710 - FF/Latch <r_ramoen_1> (without init value) has a constant value of 1 in block <mctrl>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_ramoen_2> (without init value) has a constant value of 1 in block <mctrl>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_ramoen_3> (without init value) has a constant value of 1 in block <mctrl>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_ramoen_4> (without init value) has a constant value of 1 in block <mctrl>. This FF/Latch will be trimmed during the optimization process.
 
-Optimizing unit <generic_syncram_2p> ...
-
-Optimizing unit <outpadv_1> ...
+Optimizing unit <outpadv> ...
 
 Optimizing unit <iopadv> ...
 
@@ -6547,7 +5645,7 @@ Optimizing unit <mul32> ...
 
 Optimizing unit <div32> ...
 
-Optimizing unit <syncram_2p_1> ...
+Optimizing unit <syncram_2p> ...
 
 Optimizing unit <cachemem> ...
 
@@ -6580,26 +5678,6 @@ Optimizing unit <IO_expander_APB> ...
 Optimizing unit <IO_explander_interface> ...
 
 Optimizing unit <I2CInterface> ...
-
-Optimizing unit <grethc> ...
-WARNING:Xst:1710 - FF/Latch <r_rmsto_addr_0> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_rmsto_addr_1> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <r_tmsto_addr_0> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_tmsto_addr_1> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <r_mdccnt_7> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_rmsto_addr_0> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_rmsto_addr_1> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_tmsto_addr_0> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_tmsto_addr_1> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <r_mdccnt_6> (without init value) has a constant value of 0 in block <grethc>. This FF/Latch will be trimmed during the optimization process.
-
-Optimizing unit <eth_ahb_mst> ...
-
-Optimizing unit <greth_rx> ...
-
-Optimizing unit <eth_rstgen> ...
-
-Optimizing unit <greth_tx> ...
 WARNING:Xst:1710 - FF/Latch <ahb0/r_hrdatam_19> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ahb0/r_hrdatam_18> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ahb0/r_hrdatam_17> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
@@ -6613,6 +5691,7 @@ WARNING:Xst:1710 - FF/Latch <ahb0/r_hrdatam_3> (without init value) has a consta
 WARNING:Xst:1710 - FF/Latch <ahb0/r_hrdatam_2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ahb0/r_hrdatam_1> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ahb0/r_hrdatam_0> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/a0/r_retry> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <leon3gen.dsugen.dsu0/x0/r_en_0> (without init value) has a constant value of 1 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <leon3gen.dsugen.dsu0/x0/tr_hburst_2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <leon3gen.dsugen.dsu0/x0/tr_hburst_1> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
@@ -6621,7 +5700,6 @@ WARNING:Xst:1710 - FF/Latch <leon3gen.dsugen.dsu0/x0/tr_hmaster_3> (without init
 WARNING:Xst:1710 - FF/Latch <leon3gen.dsugen.dsu0/x0/tr_hmaster_2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mg2.sr1/r_hburst_2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mg2.sr1/r_hburst_1> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <eth0.e1/m100.u0/ethc0/ahb0/r_retry_0> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ahb0/r_hrdatas_27> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ahb0/r_hrdatas_25> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ahb0/r_hrdatas_23> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
@@ -6776,9 +5854,7 @@ WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I
 WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_2> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_1> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_0> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:2677 - Node <eth0.e1/m100.u0/ethc0/r_ctrl_edcldis_4> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:2677 - Node <eth0.e1/m100.u0/ethc0/r_rxrenable> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:1710 - FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/a0/r_retry> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/a0/r_retry2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <dcomgen.dcom0/ahbmst0/r_active_2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ahbjtaggen0.ahbjtag0/ahbmst0/r_active_2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mg2.sr1/r_area_1> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
@@ -6790,7 +5866,6 @@ WARNING:Xst:2677 - Node <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/r_efaddr_3>
 WARNING:Xst:2677 - Node <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/r_efaddr_2> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:2677 - Node <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/r_efaddr_1> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:2677 - Node <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/r_efaddr_0> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:1710 - FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/a0/r_retry2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <ahb0/r_hmasterlockd> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:1710 - FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/r_flushl2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_2> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_2> 
@@ -6800,10 +5875,10 @@ INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vadd
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_5> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_5> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_6> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_6> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_7> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_7> 
-INFO:Xst:2261 - The FF/Latch <Inst_IO_expander_APB/I2c_address_0> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <Inst_IO_expander_APB/Start_transmission> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_8> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_8> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_9> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_9> 
 INFO:Xst:2261 - The FF/Latch <ahb0/r_hrdatas_17> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <ahb0/r_hrdatas_16> 
+INFO:Xst:2261 - The FF/Latch <ahb0/r_hrdatas_24> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <ahb0/r_hrdatam_14> 
 INFO:Xst:2261 - The FF/Latch <ahb0/r_hmasterd_0> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.dsugen.dsu0/x0/tr_hmaster_0> 
 INFO:Xst:2261 - The FF/Latch <ahb0/r_hmasterd_1> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.dsugen.dsu0/x0/tr_hmaster_1> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/iu/r_a_ctrl_trap> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/iu/r_a_ctrl_tt> 
@@ -6817,23 +5892,19 @@ INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrf
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_waddr_7> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_waddr_7> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_0> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_0> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_1> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_1> 
-INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_2> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_2> 
+INFO:Xst:2261 - The FF/Latch <ahb0/r_hrdatam_13> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <ahb0/r_hrdatam_12> 
 INFO:Xst:2261 - The FF/Latch <ahb0/r_cfga11> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.dsugen.dsu0/x0/tr_haddr_11> 
+INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_2> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_2> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_3> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_3> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_4> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_4> 
 INFO:Xst:2261 - The FF/Latch <ahb0/r_hrdatam_16> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <ahb0/r_hrdatam_15> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_5> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_5> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_6> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_6> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_7> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_7> 
-INFO:Xst:2261 - The FF/Latch <eth0.e1/m100.u0/ethc0/r_rxlength_10> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <eth0.e1/m100.u0/ethc0/r_rxbytecount_10> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_8> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_8> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_9> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_datain_9> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_write> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_write> 
 INFO:Xst:2261 - The FF/Latch <ahb0/r_haddr_10> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.dsugen.dsu0/x0/tr_haddr_10> 
-INFO:Xst:2261 - The FF/Latch <eth0.e1/m100.u0/ethc0/r_rxlength_6> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <eth0.e1/m100.u0/ethc0/r_rxbytecount_6> 
-INFO:Xst:2261 - The FF/Latch <eth0.e1/m100.u0/ethc0/r_rxlength_7> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <eth0.e1/m100.u0/ethc0/r_rxbytecount_7> 
-INFO:Xst:2261 - The FF/Latch <eth0.e1/m100.u0/ethc0/r_rxlength_8> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <eth0.e1/m100.u0/ethc0/r_rxbytecount_8> 
-INFO:Xst:2261 - The FF/Latch <eth0.e1/m100.u0/ethc0/r_rxlength_9> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <eth0.e1/m100.u0/ethc0/r_rxbytecount_9> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_10> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_10> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_11> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_11> 
 INFO:Xst:2261 - The FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_vaddress_12> in Unit <leon3mp> is equivalent to the following FF/Latch, which will be removed : <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_waddress_12> 
@@ -6894,9 +5965,9 @@ Mapping all equations...
 Annotating constraints using XCF file 'leon3mp.xcf'
 XCF parsing done.
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block leon3mp, actual ratio is 146.
+Found area constraint ratio of 100 (+ 5) on block leon3mp, actual ratio is 104.
 Optimizing block <leon3mp> to meet ratio 100 (+ 5) of 2278 slices :
-WARNING:Xst:2254 - Area constraint could not be met for block <leon3mp>, final ratio is 146.
+Area constraint is met for block <leon3mp>, final ratio is 104.
 Replicating register mg2.sr1/r_address_26 to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_address_25 to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_address_24 to handle IOB=TRUE attribute
@@ -6940,20 +6011,13 @@ Replicating register mg2.sr1/r_writedata_19 to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_writedata_18 to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_writedata_17 to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_writedata_16 to handle IOB=TRUE attribute
-Replicating register Inst_IO_expander_APB/SCL to handle IOB=TRUE attribute
+Replicating register Inst_IO_expander_APB/Inst_IO_explander_interface/IO_Ready to handle IOB=TRUE attribute
+Replicating register Inst_IO_expander_APB/Start_transmission to handle IOB=TRUE attribute
 Replicating register leon3gen.cpu[0].u0/leon3x0/p0/iu/r_x_nerror to handle IOB=TRUE attribute
-Replicating register eth0.e1/m100.u0/ethc0/tx_rmii0.tx0/r_txd_3 to handle IOB=TRUE attribute
-Replicating register eth0.e1/m100.u0/ethc0/tx_rmii0.tx0/r_txd_2 to handle IOB=TRUE attribute
-Replicating register eth0.e1/m100.u0/ethc0/tx_rmii0.tx0/r_txd_1 to handle IOB=TRUE attribute
-Replicating register eth0.e1/m100.u0/ethc0/tx_rmii0.tx0/r_txd_0 to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_oen to handle IOB=TRUE attribute
 Replicating register mg2.sr1/r_writen to handle IOB=TRUE attribute
-Replicating register rst0/rstoutl to handle IOB=TRUE attribute
-Replicating register eth0.e1/m100.u0/ethc0/r_mdioclk to handle IOB=TRUE attribute
-Replicating register eth0.e1/m100.u0/ethc0/r_mdioo to handle IOB=TRUE attribute
 Replicating register dcomgen.dcom0/dcom_uart0/r_tshift_0 to handle IOB=TRUE attribute
 
-FlipFlop leon3gen.cpu[0].u0/leon3x0/p0/iu/r_d_set_0 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -6994,17 +6058,16 @@ Processing Unit <leon3mp> :
 	Found 2-bit shift register for signal <leon3gen.cpu[0].u0/leon3x0/p0/iu/r_e_ctrl_inst_6>.
 	Found 2-bit shift register for signal <leon3gen.cpu[0].u0/leon3x0/p0/iu/r_e_ctrl_inst_5>.
 	Found 2-bit shift register for signal <ahbjtaggen0.ahbjtag0/newcom.jtagcom0/ar_run_sync_0>.
-	Found 2-bit shift register for signal <eth0.e1/m100.u0/ethc0/tx_rmii0.tx0/r_fullduplex_1>.
 Unit <leon3mp> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 3942
- Flip-Flops                                            : 3942
-# Shift Registers                                      : 37
- 2-bit shift register                                  : 26
+# Registers                                            : 2822
+ Flip-Flops                                            : 2822
+# Shift Registers                                      : 36
+ 2-bit shift register                                  : 25
  3-bit shift register                                  : 6
  4-bit shift register                                  : 5
 
@@ -7029,45 +6092,43 @@ Top Level Output File Name         : leon3mp.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 10139
+# BELS                             : 7161
 #      GND                         : 1
-#      INV                         : 89
-#      LUT1                        : 173
-#      LUT2                        : 435
-#      LUT3                        : 842
-#      LUT4                        : 1137
-#      LUT5                        : 1994
-#      LUT6                        : 4353
-#      MUXCY                       : 538
-#      MUXF7                       : 129
-#      MUXF8                       : 1
+#      INV                         : 64
+#      LUT1                        : 68
+#      LUT2                        : 285
+#      LUT3                        : 590
+#      LUT4                        : 768
+#      LUT5                        : 1338
+#      LUT6                        : 3347
+#      MUXCY                       : 322
+#      MUXF7                       : 83
 #      VCC                         : 1
-#      XORCY                       : 446
-# FlipFlops/Latches                : 3979
-#      FD                          : 531
-#      FDC                         : 35
+#      XORCY                       : 294
+# FlipFlops/Latches                : 2860
+#      FD                          : 385
+#      FDC                         : 23
 #      FDC_1                       : 5
-#      FDCE                        : 13
-#      FDE                         : 2191
+#      FDCE                        : 14
+#      FDE                         : 1761
 #      FDP                         : 49
 #      FDPE                        : 33
-#      FDR                         : 341
-#      FDRE                        : 672
-#      FDS                         : 40
-#      FDSE                        : 69
-# RAMS                             : 32
-#      RAM16X1D                    : 2
-#      RAM32M                      : 5
-#      RAMB16BWER                  : 25
-# Shift Registers                  : 37
-#      SRLC16E                     : 37
-# Clock Buffers                    : 5
-#      BUFG                        : 5
-# IO Buffers                       : 85
-#      IBUF                        : 10
-#      IBUFG                       : 3
-#      IOBUF                       : 18
-#      OBUF                        : 54
+#      FDR                         : 172
+#      FDRE                        : 349
+#      FDS                         : 8
+#      FDSE                        : 59
+#      LD                          : 2
+# RAMS                             : 22
+#      RAMB16BWER                  : 22
+# Shift Registers                  : 36
+#      SRLC16E                     : 36
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 66
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      IOBUF                       : 17
+#      OBUF                        : 46
 # DCMs                             : 1
 #      DCM_SP                      : 1
 # DSPs                             : 4
@@ -7082,29 +6143,28 @@ Selected Device : 6slx16csg324-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            3876  out of  18224    21%  
- Number of Slice LUTs:                 9084  out of   9112    99%  
-    Number used as Logic:              9023  out of   9112    99%  
-    Number used as Memory:               61  out of   2176     2%  
-       Number used as RAM:               24
-       Number used as SRL:               37
+ Number of Slice Registers:            2774  out of  18224    15%  
+ Number of Slice LUTs:                 6496  out of   9112    71%  
+    Number used as Logic:              6460  out of   9112    70%  
+    Number used as Memory:               36  out of   2176     1%  
+       Number used as SRL:               36
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   9479
-   Number with an unused Flip Flop:    5603  out of   9479    59%  
-   Number with an unused LUT:           395  out of   9479     4%  
-   Number of fully used LUT-FF pairs:  3481  out of   9479    36%  
-   Number of unique control sets:       310
+ Number of LUT Flip Flop pairs used:   6777
+   Number with an unused Flip Flop:    4003  out of   6777    59%  
+   Number with an unused LUT:           281  out of   6777     4%  
+   Number of fully used LUT-FF pairs:  2493  out of   6777    36%  
+   Number of unique control sets:       209
 
 IO Utilization: 
  Number of IOs:                         102
- Number of bonded IOBs:                  85  out of    232    36%  
-    IOB Flip Flops/Latches:             103
+ Number of bonded IOBs:                  66  out of    232    28%  
+    IOB Flip Flops/Latches:              86
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:               25  out of     32    78%  
-    Number using Block RAM only:         25
- Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+ Number of Block RAM/FIFO:               22  out of     32    68%  
+    Number using Block RAM only:         22
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
  Number of DSP48A1s:                      4  out of     32    12%  
 
 ---------------------------
@@ -7125,15 +6185,17 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                                  | Load  |
------------------------------------+------------------------------------------------------------------------+-------+
-clk                                | clkgen0/xc3s.v/dll0:CLKFX                                              | 3609  |
-ahbjtaggen0.ahbjtag0/lltck         | BUFG                                                                   | 117   |
-Inst_IO_expander_APB/SCL_1         | NONE(Inst_IO_expander_APB/Inst_IO_explander_interface/crnt_I2C_state_2)| 9     |
-PhyRxClk                           | IBUFG+BUFG                                                             | 157   |
-PhyTxClk                           | IBUFG+BUFG                                                             | 157   |
------------------------------------+------------------------------------------------------------------------+-------+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                                                                   | Clock buffer(FF name)                                                  | Load  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+-------+
+clk                                                                                                                                                                            | clkgen0/xc3s.v/dll0:CLKFX                                              | 2790  |
+ahbjtaggen0.ahbjtag0/lltck                                                                                                                                                     | BUFG                                                                   | 117   |
+Inst_IO_expander_APB/Inst_IO_explander_interface/GND_382_o_crnt_I2C_state[3]_OR_676_o(Inst_IO_expander_APB/Inst_IO_explander_interface/GND_382_o_crnt_I2C_state[3]_OR_676_o1:O)| NONE(*)(Inst_IO_expander_APB/Inst_IO_explander_interface/IO_Ready)     | 2     |
+Inst_IO_expander_APB/SCL                                                                                                                                                       | NONE(Inst_IO_expander_APB/Inst_IO_explander_interface/crnt_I2C_state_3)| 10    |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -7144,15 +6206,15 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 10.847ns (Maximum Frequency: 92.191MHz)
+   Minimum period: 9.797ns (Maximum Frequency: 102.072MHz)
    Minimum input arrival time before clock: 6.771ns
-   Maximum output required time after clock: 8.804ns
+   Maximum output required time after clock: 9.911ns
    Maximum combinational path delay: 5.901ns
 
 =========================================================================
 Timing constraint: NET clk PERIOD = 10 nS HIGH 5 nS
   Clock period: 9.797ns (frequency: 102.072MHz)
-  Total number of paths / destination ports: 17095264 / 8499
+  Total number of paths / destination ports: 16979000 / 6606
   Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
 -------------------------------------------------------------------------
 Slack:                  0.203ns
@@ -7181,32 +6243,22 @@ Slack:                  0.203ns
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock Inst_IO_expander_APB/SCL_1
---------------------------+---------+---------+---------+---------+
-                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
---------------------------+---------+---------+---------+---------+
-Inst_IO_expander_APB/SCL_1|    3.505|    3.073|    3.615|         |
-clk                       |    6.128|         |         |         |
---------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock Inst_IO_expander_APB/Inst_IO_explander_interface/GND_382_o_crnt_I2C_state[3]_OR_676_o
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+Inst_IO_expander_APB/SCL|         |         |    2.205|         |
+------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock PhyRxClk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-PhyRxClk       |    8.198|         |         |         |
-clk            |    5.751|         |         |         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock PhyTxClk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-PhyTxClk       |   10.847|         |         |         |
-clk            |    9.814|         |         |         |
----------------+---------+---------+---------+---------+
+Clock to Setup on destination clock Inst_IO_expander_APB/SCL
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+Inst_IO_expander_APB/SCL|    3.634|    3.177|    3.794|         |
+clk                     |    5.406|         |         |         |
+------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ahbjtaggen0.ahbjtag0/lltck
 --------------------------+---------+---------+---------+---------+
@@ -7214,33 +6266,31 @@ Clock to Setup on destination clock ahbjtaggen0.ahbjtag0/lltck
 Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------+---------+---------+---------+---------+
 ahbjtaggen0.ahbjtag0/lltck|    4.832|    4.154|    4.751|         |
-clk                       |    6.128|         |    6.128|         |
+clk                       |    5.406|         |    5.406|         |
 --------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
---------------------------+---------+---------+---------+---------+
-                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
---------------------------+---------+---------+---------+---------+
-Inst_IO_expander_APB/SCL_1|    5.336|         |         |         |
-PhyRxClk                  |   14.584|         |         |         |
-PhyTxClk                  |    2.831|         |         |         |
-ahbjtaggen0.ahbjtag0/lltck|    3.539|    3.446|         |         |
-clk                       |   19.594|         |         |         |
---------------------------+---------+---------+---------+---------+
+-------------------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------------------------------------------+---------+---------+---------+---------+
+Inst_IO_expander_APB/Inst_IO_explander_interface/GND_382_o_crnt_I2C_state[3]_OR_676_o|         |    3.974|         |         |
+ahbjtaggen0.ahbjtag0/lltck                                                           |    3.539|    3.446|         |         |
+clk                                                                                  |   19.594|         |         |         |
+-------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 261.00 secs
-Total CPU time to Xst completion: 203.22 secs
+Total REAL time to Xst completion: 142.00 secs
+Total CPU time to Xst completion: 139.67 secs
  
 --> 
 
 
-Total memory usage is 727824 kilobytes
+Total memory usage is 690992 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 2351 (   0 filtered)
-Number of infos    :  409 (   0 filtered)
+Number of warnings : 2235 (   0 filtered)
+Number of infos    :  368 (   0 filtered)
 

@@ -429,7 +429,7 @@ begin
 
    -- I2C io module
 	Inst_IO_expander_APB: IO_expander_APB 
-generic map ( pindex => 5,paddr => 5)
+generic map ( pindex => 5,paddr => 5,pmask => 16#ffe#)
 PORT MAP(
 		rstn => rstn,
 		clk => clkm,

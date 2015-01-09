@@ -1,30 +1,44 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Jan  8 18:06:17 2015
+Fri Jan  9 22:40:29 2015
 
 All signals are completely routed.
 
-WARNING:ParHelpers:362 - There are 4 sourceless signals in this design. This design will not pass the DRC check run by
+WARNING:ParHelpers:362 - There are 12 sourceless signals in this design. This design will not pass the DRC check run by
    Bitgen.
 
    PhyClk25Mhz_OBUF
+   PhyMdc_OBUF
+   PhyRstn_OBUF
+   PhyTxEn_OBUF
+   PhyTxEr_OBUF
+   PhyTxd(0)_OBUF
+   PhyTxd(1)_OBUF
+   PhyTxd(2)_OBUF
+   PhyTxd(3)_OBUF
    QuadSpiFlashCS_OBUF
    QuadSpiFlashSck_OBUF
    RamWait_OBUF
-WARNING:ParHelpers:361 - There are 18 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 24 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
+   PhyCol_IBUF
+   PhyCrs_IBUF
+   PhyMdio_IBUF
+   PhyRxClk_IBUF
+   PhyRxDv_IBUF
+   PhyRxEr_IBUF
+   PhyRxd(0)_IBUF
+   PhyRxd(1)_IBUF
+   PhyRxd(2)_IBUF
+   PhyRxd(3)_IBUF
+   PhyTxClk_IBUF
    QuadSpiFlashDB(0)_IBUF
    btn(1)_IBUF
    btn(2)_IBUF
    btn(3)_IBUF
    btn(4)_IBUF
-   eth0.e1/m100.u0/nft.rx_fifo0/xc2v.x0/a0.x0/Mram_rfd1_RAMD_D1_O
-   eth0.e1/m100.u0/nft.rx_fifo0/xc2v.x0/a0.x0/Mram_rfd2_RAMD_D1_O
-   eth0.e1/m100.u0/nft.rx_fifo0/xc2v.x0/a0.x0/Mram_rfd3_RAMD_D1_O
-   eth0.e1/m100.u0/nft.rx_fifo0/xc2v.x0/a0.x0/Mram_rfd4_RAMD_D1_O
-   eth0.e1/m100.u0/nft.rx_fifo0/xc2v.x0/a0.x0/Mram_rfd5_RAMD_D1_O
    sw(0)_IBUF
    sw(1)_IBUF
    sw(2)_IBUF

@@ -35,7 +35,7 @@ entity I2CInterface is
            Dataout : in  STD_LOGIC_vector(7 downto 0);
 		   Datain : out STD_LOGIC_VECTOR(7 downto 0);
 		   SDAin : in STD_LOGIC;
-		   I2Cdirection : in STD_LOGIC;
+		   I2Cdirection : in STD_LOGIC;			-- 1 send, 0 recieve
 		   SDA_direction : out STD_LOGIC;
            SDAout : out  STD_LOGIC;
 		   done : out STD_LOGIC;
@@ -44,7 +44,7 @@ end I2CInterface;
 
 architecture Behavioral of I2CInterface is
 
-type StateType is (reset,send,ACKstate);
+type StateType is (reset,send,ACKstate,donestate);
 
 alias dataout_rev : STD_LOGIC_VECTOR(0 to 7) is Dataout;
 
@@ -67,7 +67,7 @@ begin
 	
 	when reset =>
 		done <= '0';
-		SDA_direction <= '0';
+		SDA_direction <= i2cdirection;
 		nxt.state <= send;
 		nxt.cnt <= 0;
 		SDAout <= '0';
@@ -91,6 +91,14 @@ begin
 		nxt.cnt <= 0;
 		nxt.state <= send;
 		done <= '1';
+
+	when donestate =>
+		SDA_direction <= I2Cdirection;
+		SDAout <= '0';
+		nxt.cnt <= 0;
+		nxt.state <= donestate;
+		done <= '1';
+
 	end case;
 end process;
 

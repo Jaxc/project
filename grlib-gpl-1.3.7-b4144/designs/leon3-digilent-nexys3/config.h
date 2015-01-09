@@ -209,17 +209,6 @@
  */
 #define CONFIG_DSU_UART 1
 #define CONFIG_DSU_JTAG 1
-#define CONFIG_DSU_ETH 1
-#undef  CONFIG_DSU_ETHSZ1
-#define CONFIG_DSU_ETHSZ2 1
-#undef  CONFIG_DSU_ETHSZ4
-#undef  CONFIG_DSU_ETHSZ8
-#undef  CONFIG_DSU_ETHSZ16
-#define CONFIG_DSU_IPMSB C0A8
-#define CONFIG_DSU_IPLSB 0033
-#define CONFIG_DSU_ETHMSB 020000
-#define CONFIG_DSU_ETHLSB 000000
-#undef  CONFIG_DSU_ETH_PROG
 /*
  * Peripherals             
  */
@@ -254,13 +243,7 @@
 /*
  * Ethernet             
  */
-#define CONFIG_GRETH_ENABLE 1
-#undef  CONFIG_GRETH_GIGA
-#define CONFIG_GRETH_FIFO4 1
-#undef  CONFIG_GRETH_FIFO8
-#undef  CONFIG_GRETH_FIFO16
-#undef  CONFIG_GRETH_FIFO32
-#undef  CONFIG_GRETH_FIFO64
+#undef  CONFIG_GRETH_ENABLE
 /*
  * UARTs, timers and irq control         
  */

@@ -50,7 +50,7 @@ end IO_explander_interface;
 architecture Behavioral of IO_explander_interface is
 	
 	type state_Type is (reset,idle);
-	type I2C_state_type is (start1,start2,OP,ADDRESS,Data,Data2,stop,stop2);
+	type I2C_state_type is (start1,start2,OP,ADDRESS,Data,Data2,stop,stop2,stop3);
 	
 	type record_type is
 		record
@@ -115,7 +115,7 @@ begin
 			nxt.state <= reset;
 			SCL_ena <= '0';
 			dataout <= (others => '0');
-			I2C_direction <= '1';
+			I2C_direction <= '0';
 			I2C_reset <= '0';
 			IO_ready <= '0';
 			
@@ -125,7 +125,7 @@ begin
 			nxt.state <= reset;
 			SCL_ena <= '0';
 			dataout <= (others => '0');
-			I2C_direction <= '1';
+			I2C_direction <= '0';
 			I2C_reset <= '0';
 			IO_ready <= '0';
 		
@@ -135,7 +135,7 @@ begin
 			SDA_out <= SDA_temp;
 			SCL_ena <= '1';
 			Dataout <= "0100111" & '0';
-			I2C_direction <= '1';
+			I2C_direction <= '0';
 			IO_ready <= '0';
 			if (I2C_byte_done = '1') then -- and (SDA_in = '0') then
 				nxt.I2C_state <= ADDRESS;
@@ -175,26 +175,36 @@ begin
 				nxt.I2C_state <= Data;
 				
 			end if;
+
 		
 		when stop => 
+			I2C_reset <= '0';
 			dataout <= x"00";
 			SCL_ena <= '1';
 			SDA_out <= '0';
 			I2C_direction <= '1';
-			I2C_reset <= '0';
+			IO_ready <= '0';
 			nxt.I2C_STATE <= stop2;
 			nxt.state <= reset;
-			IO_ready <= '0';
-			
+		
 		when stop2 => 
+			I2C_reset <= '0';
+			dataout <= x"00";
+			SCL_ena <= '0';
+			SDA_out <= '0';
+			I2C_direction <= '0';
+			IO_ready <= '0';
+			nxt.I2C_STATE <= stop3;
+			nxt.state <= reset;
+		
+		when stop3 => 
 			dataout <= x"00";
 			SCL_ena <= '0';
 			SDA_out <= '1';
-			I2C_direction <= '1';
+			I2C_direction <= '0';
 			I2C_reset <= '0';
-			nxt.I2C_STATE <= start1;
 			nxt.state <= idle;
-			IO_ready <= '0';			
+			nxt.I2C_STATE <= start1; -- stop3 			
 			
 		when others => 
 			dataout <= x"00";
@@ -259,8 +269,12 @@ begin
 			Dataout <= x"09";
 			I2C_direction <= '1';
 			IO_ready <= '0';
-			if (I2C_byte_done = '1') then -- and (SDA_in = '0') then
-				nxt.I2C_state <= Data;
+			if (I2C_byte_done = '1') then -- 
+				if (SDA_in = '0') then
+					nxt.I2C_state <= Data;
+				else
+					nxt.I2C_state <= stop;
+				end if;
 			else
 				nxt.I2C_state <= ADDRESS;
 			end if;
@@ -276,6 +290,7 @@ begin
 			IO_ready <= '0';
 			if (I2C_byte_done = '1')  then --and (SDA_in = '0') then
 				nxt.I2C_state <= stop;
+
 			else				
 				nxt.I2C_state <= Data;				
 			end if;
@@ -289,39 +304,46 @@ begin
 			I2C_direction <= '1';
 			SCL_ena <= '1';
 			IO_ready <= '0';
-			if (I2C_byte_done = '1')  then --and (SDA_in = '0') then
+			if (I2C_byte_done = '0')  then --and (SDA_in = '0') then
 				nxt.I2C_state <= stop;
 			else				
 				nxt.I2C_state <= Data2;				
 			end if;
 			nxt.state <= idle;		
-		
+
 		when stop => 
 			I2C_reset <= '0';
 			dataout <= x"00";
 			SCL_ena <= '0';
-			SDA_out <= '1';
+			SDA_out <= '0';
 			I2C_direction <= '1';
 			IO_ready <= '0';
 			nxt.I2C_STATE <= stop2;
 			nxt.state <= idle;
 		
 		when stop2 => 
+			I2C_reset <= '0';
+			dataout <= x"00";
+			SCL_ena <= '0';
+			SDA_out <= '0';
+			I2C_direction <= '0';
+			IO_ready <= '0';
+			nxt.I2C_STATE <= stop3;
+			nxt.state <= idle;
+		
+		when stop3 => 
 			dataout <= x"00";
 			SCL_ena <= '0';
 			SDA_out <= '1';
 			I2C_direction <= '0';
-			I2C_reset <= '0';
-			nxt.state <= idle; 	
-
-			
+			I2C_reset <= '0';		
+			nxt.state <= idle;
+			IO_Ready <= '1';	
 			if start_transmission = '1' then
 				nxt.I2C_STATE <= start1;
-				IO_Ready <= '0';
 			else
 				
-				nxt.I2C_STATE <= stop2;
-				IO_Ready <= '1';
+				nxt.I2C_STATE <= stop3;
 			end if;
 			
 		when others =>
