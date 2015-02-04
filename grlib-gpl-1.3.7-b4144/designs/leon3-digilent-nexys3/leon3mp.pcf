@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Jan 09 22:39:04 2015
+// Written by: Map P.20131013 on Sun Jan 11 16:12:29 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -2576,60 +2576,31 @@ TIMEGRP clkgen0_xc3s_v_clk0B = BEL "leon3gen.cpu[0].u0/leon3x0/rst" BEL
         "Inst_IO_expander_APB/freq_cnt_2" BEL
         "Inst_IO_expander_APB/freq_cnt_1" BEL
         "Inst_IO_expander_APB/freq_cnt_0" BEL
-        "Inst_IO_expander_APB/apbo_prdata_31" BEL
-        "Inst_IO_expander_APB/apbo_prdata_30" BEL
-        "Inst_IO_expander_APB/apbo_prdata_29" BEL
-        "Inst_IO_expander_APB/apbo_prdata_28" BEL
-        "Inst_IO_expander_APB/apbo_prdata_27" BEL
-        "Inst_IO_expander_APB/apbo_prdata_26" BEL
-        "Inst_IO_expander_APB/apbo_prdata_25" BEL
-        "Inst_IO_expander_APB/apbo_prdata_24" BEL
-        "Inst_IO_expander_APB/apbo_prdata_23" BEL
-        "Inst_IO_expander_APB/apbo_prdata_22" BEL
-        "Inst_IO_expander_APB/apbo_prdata_21" BEL
-        "Inst_IO_expander_APB/apbo_prdata_20" BEL
-        "Inst_IO_expander_APB/apbo_prdata_19" BEL
-        "Inst_IO_expander_APB/apbo_prdata_18" BEL
-        "Inst_IO_expander_APB/apbo_prdata_17" BEL
-        "Inst_IO_expander_APB/apbo_prdata_16" BEL
-        "Inst_IO_expander_APB/apbo_prdata_15" BEL
-        "Inst_IO_expander_APB/apbo_prdata_14" BEL
-        "Inst_IO_expander_APB/apbo_prdata_13" BEL
-        "Inst_IO_expander_APB/apbo_prdata_12" BEL
-        "Inst_IO_expander_APB/apbo_prdata_11" BEL
-        "Inst_IO_expander_APB/apbo_prdata_10" BEL
-        "Inst_IO_expander_APB/apbo_prdata_9" BEL
-        "Inst_IO_expander_APB/apbo_prdata_8" BEL
         "Inst_IO_expander_APB/apbo_prdata_7" BEL
-        "Inst_IO_expander_APB/apbo_prdata_6" BEL
-        "Inst_IO_expander_APB/apbo_prdata_5" BEL
-        "Inst_IO_expander_APB/apbo_prdata_4" BEL
-        "Inst_IO_expander_APB/apbo_prdata_3" BEL
-        "Inst_IO_expander_APB/apbo_prdata_2" BEL
-        "Inst_IO_expander_APB/apbo_prdata_1" BEL
         "Inst_IO_expander_APB/apbo_prdata_0" BEL
-        "Inst_IO_expander_APB/I2c_address_0" BEL
+        "Inst_IO_expander_APB/apbo_prdata_2" BEL
+        "Inst_IO_expander_APB/apbo_prdata_3" BEL
+        "Inst_IO_expander_APB/apbo_prdata_1" BEL
+        "Inst_IO_expander_APB/apbo_prdata_4" BEL
+        "Inst_IO_expander_APB/apbo_prdata_5" BEL
+        "Inst_IO_expander_APB/apbo_prdata_6" BEL
         "Inst_IO_expander_APB/Start_transmission" BEL
         "Inst_IO_expander_APB/SCL" BEL "Inst_IO_expander_APB/I2c_message_7"
         BEL "Inst_IO_expander_APB/I2c_message_6" BEL
         "Inst_IO_expander_APB/I2c_message_5" BEL
         "Inst_IO_expander_APB/I2c_message_4" BEL
-        "Inst_IO_expander_APB/buff_31" BEL "Inst_IO_expander_APB/buff_30" BEL
-        "Inst_IO_expander_APB/buff_29" BEL "Inst_IO_expander_APB/buff_28" BEL
-        "Inst_IO_expander_APB/buff_27" BEL "Inst_IO_expander_APB/buff_26" BEL
-        "Inst_IO_expander_APB/buff_25" BEL "Inst_IO_expander_APB/buff_24" BEL
-        "Inst_IO_expander_APB/buff_23" BEL "Inst_IO_expander_APB/buff_22" BEL
-        "Inst_IO_expander_APB/buff_21" BEL "Inst_IO_expander_APB/buff_20" BEL
-        "Inst_IO_expander_APB/buff_19" BEL "Inst_IO_expander_APB/buff_18" BEL
-        "Inst_IO_expander_APB/buff_17" BEL "Inst_IO_expander_APB/buff_16" BEL
-        "Inst_IO_expander_APB/buff_15" BEL "Inst_IO_expander_APB/buff_14" BEL
-        "Inst_IO_expander_APB/buff_13" BEL "Inst_IO_expander_APB/buff_12" BEL
-        "Inst_IO_expander_APB/buff_11" BEL "Inst_IO_expander_APB/buff_10" BEL
-        "Inst_IO_expander_APB/buff_9" BEL "Inst_IO_expander_APB/buff_8" BEL
-        "Inst_IO_expander_APB/buff_7" BEL "Inst_IO_expander_APB/buff_6" BEL
-        "Inst_IO_expander_APB/buff_5" BEL "Inst_IO_expander_APB/buff_4" BEL
-        "Inst_IO_expander_APB/buff_3" BEL "Inst_IO_expander_APB/buff_2" BEL
-        "Inst_IO_expander_APB/buff_1" BEL "Inst_IO_expander_APB/buff_0" BEL
+        "Inst_IO_expander_APB/I2c_message_3" BEL
+        "Inst_IO_expander_APB/I2c_message_2" BEL
+        "Inst_IO_expander_APB/I2c_message_1" BEL
+        "Inst_IO_expander_APB/I2c_message_0" BEL
+        "Inst_IO_expander_APB/I2c_address_7" BEL
+        "Inst_IO_expander_APB/I2c_address_6" BEL
+        "Inst_IO_expander_APB/I2c_address_5" BEL
+        "Inst_IO_expander_APB/I2c_address_4" BEL
+        "Inst_IO_expander_APB/I2c_address_3" BEL
+        "Inst_IO_expander_APB/I2c_address_2" BEL
+        "Inst_IO_expander_APB/I2c_address_1" BEL
+        "Inst_IO_expander_APB/I2c_address_0" BEL
         "leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_req" BEL
         "leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/r_flush" BEL
         "leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/r_req" BEL

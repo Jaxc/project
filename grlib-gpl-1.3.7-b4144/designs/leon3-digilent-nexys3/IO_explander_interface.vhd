@@ -36,7 +36,9 @@ entity IO_explander_interface is
     Port (		clk : in STD_LOGIC;
 			SCL : in STD_LOGIC;
 			rst : in  STD_LOGIC;
-			I2C_slave_Address :in STD_LOGIC_VECTOR(6 downto 0);
+			I2C_slave_Address :in STD_LOGIC_VECTOR(7 downto 0);
+
+			datain : out STD_LOGIC_VECTOR(7 downto 0);
 			
 			start_transmission : in STD_LOGIC;
 			IO_Ready : out STD_LOGIC;
@@ -63,16 +65,18 @@ architecture Behavioral of IO_explander_interface is
 	signal dataout : STD_LOGIC_VECTOR(7 downto 0);
 	signal I2C_byte_done : STD_LOGIC;
 	signal I2C_reset : STD_LOGIC;
-	signal Datain : STD_LOGIC_VECTOR(7 downto 0);
+
 	signal I2C_direction : STD_LOGIC;
 	signal I2C_ack : STD_LOGIC;
 	
 	signal SDA_temp : STD_LOGIC;
-	
+	signal data_in_buf : STD_LOGIC_VECTOR(7 downto 0);
 
 	signal SDA_in : STD_LOGIC;
 	signal SDA_out : STD_LOGIC;
 	signal SDA_direction : STD_LOGIC;
+
+
 
 component I2CInterface
     Port ( SCL : in  STD_LOGIC;
@@ -135,7 +139,7 @@ begin
 			SDA_out <= SDA_temp;
 			SCL_ena <= '1';
 			Dataout <= "0100111" & '0';
-			I2C_direction <= '0';
+			I2C_direction <= '1';
 			IO_ready <= '0';
 			if (I2C_byte_done = '1') then -- and (SDA_in = '0') then
 				nxt.I2C_state <= ADDRESS;
@@ -178,7 +182,7 @@ begin
 
 		
 		when stop => 
-			I2C_reset <= '0';
+			I2C_reset <= '1';
 			dataout <= x"00";
 			SCL_ena <= '1';
 			SDA_out <= '0';
@@ -248,7 +252,7 @@ begin
 			SDA_out <= SDA_temp;
 			I2C_reset <= '1';
 			SCL_ena <= '1';
-			Dataout <= I2C_slave_Address & '0';
+			Dataout <= I2C_slave_Address;
 			I2C_direction <= '1';
 			IO_ready <= '0';
 			if (I2C_byte_done = '1') then
@@ -285,7 +289,7 @@ begin
 			SDA_out <= SDA_temp;	
 			I2C_reset <= '1';
 			Dataout <= invector;
-			I2C_direction <= '1';
+			I2C_direction <= not(I2C_slave_address(0));
 			SCL_ena <= '1';
 			IO_ready <= '0';
 			if (I2C_byte_done = '1')  then --and (SDA_in = '0') then
@@ -312,9 +316,9 @@ begin
 			nxt.state <= idle;		
 
 		when stop => 
-			I2C_reset <= '0';
+			I2C_reset <= '1';
 			dataout <= x"00";
-			SCL_ena <= '0';
+			SCL_ena <= '1';
 			SDA_out <= '0';
 			I2C_direction <= '1';
 			IO_ready <= '0';
@@ -358,8 +362,12 @@ begin
 	if rst = '0' then
 		crnt.state <= reset;
 		crnt.I2C_state <= start1;
+		datain <= (others => '0');
 	elsif rising_edge(SCL) then
 		crnt <= nxt;
+		if crnt.I2C_STATE = data then
+			datain <= data_in_buf;
+		end if;
 	end if;
 end process;
 
@@ -370,7 +378,7 @@ end process;
 		SCL => SCL,
 		rst => I2C_reset,
 		Dataout => Dataout,
-		Datain => Datain,
+		Datain => Data_in_buf,
 		SDAin => SDA_in,
 		I2Cdirection => I2C_direction,
 		SDA_direction => SDA_direction,

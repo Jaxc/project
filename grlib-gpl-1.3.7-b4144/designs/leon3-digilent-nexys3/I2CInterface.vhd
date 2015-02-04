@@ -67,7 +67,7 @@ begin
 	
 	when reset =>
 		done <= '0';
-		SDA_direction <= i2cdirection;
+		SDA_direction <= '0';
 		nxt.state <= send;
 		nxt.cnt <= 0;
 		SDAout <= '0';

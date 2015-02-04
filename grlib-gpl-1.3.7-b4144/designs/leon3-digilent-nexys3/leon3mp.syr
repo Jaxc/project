@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 
@@ -843,10 +843,12 @@ Elaborating entity <apbuart> (architecture <rtl>) with generics from library <ga
 WARNING:HDLCompiler:1127 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 417: Assignment to txd1 ignored, since the identifier is never used
 
 Elaborating entity <IO_expander_APB> (architecture <rtl>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_expander_APB.vhd" Line 97: Assignment to i2c_register ignored, since the identifier is never used
 
 Elaborating entity <IO_explander_interface> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" Line 251: i2c_slave_address should be on the sensitivity list of the process
-INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" Line 349. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" Line 255: i2c_slave_address should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" Line 292: i2c_slave_address should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" Line 353. Case statement is complete. others clause is never selected
 
 Elaborating entity <I2CInterface> (architecture <Behavioral>) from library <work>.
 WARNING:HDLCompiler:634 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/leon3mp.vhd" Line 155: Net <memi_data[15]> does not have a driver.
@@ -2373,12 +2375,12 @@ WARNING:Xst:653 - Signal <cpi_dbg_fsr> is used but never assigned. This sourcele
     Found 64x2-bit Read Only RAM for signal <r_e_ctrl_inst[24]_PWR_41_o_wide_mux_481_OUT>
     Found 4x1-bit Read Only RAM for signal <r_d_cnt[1]_GND_48_o_Mux_748_o>
     Found 4x3-bit Read Only RAM for signal <GND_48_o_GND_48_o_mux_615_OUT>
-    Found 64x13-bit Read Only RAM for signal <_n5573>
-    Found 64x2-bit Read Only RAM for signal <_n5722>
-    Found 32x2-bit Read Only RAM for signal <_n5859>
-    Found 8x6-bit Read Only RAM for signal <_n5885>
-    Found 32x2-bit Read Only RAM for signal <_n5918>
-    Found 16x2-bit Read Only RAM for signal <_n5935>
+    Found 64x13-bit Read Only RAM for signal <_n5574>
+    Found 64x2-bit Read Only RAM for signal <_n5725>
+    Found 32x2-bit Read Only RAM for signal <_n5862>
+    Found 8x6-bit Read Only RAM for signal <_n5888>
+    Found 32x2-bit Read Only RAM for signal <_n5978>
+    Found 16x2-bit Read Only RAM for signal <_n5995>
     Found 32-bit 5-to-1 multiplexer for signal <r_x_npc[2]_r_d_pc[31]_wide_mux_196_OUT> created at line 2552.
     Found 1-bit 4-to-1 multiplexer for signal <r_x_rstate[1]_rp_error_Mux_340_o> created at line 2757.
     Found 2-bit 4-to-1 multiplexer for signal <r_x_rstate[1]_r_x_rstate[1]_wide_mux_341_OUT> created at line 2757.
@@ -2435,7 +2437,7 @@ WARNING:Xst:653 - Signal <cpi_dbg_fsr> is used but never assigned. This sourcele
     Found 32-bit 3-to-1 multiplexer for signal <dbgi_daddr[7]_GND_48_o_wide_mux_897_OUT> created at line 567.
     Found 32-bit 8-to-1 multiplexer for signal <dbgo_data> created at line 544.
     Found 1-bit 4-to-1 multiplexer for signal <rpin_error> created at line 975.
-    Found 32-bit 4-to-1 multiplexer for signal <_n4571> created at line 1776.
+    Found 32-bit 4-to-1 multiplexer for signal <_n4569> created at line 1776.
     Found 4-bit comparator greater for signal <r_w_s_pil[3]_irqi_irl[3]_LessThan_457_o> created at line 2418
     Found 8-bit comparator equal for signal <r_e_ctrl_rd[7]_r_x_ctrl_rd[7]_equal_520_o> created at line 2039
     Found 8-bit comparator equal for signal <GND_48_o_r_a_ctrl_rd[7]_equal_761_o> created at line 1488
@@ -2692,7 +2694,7 @@ WARNING:Xst:653 - Signal <ictrl.tag(3)> is used but never assigned. This sourcel
     Found 2-bit adder for signal <r_waddress[3]_GND_62_o_add_11_OUT> created at line 1241.
     Found 2-bit adder for signal <ictrl.xaddr_inc> created at line 1241.
     Found 9-bit adder for signal <r_faddr[8]_GND_62_o_add_77_OUT> created at line 1241.
-    Found 4x2-bit Read Only RAM for signal <_n0588>
+    Found 4x2-bit Read Only RAM for signal <_n0586>
     Found 1-bit 4-to-1 multiplexer for signal <ictrl.validv(1)> created at line 170.
     Found 1-bit 4-to-1 multiplexer for signal <ictrl.validv(0)> created at line 170.
     Found 1-bit 4-to-1 multiplexer for signal <r_istate[1]_PWR_56_o_Mux_21_o> created at line 381.
@@ -4783,7 +4785,7 @@ WARNING:Xst:647 - Input <apbi_testoen> is never used. This port will be preserve
     Found 11-bit 3-to-1 multiplexer for signal <uartop.v_tshift> created at line 362.
     Found 2-bit 4-to-1 multiplexer for signal <r_txstate[1]_r_txstate[1]_wide_mux_71_OUT> created at line 362.
     Found 3-bit 5-to-1 multiplexer for signal <r_rxstate[2]_X_100_o_wide_mux_107_OUT> created at line 437.
-    Found 32-bit 7-to-1 multiplexer for signal <_n0553> created at line 217.
+    Found 32-bit 7-to-1 multiplexer for signal <_n0554> created at line 217.
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred 119 D-type flip-flop(s).
@@ -4798,6 +4800,7 @@ Synthesizing Unit <IO_expander_APB>.
 WARNING:Xst:647 - Input <apbi_psel<0:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <apbi_psel<6:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <apbi_paddr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <apbi_pwdata<23:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <apbi_pirq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <apbi_testin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <apbi_penable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -4806,35 +4809,41 @@ WARNING:Xst:647 - Input <apbi_testrst> is never used. This port will be preserve
 WARNING:Xst:647 - Input <apbi_scanen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <apbi_testoen> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <apbo_pirq> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 32-bit register for signal <apbo_prdata>.
-    Found 7-bit register for signal <I2c_address>.
+    Found 1-bit register for signal <apbo_prdata(6)>.
+    Found 1-bit register for signal <apbo_prdata(5)>.
+    Found 1-bit register for signal <apbo_prdata(4)>.
+    Found 1-bit register for signal <apbo_prdata(3)>.
+    Found 1-bit register for signal <apbo_prdata(2)>.
+    Found 1-bit register for signal <apbo_prdata(1)>.
+    Found 1-bit register for signal <apbo_prdata(0)>.
+    Found 1-bit register for signal <apbo_prdata(7)>.
+    Found 8-bit register for signal <I2c_address>.
     Found 8-bit register for signal <I2c_message>.
     Found 8-bit register for signal <freq_cnt>.
-    Found 32-bit register for signal <buff>.
     Found 1-bit register for signal <SCL>.
     Found 1-bit register for signal <Start_transmission>.
-    Found 8-bit adder for signal <freq_cnt[7]_GND_380_o_add_1_OUT> created at line 88.
+    Found 8-bit adder for signal <freq_cnt[7]_GND_380_o_add_1_OUT> created at line 87.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  89 D-type flip-flop(s).
+	inferred  34 D-type flip-flop(s).
 	inferred   2 Multiplexer(s).
 Unit <IO_expander_APB> synthesized.
 
 Synthesizing Unit <IO_explander_interface>.
     Related source file is "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" line 369: Output port <Datain> of the instance <Inst_I2CInterface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" line 369: Output port <ACK> of the instance <Inst_I2CInterface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/jaxc/Desktop/git repo/grlib-gpl-1.3.7-b4144/designs/leon3-digilent-nexys3/IO_explander_interface.vhd" line 377: Output port <ACK> of the instance <Inst_I2CInterface> is unconnected or connected to loadless signal.
     Found 4-bit register for signal <crnt_I2C_state>.
+    Found 8-bit register for signal <datain>.
     Found 1-bit register for signal <crnt_state>.
-    Found 4x1-bit Read Only RAM for signal <crnt_I2C_state[2]_GND_382_o_Mux_22_o>
-    Found 16x14-bit Read Only RAM for signal <_n0077>
+    Found 8x1-bit Read Only RAM for signal <crnt_I2C_state[2]_GND_406_o_Mux_22_o>
+    Found 16x12-bit Read Only RAM for signal <_n0083>
 WARNING:Xst:737 - Found 1-bit latch for signal <IO_Ready>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   2 RAM(s).
-	inferred   5 D-type flip-flop(s).
+	inferred  13 D-type flip-flop(s).
 	inferred   1 Latch(s).
-	inferred  26 Multiplexer(s).
+	inferred  27 Multiplexer(s).
 Unit <IO_explander_interface> synthesized.
 
 Synthesizing Unit <I2CInterface>.
@@ -4842,8 +4851,9 @@ Synthesizing Unit <I2CInterface>.
     Found 2-bit register for signal <crnt_state>.
     Found 8-bit register for signal <Datain>.
     Found 3-bit register for signal <crnt_cnt>.
-    Found 3-bit adder for signal <crnt_cnt[2]_GND_384_o_add_1_OUT> created at line 83.
+    Found 3-bit adder for signal <crnt_cnt[2]_GND_408_o_add_1_OUT> created at line 83.
     Found 1-bit 8-to-1 multiplexer for signal <crnt_cnt[2]_Dataout[0]_Mux_4_o> created at line 85.
+    Found 1-bit 3-to-1 multiplexer for signal <SDA_direction> created at line 66.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  13 D-type flip-flop(s).
@@ -4856,18 +4866,18 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 19
  16x1-bit single-port Read Only RAM                    : 1
- 16x14-bit single-port Read Only RAM                   : 1
+ 16x12-bit single-port Read Only RAM                   : 1
  16x2-bit single-port Read Only RAM                    : 1
  32x1-bit single-port Read Only RAM                    : 1
  32x2-bit single-port Read Only RAM                    : 2
- 4x1-bit single-port Read Only RAM                     : 3
+ 4x1-bit single-port Read Only RAM                     : 2
  4x2-bit single-port Read Only RAM                     : 1
  4x3-bit single-port Read Only RAM                     : 1
  4x4-bit single-port Read Only RAM                     : 2
  64x1-bit single-port Read Only RAM                    : 1
  64x13-bit single-port Read Only RAM                   : 1
  64x2-bit single-port Read Only RAM                    : 2
- 8x1-bit single-port Read Only RAM                     : 1
+ 8x1-bit single-port Read Only RAM                     : 2
  8x6-bit single-port Read Only RAM                     : 1
 # Multipliers                                          : 1
  33x33-bit multiplier                                  : 1
@@ -4891,8 +4901,8 @@ Macro Statistics
  8-bit adder                                           : 3
  9-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 533
- 1-bit register                                        : 308
+# Registers                                            : 540
+ 1-bit register                                        : 316
  11-bit register                                       : 2
  12-bit register                                       : 2
  14-bit register                                       : 1
@@ -4904,7 +4914,7 @@ Macro Statistics
  25-bit register                                       : 1
  3-bit register                                        : 25
  30-bit register                                       : 14
- 32-bit register                                       : 46
+ 32-bit register                                       : 44
  33-bit register                                       : 2
  35-bit register                                       : 2
  4-bit register                                        : 21
@@ -4912,8 +4922,8 @@ Macro Statistics
  6-bit register                                        : 6
  65-bit register                                       : 1
  66-bit register                                       : 1
- 7-bit register                                        : 4
- 8-bit register                                        : 29
+ 7-bit register                                        : 3
+ 8-bit register                                        : 31
  9-bit register                                        : 1
 # Latches                                              : 1
  1-bit latch                                           : 1
@@ -4928,9 +4938,9 @@ Macro Statistics
  20-bit comparator equal                               : 2
  4-bit comparator greater                              : 1
  8-bit comparator equal                                : 9
-# Multiplexers                                         : 2807
+# Multiplexers                                         : 2808
  1-bit 2-to-1 multiplexer                              : 1798
- 1-bit 3-to-1 multiplexer                              : 37
+ 1-bit 3-to-1 multiplexer                              : 38
  1-bit 4-to-1 multiplexer                              : 38
  1-bit 6-to-1 multiplexer                              : 1
  1-bit 7-to-1 multiplexer                              : 2
@@ -5002,12 +5012,6 @@ INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_3> in Unit <iu> is equivalent to the
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_tt_1> in Unit <iu> is equivalent to the following 4 FFs/Latches, which will be removed : <r_a_ctrl_tt_2> <r_a_ctrl_tt_3> <r_a_ctrl_tt_4> <r_a_ctrl_tt_5> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_12> in Unit <iu> is equivalent to the following FF/Latch, which will be removed : <r_a_imm_22> 
 INFO:Xst:2261 - The FF/Latch <ar_qual_areg> in Unit <newcom.jtagcom0> is equivalent to the following FF/Latch, which will be removed : <ar_qual_dreg> 
-INFO:Xst:2261 - The FF/Latch <buff_3> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_3> 
-INFO:Xst:2261 - The FF/Latch <I2c_address_3> in Unit <Inst_IO_expander_APB> is equivalent to the following 2 FFs/Latches, which will be removed : <I2c_address_4> <I2c_address_6> 
-INFO:Xst:2261 - The FF/Latch <I2c_address_0> in Unit <Inst_IO_expander_APB> is equivalent to the following 3 FFs/Latches, which will be removed : <I2c_address_1> <I2c_address_2> <I2c_address_5> 
-INFO:Xst:2261 - The FF/Latch <buff_0> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_0> 
-INFO:Xst:2261 - The FF/Latch <buff_1> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_1> 
-INFO:Xst:2261 - The FF/Latch <buff_2> in Unit <Inst_IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_2> 
 WARNING:Xst:1710 - FF/Latch <r_data_1> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_data_2> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_data_3> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
@@ -5030,7 +5034,6 @@ WARNING:Xst:1710 - FF/Latch <r_ctsn_0> (without init value) has a constant value
 WARNING:Xst:1710 - FF/Latch <r_extclk> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_rxf_0> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_tcnt_1> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <I2c_address_3> (without init value) has a constant value of 0 in block <Inst_IO_expander_APB>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_lock> (without init value) has a constant value of 0 in block <icache0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_lock> (without init value) has a constant value of 0 in block <dcache0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_tadj_0> (without init value) has a constant value of 0 in block <dcache0>. This FF/Latch will be trimmed during the optimization process.
@@ -5050,8 +5053,8 @@ WARNING:Xst:1710 - FF/Latch <r_dsubre_0> (without init value) has a constant val
 WARNING:Xst:1710 - FF/Latch <r_dsuen_0> (without init value) has a constant value of 1 in block <x0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_data_0> (without init value) has a constant value of 0 in block <mg2.sr1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsubre_1> (without init value) has a constant value of 0 in block <x0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_ctsn_1> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsuen_1> (without init value) has a constant value of 1 in block <x0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_ctsn_1> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_rxf_1> (without init value) has a constant value of 0 in block <ua1.uart1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsubre_2> (without init value) has a constant value of 0 in block <x0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsuen_2> (without init value) has a constant value of 1 in block <x0>. This FF/Latch will be trimmed during the optimization process.
@@ -5104,30 +5107,29 @@ WARNING:Xst:1898 - Due to constant pushing, FF/Latch <r_echeck> is unconnected i
 WARNING:Xst:2404 -  FFs/Latches <r_a_ctrl_tt<5:1>> (without init value) have a constant value of 0 in block <iu3>.
 WARNING:Xst:2404 -  FFs/Latches <r_rcnt<1:1>> (without init value) have a constant value of 0 in block <apbuart>.
 WARNING:Xst:2404 -  FFs/Latches <r_tcnt<1:1>> (without init value) have a constant value of 0 in block <apbuart>.
-WARNING:Xst:2404 -  FFs/Latches <I2c_address<6:6>> (without init value) have a constant value of 0 in block <IO_expander_APB>.
 
 Synthesizing (advanced) Unit <IO_expander_APB>.
 The following registers are absorbed into counter <freq_cnt>: 1 register on signal <freq_cnt>.
 Unit <IO_expander_APB> synthesized (advanced).
 
 Synthesizing (advanced) Unit <IO_explander_interface>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_crnt_I2C_state[2]_GND_382_o_Mux_22_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_crnt_I2C_state[2]_GND_406_o_Mux_22_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <(crnt_I2C_state(2),crnt_I2C_state(1))> |          |
+    |     addrA          | connected to signal <(crnt_I2C_state(2),crnt_I2C_state(1),crnt_I2C_state(0))> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0077> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0083> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 16-word x 14-bit                    |          |
+    |     aspect ratio   | 16-word x 12-bit                    |          |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <(crnt_I2C_state(3),crnt_I2C_state(2),crnt_I2C_state(1),crnt_I2C_state(0))> |          |
     |     diA            | connected to signal <GND>           |          |
@@ -5231,7 +5233,7 @@ INFO:Xst:3231 - The small RAM <Mram_GND_48_o_GND_48_o_mux_615_OUT> will be imple
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5573> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5574> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5242,7 +5244,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5573> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5885> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5888> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5253,7 +5255,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5885> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5918> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5978> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5264,7 +5266,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5918> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n5935> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n5995> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5275,7 +5277,7 @@ INFO:Xst:3231 - The small RAM <Mram__n5935> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5722> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5725> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5286,7 +5288,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5722> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5859> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n5862> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5331,7 +5333,7 @@ Unit <mmu_dcache> synthesized (advanced).
 Synthesizing (advanced) Unit <mmu_icache>.
 The following registers are absorbed into counter <r_rndcnt_0>: 1 register on signal <r_rndcnt_0>.
 The following registers are absorbed into counter <r_faddr>: 1 register on signal <r_faddr>.
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_istate> prevents it from being combined with the RAM <Mram__n0588> for implementation as read-only block RAM.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <r_istate> prevents it from being combined with the RAM <Mram__n0586> for implementation as read-only block RAM.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -5388,18 +5390,18 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 19
  16x1-bit single-port distributed Read Only RAM        : 1
- 16x14-bit single-port distributed Read Only RAM       : 1
+ 16x12-bit single-port distributed Read Only RAM       : 1
  16x2-bit single-port distributed Read Only RAM        : 1
  32x1-bit single-port distributed Read Only RAM        : 1
  32x2-bit single-port distributed Read Only RAM        : 2
- 4x1-bit single-port distributed Read Only RAM         : 3
+ 4x1-bit single-port distributed Read Only RAM         : 2
  4x2-bit single-port distributed Read Only RAM         : 1
  4x3-bit single-port distributed Read Only RAM         : 1
  4x4-bit single-port distributed Read Only RAM         : 2
  64x1-bit single-port distributed Read Only RAM        : 1
  64x13-bit single-port distributed Read Only RAM       : 1
  64x2-bit single-port distributed Read Only RAM        : 2
- 8x1-bit single-port distributed Read Only RAM         : 1
+ 8x1-bit single-port distributed Read Only RAM         : 2
  8x6-bit single-port distributed Read Only RAM         : 1
 # Multipliers                                          : 1
  33x33-bit registered multiplier                       : 1
@@ -5429,8 +5431,8 @@ Macro Statistics
  3-bit down counter                                    : 1
  8-bit up counter                                      : 1
  9-bit up counter                                      : 1
-# Registers                                            : 3186
- Flip-Flops                                            : 3186
+# Registers                                            : 3140
+ Flip-Flops                                            : 3140
 # Comparators                                          : 75
  12-bit comparator equal                               : 54
  14-bit comparator equal                               : 1
@@ -5442,9 +5444,9 @@ Macro Statistics
  20-bit comparator equal                               : 2
  4-bit comparator greater                              : 1
  8-bit comparator equal                                : 9
-# Multiplexers                                         : 3157
+# Multiplexers                                         : 3158
  1-bit 2-to-1 multiplexer                              : 2077
- 1-bit 3-to-1 multiplexer                              : 37
+ 1-bit 3-to-1 multiplexer                              : 38
  1-bit 4-to-1 multiplexer                              : 70
  1-bit 6-to-1 multiplexer                              : 33
  1-bit 7-to-1 multiplexer                              : 34
@@ -5560,19 +5562,12 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsubre_1> (withou
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_dsubre_2> (without init value) has a constant value of 0 in block <dsu3x>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_mcfg2_sdren> (without init value) has a constant value of 0 in block <mctrl>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <r_rwaddr_0> (without init value) has a constant value of 0 in block <apbuart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <I2c_address_3> (without init value) has a constant value of 0 in block <IO_expander_APB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I2c_address_4> (without init value) has a constant value of 0 in block <IO_expander_APB>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_0> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_rfa2_0> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_1> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_rfa2_1> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_2> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_rfa2_2> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_3> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_rfa2_3> 
 INFO:Xst:2261 - The FF/Latch <r_a_ctrl_inst_12> in Unit <iu3> is equivalent to the following FF/Latch, which will be removed : <r_a_imm_22> 
 INFO:Xst:2261 - The FF/Latch <ar_qual_dreg> in Unit <jtagcom2> is equivalent to the following FF/Latch, which will be removed : <ar_qual_areg> 
-INFO:Xst:2261 - The FF/Latch <buff_3> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_3> 
-INFO:Xst:2261 - The FF/Latch <I2c_address_0> in Unit <IO_expander_APB> is equivalent to the following 3 FFs/Latches, which will be removed : <I2c_address_1> <I2c_address_2> <I2c_address_5> 
-INFO:Xst:2261 - The FF/Latch <buff_0> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_0> 
-INFO:Xst:2261 - The FF/Latch <buff_1> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_1> 
-INFO:Xst:2261 - The FF/Latch <buff_2> in Unit <IO_expander_APB> is equivalent to the following FF/Latch, which will be removed : <I2c_message_2> 
 INFO:Xst:2261 - The FF/Latch <r_data_0> in Unit <mctrl> is equivalent to the following 15 FFs/Latches, which will be removed : <r_data_1> <r_data_2> <r_data_3> <r_data_4> <r_data_5> <r_data_6> <r_data_7> <r_data_8> <r_data_9> <r_data_10> <r_data_11> <r_data_12> <r_data_13> <r_data_14> <r_data_15> 
 INFO:Xst:2261 - The FF/Latch <r_brdyn> in Unit <mctrl> is equivalent to the following FF/Latch, which will be removed : <r_bexcn> 
 INFO:Xst:2261 - The FF/Latch <r_ctsn_0> in Unit <apbuart> is equivalent to the following 2 FFs/Latches, which will be removed : <r_extclk> <r_rxf_0> 
@@ -5846,14 +5841,6 @@ WARNING:Xst:2677 - Node <gpt.timer0/r_wdogn> of sequential type is unconnected i
 WARNING:Xst:2677 - Node <gpt.timer0/r_wdog> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:2677 - Node <ua1.uart1/r_rtsn> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:2677 - Node <ua1.uart1/r_txd> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_7> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_6> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_5> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_4> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_3> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_2> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_1> of sequential type is unconnected in block <leon3mp>.
-WARNING:Xst:2677 - Node <Inst_IO_expander_APB/Inst_IO_explander_interface/Inst_I2CInterface/Datain_0> of sequential type is unconnected in block <leon3mp>.
 WARNING:Xst:1710 - FF/Latch <leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/a0/r_retry2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <dcomgen.dcom0/ahbmst0/r_active_2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ahbjtaggen0.ahbjtag0/ahbmst0/r_active_2> (without init value) has a constant value of 0 in block <leon3mp>. This FF/Latch will be trimmed during the optimization process.
@@ -6064,8 +6051,8 @@ Unit <leon3mp> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2822
- Flip-Flops                                            : 2822
+# Registers                                            : 2793
+ Flip-Flops                                            : 2793
 # Shift Registers                                      : 36
  2-bit shift register                                  : 25
  3-bit shift register                                  : 6
@@ -6092,27 +6079,28 @@ Top Level Output File Name         : leon3mp.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 7161
+# BELS                             : 7172
 #      GND                         : 1
 #      INV                         : 64
-#      LUT1                        : 68
-#      LUT2                        : 285
-#      LUT3                        : 590
-#      LUT4                        : 768
-#      LUT5                        : 1338
-#      LUT6                        : 3347
+#      LUT1                        : 67
+#      LUT2                        : 288
+#      LUT3                        : 587
+#      LUT4                        : 774
+#      LUT5                        : 1330
+#      LUT6                        : 3363
 #      MUXCY                       : 322
-#      MUXF7                       : 83
+#      MUXF7                       : 81
 #      VCC                         : 1
 #      XORCY                       : 294
-# FlipFlops/Latches                : 2860
+# FlipFlops/Latches                : 2831
 #      FD                          : 385
 #      FDC                         : 23
 #      FDC_1                       : 5
-#      FDCE                        : 14
+#      FDCE                        : 29
+#      FDCE_1                      : 8
 #      FDE                         : 1761
-#      FDP                         : 49
-#      FDPE                        : 33
+#      FDP                         : 17
+#      FDPE                        : 13
 #      FDR                         : 172
 #      FDRE                        : 349
 #      FDS                         : 8
@@ -6122,8 +6110,8 @@ Primitive and Black Box Usage:
 #      RAMB16BWER                  : 22
 # Shift Registers                  : 36
 #      SRLC16E                     : 36
-# Clock Buffers                    : 3
-#      BUFG                        : 3
+# Clock Buffers                    : 4
+#      BUFG                        : 4
 # IO Buffers                       : 66
 #      IBUF                        : 2
 #      IBUFG                       : 1
@@ -6143,18 +6131,18 @@ Selected Device : 6slx16csg324-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            2774  out of  18224    15%  
- Number of Slice LUTs:                 6496  out of   9112    71%  
-    Number used as Logic:              6460  out of   9112    70%  
+ Number of Slice Registers:            2745  out of  18224    15%  
+ Number of Slice LUTs:                 6509  out of   9112    71%  
+    Number used as Logic:              6473  out of   9112    71%  
     Number used as Memory:               36  out of   2176     1%  
        Number used as SRL:               36
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   6777
-   Number with an unused Flip Flop:    4003  out of   6777    59%  
-   Number with an unused LUT:           281  out of   6777     4%  
-   Number of fully used LUT-FF pairs:  2493  out of   6777    36%  
-   Number of unique control sets:       209
+ Number of LUT Flip Flop pairs used:   6775
+   Number with an unused Flip Flop:    4030  out of   6775    59%  
+   Number with an unused LUT:           266  out of   6775     3%  
+   Number of fully used LUT-FF pairs:  2479  out of   6775    36%  
+   Number of unique control sets:       211
 
 IO Utilization: 
  Number of IOs:                         102
@@ -6164,7 +6152,7 @@ IO Utilization:
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               22  out of     32    68%  
     Number using Block RAM only:         22
- Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
  Number of DSP48A1s:                      4  out of     32    12%  
 
 ---------------------------
@@ -6185,14 +6173,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+-------+
-Clock Signal                                                                                                                                                                   | Clock buffer(FF name)                                                  | Load  |
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+-------+
-clk                                                                                                                                                                            | clkgen0/xc3s.v/dll0:CLKFX                                              | 2790  |
-ahbjtaggen0.ahbjtag0/lltck                                                                                                                                                     | BUFG                                                                   | 117   |
-Inst_IO_expander_APB/Inst_IO_explander_interface/GND_382_o_crnt_I2C_state[3]_OR_676_o(Inst_IO_expander_APB/Inst_IO_explander_interface/GND_382_o_crnt_I2C_state[3]_OR_676_o1:O)| NONE(*)(Inst_IO_expander_APB/Inst_IO_explander_interface/IO_Ready)     | 2     |
-Inst_IO_expander_APB/SCL                                                                                                                                                       | NONE(Inst_IO_expander_APB/Inst_IO_explander_interface/crnt_I2C_state_3)| 10    |
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+-------+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                                                                   | Clock buffer(FF name)                                             | Load  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
+clk                                                                                                                                                                            | clkgen0/xc3s.v/dll0:CLKFX                                         | 2745  |
+ahbjtaggen0.ahbjtag0/lltck                                                                                                                                                     | BUFG                                                              | 117   |
+Inst_IO_expander_APB/Inst_IO_explander_interface/GND_406_o_crnt_I2C_state[3]_OR_676_o(Inst_IO_expander_APB/Inst_IO_explander_interface/GND_406_o_crnt_I2C_state[3]_OR_676_o1:O)| NONE(*)(Inst_IO_expander_APB/Inst_IO_explander_interface/IO_Ready)| 2     |
+Inst_IO_expander_APB/SCL                                                                                                                                                       | BUFG                                                              | 26    |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -6208,13 +6196,13 @@ Speed Grade: -2
 
    Minimum period: 9.797ns (Maximum Frequency: 102.072MHz)
    Minimum input arrival time before clock: 6.771ns
-   Maximum output required time after clock: 9.911ns
+   Maximum output required time after clock: 9.714ns
    Maximum combinational path delay: 5.901ns
 
 =========================================================================
 Timing constraint: NET clk PERIOD = 10 nS HIGH 5 nS
   Clock period: 9.797ns (frequency: 102.072MHz)
-  Total number of paths / destination ports: 16979000 / 6606
+  Total number of paths / destination ports: 16978660 / 6496
   Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
 -------------------------------------------------------------------------
 Slack:                  0.203ns
@@ -6243,12 +6231,12 @@ Slack:                  0.203ns
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock Inst_IO_expander_APB/Inst_IO_explander_interface/GND_382_o_crnt_I2C_state[3]_OR_676_o
+Clock to Setup on destination clock Inst_IO_expander_APB/Inst_IO_explander_interface/GND_406_o_crnt_I2C_state[3]_OR_676_o
 ------------------------+---------+---------+---------+---------+
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-Inst_IO_expander_APB/SCL|         |         |    2.205|         |
+Inst_IO_expander_APB/SCL|         |         |    2.253|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_IO_expander_APB/SCL
@@ -6256,8 +6244,8 @@ Clock to Setup on destination clock Inst_IO_expander_APB/SCL
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-Inst_IO_expander_APB/SCL|    3.634|    3.177|    3.794|         |
-clk                     |    5.406|         |         |         |
+Inst_IO_expander_APB/SCL|    3.682|    3.208|    4.099|         |
+clk                     |    5.402|         |         |         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ahbjtaggen0.ahbjtag0/lltck
@@ -6266,7 +6254,7 @@ Clock to Setup on destination clock ahbjtaggen0.ahbjtag0/lltck
 Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------+---------+---------+---------+---------+
 ahbjtaggen0.ahbjtag0/lltck|    4.832|    4.154|    4.751|         |
-clk                       |    5.406|         |    5.406|         |
+clk                       |    5.402|         |    5.402|         |
 --------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -6274,7 +6262,8 @@ Clock to Setup on destination clock clk
                                                                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------------------------------------------------------------+---------+---------+---------+---------+
-Inst_IO_expander_APB/Inst_IO_explander_interface/GND_382_o_crnt_I2C_state[3]_OR_676_o|         |    3.974|         |         |
+Inst_IO_expander_APB/Inst_IO_explander_interface/GND_406_o_crnt_I2C_state[3]_OR_676_o|         |    3.750|         |         |
+Inst_IO_expander_APB/SCL                                                             |    1.280|         |         |         |
 ahbjtaggen0.ahbjtag0/lltck                                                           |    3.539|    3.446|         |         |
 clk                                                                                  |   19.594|         |         |         |
 -------------------------------------------------------------------------------------+---------+---------+---------+---------+
@@ -6282,15 +6271,15 @@ clk                                                                             
 =========================================================================
 
 
-Total REAL time to Xst completion: 142.00 secs
-Total CPU time to Xst completion: 139.67 secs
+Total REAL time to Xst completion: 162.00 secs
+Total CPU time to Xst completion: 154.17 secs
  
 --> 
 
 
-Total memory usage is 690992 kilobytes
+Total memory usage is 691012 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 2235 (   0 filtered)
-Number of infos    :  368 (   0 filtered)
+Number of warnings : 2226 (   0 filtered)
+Number of infos    :  356 (   0 filtered)
 

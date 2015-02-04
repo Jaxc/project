@@ -1,17 +1,42 @@
+for {set i 0} {$i < 10} {incr i} {
 wmem 0x80000500 0x0000FF00
-after 100
+after 50
 wmem 0x80000500 0x0000FF01
-after 100
+after 50
 wmem 0x80000500 0x0000FF02
-after 100
+after 50
 wmem 0x80000500 0x0000FF04
-after 100
+after 50
 wmem 0x80000500 0x0000FF08
-after 100
+after 50
 wmem 0x80000500 0x0000FF10
-after 100
+after 50
 wmem 0x80000500 0x0000FF20
-after 100
+after 50
 wmem 0x80000500 0x0000FF40
-after 100
+after 50
 wmem 0x80000500 0x0000FF80
+after 50
+}
+for {set i 0} {$i < 10} {incr i} {
+wmem 0x80000500 0x0000FF00
+after 20
+wmem 0x80000500 0x0000FFff
+after 20
+wmem 0x80000500 0x0000FF00
+after 20
+wmem 0x80000500 0x0000FFff
+after 20
+wmem 0x80000500 0x0000FF00
+after 20
+wmem 0x80000500 0x0000FFff
+after 20
+wmem 0x80000500 0x0000FF00
+after 20
+wmem 0x80000500 0x0000FFff
+after 20
+wmem 0x80000500 0x0000FF00
+after 20
+wmem 0x80000500 0x0000FFff
+after 20
+}

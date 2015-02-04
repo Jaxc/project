@@ -35,17 +35,14 @@ architecture rtl of IO_expander_APB is
 
   signal apb_reg    : adder_registers;
   signal apb_reg_in : adder_registers;
-  
-  signal A       : std_logic_vector(31 downto 0);
-  signal B       : std_logic_vector(31 downto 0);
-  signal sum     : std_logic_vector(31 downto 0);
 
 	COMPONENT IO_explander_interface
 	PORT(
 		clk : in STD_LOGIC;
 		SCL : IN std_logic;
 		rst : IN std_logic;
-		I2C_slave_Address :in STD_LOGIC_VECTOR(6 downto 0);
+		I2C_slave_Address :in STD_LOGIC_VECTOR(7 downto 0);
+		datain : out STD_LOGIC_VECTOR(7 downto 0);
 		start_transmission : IN std_logic;
 		Invector : IN std_logic_vector(7 downto 0);    
 		SDA : INOUT std_logic;      
@@ -63,15 +60,17 @@ signal freq_cnt 	: integer range 0 to 254;
 signal SCL 		: STD_LOGIC;
 
 
-signal I2c_address	: STD_LOGIC_VECTOR(6 downto 0);
+signal I2c_address	: STD_LOGIC_VECTOR(7 downto 0);
 signal I2c_message	: STD_LOGIC_VECTOR(7 downto 0);
 signal IO_Ready		: STD_LOGIC;
 signal Start_transmission	: STD_Logic;
+signal data_in 		: STD_LOGIC_VECTOR(7 downto 0);
 
 signal buff : STD_LOGIC_VECTOR(31 downto 0);
 
 signal SCL_ena : STD_LOGIC;
 
+	signal i2c_register : STD_LOGIC_VECTOR(7 downto 0);
 begin
 
 
@@ -102,27 +101,24 @@ SCL_out <= SCL when '1',
 			I2C_message <= (others => '0');
 			start_transmission <= '0';
 			apbo.prdata <= x"FFFFFFFF";
-			buff <= x"FFFFFFF0";
 		elsif rising_edge(clk) then
 			if IO_Ready = '1' then
 				if apbi.psel(pindex) = '1' then
 --					if apbi.paddr(31 downto 8) = x"0000" & std_logic_vector(to_unsigned(paddr,8)) then
 					
 						if apbi.pwrite = '1' then
-							buff 	<= apbi.pwdata;
-							I2C_address <= "0100111";--apbi.paddr(6 downto 0);
-		--					apbo.prdata <= apbi.pwdata;
+							I2C_address <= apbi.pwdata(31 downto 24);
+							I2C_register <= apbi.pwdata(23 downto 16);
+							apbo.prdata(7 downto 0) <= data_in;
 							I2C_message <= apbi.pwdata(7 downto 0);
 							start_transmission <= '1';
-				
+							
 						end if;
 --					end if;
 				end if;
 			else
 				start_transmission <= '0';
 			end if;
-
-		apbo.prdata <= buff;
 		end if;
 	end process;
 
@@ -136,6 +132,7 @@ test <= IO_Ready & start_transmission;
 		SCL => SCL,
 		rst => rstn,
 		I2C_slave_Address => I2C_address,
+		datain => data_in,
 		start_transmission => start_transmission,
 		IO_Ready => IO_Ready,
 		SCL_ena => SCL_ena,

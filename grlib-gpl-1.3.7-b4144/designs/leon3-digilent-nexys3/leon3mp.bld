@@ -42,10 +42,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   2
 
-Total memory usage is 426592 kilobytes
+Total memory usage is 424952 kilobytes
 
 Writing NGD file "leon3mp.ngd" ...
-Total REAL time to NGDBUILD completion:  7 sec
-Total CPU time to NGDBUILD completion:   7 sec
+Total REAL time to NGDBUILD completion:  10 sec
+Total CPU time to NGDBUILD completion:   9 sec
 
 Writing NGDBUILD log file "leon3mp.bld"...
