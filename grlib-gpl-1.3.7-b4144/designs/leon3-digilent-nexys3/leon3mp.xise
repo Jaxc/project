@@ -87,12 +87,12 @@
     </file>
     <file xil_pn:name="../../lib/grlib/amba/apbctrl.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="16"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="104"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="105"/>
       <library xil_pn:name="grlib"/>
     </file>
     <file xil_pn:name="../../lib/grlib/amba/ahbctrl.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="17"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="105"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="106"/>
       <library xil_pn:name="grlib"/>
     </file>
     <file xil_pn:name="../../lib/grlib/amba/dma2ahb_pkg.vhd" xil_pn:type="FILE_VHDL">
@@ -277,7 +277,7 @@
     </file>
     <file xil_pn:name="../../lib/techmap/maps/clkgen.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="56"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="103"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="104"/>
       <library xil_pn:name="techmap"/>
     </file>
     <file xil_pn:name="../../lib/techmap/maps/clkmux.vhd" xil_pn:type="FILE_VHDL">
@@ -357,7 +357,7 @@
     </file>
     <file xil_pn:name="../../lib/techmap/maps/clkpad.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="72"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="102"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="103"/>
       <library xil_pn:name="techmap"/>
     </file>
     <file xil_pn:name="../../lib/techmap/maps/clkpad_ds.vhd" xil_pn:type="FILE_VHDL">
@@ -367,7 +367,7 @@
     </file>
     <file xil_pn:name="../../lib/techmap/maps/inpad.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="74"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="101"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="102"/>
       <library xil_pn:name="techmap"/>
     </file>
     <file xil_pn:name="../../lib/techmap/maps/inpad_ds.vhd" xil_pn:type="FILE_VHDL">
@@ -382,7 +382,7 @@
     </file>
     <file xil_pn:name="../../lib/techmap/maps/iopad.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="77"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="100"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="101"/>
       <library xil_pn:name="techmap"/>
     </file>
     <file xil_pn:name="../../lib/techmap/maps/iopad_ds.vhd" xil_pn:type="FILE_VHDL">
@@ -402,7 +402,7 @@
     </file>
     <file xil_pn:name="../../lib/techmap/maps/outpad.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="81"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="99"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="100"/>
       <library xil_pn:name="techmap"/>
     </file>
     <file xil_pn:name="../../lib/techmap/maps/outpad_ds.vhd" xil_pn:type="FILE_VHDL">
@@ -702,7 +702,7 @@
     </file>
     <file xil_pn:name="../../lib/gaisler/leon3v3/dsu3.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="141"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="113"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="114"/>
       <library xil_pn:name="gaisler"/>
     </file>
     <file xil_pn:name="../../lib/gaisler/leon3v3/dsu3_mb.vhd" xil_pn:type="FILE_VHDL">
@@ -787,7 +787,7 @@
     </file>
     <file xil_pn:name="../../lib/gaisler/leon3v3/leon3s.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="158"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="112"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="113"/>
       <library xil_pn:name="gaisler"/>
     </file>
     <file xil_pn:name="../../lib/gaisler/leon3v3/leon3sh.vhd" xil_pn:type="FILE_VHDL">
@@ -807,7 +807,7 @@
     </file>
     <file xil_pn:name="../../lib/gaisler/irqmp/irqmp.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="162"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="115"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="116"/>
       <library xil_pn:name="gaisler"/>
     </file>
     <file xil_pn:name="../../lib/gaisler/l2cache/v2-pkg/l2cache.vhd" xil_pn:type="FILE_VHDL">
@@ -822,17 +822,17 @@
     </file>
     <file xil_pn:name="../../lib/gaisler/misc/rstgen.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="165"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="109"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="110"/>
       <library xil_pn:name="gaisler"/>
     </file>
     <file xil_pn:name="../../lib/gaisler/misc/gptimer.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="166"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="110"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="111"/>
       <library xil_pn:name="gaisler"/>
     </file>
     <file xil_pn:name="../../lib/gaisler/misc/ahbram.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="167"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="111"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="112"/>
       <library xil_pn:name="gaisler"/>
     </file>
     <file xil_pn:name="../../lib/gaisler/misc/ahbdpram.vhd" xil_pn:type="FILE_VHDL">
@@ -937,7 +937,7 @@
     </file>
     <file xil_pn:name="../../lib/gaisler/uart/apbuart.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="188"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="106"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="107"/>
       <library xil_pn:name="gaisler"/>
     </file>
     <file xil_pn:name="../../lib/gaisler/uart/dcom.vhd" xil_pn:type="FILE_VHDL">
@@ -952,7 +952,7 @@
     </file>
     <file xil_pn:name="../../lib/gaisler/uart/ahbuart.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="191"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="107"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="108"/>
       <library xil_pn:name="gaisler"/>
     </file>
     <file xil_pn:name="../../lib/gaisler/sim/sim.vhd" xil_pn:type="FILE_VHDL">
@@ -1012,7 +1012,7 @@
     </file>
     <file xil_pn:name="../../lib/gaisler/jtag/ahbjtag.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="205"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="114"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="115"/>
       <library xil_pn:name="gaisler"/>
     </file>
     <file xil_pn:name="../../lib/gaisler/jtag/ahbjtag_bsd.vhd" xil_pn:type="FILE_VHDL">
@@ -1066,7 +1066,7 @@
     </file>
     <file xil_pn:name="../../lib/gaisler/greth/grethm.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="216"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="116"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="117"/>
       <library xil_pn:name="gaisler"/>
     </file>
     <file xil_pn:name="../../lib/gaisler/greth/rgmii.vhd" xil_pn:type="FILE_VHDL">
@@ -1196,7 +1196,7 @@
     </file>
     <file xil_pn:name="../../lib/gaisler/spi/spi.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="242"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="108"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="109"/>
       <library xil_pn:name="gaisler"/>
     </file>
     <file xil_pn:name="../../lib/gaisler/spi/spimctrl.vhd" xil_pn:type="FILE_VHDL">
@@ -1240,7 +1240,7 @@
     </file>
     <file xil_pn:name="../../lib/esa/memoryctrl/mctrl.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="251"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="117"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="118"/>
       <library xil_pn:name="esa"/>
     </file>
     <file xil_pn:name="../../lib/fmf/utilities/conversions.vhd" xil_pn:type="FILE_VHDL">
@@ -1314,15 +1314,15 @@
     </file>
     <file xil_pn:name="config.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="270"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="119"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="121"/>
     </file>
     <file xil_pn:name="ahbrom.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="271"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="120"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="122"/>
     </file>
     <file xil_pn:name="leon3mp.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="272"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="121"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="123"/>
     </file>
     <file xil_pn:name="testbench.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="273"/>
@@ -1332,7 +1332,7 @@
     </file>
     <file xil_pn:name="IO_explander_interface.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="327"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="98"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="99"/>
     </file>
     <file xil_pn:name="I2CInterface.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="328"/>
@@ -1340,7 +1340,15 @@
     </file>
     <file xil_pn:name="IO_expander_APB.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="330"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="118"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="120"/>
+    </file>
+    <file xil_pn:name="SPI_APB.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="340"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="119"/>
+    </file>
+    <file xil_pn:name="SPI_phys.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="341"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="98"/>
     </file>
   </files>
 
@@ -1355,8 +1363,8 @@
     <property xil_pn:name="Allow Unmatched Timing Group Constraints" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Analysis Effort Level" xil_pn:value="Standard" xil_pn:valueState="default"/>
     <property xil_pn:name="Asynchronous To Synchronous" xil_pn:value="false" xil_pn:valueState="default"/>
-    <property xil_pn:name="Auto Implementation Compile Order" xil_pn:value="false" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Auto Implementation Top" xil_pn:value="false" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Auto Implementation Compile Order" xil_pn:value="true" xil_pn:valueState="default"/>
+    <property xil_pn:name="Auto Implementation Top" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Automatic BRAM Packing" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Automatically Insert glbl Module in the Netlist" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Automatically Run Generate Target PROM/ACE File" xil_pn:value="false" xil_pn:valueState="default"/>
@@ -1486,7 +1494,7 @@
     <property xil_pn:name="Log All Signals In Post-Par Simulation" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Log All Signals In Post-Translate Simulation" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Macro Search Path" xil_pn:value="../../netlists/xilinx/Spartan3" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Manual Implementation Compile Order" xil_pn:value="true" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Manual Implementation Compile Order" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Map Slice Logic into Unused Block RAMs" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Mask Pins for Multi-Pin Wake-Up Suspend Mode spartan6" xil_pn:value="0x00" xil_pn:valueState="default"/>
     <property xil_pn:name="Max Fanout" xil_pn:value="100000" xil_pn:valueState="default"/>

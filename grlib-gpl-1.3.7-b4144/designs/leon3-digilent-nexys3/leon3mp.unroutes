@@ -1,11 +1,11 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Jan 11 16:13:59 2015
+Sun Feb  8 01:18:28 2015
 
 All signals are completely routed.
 
-WARNING:ParHelpers:362 - There are 12 sourceless signals in this design. This design will not pass the DRC check run by
+WARNING:ParHelpers:362 - There are 14 sourceless signals in this design. This design will not pass the DRC check run by
    Bitgen.
 
    PhyClk25Mhz_OBUF
@@ -20,9 +20,12 @@ WARNING:ParHelpers:362 - There are 12 sourceless signals in this design. This de
    QuadSpiFlashCS_OBUF
    QuadSpiFlashSck_OBUF
    RamWait_OBUF
-WARNING:ParHelpers:361 - There are 24 loadless signals in this design. This design will cause Bitgen to issue DRC
+   led(2)_OBUF
+   led(3)_OBUF
+WARNING:ParHelpers:361 - There are 25 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
+   MISO_IBUF
    PhyCol_IBUF
    PhyCrs_IBUF
    PhyMdio_IBUF

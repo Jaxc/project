@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Jan 11 16:13:59 2015
+Sun Feb  8 01:18:28 2015
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -182,8 +182,8 @@ Pinout by Pin Number:
 |J16       |address(3)       |IOB      |IO_L44P_A3_M1DQ6_1           |OUTPUT   |LVCMOS33   |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
 |J17       |                 |         |VCCO_1                       |         |           |1             |          |         |           |         |3.30   |          |           |                |
 |J18       |address(2)       |IOB      |IO_L44N_A2_M1DQ7_1           |OUTPUT   |LVCMOS33   |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
-|K1        |                 |IOBS     |IO_L38N_M3DQ3_3              |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
-|K2        |                 |IOBM     |IO_L38P_M3DQ2_3              |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|K1        |MOSI             |IOB      |IO_L38N_M3DQ3_3              |OUTPUT   |LVCMOS33   |3             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
+|K2        |MISO             |IOB      |IO_L38P_M3DQ2_3              |INPUT    |LVCMOS33   |3             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |K3        |                 |IOBS     |IO_L42N_GCLK24_M3LDM_3       |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
 |K4        |                 |IOBM     |IO_L42P_GCLK25_TRDY2_M3UDM_3 |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
 |K5        |                 |IOBS     |IO_L43N_GCLK22_IRDY2_M3CASN_3|UNUSED   |           |3             |          |         |           |         |       |          |           |                |
@@ -202,8 +202,8 @@ Pinout by Pin Number:
 |K18       |address(0)       |IOB      |IO_L45N_A0_M1LDQSN_1         |OUTPUT   |LVCMOS33   |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
 |L1        |PhyRxDv          |IOB      |IO_L37N_M3DQ1_3              |INPUT    |LVCMOS33   |3             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |L2        |PhyTxEn          |IOB      |IO_L37P_M3DQ0_3              |OUTPUT   |LVCMOS33   |3             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
-|L3        |                 |IOBS     |IO_L39N_M3LDQSN_3            |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
-|L4        |                 |IOBM     |IO_L39P_M3LDQS_3             |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|L3        |CS_SDCARD        |IOB      |IO_L39N_M3LDQSN_3            |OUTPUT   |LVCMOS33   |3             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
+|L4        |SCLK             |IOB      |IO_L39P_M3LDQS_3             |OUTPUT   |LVCMOS33   |3             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |L5        |PhyTxClk         |IOB      |IO_L43P_GCLK23_M3RASN_3      |INPUT    |LVCMOS33   |3             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |L6        |PhyMdio          |IOB      |IO_L31P_3                    |INPUT    |LVCMOS33   |3             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |L7        |led(5)           |IOB      |IO_L45P_M3A3_3               |OUTPUT   |LVCMOS33   |3             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
@@ -340,7 +340,7 @@ Pinout by Pin Number:
 |V12       |                 |IOBS     |IO_L19N_2                    |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
 |V13       |data(12)         |IOB      |IO_L14N_D12_2                |BIDIR    |LVCMOS33   |2             |12        |SLOW     |           |NONE     |       |LOCATED   |YES        |NONE            |
 |V14       |data(2)          |IOB      |IO_L12N_D2_MISO3_2           |BIDIR    |LVCMOS33   |2             |12        |SLOW     |           |NONE     |       |LOCATED   |YES        |NONE            |
-|V15       |led(3)           |IOB      |IO_L5N_2                     |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
+|V15       |led(3)           |IOB      |IO_L5N_2                     |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |V16       |led(1)           |IOB      |IO_L2N_CMPMOSI_2             |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |V17       |                 |         |DONE_2                       |         |           |              |          |         |           |         |       |          |           |                |
 |V18       |                 |         |GND                          |         |           |              |          |         |           |         |       |          |           |                |

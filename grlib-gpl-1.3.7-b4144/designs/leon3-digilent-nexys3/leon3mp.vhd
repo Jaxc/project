@@ -143,7 +143,14 @@ entity leon3mp is
 
     -- I2C interface
     SDA 		: inout STD_LOGIC;
-    SCL			: out STD_LOGIC
+    SCL			: out STD_LOGIC;
+	 
+	 -- SD-card interface
+	 
+	 	MISO : IN std_logic; 
+		MOSI : OUT std_logic;
+		SCLK : OUT std_logic;
+		CS_SDCARD : OUT std_logic
 
     );
 end;
@@ -231,6 +238,24 @@ architecture rtl of leon3mp is
 		SDA : INOUT std_logic;      
 		SCL_out : OUT std_logic;
 		test : out STD_LOGIC_VECTOR(1 downto 0)
+		);
+	END COMPONENT;
+	
+	
+		COMPONENT SPI_APB
+		  generic(
+    pindex      : integer := 0;
+    paddr       : integer := 0;
+    pmask       : integer := 16#fff#);
+	PORT(
+		rstn : IN std_logic;
+		clk : IN std_logic;
+    		apbi   	: in  apb_slv_in_type;
+    		apbo   	: out apb_slv_out_type; 
+		MISO : IN std_logic; 
+		MOSI : OUT std_logic;
+		SCLK : OUT std_logic;
+		CS : OUT std_logic
 		);
 	END COMPONENT;
 
@@ -438,6 +463,21 @@ PORT MAP(
 		SDA => SDA,
 		SCL_out => SCL,
 		test => test
+	);
+	
+	-- SDCARD interface
+
+		Inst_SPI_APB: SPI_APB 
+		generic map ( pindex => 6,paddr => 6,pmask => 16#fff#)
+		PORT MAP(
+		rstn => rstn,
+		clk => clkm,
+		apbi => apbi,
+		apbo => apbo(6),
+		MISO => MISO,
+		MOSI => MOSI,
+		SCLK => SCLK,
+		CS => CS_SDCARD
 	);
 
 -----------------------------------------------------------------------

@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-jaxc-Lappytoppy::  Sun Jan 11 16:12:36 2015
+jaxc-Lappytoppy::  Sun Feb 08 01:18:08 2015
 
 par -w -intstyle ise -ol high -mt off leon3mp_map.ncd leon3mp.ncd leon3mp.pcf 
 
@@ -22,36 +22,36 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                 2,745 out of  18,224   15%
-    Number used as Flip Flops:               2,744
+  Number of Slice Registers:                 1,091 out of  18,224    5%
+    Number used as Flip Flops:               1,090
     Number used as Latches:                      1
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      5,797 out of   9,112   63%
-    Number used as logic:                    5,771 out of   9,112   63%
-      Number using O6 output only:           4,981
-      Number using O5 output only:              64
-      Number using O5 and O6:                  726
+  Number of Slice LUTs:                      1,654 out of   9,112   18%
+    Number used as logic:                    1,651 out of   9,112   18%
+      Number using O6 output only:           1,352
+      Number using O5 output only:              29
+      Number using O5 and O6:                  270
       Number used as ROM:                        0
-    Number used as Memory:                      21 out of   2,176    1%
+    Number used as Memory:                       1 out of   2,176    1%
       Number used as Dual Port RAM:              0
       Number used as Single Port RAM:            0
-      Number used as Shift Register:            21
-        Number using O6 output only:             6
+      Number used as Shift Register:             1
+        Number using O6 output only:             1
         Number using O5 output only:             0
-        Number using O5 and O6:                 15
-    Number used exclusively as route-thrus:      5
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:      2
       Number with same-slice register load:      1
-      Number with same-slice carry load:         4
+      Number with same-slice carry load:         1
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,967 out of   2,278   86%
-  Number of MUXCYs used:                       364 out of   4,556    7%
-  Number of LUT Flip Flop pairs used:        6,088
-    Number with an unused Flip Flop:         3,456 out of   6,088   56%
-    Number with an unused LUT:                 291 out of   6,088    4%
-    Number of fully used LUT-FF pairs:       2,341 out of   6,088   38%
+  Number of occupied Slices:                   598 out of   2,278   26%
+  Number of MUXCYs used:                       120 out of   4,556    2%
+  Number of LUT Flip Flop pairs used:        1,816
+    Number with an unused Flip Flop:           790 out of   1,816   43%
+    Number with an unused LUT:                 162 out of   1,816    8%
+    Number of fully used LUT-FF pairs:         864 out of   1,816   47%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -62,13 +62,13 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       102 out of     232   43%
-    Number of LOCed IOBs:                      102 out of     102  100%
-    IOB Flip Flops:                             85
+  Number of bonded IOBs:                       106 out of     232   45%
+    Number of LOCed IOBs:                      106 out of     106  100%
+    IOB Flip Flops:                             86
     IOB Latches:                                 1
 
 Specific Feature Utilization:
-  Number of RAMB16BWERs:                        22 out of      32   68%
+  Number of RAMB16BWERs:                         0 out of      32    0%
   Number of RAMB8BWERs:                          0 out of      64    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
     Number used as BUFIO2s:                      1
@@ -86,14 +86,14 @@ Specific Feature Utilization:
     Number used as ILOGIC2s:                    17
     Number used as ISERDES2s:                    0
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
-  Number of OLOGIC2/OSERDES2s:                  53 out of     248   21%
-    Number used as OLOGIC2s:                    53
+  Number of OLOGIC2/OSERDES2s:                  54 out of     248   21%
+    Number used as OLOGIC2s:                    54
     Number used as OSERDES2s:                    0
   Number of BSCANs:                              2 out of       4   50%
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
   Number of BUFPLL_MCBs:                         0 out of       4    0%
-  Number of DSP48A1s:                            4 out of      32   12%
+  Number of DSP48A1s:                            0 out of      32    0%
   Number of ICAPs:                               0 out of       1    0%
   Number of MCBs:                                0 out of       2    0%
   Number of PCILOGICSEs:                         0 out of       2    0%
@@ -106,9 +106,10 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 12 secs 
-Finished initial Timing Analysis.  REAL time: 12 secs 
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
 
+WARNING:Par:288 - The signal MISO_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:289 - The signal RamWait_OBUF has no driver.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal PhyMdio_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal PhyRxEr_IBUF has no load.  PAR will not attempt to route this signal.
@@ -130,7 +131,9 @@ WARNING:Par:288 - The signal PhyCol_IBUF has no load.  PAR will not attempt to r
 WARNING:Par:289 - The signal PhyMdc_OBUF has no driver.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal PhyCrs_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal btn(1)_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal led(2)_OBUF has no driver.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal btn(2)_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal led(3)_OBUF has no driver.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal btn(3)_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal btn(4)_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:289 - The signal PhyClk25Mhz_OBUF has no driver.  PAR will not attempt to route this signal.
@@ -148,29 +151,29 @@ WARNING:Par:289 - The signal QuadSpiFlashCS_OBUF has no driver.  PAR will not at
 Starting Router
 
 
-Phase  1  : 37377 unrouted;      REAL time: 13 secs 
+Phase  1  : 10271 unrouted;      REAL time: 6 secs 
 
-Phase  2  : 34552 unrouted;      REAL time: 15 secs 
+Phase  2  : 9451 unrouted;      REAL time: 7 secs 
 
-Phase  3  : 20448 unrouted;      REAL time: 29 secs 
+Phase  3  : 4631 unrouted;      REAL time: 10 secs 
 
-Phase  4  : 20448 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 31 secs 
+Phase  4  : 4631 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
 
 Updating file: leon3mp.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 14 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 14 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 14 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 14 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 14 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
-Total REAL time to Router completion: 1 mins 18 secs 
-Total CPU time to Router completion: 1 mins 22 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
+Total REAL time to Router completion: 18 secs 
+Total CPU time to Router completion: 19 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -188,19 +191,22 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|                clkm |  BUFGMUX_X2Y4| No   | 1192 |  0.703     |  1.776      |
-+---------------------+--------------+------+------+------------+-------------+
-|ahbjtaggen0.ahbjtag0 |              |      |      |            |             |
-|               /ltck | BUFGMUX_X3Y13| No   |   38 |  0.052     |  1.131      |
+|                clkm |  BUFGMUX_X2Y4| No   |  442 |  0.701     |  1.774      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_IO_expander_APB |              |      |      |            |             |
-|           /SCL_BUFG |  BUFGMUX_X2Y2| No   |   10 |  0.012     |  1.132      |
+|           /SCL_BUFG |  BUFGMUX_X2Y2| No   |    9 |  0.016     |  1.128      |
++---------------------+--------------+------+------+------------+-------------+
+|ahbjtaggen0.ahbjtag0 |              |      |      |            |             |
+|               /ltck | BUFGMUX_X3Y13| No   |   39 |  0.042     |  1.124      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_IO_expander_APB |              |      |      |            |             |
 |/Inst_IO_explander_i |              |      |      |            |             |
-|nterface/GND_406_o_c |              |      |      |            |             |
+|nterface/GND_325_o_c |              |      |      |            |             |
 |rnt_I2C_state[3]_OR_ |              |      |      |            |             |
-|               676_o |         Local|      |    2 |  0.798     |  1.384      |
+|               284_o |         Local|      |    2 |  1.007     |  1.593      |
++---------------------+--------------+------+------+------------+-------------+
+|Inst_SPI_APB/SPI_CLK |              |      |      |            |             |
+|                     |         Local|      |    6 |  1.121     |  1.714      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -222,12 +228,12 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clkgen0_xc3s_v_clk0B = PERIOD TIMEGRP  | SETUP       |     0.248ns|    19.752ns|       0|           0
-  "clkgen0_xc3s_v_clk0B" TS_sys_clk_pin     | HOLD        |     0.392ns|            |       0|           0
-       * 0.5 HIGH 50%                       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
   TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |     4.660ns|     5.340ns|       0|           0
   pin" 100 MHz HIGH 50%                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clkgen0_xc3s_v_clk0B = PERIOD TIMEGRP  | SETUP       |     5.774ns|    14.226ns|       0|           0
+  "clkgen0_xc3s_v_clk0B" TS_sys_clk_pin     | HOLD        |     0.392ns|            |       0|           0
+       * 0.5 HIGH 50%                       |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -241,8 +247,8 @@ Derived Constraints for TS_sys_clk_pin
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_pin                 |     10.000ns|      5.340ns|      9.876ns|            0|            0|            0|     19843750|
-| TS_clkgen0_xc3s_v_clk0B       |     20.000ns|     19.752ns|          N/A|            0|            0|     19843750|            0|
+|TS_sys_clk_pin                 |     10.000ns|      5.340ns|      7.113ns|            0|            0|            0|        90178|
+| TS_clkgen0_xc3s_v_clk0B       |     20.000ns|     14.226ns|          N/A|            0|            0|        90178|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -252,21 +258,21 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 24 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 25 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-WARNING:Par:284 - There are 12 sourceless signals in this design. This design will not pass the DRC check run by Bitgen.
+WARNING:Par:284 - There are 14 sourceless signals in this design. This design will not pass the DRC check run by Bitgen.
 
-Total REAL time to PAR completion: 1 mins 22 secs 
-Total CPU time to PAR completion: 1 mins 26 secs 
+Total REAL time to PAR completion: 19 secs 
+Total CPU time to PAR completion: 20 secs 
 
-Peak Memory Usage:  729 MB
+Peak Memory Usage:  645 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 40
+Number of warning messages: 43
 Number of info messages: 0
 
 Writing design to file leon3mp.ncd
